@@ -13,7 +13,7 @@
   "puesto": 2,
   "album": "Train of Thought",
   "artista": "Dream Theater",
-  "horas": 58.2
+  "horas": 58.0
  },
  {
   "id": "Todos-03",
@@ -21,7 +21,7 @@
   "puesto": 3,
   "album": "The way of all flesh",
   "artista": "Gojira",
-  "horas": 46.6
+  "horas": 46.4
  },
  {
   "id": "Todos-04",
@@ -29,7 +29,7 @@
   "puesto": 4,
   "album": "Finisterra",
   "artista": "Mägo de Oz",
-  "horas": 45.3
+  "horas": 45.0
  },
  {
   "id": "Todos-05",
@@ -37,7 +37,7 @@
   "puesto": 5,
   "album": "Eye of Providence",
   "artista": "The Agonist",
-  "horas": 41.0
+  "horas": 40.4
  },
  {
   "id": "2019-01",
@@ -45,7 +45,7 @@
   "puesto": 1,
   "album": "Train of Thought",
   "artista": "Dream Theater",
-  "horas": 27.2
+  "horas": 27.0
  },
  {
   "id": "2019-02",
@@ -53,7 +53,7 @@
   "puesto": 2,
   "album": "Muerte",
   "artista": "Canserbero",
-  "horas": 17.3
+  "horas": 17.2
  },
  {
   "id": "2019-03",
@@ -61,7 +61,7 @@
   "puesto": 3,
   "album": "From Mars to Sirius",
   "artista": "Gojira",
-  "horas": 15.9
+  "horas": 15.6
  },
  {
   "id": "2019-04",
@@ -69,7 +69,7 @@
   "puesto": 4,
   "album": "L'Enfant Sauvage",
   "artista": "Gojira",
-  "horas": 13.6
+  "horas": 13.4
  },
  {
   "id": "2019-05",
@@ -77,7 +77,7 @@
   "puesto": 5,
   "album": "The way of all flesh",
   "artista": "Gojira",
-  "horas": 13.5
+  "horas": 13.3
  },
  {
   "id": "2020-01",
@@ -125,7 +125,7 @@
   "puesto": 1,
   "album": "Beyond the Silence of These Years",
   "artista": "Ankor",
-  "horas": 10.4
+  "horas": 9.6
  },
  {
   "id": "2021-02",
@@ -133,7 +133,7 @@
   "puesto": 2,
   "album": "Eye of Providence",
   "artista": "The Agonist",
-  "horas": 7.5
+  "horas": 7.0
  },
  {
   "id": "2021-03",
@@ -141,7 +141,7 @@
   "puesto": 3,
   "album": "Finisterra",
   "artista": "Mägo de Oz",
-  "horas": 5.8
+  "horas": 5.6
  },
  {
   "id": "2021-04",
@@ -163,16 +163,16 @@
   "id": "2022-01",
   "anio": "2022",
   "puesto": 1,
-  "album": "Beyond the Silence of These Years",
-  "artista": "Ankor",
-  "horas": 9.2
+  "album": "The Blackening",
+  "artista": "Machine Head",
+  "horas": 9.1
  },
  {
   "id": "2022-02",
   "anio": "2022",
   "puesto": 2,
-  "album": "The Blackening",
-  "artista": "Machine Head",
+  "album": "Beyond the Silence of These Years",
+  "artista": "Ankor",
   "horas": 9.1
  },
  {
@@ -181,7 +181,7 @@
   "puesto": 3,
   "album": "Come the Tide",
   "artista": "Eternal Storm",
-  "horas": 9.0
+  "horas": 8.9
  },
  {
   "id": "2022-04",
@@ -189,7 +189,7 @@
   "puesto": 4,
   "album": "Finisterra",
   "artista": "Mägo de Oz",
-  "horas": 7.6
+  "horas": 7.5
  },
  {
   "id": "2022-05",

@@ -21,7 +21,7 @@
   "puesto": 3,
   "cancion": "Hijo de la Luna",
   "artista": "Stravaganzza",
-  "reproducciones": 121
+  "reproducciones": 120
  },
  {
   "id": "Todos-04",
@@ -29,23 +29,23 @@
   "puesto": 4,
   "cancion": "Y seras canción - 2010",
   "artista": "Mägo de Oz",
-  "reproducciones": 120
+  "reproducciones": 114
  },
  {
   "id": "Todos-05",
   "anio": "Todos",
   "puesto": 5,
-  "cancion": "Toxicity",
-  "artista": "System Of A Down",
-  "reproducciones": 113
+  "cancion": "Dance With The Devil",
+  "artista": "Breaking Benjamin",
+  "reproducciones": 111
  },
  {
   "id": "Todos-06",
   "anio": "Todos",
   "puesto": 6,
-  "cancion": "Dance With The Devil",
-  "artista": "Breaking Benjamin",
-  "reproducciones": 112
+  "cancion": "Toxicity",
+  "artista": "System Of A Down",
+  "reproducciones": 110
  },
  {
   "id": "Todos-07",
@@ -75,9 +75,9 @@
   "id": "Todos-10",
   "anio": "Todos",
   "puesto": 10,
-  "cancion": "Nana",
-  "artista": "Ankor",
-  "reproducciones": 103
+  "cancion": "Bloody Angel",
+  "artista": "Avatar",
+  "reproducciones": 102
  },
  {
   "id": "2019-01",
@@ -93,7 +93,7 @@
   "puesto": 2,
   "cancion": "Vacuity",
   "artista": "Gojira",
-  "reproducciones": 49
+  "reproducciones": 47
  },
  {
   "id": "2019-03",
@@ -115,25 +115,25 @@
   "id": "2019-05",
   "anio": "2019",
   "puesto": 5,
-  "cancion": "House of Eternal Hunt",
-  "artista": "Avatar",
-  "reproducciones": 39
+  "cancion": "The Gift of Guilt",
+  "artista": "Gojira",
+  "reproducciones": 37
  },
  {
   "id": "2019-06",
   "anio": "2019",
   "puesto": 6,
-  "cancion": "The Gift of Guilt",
+  "cancion": "The Shooting Star",
   "artista": "Gojira",
-  "reproducciones": 38
+  "reproducciones": 36
  },
  {
   "id": "2019-07",
   "anio": "2019",
   "puesto": 7,
-  "cancion": "The Shooting Star",
-  "artista": "Gojira",
-  "reproducciones": 37
+  "cancion": "House of Eternal Hunt",
+  "artista": "Avatar",
+  "reproducciones": 36
  },
  {
   "id": "2019-08",
@@ -147,17 +147,17 @@
   "id": "2019-09",
   "anio": "2019",
   "puesto": 9,
-  "cancion": "Vacant",
+  "cancion": "Honor Thy Father",
   "artista": "Dream Theater",
-  "reproducciones": 34
+  "reproducciones": 33
  },
  {
   "id": "2019-10",
   "anio": "2019",
   "puesto": 10,
-  "cancion": "Honor Thy Father",
+  "cancion": "Vacant",
   "artista": "Dream Theater",
-  "reproducciones": 34
+  "reproducciones": 32
  },
  {
   "id": "2020-01",
@@ -187,16 +187,16 @@
   "id": "2020-04",
   "anio": "2020",
   "puesto": 4,
-  "cancion": "Satania",
-  "artista": "Mägo de Oz",
+  "cancion": "Nana",
+  "artista": "Ankor",
   "reproducciones": 24
  },
  {
   "id": "2020-05",
   "anio": "2020",
   "puesto": 5,
-  "cancion": "Nana",
-  "artista": "Ankor",
+  "cancion": "Satania",
+  "artista": "Mägo de Oz",
   "reproducciones": 24
  },
  {
@@ -211,8 +211,8 @@
   "id": "2020-07",
   "anio": "2020",
   "puesto": 7,
-  "cancion": "Hijo de la Luna",
-  "artista": "Stravaganzza",
+  "cancion": "Another World",
+  "artista": "Gojira",
   "reproducciones": 20
  },
  {
@@ -227,33 +227,33 @@
   "id": "2020-09",
   "anio": "2020",
   "puesto": 9,
-  "cancion": "Another World",
-  "artista": "Gojira",
+  "cancion": "Hijo de la Luna",
+  "artista": "Stravaganzza",
   "reproducciones": 20
  },
  {
   "id": "2020-10",
   "anio": "2020",
   "puesto": 10,
-  "cancion": "Fathoms",
-  "artista": "Rest, Repose",
+  "cancion": "Danse Macabre",
+  "artista": "The Agonist",
   "reproducciones": 19
  },
  {
   "id": "2021-01",
   "anio": "2021",
   "puesto": 1,
-  "cancion": "Y seras canción - 2010",
-  "artista": "Mägo de Oz",
-  "reproducciones": 37
+  "cancion": "Señorita",
+  "artista": "Ankor",
+  "reproducciones": 33
  },
  {
   "id": "2021-02",
   "anio": "2021",
   "puesto": 2,
-  "cancion": "Señorita",
-  "artista": "Ankor",
-  "reproducciones": 37
+  "cancion": "Y seras canción - 2010",
+  "artista": "Mägo de Oz",
+  "reproducciones": 32
  },
  {
   "id": "2021-03",
@@ -261,7 +261,7 @@
   "puesto": 3,
   "cancion": "Toxicity",
   "artista": "System Of A Down",
-  "reproducciones": 33
+  "reproducciones": 31
  },
  {
   "id": "2021-04",
@@ -269,7 +269,7 @@
   "puesto": 4,
   "cancion": "Nana",
   "artista": "Ankor",
-  "reproducciones": 33
+  "reproducciones": 30
  },
  {
   "id": "2021-05",
@@ -277,7 +277,7 @@
   "puesto": 5,
   "cancion": "Fathoms",
   "artista": "Rest, Repose",
-  "reproducciones": 30
+  "reproducciones": 28
  },
  {
   "id": "2021-06",
@@ -285,39 +285,39 @@
   "puesto": 6,
   "cancion": "Bad Guy",
   "artista": "Ankor",
-  "reproducciones": 30
+  "reproducciones": 28
  },
  {
   "id": "2021-07",
   "anio": "2021",
   "puesto": 7,
-  "cancion": "Hunger",
-  "artista": "Amaranthe",
-  "reproducciones": 30
+  "cancion": "Courtesy Call",
+  "artista": "Thousand Foot Krutch",
+  "reproducciones": 28
  },
  {
   "id": "2021-08",
   "anio": "2021",
   "puesto": 8,
-  "cancion": "Huelo el Miedo",
-  "artista": "Warcry",
-  "reproducciones": 30
+  "cancion": "Hijo de la Luna",
+  "artista": "Stravaganzza",
+  "reproducciones": 27
  },
  {
   "id": "2021-09",
   "anio": "2021",
   "puesto": 9,
-  "cancion": "Courtesy Call",
-  "artista": "Thousand Foot Krutch",
-  "reproducciones": 29
+  "cancion": "Havana",
+  "artista": "Ankor",
+  "reproducciones": 26
  },
  {
   "id": "2021-10",
   "anio": "2021",
   "puesto": 10,
-  "cancion": "Endless Road",
-  "artista": "Ankor",
-  "reproducciones": 28
+  "cancion": "Huelo el Miedo",
+  "artista": "Warcry",
+  "reproducciones": 25
  },
  {
   "id": "2022-01",
@@ -325,7 +325,7 @@
   "puesto": 1,
   "cancion": "Through the Wall of Light Pt. I",
   "artista": "Eternal Storm",
-  "reproducciones": 51
+  "reproducciones": 50
  },
  {
   "id": "2022-02",
@@ -333,39 +333,39 @@
   "puesto": 2,
   "cancion": "Cry Baby (From \"Tokyo Revengers\")",
   "artista": "Tricker",
-  "reproducciones": 47
+  "reproducciones": 46
  },
  {
   "id": "2022-03",
   "anio": "2022",
   "puesto": 3,
-  "cancion": "Fuyu No Hanashi (From \"Given\")",
-  "artista": "Tricker",
-  "reproducciones": 36
- },
- {
-  "id": "2022-04",
-  "anio": "2022",
-  "puesto": 4,
   "cancion": "Learning to Fly",
   "artista": "Stratovarius",
   "reproducciones": 35
  },
  {
+  "id": "2022-04",
+  "anio": "2022",
+  "puesto": 4,
+  "cancion": "Through the Wall of Light Pt. II",
+  "artista": "Eternal Storm",
+  "reproducciones": 33
+ },
+ {
   "id": "2022-05",
   "anio": "2022",
   "puesto": 5,
-  "cancion": "White Rabbit",
-  "artista": "Egypt Central",
-  "reproducciones": 34
+  "cancion": "Fuyu No Hanashi (From \"Given\")",
+  "artista": "Tricker",
+  "reproducciones": 32
  },
  {
   "id": "2022-06",
   "anio": "2022",
   "puesto": 6,
-  "cancion": "Through the Wall of Light Pt. II",
-  "artista": "Eternal Storm",
-  "reproducciones": 33
+  "cancion": "White Rabbit",
+  "artista": "Egypt Central",
+  "reproducciones": 32
  },
  {
   "id": "2022-07",
@@ -395,9 +395,9 @@
   "id": "2022-10",
   "anio": "2022",
   "puesto": 10,
-  "cancion": "Kizuato (From \"Given\")",
+  "cancion": "Yoru Ga Akeru - Spanish Cover",
   "artista": "Tricker",
-  "reproducciones": 30
+  "reproducciones": 29
  },
  {
   "id": "2023-01",

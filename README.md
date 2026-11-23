@@ -14,6 +14,6 @@ Los datos van de enero de 2019 al 18 de noviembre de 2026.
 
 - `index.html`: la página.
 - `data/`: los totales que usa la página, en JSON. `wrapped-data.js` es lo que carga la página. Los `.json` son los mismos datos por separado.
-- `scripts/build_data.py`: el script que generó esos totales a partir del historial extendido de Spotify.
+- Los datos se generan con `actualizar.py` del repo privado Historial-de-reproduccion.
 
-El historial original de Spotify no está en el repo porque trae datos personales (como direcciones IP). Para actualizar la página hay que pedir de nuevo el "historial de reproducción extendido" en spotify.com/account/privacy y volver a generar los datos.
+El historial original no está en este repo porque trae datos personales. Para actualizar la página, sigue los pasos del README de Historial-de-reproduccion.

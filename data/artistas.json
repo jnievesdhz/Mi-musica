@@ -4,42 +4,42 @@
   "anio": "Todos",
   "puesto": 1,
   "artista": "Dream Theater",
-  "horas": 227.8
+  "horas": 227.1
  },
  {
   "id": "Todos-02",
   "anio": "Todos",
   "puesto": 2,
   "artista": "Avatar",
-  "horas": 195.0
+  "horas": 194.3
  },
  {
   "id": "Todos-03",
   "anio": "Todos",
   "puesto": 3,
   "artista": "Gojira",
-  "horas": 189.6
+  "horas": 188.3
  },
  {
   "id": "Todos-04",
   "anio": "Todos",
   "puesto": 4,
   "artista": "Mägo de Oz",
-  "horas": 176.9
+  "horas": 174.3
  },
  {
   "id": "Todos-05",
   "anio": "Todos",
   "puesto": 5,
   "artista": "The Agonist",
-  "horas": 132.9
+  "horas": 132.1
  },
  {
   "id": "Todos-06",
   "anio": "Todos",
   "puesto": 6,
   "artista": "Heaven Shall Burn",
-  "horas": 132.3
+  "horas": 131.7
  },
  {
   "id": "Todos-07",
@@ -53,7 +53,7 @@
   "anio": "Todos",
   "puesto": 8,
   "artista": "Lamb of God",
-  "horas": 126.4
+  "horas": 126.2
  },
  {
   "id": "Todos-09",
@@ -67,70 +67,70 @@
   "anio": "Todos",
   "puesto": 10,
   "artista": "Canserbero",
-  "horas": 96.2
+  "horas": 96.0
  },
  {
   "id": "2019-01",
   "anio": "2019",
   "puesto": 1,
   "artista": "Gojira",
-  "horas": 67.8
+  "horas": 66.5
  },
  {
   "id": "2019-02",
   "anio": "2019",
   "puesto": 2,
   "artista": "Dream Theater",
-  "horas": 66.1
+  "horas": 65.4
  },
  {
   "id": "2019-03",
   "anio": "2019",
   "puesto": 3,
   "artista": "Avatar",
-  "horas": 51.1
+  "horas": 50.4
  },
  {
   "id": "2019-04",
   "anio": "2019",
   "puesto": 4,
   "artista": "Mägo de Oz",
-  "horas": 47.1
+  "horas": 46.9
  },
  {
   "id": "2019-05",
   "anio": "2019",
   "puesto": 5,
   "artista": "Canserbero",
-  "horas": 45.0
+  "horas": 44.8
  },
  {
   "id": "2019-06",
   "anio": "2019",
   "puesto": 6,
   "artista": "Lamb of God",
-  "horas": 35.1
+  "horas": 35.0
  },
  {
   "id": "2019-07",
   "anio": "2019",
   "puesto": 7,
   "artista": "The Agonist",
-  "horas": 32.8
+  "horas": 32.7
  },
  {
   "id": "2019-08",
   "anio": "2019",
   "puesto": 8,
   "artista": "Heaven Shall Burn",
-  "horas": 25.5
+  "horas": 25.2
  },
  {
   "id": "2019-09",
   "anio": "2019",
   "puesto": 9,
   "artista": "Amorphis",
-  "horas": 23.9
+  "horas": 23.8
  },
  {
   "id": "2019-10",
@@ -193,7 +193,7 @@
   "anio": "2020",
   "puesto": 8,
   "artista": "Angelus Apatrida",
-  "horas": 11.0
+  "horas": 10.9
  },
  {
   "id": "2020-09",
@@ -213,15 +213,15 @@
   "id": "2021-01",
   "anio": "2021",
   "puesto": 1,
-  "artista": "Mägo de Oz",
-  "horas": 25.6
+  "artista": "Dream Theater",
+  "horas": 25.3
  },
  {
   "id": "2021-02",
   "anio": "2021",
   "puesto": 2,
-  "artista": "Dream Theater",
-  "horas": 25.3
+  "artista": "Mägo de Oz",
+  "horas": 23.9
  },
  {
   "id": "2021-03",
@@ -235,21 +235,21 @@
   "anio": "2021",
   "puesto": 4,
   "artista": "Avatar",
-  "horas": 20.4
+  "horas": 20.3
  },
  {
   "id": "2021-05",
   "anio": "2021",
   "puesto": 5,
   "artista": "Ankor",
-  "horas": 19.3
+  "horas": 18.0
  },
  {
   "id": "2021-06",
   "anio": "2021",
   "puesto": 6,
   "artista": "The Agonist",
-  "horas": 17.5
+  "horas": 16.9
  },
  {
   "id": "2021-07",
@@ -270,14 +270,14 @@
   "anio": "2021",
   "puesto": 9,
   "artista": "Lamb of God",
-  "horas": 13.0
+  "horas": 12.9
  },
  {
   "id": "2021-10",
   "anio": "2021",
   "puesto": 10,
   "artista": "Soen",
-  "horas": 11.0
+  "horas": 10.9
  },
  {
   "id": "2022-01",
@@ -290,15 +290,15 @@
   "id": "2022-02",
   "anio": "2022",
   "puesto": 2,
-  "artista": "Mägo de Oz",
-  "horas": 26.5
+  "artista": "Dream Theater",
+  "horas": 26.4
  },
  {
   "id": "2022-03",
   "anio": "2022",
   "puesto": 3,
-  "artista": "Dream Theater",
-  "horas": 26.4
+  "artista": "Mägo de Oz",
+  "horas": 25.7
  },
  {
   "id": "2022-04",
@@ -312,28 +312,28 @@
   "anio": "2022",
   "puesto": 5,
   "artista": "Katatonia",
-  "horas": 20.6
+  "horas": 20.5
  },
  {
   "id": "2022-06",
   "anio": "2022",
   "puesto": 6,
   "artista": "Heaven Shall Burn",
-  "horas": 18.7
+  "horas": 18.5
  },
  {
   "id": "2022-07",
   "anio": "2022",
   "puesto": 7,
   "artista": "The Agonist",
-  "horas": 17.3
+  "horas": 17.1
  },
  {
   "id": "2022-08",
   "anio": "2022",
   "puesto": 8,
   "artista": "Ankor",
-  "horas": 16.4
+  "horas": 16.2
  },
  {
   "id": "2022-09",
