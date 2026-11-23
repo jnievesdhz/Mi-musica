@@ -3,13 +3,13 @@
   "id": "Todos-00",
   "anio": "Todos",
   "hora": 0,
-  "horas": 156.6
+  "horas": 156.0
  },
  {
   "id": "Todos-01",
   "anio": "Todos",
   "hora": 1,
-  "horas": 96.7
+  "horas": 96.6
  },
  {
   "id": "Todos-02",
@@ -33,13 +33,13 @@
   "id": "Todos-05",
   "anio": "Todos",
   "hora": 5,
-  "horas": 37.7
+  "horas": 37.6
  },
  {
   "id": "Todos-06",
   "anio": "Todos",
   "hora": 6,
-  "horas": 124.0
+  "horas": 123.8
  },
  {
   "id": "Todos-07",
@@ -51,97 +51,97 @@
   "id": "Todos-08",
   "anio": "Todos",
   "hora": 8,
-  "horas": 228.0
+  "horas": 227.6
  },
  {
   "id": "Todos-09",
   "anio": "Todos",
   "hora": 9,
-  "horas": 156.7
+  "horas": 156.5
  },
  {
   "id": "Todos-10",
   "anio": "Todos",
   "hora": 10,
-  "horas": 173.2
+  "horas": 172.6
  },
  {
   "id": "Todos-11",
   "anio": "Todos",
   "hora": 11,
-  "horas": 165.3
+  "horas": 165.0
  },
  {
   "id": "Todos-12",
   "anio": "Todos",
   "hora": 12,
-  "horas": 180.7
+  "horas": 179.6
  },
  {
   "id": "Todos-13",
   "anio": "Todos",
   "hora": 13,
-  "horas": 178.7
+  "horas": 177.2
  },
  {
   "id": "Todos-14",
   "anio": "Todos",
   "hora": 14,
-  "horas": 161.7
+  "horas": 161.1
  },
  {
   "id": "Todos-15",
   "anio": "Todos",
   "hora": 15,
-  "horas": 204.2
+  "horas": 202.3
  },
  {
   "id": "Todos-16",
   "anio": "Todos",
   "hora": 16,
-  "horas": 268.6
+  "horas": 267.7
  },
  {
   "id": "Todos-17",
   "anio": "Todos",
   "hora": 17,
-  "horas": 236.1
+  "horas": 235.5
  },
  {
   "id": "Todos-18",
   "anio": "Todos",
   "hora": 18,
-  "horas": 233.5
+  "horas": 233.1
  },
  {
   "id": "Todos-19",
   "anio": "Todos",
   "hora": 19,
-  "horas": 219.2
+  "horas": 217.7
  },
  {
   "id": "Todos-20",
   "anio": "Todos",
   "hora": 20,
-  "horas": 197.9
+  "horas": 196.8
  },
  {
   "id": "Todos-21",
   "anio": "Todos",
   "hora": 21,
-  "horas": 251.3
+  "horas": 250.2
  },
  {
   "id": "Todos-22",
   "anio": "Todos",
   "hora": 22,
-  "horas": 225.1
+  "horas": 224.3
  },
  {
   "id": "Todos-23",
   "anio": "Todos",
   "hora": 23,
-  "horas": 178.0
+  "horas": 177.6
  },
  {
   "id": "2019-00",
@@ -195,7 +195,7 @@
   "id": "2019-08",
   "anio": "2019",
   "hora": 8,
-  "horas": 19.9
+  "horas": 19.6
  },
  {
   "id": "2019-09",
@@ -207,13 +207,13 @@
   "id": "2019-10",
   "anio": "2019",
   "hora": 10,
-  "horas": 19.3
+  "horas": 18.6
  },
  {
   "id": "2019-11",
   "anio": "2019",
   "hora": 11,
-  "horas": 22.5
+  "horas": 22.3
  },
  {
   "id": "2019-12",
@@ -237,55 +237,55 @@
   "id": "2019-15",
   "anio": "2019",
   "hora": 15,
-  "horas": 30.9
+  "horas": 30.4
  },
  {
   "id": "2019-16",
   "anio": "2019",
   "hora": 16,
-  "horas": 70.6
+  "horas": 70.0
  },
  {
   "id": "2019-17",
   "anio": "2019",
   "hora": 17,
-  "horas": 50.5
+  "horas": 50.1
  },
  {
   "id": "2019-18",
   "anio": "2019",
   "hora": 18,
-  "horas": 31.0
+  "horas": 30.9
  },
  {
   "id": "2019-19",
   "anio": "2019",
   "hora": 19,
-  "horas": 37.6
+  "horas": 37.4
  },
  {
   "id": "2019-20",
   "anio": "2019",
   "hora": 20,
-  "horas": 30.9
+  "horas": 30.6
  },
  {
   "id": "2019-21",
   "anio": "2019",
   "hora": 21,
-  "horas": 59.2
+  "horas": 58.5
  },
  {
   "id": "2019-22",
   "anio": "2019",
   "hora": 22,
-  "horas": 45.9
+  "horas": 45.5
  },
  {
   "id": "2019-23",
   "anio": "2019",
   "hora": 23,
-  "horas": 18.8
+  "horas": 18.7
  },
  {
   "id": "2020-00",
@@ -345,7 +345,7 @@
   "id": "2020-09",
   "anio": "2020",
   "hora": 9,
-  "horas": 13.6
+  "horas": 13.5
  },
  {
   "id": "2020-10",
@@ -369,7 +369,7 @@
   "id": "2020-13",
   "anio": "2020",
   "hora": 13,
-  "horas": 21.2
+  "horas": 21.1
  },
  {
   "id": "2020-14",
@@ -435,7 +435,7 @@
   "id": "2021-00",
   "anio": "2021",
   "hora": 0,
-  "horas": 28.4
+  "horas": 28.0
  },
  {
   "id": "2021-01",
@@ -489,7 +489,7 @@
   "id": "2021-09",
   "anio": "2021",
   "hora": 9,
-  "horas": 9.5
+  "horas": 9.4
  },
  {
   "id": "2021-10",
@@ -501,85 +501,85 @@
   "id": "2021-11",
   "anio": "2021",
   "hora": 11,
-  "horas": 18.5
+  "horas": 18.3
  },
  {
   "id": "2021-12",
   "anio": "2021",
   "hora": 12,
-  "horas": 21.0
+  "horas": 20.4
  },
  {
   "id": "2021-13",
   "anio": "2021",
   "hora": 13,
-  "horas": 17.6
+  "horas": 17.3
  },
  {
   "id": "2021-14",
   "anio": "2021",
   "hora": 14,
-  "horas": 18.4
+  "horas": 18.0
  },
  {
   "id": "2021-15",
   "anio": "2021",
   "hora": 15,
-  "horas": 28.1
+  "horas": 27.7
  },
  {
   "id": "2021-16",
   "anio": "2021",
   "hora": 16,
-  "horas": 27.7
+  "horas": 27.6
  },
  {
   "id": "2021-17",
   "anio": "2021",
   "hora": 17,
-  "horas": 30.8
+  "horas": 30.6
  },
  {
   "id": "2021-18",
   "anio": "2021",
   "hora": 18,
-  "horas": 27.6
+  "horas": 27.3
  },
  {
   "id": "2021-19",
   "anio": "2021",
   "hora": 19,
-  "horas": 27.0
+  "horas": 25.8
  },
  {
   "id": "2021-20",
   "anio": "2021",
   "hora": 20,
-  "horas": 23.3
+  "horas": 22.4
  },
  {
   "id": "2021-21",
   "anio": "2021",
   "hora": 21,
-  "horas": 21.9
+  "horas": 21.5
  },
  {
   "id": "2021-22",
   "anio": "2021",
   "hora": 22,
-  "horas": 20.6
+  "horas": 20.4
  },
  {
   "id": "2021-23",
   "anio": "2021",
   "hora": 23,
-  "horas": 24.2
+  "horas": 23.9
  },
  {
   "id": "2022-00",
   "anio": "2022",
   "hora": 0,
-  "horas": 34.7
+  "horas": 34.4
  },
  {
   "id": "2022-01",
@@ -615,19 +615,19 @@
   "id": "2022-06",
   "anio": "2022",
   "hora": 6,
-  "horas": 10.6
+  "horas": 10.4
  },
  {
   "id": "2022-07",
   "anio": "2022",
   "hora": 7,
-  "horas": 8.3
+  "horas": 8.2
  },
  {
   "id": "2022-08",
   "anio": "2022",
   "hora": 8,
-  "horas": 29.1
+  "horas": 28.8
  },
  {
   "id": "2022-09",
@@ -651,31 +651,31 @@
   "id": "2022-12",
   "anio": "2022",
   "hora": 12,
-  "horas": 29.9
+  "horas": 29.3
  },
  {
   "id": "2022-13",
   "anio": "2022",
   "hora": 13,
-  "horas": 34.1
+  "horas": 33.1
  },
  {
   "id": "2022-14",
   "anio": "2022",
   "hora": 14,
-  "horas": 19.3
+  "horas": 19.1
  },
  {
   "id": "2022-15",
   "anio": "2022",
   "hora": 15,
-  "horas": 26.7
+  "horas": 25.7
  },
  {
   "id": "2022-16",
   "anio": "2022",
   "hora": 16,
-  "horas": 29.8
+  "horas": 29.6
  },
  {
   "id": "2022-17",
@@ -693,13 +693,13 @@
   "id": "2022-19",
   "anio": "2022",
   "hora": 19,
-  "horas": 24.0
+  "horas": 23.9
  },
  {
   "id": "2022-20",
   "anio": "2022",
   "hora": 20,
-  "horas": 16.8
+  "horas": 16.7
  },
  {
   "id": "2022-21",
@@ -711,7 +711,7 @@
   "id": "2022-22",
   "anio": "2022",
   "hora": 22,
-  "horas": 26.9
+  "horas": 26.7
  },
  {
   "id": "2022-23",

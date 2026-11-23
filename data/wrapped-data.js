@@ -2,13 +2,13 @@ window.WRAPPED_DATA = {
  "resumen": [
   {
    "anio": "Todos",
-   "horas": 3884.0,
+   "horas": 3869.6,
    "artistas": 175,
    "canciones": 5223,
    "dias": 2506,
-   "horas_metal": 3681.8,
-   "horas_rock": 96.6,
-   "horas_rap": 96.2,
+   "horas_metal": 3668.6,
+   "horas_rock": 95.8,
+   "horas_rap": 96.0,
    "horas_electronica": 9.3,
    "artista_top": "Dream Theater",
    "cancion_top": "Initiate",
@@ -16,13 +16,13 @@ window.WRAPPED_DATA = {
   },
   {
    "anio": "2019",
-   "horas": 549.7,
+   "horas": 545.4,
    "artistas": 68,
    "canciones": 1646,
    "dias": 296,
-   "horas_metal": 492.1,
-   "horas_rock": 12.5,
-   "horas_rap": 45.0,
+   "horas_metal": 488.6,
+   "horas_rock": 11.9,
+   "horas_rap": 44.8,
    "horas_electronica": 0.2,
    "artista_top": "Gojira",
    "cancion_top": "Stream of Consciousness",
@@ -30,39 +30,39 @@ window.WRAPPED_DATA = {
   },
   {
    "anio": "2020",
-   "horas": 384.0,
+   "horas": 383.8,
    "artistas": 114,
    "canciones": 2399,
    "dias": 297,
-   "horas_metal": 364.3,
+   "horas_metal": 364.1,
    "horas_rock": 10.8,
    "horas_rap": 8.5,
-   "horas_electronica": 0.3,
+   "horas_electronica": 0.2,
    "artista_top": "Dream Theater",
    "cancion_top": "Halo",
    "cancion_top_artista": "Machine Head"
   },
   {
    "anio": "2021",
-   "horas": 406.8,
+   "horas": 400.9,
    "artistas": 115,
    "canciones": 1923,
    "dias": 321,
-   "horas_metal": 384.4,
-   "horas_rock": 13.5,
+   "horas_metal": 378.8,
+   "horas_rock": 13.2,
    "horas_rap": 8.7,
    "horas_electronica": 0.2,
-   "artista_top": "Mägo de Oz",
-   "cancion_top": "Y seras canción - 2010",
-   "cancion_top_artista": "Mägo de Oz"
+   "artista_top": "Dream Theater",
+   "cancion_top": "Señorita",
+   "cancion_top_artista": "Ankor"
   },
   {
    "anio": "2022",
-   "horas": 490.9,
+   "horas": 486.9,
    "artistas": 122,
    "canciones": 2021,
    "dias": 333,
-   "horas_metal": 466.0,
+   "horas_metal": 462.0,
    "horas_rock": 15.5,
    "horas_rap": 8.0,
    "horas_electronica": 1.5,
@@ -133,42 +133,42 @@ window.WRAPPED_DATA = {
    "anio": "Todos",
    "puesto": 1,
    "artista": "Dream Theater",
-   "horas": 227.8
+   "horas": 227.1
   },
   {
    "id": "Todos-02",
    "anio": "Todos",
    "puesto": 2,
    "artista": "Avatar",
-   "horas": 195.0
+   "horas": 194.3
   },
   {
    "id": "Todos-03",
    "anio": "Todos",
    "puesto": 3,
    "artista": "Gojira",
-   "horas": 189.6
+   "horas": 188.3
   },
   {
    "id": "Todos-04",
    "anio": "Todos",
    "puesto": 4,
    "artista": "Mägo de Oz",
-   "horas": 176.9
+   "horas": 174.3
   },
   {
    "id": "Todos-05",
    "anio": "Todos",
    "puesto": 5,
    "artista": "The Agonist",
-   "horas": 132.9
+   "horas": 132.1
   },
   {
    "id": "Todos-06",
    "anio": "Todos",
    "puesto": 6,
    "artista": "Heaven Shall Burn",
-   "horas": 132.3
+   "horas": 131.7
   },
   {
    "id": "Todos-07",
@@ -182,7 +182,7 @@ window.WRAPPED_DATA = {
    "anio": "Todos",
    "puesto": 8,
    "artista": "Lamb of God",
-   "horas": 126.4
+   "horas": 126.2
   },
   {
    "id": "Todos-09",
@@ -196,70 +196,70 @@ window.WRAPPED_DATA = {
    "anio": "Todos",
    "puesto": 10,
    "artista": "Canserbero",
-   "horas": 96.2
+   "horas": 96.0
   },
   {
    "id": "2019-01",
    "anio": "2019",
    "puesto": 1,
    "artista": "Gojira",
-   "horas": 67.8
+   "horas": 66.5
   },
   {
    "id": "2019-02",
    "anio": "2019",
    "puesto": 2,
    "artista": "Dream Theater",
-   "horas": 66.1
+   "horas": 65.4
   },
   {
    "id": "2019-03",
    "anio": "2019",
    "puesto": 3,
    "artista": "Avatar",
-   "horas": 51.1
+   "horas": 50.4
   },
   {
    "id": "2019-04",
    "anio": "2019",
    "puesto": 4,
    "artista": "Mägo de Oz",
-   "horas": 47.1
+   "horas": 46.9
   },
   {
    "id": "2019-05",
    "anio": "2019",
    "puesto": 5,
    "artista": "Canserbero",
-   "horas": 45.0
+   "horas": 44.8
   },
   {
    "id": "2019-06",
    "anio": "2019",
    "puesto": 6,
    "artista": "Lamb of God",
-   "horas": 35.1
+   "horas": 35.0
   },
   {
    "id": "2019-07",
    "anio": "2019",
    "puesto": 7,
    "artista": "The Agonist",
-   "horas": 32.8
+   "horas": 32.7
   },
   {
    "id": "2019-08",
    "anio": "2019",
    "puesto": 8,
    "artista": "Heaven Shall Burn",
-   "horas": 25.5
+   "horas": 25.2
   },
   {
    "id": "2019-09",
    "anio": "2019",
    "puesto": 9,
    "artista": "Amorphis",
-   "horas": 23.9
+   "horas": 23.8
   },
   {
    "id": "2019-10",
@@ -322,7 +322,7 @@ window.WRAPPED_DATA = {
    "anio": "2020",
    "puesto": 8,
    "artista": "Angelus Apatrida",
-   "horas": 11.0
+   "horas": 10.9
   },
   {
    "id": "2020-09",
@@ -342,15 +342,15 @@ window.WRAPPED_DATA = {
    "id": "2021-01",
    "anio": "2021",
    "puesto": 1,
-   "artista": "Mägo de Oz",
-   "horas": 25.6
+   "artista": "Dream Theater",
+   "horas": 25.3
   },
   {
    "id": "2021-02",
    "anio": "2021",
    "puesto": 2,
-   "artista": "Dream Theater",
-   "horas": 25.3
+   "artista": "Mägo de Oz",
+   "horas": 23.9
   },
   {
    "id": "2021-03",
@@ -364,21 +364,21 @@ window.WRAPPED_DATA = {
    "anio": "2021",
    "puesto": 4,
    "artista": "Avatar",
-   "horas": 20.4
+   "horas": 20.3
   },
   {
    "id": "2021-05",
    "anio": "2021",
    "puesto": 5,
    "artista": "Ankor",
-   "horas": 19.3
+   "horas": 18.0
   },
   {
    "id": "2021-06",
    "anio": "2021",
    "puesto": 6,
    "artista": "The Agonist",
-   "horas": 17.5
+   "horas": 16.9
   },
   {
    "id": "2021-07",
@@ -399,14 +399,14 @@ window.WRAPPED_DATA = {
    "anio": "2021",
    "puesto": 9,
    "artista": "Lamb of God",
-   "horas": 13.0
+   "horas": 12.9
   },
   {
    "id": "2021-10",
    "anio": "2021",
    "puesto": 10,
    "artista": "Soen",
-   "horas": 11.0
+   "horas": 10.9
   },
   {
    "id": "2022-01",
@@ -419,15 +419,15 @@ window.WRAPPED_DATA = {
    "id": "2022-02",
    "anio": "2022",
    "puesto": 2,
-   "artista": "Mägo de Oz",
-   "horas": 26.5
+   "artista": "Dream Theater",
+   "horas": 26.4
   },
   {
    "id": "2022-03",
    "anio": "2022",
    "puesto": 3,
-   "artista": "Dream Theater",
-   "horas": 26.4
+   "artista": "Mägo de Oz",
+   "horas": 25.7
   },
   {
    "id": "2022-04",
@@ -441,28 +441,28 @@ window.WRAPPED_DATA = {
    "anio": "2022",
    "puesto": 5,
    "artista": "Katatonia",
-   "horas": 20.6
+   "horas": 20.5
   },
   {
    "id": "2022-06",
    "anio": "2022",
    "puesto": 6,
    "artista": "Heaven Shall Burn",
-   "horas": 18.7
+   "horas": 18.5
   },
   {
    "id": "2022-07",
    "anio": "2022",
    "puesto": 7,
    "artista": "The Agonist",
-   "horas": 17.3
+   "horas": 17.1
   },
   {
    "id": "2022-08",
    "anio": "2022",
    "puesto": 8,
    "artista": "Ankor",
-   "horas": 16.4
+   "horas": 16.2
   },
   {
    "id": "2022-09",
@@ -782,7 +782,7 @@ window.WRAPPED_DATA = {
    "puesto": 3,
    "cancion": "Hijo de la Luna",
    "artista": "Stravaganzza",
-   "reproducciones": 121
+   "reproducciones": 120
   },
   {
    "id": "Todos-04",
@@ -790,23 +790,23 @@ window.WRAPPED_DATA = {
    "puesto": 4,
    "cancion": "Y seras canción - 2010",
    "artista": "Mägo de Oz",
-   "reproducciones": 120
+   "reproducciones": 114
   },
   {
    "id": "Todos-05",
    "anio": "Todos",
    "puesto": 5,
-   "cancion": "Toxicity",
-   "artista": "System Of A Down",
-   "reproducciones": 113
+   "cancion": "Dance With The Devil",
+   "artista": "Breaking Benjamin",
+   "reproducciones": 111
   },
   {
    "id": "Todos-06",
    "anio": "Todos",
    "puesto": 6,
-   "cancion": "Dance With The Devil",
-   "artista": "Breaking Benjamin",
-   "reproducciones": 112
+   "cancion": "Toxicity",
+   "artista": "System Of A Down",
+   "reproducciones": 110
   },
   {
    "id": "Todos-07",
@@ -836,9 +836,9 @@ window.WRAPPED_DATA = {
    "id": "Todos-10",
    "anio": "Todos",
    "puesto": 10,
-   "cancion": "Nana",
-   "artista": "Ankor",
-   "reproducciones": 103
+   "cancion": "Bloody Angel",
+   "artista": "Avatar",
+   "reproducciones": 102
   },
   {
    "id": "2019-01",
@@ -854,7 +854,7 @@ window.WRAPPED_DATA = {
    "puesto": 2,
    "cancion": "Vacuity",
    "artista": "Gojira",
-   "reproducciones": 49
+   "reproducciones": 47
   },
   {
    "id": "2019-03",
@@ -876,25 +876,25 @@ window.WRAPPED_DATA = {
    "id": "2019-05",
    "anio": "2019",
    "puesto": 5,
-   "cancion": "House of Eternal Hunt",
-   "artista": "Avatar",
-   "reproducciones": 39
+   "cancion": "The Gift of Guilt",
+   "artista": "Gojira",
+   "reproducciones": 37
   },
   {
    "id": "2019-06",
    "anio": "2019",
    "puesto": 6,
-   "cancion": "The Gift of Guilt",
+   "cancion": "The Shooting Star",
    "artista": "Gojira",
-   "reproducciones": 38
+   "reproducciones": 36
   },
   {
    "id": "2019-07",
    "anio": "2019",
    "puesto": 7,
-   "cancion": "The Shooting Star",
-   "artista": "Gojira",
-   "reproducciones": 37
+   "cancion": "House of Eternal Hunt",
+   "artista": "Avatar",
+   "reproducciones": 36
   },
   {
    "id": "2019-08",
@@ -908,17 +908,17 @@ window.WRAPPED_DATA = {
    "id": "2019-09",
    "anio": "2019",
    "puesto": 9,
-   "cancion": "Vacant",
+   "cancion": "Honor Thy Father",
    "artista": "Dream Theater",
-   "reproducciones": 34
+   "reproducciones": 33
   },
   {
    "id": "2019-10",
    "anio": "2019",
    "puesto": 10,
-   "cancion": "Honor Thy Father",
+   "cancion": "Vacant",
    "artista": "Dream Theater",
-   "reproducciones": 34
+   "reproducciones": 32
   },
   {
    "id": "2020-01",
@@ -948,16 +948,16 @@ window.WRAPPED_DATA = {
    "id": "2020-04",
    "anio": "2020",
    "puesto": 4,
-   "cancion": "Satania",
-   "artista": "Mägo de Oz",
+   "cancion": "Nana",
+   "artista": "Ankor",
    "reproducciones": 24
   },
   {
    "id": "2020-05",
    "anio": "2020",
    "puesto": 5,
-   "cancion": "Nana",
-   "artista": "Ankor",
+   "cancion": "Satania",
+   "artista": "Mägo de Oz",
    "reproducciones": 24
   },
   {
@@ -972,8 +972,8 @@ window.WRAPPED_DATA = {
    "id": "2020-07",
    "anio": "2020",
    "puesto": 7,
-   "cancion": "Hijo de la Luna",
-   "artista": "Stravaganzza",
+   "cancion": "Another World",
+   "artista": "Gojira",
    "reproducciones": 20
   },
   {
@@ -988,33 +988,33 @@ window.WRAPPED_DATA = {
    "id": "2020-09",
    "anio": "2020",
    "puesto": 9,
-   "cancion": "Another World",
-   "artista": "Gojira",
+   "cancion": "Hijo de la Luna",
+   "artista": "Stravaganzza",
    "reproducciones": 20
   },
   {
    "id": "2020-10",
    "anio": "2020",
    "puesto": 10,
-   "cancion": "Fathoms",
-   "artista": "Rest, Repose",
+   "cancion": "Danse Macabre",
+   "artista": "The Agonist",
    "reproducciones": 19
   },
   {
    "id": "2021-01",
    "anio": "2021",
    "puesto": 1,
-   "cancion": "Y seras canción - 2010",
-   "artista": "Mägo de Oz",
-   "reproducciones": 37
+   "cancion": "Señorita",
+   "artista": "Ankor",
+   "reproducciones": 33
   },
   {
    "id": "2021-02",
    "anio": "2021",
    "puesto": 2,
-   "cancion": "Señorita",
-   "artista": "Ankor",
-   "reproducciones": 37
+   "cancion": "Y seras canción - 2010",
+   "artista": "Mägo de Oz",
+   "reproducciones": 32
   },
   {
    "id": "2021-03",
@@ -1022,7 +1022,7 @@ window.WRAPPED_DATA = {
    "puesto": 3,
    "cancion": "Toxicity",
    "artista": "System Of A Down",
-   "reproducciones": 33
+   "reproducciones": 31
   },
   {
    "id": "2021-04",
@@ -1030,7 +1030,7 @@ window.WRAPPED_DATA = {
    "puesto": 4,
    "cancion": "Nana",
    "artista": "Ankor",
-   "reproducciones": 33
+   "reproducciones": 30
   },
   {
    "id": "2021-05",
@@ -1038,7 +1038,7 @@ window.WRAPPED_DATA = {
    "puesto": 5,
    "cancion": "Fathoms",
    "artista": "Rest, Repose",
-   "reproducciones": 30
+   "reproducciones": 28
   },
   {
    "id": "2021-06",
@@ -1046,39 +1046,39 @@ window.WRAPPED_DATA = {
    "puesto": 6,
    "cancion": "Bad Guy",
    "artista": "Ankor",
-   "reproducciones": 30
+   "reproducciones": 28
   },
   {
    "id": "2021-07",
    "anio": "2021",
    "puesto": 7,
-   "cancion": "Hunger",
-   "artista": "Amaranthe",
-   "reproducciones": 30
+   "cancion": "Courtesy Call",
+   "artista": "Thousand Foot Krutch",
+   "reproducciones": 28
   },
   {
    "id": "2021-08",
    "anio": "2021",
    "puesto": 8,
-   "cancion": "Huelo el Miedo",
-   "artista": "Warcry",
-   "reproducciones": 30
+   "cancion": "Hijo de la Luna",
+   "artista": "Stravaganzza",
+   "reproducciones": 27
   },
   {
    "id": "2021-09",
    "anio": "2021",
    "puesto": 9,
-   "cancion": "Courtesy Call",
-   "artista": "Thousand Foot Krutch",
-   "reproducciones": 29
+   "cancion": "Havana",
+   "artista": "Ankor",
+   "reproducciones": 26
   },
   {
    "id": "2021-10",
    "anio": "2021",
    "puesto": 10,
-   "cancion": "Endless Road",
-   "artista": "Ankor",
-   "reproducciones": 28
+   "cancion": "Huelo el Miedo",
+   "artista": "Warcry",
+   "reproducciones": 25
   },
   {
    "id": "2022-01",
@@ -1086,7 +1086,7 @@ window.WRAPPED_DATA = {
    "puesto": 1,
    "cancion": "Through the Wall of Light Pt. I",
    "artista": "Eternal Storm",
-   "reproducciones": 51
+   "reproducciones": 50
   },
   {
    "id": "2022-02",
@@ -1094,39 +1094,39 @@ window.WRAPPED_DATA = {
    "puesto": 2,
    "cancion": "Cry Baby (From \"Tokyo Revengers\")",
    "artista": "Tricker",
-   "reproducciones": 47
+   "reproducciones": 46
   },
   {
    "id": "2022-03",
    "anio": "2022",
    "puesto": 3,
-   "cancion": "Fuyu No Hanashi (From \"Given\")",
-   "artista": "Tricker",
-   "reproducciones": 36
-  },
-  {
-   "id": "2022-04",
-   "anio": "2022",
-   "puesto": 4,
    "cancion": "Learning to Fly",
    "artista": "Stratovarius",
    "reproducciones": 35
   },
   {
+   "id": "2022-04",
+   "anio": "2022",
+   "puesto": 4,
+   "cancion": "Through the Wall of Light Pt. II",
+   "artista": "Eternal Storm",
+   "reproducciones": 33
+  },
+  {
    "id": "2022-05",
    "anio": "2022",
    "puesto": 5,
-   "cancion": "White Rabbit",
-   "artista": "Egypt Central",
-   "reproducciones": 34
+   "cancion": "Fuyu No Hanashi (From \"Given\")",
+   "artista": "Tricker",
+   "reproducciones": 32
   },
   {
    "id": "2022-06",
    "anio": "2022",
    "puesto": 6,
-   "cancion": "Through the Wall of Light Pt. II",
-   "artista": "Eternal Storm",
-   "reproducciones": 33
+   "cancion": "White Rabbit",
+   "artista": "Egypt Central",
+   "reproducciones": 32
   },
   {
    "id": "2022-07",
@@ -1156,9 +1156,9 @@ window.WRAPPED_DATA = {
    "id": "2022-10",
    "anio": "2022",
    "puesto": 10,
-   "cancion": "Kizuato (From \"Given\")",
+   "cancion": "Yoru Ga Akeru - Spanish Cover",
    "artista": "Tricker",
-   "reproducciones": 30
+   "reproducciones": 29
   },
   {
    "id": "2023-01",
@@ -1496,7 +1496,7 @@ window.WRAPPED_DATA = {
    "puesto": 2,
    "album": "Train of Thought",
    "artista": "Dream Theater",
-   "horas": 58.2
+   "horas": 58.0
   },
   {
    "id": "Todos-03",
@@ -1504,7 +1504,7 @@ window.WRAPPED_DATA = {
    "puesto": 3,
    "album": "The way of all flesh",
    "artista": "Gojira",
-   "horas": 46.6
+   "horas": 46.4
   },
   {
    "id": "Todos-04",
@@ -1512,7 +1512,7 @@ window.WRAPPED_DATA = {
    "puesto": 4,
    "album": "Finisterra",
    "artista": "Mägo de Oz",
-   "horas": 45.3
+   "horas": 45.0
   },
   {
    "id": "Todos-05",
@@ -1520,7 +1520,7 @@ window.WRAPPED_DATA = {
    "puesto": 5,
    "album": "Eye of Providence",
    "artista": "The Agonist",
-   "horas": 41.0
+   "horas": 40.4
   },
   {
    "id": "2019-01",
@@ -1528,7 +1528,7 @@ window.WRAPPED_DATA = {
    "puesto": 1,
    "album": "Train of Thought",
    "artista": "Dream Theater",
-   "horas": 27.2
+   "horas": 27.0
   },
   {
    "id": "2019-02",
@@ -1536,7 +1536,7 @@ window.WRAPPED_DATA = {
    "puesto": 2,
    "album": "Muerte",
    "artista": "Canserbero",
-   "horas": 17.3
+   "horas": 17.2
   },
   {
    "id": "2019-03",
@@ -1544,7 +1544,7 @@ window.WRAPPED_DATA = {
    "puesto": 3,
    "album": "From Mars to Sirius",
    "artista": "Gojira",
-   "horas": 15.9
+   "horas": 15.6
   },
   {
    "id": "2019-04",
@@ -1552,7 +1552,7 @@ window.WRAPPED_DATA = {
    "puesto": 4,
    "album": "L'Enfant Sauvage",
    "artista": "Gojira",
-   "horas": 13.6
+   "horas": 13.4
   },
   {
    "id": "2019-05",
@@ -1560,7 +1560,7 @@ window.WRAPPED_DATA = {
    "puesto": 5,
    "album": "The way of all flesh",
    "artista": "Gojira",
-   "horas": 13.5
+   "horas": 13.3
   },
   {
    "id": "2020-01",
@@ -1608,7 +1608,7 @@ window.WRAPPED_DATA = {
    "puesto": 1,
    "album": "Beyond the Silence of These Years",
    "artista": "Ankor",
-   "horas": 10.4
+   "horas": 9.6
   },
   {
    "id": "2021-02",
@@ -1616,7 +1616,7 @@ window.WRAPPED_DATA = {
    "puesto": 2,
    "album": "Eye of Providence",
    "artista": "The Agonist",
-   "horas": 7.5
+   "horas": 7.0
   },
   {
    "id": "2021-03",
@@ -1624,7 +1624,7 @@ window.WRAPPED_DATA = {
    "puesto": 3,
    "album": "Finisterra",
    "artista": "Mägo de Oz",
-   "horas": 5.8
+   "horas": 5.6
   },
   {
    "id": "2021-04",
@@ -1646,16 +1646,16 @@ window.WRAPPED_DATA = {
    "id": "2022-01",
    "anio": "2022",
    "puesto": 1,
-   "album": "Beyond the Silence of These Years",
-   "artista": "Ankor",
-   "horas": 9.2
+   "album": "The Blackening",
+   "artista": "Machine Head",
+   "horas": 9.1
   },
   {
    "id": "2022-02",
    "anio": "2022",
    "puesto": 2,
-   "album": "The Blackening",
-   "artista": "Machine Head",
+   "album": "Beyond the Silence of These Years",
+   "artista": "Ankor",
    "horas": 9.1
   },
   {
@@ -1664,7 +1664,7 @@ window.WRAPPED_DATA = {
    "puesto": 3,
    "album": "Come the Tide",
    "artista": "Eternal Storm",
-   "horas": 9.0
+   "horas": 8.9
   },
   {
    "id": "2022-04",
@@ -1672,7 +1672,7 @@ window.WRAPPED_DATA = {
    "puesto": 4,
    "album": "Finisterra",
    "artista": "Mägo de Oz",
-   "horas": 7.6
+   "horas": 7.5
   },
   {
    "id": "2022-05",
@@ -1848,13 +1848,13 @@ window.WRAPPED_DATA = {
    "id": "Todos-00",
    "anio": "Todos",
    "hora": 0,
-   "horas": 156.6
+   "horas": 156.0
   },
   {
    "id": "Todos-01",
    "anio": "Todos",
    "hora": 1,
-   "horas": 96.7
+   "horas": 96.6
   },
   {
    "id": "Todos-02",
@@ -1878,13 +1878,13 @@ window.WRAPPED_DATA = {
    "id": "Todos-05",
    "anio": "Todos",
    "hora": 5,
-   "horas": 37.7
+   "horas": 37.6
   },
   {
    "id": "Todos-06",
    "anio": "Todos",
    "hora": 6,
-   "horas": 124.0
+   "horas": 123.8
   },
   {
    "id": "Todos-07",
@@ -1896,97 +1896,97 @@ window.WRAPPED_DATA = {
    "id": "Todos-08",
    "anio": "Todos",
    "hora": 8,
-   "horas": 228.0
+   "horas": 227.6
   },
   {
    "id": "Todos-09",
    "anio": "Todos",
    "hora": 9,
-   "horas": 156.7
+   "horas": 156.5
   },
   {
    "id": "Todos-10",
    "anio": "Todos",
    "hora": 10,
-   "horas": 173.2
+   "horas": 172.6
   },
   {
    "id": "Todos-11",
    "anio": "Todos",
    "hora": 11,
-   "horas": 165.3
+   "horas": 165.0
   },
   {
    "id": "Todos-12",
    "anio": "Todos",
    "hora": 12,
-   "horas": 180.7
+   "horas": 179.6
   },
   {
    "id": "Todos-13",
    "anio": "Todos",
    "hora": 13,
-   "horas": 178.7
+   "horas": 177.2
   },
   {
    "id": "Todos-14",
    "anio": "Todos",
    "hora": 14,
-   "horas": 161.7
+   "horas": 161.1
   },
   {
    "id": "Todos-15",
    "anio": "Todos",
    "hora": 15,
-   "horas": 204.2
+   "horas": 202.3
   },
   {
    "id": "Todos-16",
    "anio": "Todos",
    "hora": 16,
-   "horas": 268.6
+   "horas": 267.7
   },
   {
    "id": "Todos-17",
    "anio": "Todos",
    "hora": 17,
-   "horas": 236.1
+   "horas": 235.5
   },
   {
    "id": "Todos-18",
    "anio": "Todos",
    "hora": 18,
-   "horas": 233.5
+   "horas": 233.1
   },
   {
    "id": "Todos-19",
    "anio": "Todos",
    "hora": 19,
-   "horas": 219.2
+   "horas": 217.7
   },
   {
    "id": "Todos-20",
    "anio": "Todos",
    "hora": 20,
-   "horas": 197.9
+   "horas": 196.8
   },
   {
    "id": "Todos-21",
    "anio": "Todos",
    "hora": 21,
-   "horas": 251.3
+   "horas": 250.2
   },
   {
    "id": "Todos-22",
    "anio": "Todos",
    "hora": 22,
-   "horas": 225.1
+   "horas": 224.3
   },
   {
    "id": "Todos-23",
    "anio": "Todos",
    "hora": 23,
-   "horas": 178.0
+   "horas": 177.6
   },
   {
    "id": "2019-00",
@@ -2040,7 +2040,7 @@ window.WRAPPED_DATA = {
    "id": "2019-08",
    "anio": "2019",
    "hora": 8,
-   "horas": 19.9
+   "horas": 19.6
   },
   {
    "id": "2019-09",
@@ -2052,13 +2052,13 @@ window.WRAPPED_DATA = {
    "id": "2019-10",
    "anio": "2019",
    "hora": 10,
-   "horas": 19.3
+   "horas": 18.6
   },
   {
    "id": "2019-11",
    "anio": "2019",
    "hora": 11,
-   "horas": 22.5
+   "horas": 22.3
   },
   {
    "id": "2019-12",
@@ -2082,55 +2082,55 @@ window.WRAPPED_DATA = {
    "id": "2019-15",
    "anio": "2019",
    "hora": 15,
-   "horas": 30.9
+   "horas": 30.4
   },
   {
    "id": "2019-16",
    "anio": "2019",
    "hora": 16,
-   "horas": 70.6
+   "horas": 70.0
   },
   {
    "id": "2019-17",
    "anio": "2019",
    "hora": 17,
-   "horas": 50.5
+   "horas": 50.1
   },
   {
    "id": "2019-18",
    "anio": "2019",
    "hora": 18,
-   "horas": 31.0
+   "horas": 30.9
   },
   {
    "id": "2019-19",
    "anio": "2019",
    "hora": 19,
-   "horas": 37.6
+   "horas": 37.4
   },
   {
    "id": "2019-20",
    "anio": "2019",
    "hora": 20,
-   "horas": 30.9
+   "horas": 30.6
   },
   {
    "id": "2019-21",
    "anio": "2019",
    "hora": 21,
-   "horas": 59.2
+   "horas": 58.5
   },
   {
    "id": "2019-22",
    "anio": "2019",
    "hora": 22,
-   "horas": 45.9
+   "horas": 45.5
   },
   {
    "id": "2019-23",
    "anio": "2019",
    "hora": 23,
-   "horas": 18.8
+   "horas": 18.7
   },
   {
    "id": "2020-00",
@@ -2190,7 +2190,7 @@ window.WRAPPED_DATA = {
    "id": "2020-09",
    "anio": "2020",
    "hora": 9,
-   "horas": 13.6
+   "horas": 13.5
   },
   {
    "id": "2020-10",
@@ -2214,7 +2214,7 @@ window.WRAPPED_DATA = {
    "id": "2020-13",
    "anio": "2020",
    "hora": 13,
-   "horas": 21.2
+   "horas": 21.1
   },
   {
    "id": "2020-14",
@@ -2280,7 +2280,7 @@ window.WRAPPED_DATA = {
    "id": "2021-00",
    "anio": "2021",
    "hora": 0,
-   "horas": 28.4
+   "horas": 28.0
   },
   {
    "id": "2021-01",
@@ -2334,7 +2334,7 @@ window.WRAPPED_DATA = {
    "id": "2021-09",
    "anio": "2021",
    "hora": 9,
-   "horas": 9.5
+   "horas": 9.4
   },
   {
    "id": "2021-10",
@@ -2346,85 +2346,85 @@ window.WRAPPED_DATA = {
    "id": "2021-11",
    "anio": "2021",
    "hora": 11,
-   "horas": 18.5
+   "horas": 18.3
   },
   {
    "id": "2021-12",
    "anio": "2021",
    "hora": 12,
-   "horas": 21.0
+   "horas": 20.4
   },
   {
    "id": "2021-13",
    "anio": "2021",
    "hora": 13,
-   "horas": 17.6
+   "horas": 17.3
   },
   {
    "id": "2021-14",
    "anio": "2021",
    "hora": 14,
-   "horas": 18.4
+   "horas": 18.0
   },
   {
    "id": "2021-15",
    "anio": "2021",
    "hora": 15,
-   "horas": 28.1
+   "horas": 27.7
   },
   {
    "id": "2021-16",
    "anio": "2021",
    "hora": 16,
-   "horas": 27.7
+   "horas": 27.6
   },
   {
    "id": "2021-17",
    "anio": "2021",
    "hora": 17,
-   "horas": 30.8
+   "horas": 30.6
   },
   {
    "id": "2021-18",
    "anio": "2021",
    "hora": 18,
-   "horas": 27.6
+   "horas": 27.3
   },
   {
    "id": "2021-19",
    "anio": "2021",
    "hora": 19,
-   "horas": 27.0
+   "horas": 25.8
   },
   {
    "id": "2021-20",
    "anio": "2021",
    "hora": 20,
-   "horas": 23.3
+   "horas": 22.4
   },
   {
    "id": "2021-21",
    "anio": "2021",
    "hora": 21,
-   "horas": 21.9
+   "horas": 21.5
   },
   {
    "id": "2021-22",
    "anio": "2021",
    "hora": 22,
-   "horas": 20.6
+   "horas": 20.4
   },
   {
    "id": "2021-23",
    "anio": "2021",
    "hora": 23,
-   "horas": 24.2
+   "horas": 23.9
   },
   {
    "id": "2022-00",
    "anio": "2022",
    "hora": 0,
-   "horas": 34.7
+   "horas": 34.4
   },
   {
    "id": "2022-01",
@@ -2460,19 +2460,19 @@ window.WRAPPED_DATA = {
    "id": "2022-06",
    "anio": "2022",
    "hora": 6,
-   "horas": 10.6
+   "horas": 10.4
   },
   {
    "id": "2022-07",
    "anio": "2022",
    "hora": 7,
-   "horas": 8.3
+   "horas": 8.2
   },
   {
    "id": "2022-08",
    "anio": "2022",
    "hora": 8,
-   "horas": 29.1
+   "horas": 28.8
   },
   {
    "id": "2022-09",
@@ -2496,31 +2496,31 @@ window.WRAPPED_DATA = {
    "id": "2022-12",
    "anio": "2022",
    "hora": 12,
-   "horas": 29.9
+   "horas": 29.3
   },
   {
    "id": "2022-13",
    "anio": "2022",
    "hora": 13,
-   "horas": 34.1
+   "horas": 33.1
   },
   {
    "id": "2022-14",
    "anio": "2022",
    "hora": 14,
-   "horas": 19.3
+   "horas": 19.1
   },
   {
    "id": "2022-15",
    "anio": "2022",
    "hora": 15,
-   "horas": 26.7
+   "horas": 25.7
   },
   {
    "id": "2022-16",
    "anio": "2022",
    "hora": 16,
-   "horas": 29.8
+   "horas": 29.6
   },
   {
    "id": "2022-17",
@@ -2538,13 +2538,13 @@ window.WRAPPED_DATA = {
    "id": "2022-19",
    "anio": "2022",
    "hora": 19,
-   "horas": 24.0
+   "horas": 23.9
   },
   {
    "id": "2022-20",
    "anio": "2022",
    "hora": 20,
-   "horas": 16.8
+   "horas": 16.7
   },
   {
    "id": "2022-21",
@@ -2556,7 +2556,7 @@ window.WRAPPED_DATA = {
    "id": "2022-22",
    "anio": "2022",
    "hora": 22,
-   "horas": 26.9
+   "horas": 26.7
   },
   {
    "id": "2022-23",
