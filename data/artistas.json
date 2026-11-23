@@ -1,0 +1,632 @@
+[
+ {
+  "id": "Todos-01",
+  "anio": "Todos",
+  "puesto": 1,
+  "artista": "Dream Theater",
+  "horas": 227.8
+ },
+ {
+  "id": "Todos-02",
+  "anio": "Todos",
+  "puesto": 2,
+  "artista": "Avatar",
+  "horas": 195.0
+ },
+ {
+  "id": "Todos-03",
+  "anio": "Todos",
+  "puesto": 3,
+  "artista": "Gojira",
+  "horas": 189.6
+ },
+ {
+  "id": "Todos-04",
+  "anio": "Todos",
+  "puesto": 4,
+  "artista": "Mägo de Oz",
+  "horas": 176.9
+ },
+ {
+  "id": "Todos-05",
+  "anio": "Todos",
+  "puesto": 5,
+  "artista": "The Agonist",
+  "horas": 132.9
+ },
+ {
+  "id": "Todos-06",
+  "anio": "Todos",
+  "puesto": 6,
+  "artista": "Heaven Shall Burn",
+  "horas": 132.3
+ },
+ {
+  "id": "Todos-07",
+  "anio": "Todos",
+  "puesto": 7,
+  "artista": "TOOL",
+  "horas": 129.9
+ },
+ {
+  "id": "Todos-08",
+  "anio": "Todos",
+  "puesto": 8,
+  "artista": "Lamb of God",
+  "horas": 126.4
+ },
+ {
+  "id": "Todos-09",
+  "anio": "Todos",
+  "puesto": 9,
+  "artista": "Opeth",
+  "horas": 100.0
+ },
+ {
+  "id": "Todos-10",
+  "anio": "Todos",
+  "puesto": 10,
+  "artista": "Canserbero",
+  "horas": 96.2
+ },
+ {
+  "id": "2019-01",
+  "anio": "2019",
+  "puesto": 1,
+  "artista": "Gojira",
+  "horas": 67.8
+ },
+ {
+  "id": "2019-02",
+  "anio": "2019",
+  "puesto": 2,
+  "artista": "Dream Theater",
+  "horas": 66.1
+ },
+ {
+  "id": "2019-03",
+  "anio": "2019",
+  "puesto": 3,
+  "artista": "Avatar",
+  "horas": 51.1
+ },
+ {
+  "id": "2019-04",
+  "anio": "2019",
+  "puesto": 4,
+  "artista": "Mägo de Oz",
+  "horas": 47.1
+ },
+ {
+  "id": "2019-05",
+  "anio": "2019",
+  "puesto": 5,
+  "artista": "Canserbero",
+  "horas": 45.0
+ },
+ {
+  "id": "2019-06",
+  "anio": "2019",
+  "puesto": 6,
+  "artista": "Lamb of God",
+  "horas": 35.1
+ },
+ {
+  "id": "2019-07",
+  "anio": "2019",
+  "puesto": 7,
+  "artista": "The Agonist",
+  "horas": 32.8
+ },
+ {
+  "id": "2019-08",
+  "anio": "2019",
+  "puesto": 8,
+  "artista": "Heaven Shall Burn",
+  "horas": 25.5
+ },
+ {
+  "id": "2019-09",
+  "anio": "2019",
+  "puesto": 9,
+  "artista": "Amorphis",
+  "horas": 23.9
+ },
+ {
+  "id": "2019-10",
+  "anio": "2019",
+  "puesto": 10,
+  "artista": "Fleshgod Apocalypse",
+  "horas": 19.4
+ },
+ {
+  "id": "2020-01",
+  "anio": "2020",
+  "puesto": 1,
+  "artista": "Dream Theater",
+  "horas": 40.8
+ },
+ {
+  "id": "2020-02",
+  "anio": "2020",
+  "puesto": 2,
+  "artista": "Mägo de Oz",
+  "horas": 28.4
+ },
+ {
+  "id": "2020-03",
+  "anio": "2020",
+  "puesto": 3,
+  "artista": "Gojira",
+  "horas": 20.7
+ },
+ {
+  "id": "2020-04",
+  "anio": "2020",
+  "puesto": 4,
+  "artista": "Avatar",
+  "horas": 18.9
+ },
+ {
+  "id": "2020-05",
+  "anio": "2020",
+  "puesto": 5,
+  "artista": "The Agonist",
+  "horas": 15.5
+ },
+ {
+  "id": "2020-06",
+  "anio": "2020",
+  "puesto": 6,
+  "artista": "Heaven Shall Burn",
+  "horas": 12.7
+ },
+ {
+  "id": "2020-07",
+  "anio": "2020",
+  "puesto": 7,
+  "artista": "Ankor",
+  "horas": 12.0
+ },
+ {
+  "id": "2020-08",
+  "anio": "2020",
+  "puesto": 8,
+  "artista": "Angelus Apatrida",
+  "horas": 11.0
+ },
+ {
+  "id": "2020-09",
+  "anio": "2020",
+  "puesto": 9,
+  "artista": "Lamb of God",
+  "horas": 10.1
+ },
+ {
+  "id": "2020-10",
+  "anio": "2020",
+  "puesto": 10,
+  "artista": "Stormlord",
+  "horas": 9.9
+ },
+ {
+  "id": "2021-01",
+  "anio": "2021",
+  "puesto": 1,
+  "artista": "Mägo de Oz",
+  "horas": 25.6
+ },
+ {
+  "id": "2021-02",
+  "anio": "2021",
+  "puesto": 2,
+  "artista": "Dream Theater",
+  "horas": 25.3
+ },
+ {
+  "id": "2021-03",
+  "anio": "2021",
+  "puesto": 3,
+  "artista": "Gojira",
+  "horas": 21.5
+ },
+ {
+  "id": "2021-04",
+  "anio": "2021",
+  "puesto": 4,
+  "artista": "Avatar",
+  "horas": 20.4
+ },
+ {
+  "id": "2021-05",
+  "anio": "2021",
+  "puesto": 5,
+  "artista": "Ankor",
+  "horas": 19.3
+ },
+ {
+  "id": "2021-06",
+  "anio": "2021",
+  "puesto": 6,
+  "artista": "The Agonist",
+  "horas": 17.5
+ },
+ {
+  "id": "2021-07",
+  "anio": "2021",
+  "puesto": 7,
+  "artista": "Heaven Shall Burn",
+  "horas": 14.9
+ },
+ {
+  "id": "2021-08",
+  "anio": "2021",
+  "puesto": 8,
+  "artista": "Sirenia",
+  "horas": 14.7
+ },
+ {
+  "id": "2021-09",
+  "anio": "2021",
+  "puesto": 9,
+  "artista": "Lamb of God",
+  "horas": 13.0
+ },
+ {
+  "id": "2021-10",
+  "anio": "2021",
+  "puesto": 10,
+  "artista": "Soen",
+  "horas": 11.0
+ },
+ {
+  "id": "2022-01",
+  "anio": "2022",
+  "puesto": 1,
+  "artista": "Avatar",
+  "horas": 29.5
+ },
+ {
+  "id": "2022-02",
+  "anio": "2022",
+  "puesto": 2,
+  "artista": "Mägo de Oz",
+  "horas": 26.5
+ },
+ {
+  "id": "2022-03",
+  "anio": "2022",
+  "puesto": 3,
+  "artista": "Dream Theater",
+  "horas": 26.4
+ },
+ {
+  "id": "2022-04",
+  "anio": "2022",
+  "puesto": 4,
+  "artista": "Gojira",
+  "horas": 22.2
+ },
+ {
+  "id": "2022-05",
+  "anio": "2022",
+  "puesto": 5,
+  "artista": "Katatonia",
+  "horas": 20.6
+ },
+ {
+  "id": "2022-06",
+  "anio": "2022",
+  "puesto": 6,
+  "artista": "Heaven Shall Burn",
+  "horas": 18.7
+ },
+ {
+  "id": "2022-07",
+  "anio": "2022",
+  "puesto": 7,
+  "artista": "The Agonist",
+  "horas": 17.3
+ },
+ {
+  "id": "2022-08",
+  "anio": "2022",
+  "puesto": 8,
+  "artista": "Ankor",
+  "horas": 16.4
+ },
+ {
+  "id": "2022-09",
+  "anio": "2022",
+  "puesto": 9,
+  "artista": "Soen",
+  "horas": 15.0
+ },
+ {
+  "id": "2022-10",
+  "anio": "2022",
+  "puesto": 10,
+  "artista": "Lamb of God",
+  "horas": 14.9
+ },
+ {
+  "id": "2023-01",
+  "anio": "2023",
+  "puesto": 1,
+  "artista": "Haken",
+  "horas": 37.9
+ },
+ {
+  "id": "2023-02",
+  "anio": "2023",
+  "puesto": 2,
+  "artista": "Avatar",
+  "horas": 21.6
+ },
+ {
+  "id": "2023-03",
+  "anio": "2023",
+  "puesto": 3,
+  "artista": "Dream Theater",
+  "horas": 18.1
+ },
+ {
+  "id": "2023-04",
+  "anio": "2023",
+  "puesto": 4,
+  "artista": "Rishloo",
+  "horas": 17.7
+ },
+ {
+  "id": "2023-05",
+  "anio": "2023",
+  "puesto": 5,
+  "artista": "Heaven Shall Burn",
+  "horas": 17.6
+ },
+ {
+  "id": "2023-06",
+  "anio": "2023",
+  "puesto": 6,
+  "artista": "Soen",
+  "horas": 17.5
+ },
+ {
+  "id": "2023-07",
+  "anio": "2023",
+  "puesto": 7,
+  "artista": "Mägo de Oz",
+  "horas": 14.9
+ },
+ {
+  "id": "2023-08",
+  "anio": "2023",
+  "puesto": 8,
+  "artista": "Gojira",
+  "horas": 14.5
+ },
+ {
+  "id": "2023-09",
+  "anio": "2023",
+  "puesto": 9,
+  "artista": "The Agonist",
+  "horas": 13.4
+ },
+ {
+  "id": "2023-10",
+  "anio": "2023",
+  "puesto": 10,
+  "artista": "Lamb of God",
+  "horas": 13.2
+ },
+ {
+  "id": "2024-01",
+  "anio": "2024",
+  "puesto": 1,
+  "artista": "TOOL",
+  "horas": 79.5
+ },
+ {
+  "id": "2024-02",
+  "anio": "2024",
+  "puesto": 2,
+  "artista": "Opeth",
+  "horas": 29.4
+ },
+ {
+  "id": "2024-03",
+  "anio": "2024",
+  "puesto": 3,
+  "artista": "Rishloo",
+  "horas": 27.6
+ },
+ {
+  "id": "2024-04",
+  "anio": "2024",
+  "puesto": 4,
+  "artista": "Dark Tranquillity",
+  "horas": 25.9
+ },
+ {
+  "id": "2024-05",
+  "anio": "2024",
+  "puesto": 5,
+  "artista": "Avatar",
+  "horas": 23.0
+ },
+ {
+  "id": "2024-06",
+  "anio": "2024",
+  "puesto": 6,
+  "artista": "Dream Theater",
+  "horas": 21.3
+ },
+ {
+  "id": "2024-07",
+  "anio": "2024",
+  "puesto": 7,
+  "artista": "Novembre",
+  "horas": 21.0
+ },
+ {
+  "id": "2024-08",
+  "anio": "2024",
+  "puesto": 8,
+  "artista": "Soen",
+  "horas": 19.4
+ },
+ {
+  "id": "2024-09",
+  "anio": "2024",
+  "puesto": 9,
+  "artista": "Caligula's Horse",
+  "horas": 16.6
+ },
+ {
+  "id": "2024-10",
+  "anio": "2024",
+  "puesto": 10,
+  "artista": "Lamb of God",
+  "horas": 16.1
+ },
+ {
+  "id": "2025-01",
+  "anio": "2025",
+  "puesto": 1,
+  "artista": "TOOL",
+  "horas": 36.8
+ },
+ {
+  "id": "2025-02",
+  "anio": "2025",
+  "puesto": 2,
+  "artista": "Opeth",
+  "horas": 34.2
+ },
+ {
+  "id": "2025-03",
+  "anio": "2025",
+  "puesto": 3,
+  "artista": "Dark Tranquillity",
+  "horas": 25.0
+ },
+ {
+  "id": "2025-04",
+  "anio": "2025",
+  "puesto": 4,
+  "artista": "Dream Theater",
+  "horas": 19.2
+ },
+ {
+  "id": "2025-05",
+  "anio": "2025",
+  "puesto": 5,
+  "artista": "Avatar",
+  "horas": 18.3
+ },
+ {
+  "id": "2025-06",
+  "anio": "2025",
+  "puesto": 6,
+  "artista": "Heaven Shall Burn",
+  "horas": 15.7
+ },
+ {
+  "id": "2025-07",
+  "anio": "2025",
+  "puesto": 7,
+  "artista": "Novembre",
+  "horas": 15.3
+ },
+ {
+  "id": "2025-08",
+  "anio": "2025",
+  "puesto": 8,
+  "artista": "Be'lakor",
+  "horas": 15.2
+ },
+ {
+  "id": "2025-09",
+  "anio": "2025",
+  "puesto": 9,
+  "artista": "Soen",
+  "horas": 14.0
+ },
+ {
+  "id": "2025-10",
+  "anio": "2025",
+  "puesto": 10,
+  "artista": "Caligula's Horse",
+  "horas": 13.9
+ },
+ {
+  "id": "2026-01",
+  "anio": "2026",
+  "puesto": 1,
+  "artista": "Opeth",
+  "horas": 26.1
+ },
+ {
+  "id": "2026-02",
+  "anio": "2026",
+  "puesto": 2,
+  "artista": "Dark Tranquillity",
+  "horas": 16.3
+ },
+ {
+  "id": "2026-03",
+  "anio": "2026",
+  "puesto": 3,
+  "artista": "My Dying Bride",
+  "horas": 16.0
+ },
+ {
+  "id": "2026-04",
+  "anio": "2026",
+  "puesto": 4,
+  "artista": "Gojira",
+  "horas": 14.5
+ },
+ {
+  "id": "2026-05",
+  "anio": "2026",
+  "puesto": 5,
+  "artista": "TOOL",
+  "horas": 13.6
+ },
+ {
+  "id": "2026-06",
+  "anio": "2026",
+  "puesto": 6,
+  "artista": "Avatar",
+  "horas": 12.3
+ },
+ {
+  "id": "2026-07",
+  "anio": "2026",
+  "puesto": 7,
+  "artista": "Lamb of God",
+  "horas": 11.6
+ },
+ {
+  "id": "2026-08",
+  "anio": "2026",
+  "puesto": 8,
+  "artista": "Heaven Shall Burn",
+  "horas": 11.4
+ },
+ {
+  "id": "2026-09",
+  "anio": "2026",
+  "puesto": 9,
+  "artista": "Sirenia",
+  "horas": 10.8
+ },
+ {
+  "id": "2026-10",
+  "anio": "2026",
+  "puesto": 10,
+  "artista": "Dream Theater",
+  "horas": 10.5
+ }
+]
