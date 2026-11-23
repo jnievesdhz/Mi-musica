@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0e0e10">
+<meta name="color-scheme" content="dark">
+<title>Mi Wrapped de metal</title>
+<style>
+html, body { margin: 0; background: #0e0e10; }
+body { --font-anthropic-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; min-height: 100dvh; }
+.dash-skeleton { color: transparent !important; background: #1d1d21; border-radius: 6px; }
+
+/* Tema fijo oscuro: la página lo exige por identidad, no sigue el tema de la app. Un solo acento: rojo lirio araña. */
+#dash-root { --dash-gutter: 0; }
+.wr {
+  --bg: #0e0e10; --surface: #151518; --line: #26262b; --fg: #ecebe8; --muted: #9c9ba1; --dim: #5c5c63;
+  --bar: #34343a; --accent: #d9483b; --accent-soft: rgb(217 72 59 / .16);
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  container-type: inline-size;
+  background: var(--bg); color: var(--fg); font-family: var(--font-anthropic-sans);
+  padding: clamp(20px, 5cqi, 64px) clamp(16px, 5cqi, 72px) 48px;
+  display: flex; flex-direction: column; gap: clamp(48px, 8cqi, 96px);
+  -webkit-font-smoothing: antialiased;
+}
+.wr ::selection { background: var(--accent); color: var(--bg); }
+.wr h1, .wr h2, .wr h3, .wr p { margin: 0; }
+.wr .num { font-variant-numeric: tabular-nums; }
+.wr-muted { color: var(--muted); }
+
+/* Cabecera y periodo */
+.wr-top { display: flex; flex-direction: column; gap: 20px; }
+.wr-title { font-size: 15px; font-weight: 600; letter-spacing: -0.01em; color: var(--muted); }
+.wr-pills { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; scroll-snap-type: x proximity; }
+.wr-pills::-webkit-scrollbar { display: none; }
+.wr-pill {
+  flex: none; scroll-snap-align: start; font: inherit; font-size: 13px; font-weight: 500; font-variant-numeric: tabular-nums;
+  color: var(--muted); background-color: transparent; border: 1px solid var(--line); border-radius: 999px;
+  padding: 7px 14px; cursor: pointer; -webkit-tap-highlight-color: transparent;
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease, transform 160ms var(--ease-out);
+}
+.wr-pill:active { transform: scale(0.97); }
+.wr-pill:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.wr-pill.is-on { background-color: var(--fg); color: var(--bg); border-color: var(--fg); }
+@media (hover: hover) and (pointer: fine) { .wr-pill:not(.is-on):hover { color: var(--fg); border-color: var(--dim); } }
+
+/* Hero */
+.wr-hero { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: end; }
+@container (min-width: 760px) { .wr-hero { grid-template-columns: 1.35fr 1fr; gap: 56px; } }
+.wr-big { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+.wr-big .num { font-size: clamp(72px, 17cqi, 168px); font-weight: 600; letter-spacing: -0.055em; line-height: 0.9; }
+.wr-big .unit { font-size: clamp(18px, 2.4cqi, 24px); color: var(--muted); font-weight: 500; }
+.wr-lead { margin-top: 20px; font-size: clamp(16px, 1.9cqi, 19px); line-height: 1.55; color: var(--muted); max-width: 46ch; }
+.wr-lead b { color: var(--fg); font-weight: 600; }
+.wr-one { border-left: 2px solid var(--accent); padding-left: 20px; display: flex; flex-direction: column; gap: 22px; }
+.wr-label { font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+.wr-one .artist { font-size: clamp(30px, 5.2cqi, 52px); font-weight: 600; letter-spacing: -0.035em; line-height: 1.02; }
+.wr-one .song { font-size: clamp(19px, 2.4cqi, 24px); font-weight: 600; letter-spacing: -0.02em; line-height: 1.2; }
+.wr-one .by { font-size: 14px; color: var(--muted); margin-top: 4px; }
+
+/* Encabezados de sección */
+.wr-sec { display: flex; flex-direction: column; gap: 22px; }
+.wr-sec h2 { font-size: clamp(22px, 3cqi, 30px); font-weight: 600; letter-spacing: -0.03em; }
+.wr-sec .sub { font-size: 14px; color: var(--muted); margin-top: 6px; max-width: 60ch; }
+
+/* Géneros */
+.wr-strip { display: flex; height: 14px; gap: 3px; }
+.wr-strip span { border-radius: 3px; min-width: 3px; transition: flex-grow 420ms var(--ease-out); }
+.wr-legend { display: flex; flex-wrap: wrap; gap: 10px 28px; font-size: 14px; color: var(--muted); }
+.wr-legend .sw { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 8px; vertical-align: -1px; }
+.wr-legend b { color: var(--fg); font-weight: 600; }
+
+/* Gráficas */
+.wr-chart { position: relative; min-height: 240px; }
+.wr-chart svg { display: block; overflow: visible; }
+.wr-chart text, .wr-clock text { fill: var(--muted); font-size: 12px; font-family: var(--font-anthropic-sans); font-variant-numeric: tabular-nums; }
+.wr-chart rect.bar { cursor: pointer; transition: fill 200ms ease; }
+.wr-tip {
+  position: absolute; pointer-events: none; z-index: 2; background: var(--surface); border: 1px solid var(--line);
+  border-radius: 10px; padding: 8px 12px; font-size: 13px; white-space: nowrap; color: var(--fg);
+  box-shadow: 0 12px 32px rgb(0 0 0 / .45);
+}
+.wr-tip .t-sub { color: var(--muted); display: block; margin-top: 2px; }
+
+/* Artistas: podio + resto */
+.wr-podium { display: flex; flex-direction: column; }
+.wr-prow { display: grid; grid-template-columns: 56px 1fr auto; align-items: baseline; gap: 12px; padding: 18px 0; border-top: 1px solid var(--line); }
+.wr-prow .rk { font-size: clamp(28px, 4cqi, 40px); font-weight: 600; color: var(--accent); letter-spacing: -0.04em; }
+.wr-prow .nm { font-size: clamp(24px, 4.4cqi, 44px); font-weight: 600; letter-spacing: -0.035em; line-height: 1.05; overflow-wrap: anywhere; }
+.wr-prow .hr { font-size: 15px; color: var(--muted); white-space: nowrap; }
+.wr-rest { display: grid; grid-template-columns: 1fr; gap: 0 40px; margin-top: 8px; }
+@container (min-width: 640px) { .wr-rest { grid-template-columns: 1fr 1fr; } }
+.wr-rrow { display: grid; grid-template-columns: 32px 1fr auto; gap: 10px; align-items: baseline; padding: 11px 0; }
+.wr-rrow .rk { color: var(--dim); font-size: 14px; }
+.wr-rrow .nm { font-size: 17px; font-weight: 500; overflow-wrap: anywhere; }
+.wr-rrow .hr { font-size: 14px; color: var(--muted); white-space: nowrap; }
+
+/* Canciones */
+.wr-songs { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr; gap: 6px 40px; }
+@container (min-width: 760px) { .wr-songs { grid-template-columns: 1fr 1fr; grid-auto-flow: column; grid-template-rows: repeat(5, auto); } }
+.wr-song { display: grid; grid-template-columns: 44px 1fr auto; gap: 12px; align-items: center; padding: 12px 0; }
+.wr-song .rk { font-size: 22px; font-weight: 600; color: var(--dim); letter-spacing: -0.03em; }
+.wr-song:first-child .rk { color: var(--accent); }
+.wr-song .tt { font-size: 17px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.25; overflow-wrap: anywhere; }
+.wr-song .ar { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.wr-song .ct { font-size: 14px; color: var(--muted); white-space: nowrap; text-align: right; }
+.wr-song .ct b { color: var(--fg); font-weight: 600; font-size: 17px; }
+
+/* Álbumes + reloj */
+.wr-split { display: grid; grid-template-columns: 1fr; gap: 56px; }
+@container (min-width: 760px) { .wr-split { grid-template-columns: 1fr 1fr; align-items: start; } }
+.wr-albums { display: flex; flex-direction: column; }
+.wr-album { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: baseline; padding: 14px 0; border-top: 1px solid var(--line); }
+.wr-album:last-child { border-bottom: 1px solid var(--line); }
+.wr-album .tt { font-size: 18px; font-weight: 600; letter-spacing: -0.015em; overflow-wrap: anywhere; }
+.wr-album .ar { font-size: 14px; color: var(--muted); margin-top: 2px; }
+.wr-album .hr { font-size: 14px; color: var(--muted); white-space: nowrap; }
+.wr-clock { position: relative; aspect-ratio: 1; max-width: 380px; width: 100%; margin: 0 auto; }
+.wr-clock-c { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; pointer-events: none; text-align: center; }
+.wr-clock-c b { font-size: clamp(30px, 6cqi, 40px); font-weight: 600; letter-spacing: -0.04em; }
+.wr-clock-c span { font-size: 13px; color: var(--muted); }
+.wr-clock path.arc { transition: fill 200ms ease; }
+
+/* Pie */
+.wr details { font-size: 14px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 20px; }
+.wr summary { cursor: pointer; color: var(--fg); font-weight: 500; }
+.wr details p { margin-top: 12px; max-width: 70ch; line-height: 1.6; }
+.wr-err { color: var(--muted); font-size: 14px; }
+
+/* Movimiento: solo opacidad y transform, salidas rápidas, sin rebotes */
+@media (prefers-reduced-motion: no-preference) {
+  .wr-swap { animation: wr-swap 260ms var(--ease-out); }
+  .wr-enter { animation: wr-rise 360ms var(--ease-out) both; animation-delay: calc(var(--i, 0) * 34ms); }
+  .wr-grow { transform-box: fill-box; transform-origin: 50% 100%; animation: wr-grow 520ms var(--ease-out) both; animation-delay: calc(var(--i, 0) * 40ms); }
+  .wr-fade { animation: wr-fade 320ms var(--ease-out) both; animation-delay: calc(var(--i, 0) * 14ms); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wr-swap, .wr-enter, .wr-fade { animation: wr-fade 160ms ease both; }
+}
+@keyframes wr-swap { from { opacity: 0; filter: blur(3px); transform: translateY(4px); } }
+@keyframes wr-rise { from { opacity: 0; transform: translateY(8px); } }
+@keyframes wr-grow { from { opacity: 0; transform: scaleY(0.08); } }
+@keyframes wr-fade { from { opacity: 0; } }
+
+</style>
+</head>
+<body>
+<div class="wr" lang="es">
+  <div class="wr-top" id="titulo">
+    <h1 class="wr-title">Mi Wrapped de metal</h1>
+    <div class="wr-pills" id="filtro-anio" role="group" aria-label="Periodo">
+      <button type="button" class="wr-pill is-on" data-year="Todos" aria-pressed="true">Todos los años</button>
+      <button type="button" class="wr-pill" data-year="2019" aria-pressed="false">2019</button>
+      <button type="button" class="wr-pill" data-year="2020" aria-pressed="false">2020</button>
+      <button type="button" class="wr-pill" data-year="2021" aria-pressed="false">2021</button>
+      <button type="button" class="wr-pill" data-year="2022" aria-pressed="false">2022</button>
+      <button type="button" class="wr-pill" data-year="2023" aria-pressed="false">2023</button>
+      <button type="button" class="wr-pill" data-year="2024" aria-pressed="false">2024</button>
+      <button type="button" class="wr-pill" data-year="2025" aria-pressed="false">2025</button>
+      <button type="button" class="wr-pill" data-year="2026" aria-pressed="false">2026</button>
+    </div>
+  </div>
+
+  <section class="wr-hero" id="resumen">
+    <div>
+      <div class="wr-big"><span class="num dash-skeleton" data-draw="kpi_horas">—</span><span class="unit">horas</span></div>
+      <p class="wr-lead" id="resumen-frase">De tu música <span data-draw="periodo" class="dash-skeleton">—</span>. Sonaron <b class="num dash-skeleton" data-draw="kpi_artistas">—</b> artistas y <b class="num dash-skeleton" data-draw="kpi_canciones">—</b> canciones distintas, repartidas en <b class="num dash-skeleton" data-draw="kpi_dias">—</b> días.</p>
+    </div>
+    <div class="wr-one" id="numero-uno">
+      <div>
+        <p class="wr-label">Tu número uno</p>
+        <p class="artist dash-skeleton" data-draw="art_top">—</p>
+      </div>
+      <div>
+        <p class="wr-label">La canción que más repetiste</p>
+        <p class="song dash-skeleton" data-draw="can_top">—</p>
+        <p class="by">de <span class="dash-skeleton" data-draw="can_top_art">—</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wr-sec" id="generos">
+    <div>
+      <h2>Lo que más pesa</h2>
+      <p class="sub">Horas por tipo de música en el periodo elegido.</p>
+    </div>
+    <div data-draw="generos" data-source="resumen" style="min-height:52px"></div>
+  </section>
+
+  <section class="wr-sec" id="por-anio">
+    <div>
+      <h2>Año por año</h2>
+      <p class="sub">Toca una barra para abrir ese año. 2026 llega hasta el 18 de noviembre.</p>
+    </div>
+    <div class="wr-chart" data-draw="anios" data-source="resumen"></div>
+  </section>
+
+  <section class="wr-sec" id="top-artistas">
+    <div>
+      <h2>Tus artistas</h2>
+      <p class="sub">Los diez con más horas.</p>
+    </div>
+    <div data-draw="artistas_list" data-source="artistas" style="min-height:420px"></div>
+  </section>
+
+  <section class="wr-sec" id="top-canciones">
+    <div>
+      <h2>Las que más sonaron</h2>
+      <p class="sub">Reproducciones de 30 segundos o más.</p>
+    </div>
+    <ol class="wr-songs" data-draw="canciones_list" data-source="canciones"></ol>
+  </section>
+
+  <section class="wr-split" id="mas">
+    <div class="wr-sec" id="top-albumes">
+      <div>
+        <h2>Discos de cabecera</h2>
+        <p class="sub">Los cinco con más horas.</p>
+      </div>
+      <div class="wr-albums" data-draw="albumes_list" data-source="albumes"></div>
+    </div>
+    <div class="wr-sec" id="hora-dia">
+      <div>
+        <h2>Tu reloj</h2>
+        <p class="sub">Horas escuchadas en cada hora del día, en hora de Bogotá.</p>
+      </div>
+      <div class="wr-clock" data-draw="reloj" data-source="horas_dia"></div>
+    </div>
+  </section>
+
+  <details id="metodo">
+    <summary>Qué cuenta como tu música</summary>
+    <p>La cuenta de Spotify es compartida, así que aquí solo entra lo tuyo: metal, rock pesado afín (Three Days Grace, Fit For Rivals, Breaking Benjamin y similares), Canserbero y tu electrónica (Infected Mushroom, Zedd, Eiffel 65 y ZEXSING).</p>
+    <p>"Solo" de Overdry y "Pisces" de Jinjer no se cuentan porque las escuchan los dos. El historial va de enero de 2019 al 18 de noviembre de 2026.</p>
+  </details>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+<script src="data/wrapped-data.js"></script>
+<script>
+// Versión independiente: reemplaza el entorno de Claude con datos incluidos en la página.
+window.dash = (() => {
+  const DATA = window.WRAPPED_DATA;
+  const fns = {};
+  const run = (name) => document.querySelectorAll(`[data-draw="${name}"]`).forEach((el) => { try { fns[name](el); } catch (e) { console.error(name, e); } });
+  let w = 0, t;
+  new ResizeObserver((entries) => {
+    const nw = Math.round(entries[0].contentRect.width);
+    if (nw === w) return; w = nw;
+    clearTimeout(t); t = setTimeout(() => Object.keys(fns).forEach(run), 120);
+  }).observe(document.documentElement);
+  return {
+    data: (id) => ({ status: DATA[id] ? 'ok' : 'missing', data: DATA[id] || [] }),
+    draw(name, fn) { if (fn) fns[name] = fn; if (fns[name]) run(name); },
+    colors: ['#d9483b']
+  };
+})();
+</script>
+<script>
+window.WR = {
+  year: 'Todos',
+  fint: (v) => Math.round(+v).toLocaleString('es-CO'),
+  pe: (s) => String(s).replace(/%/g, '%25').replace(/&/g, '%26').replace(/=/g, '%3D'),
+  rows(id) { const d = dash.data(id); return d.status === 'ok' ? d.data.filter((r) => String(r.anio) === WR.year) : null; },
+  failed(id) { return dash.data(id).status === 'error'; },
+  mark(el, src, field, id) { el.setAttribute('data-source', src); el.setAttribute('data-field', field); el.setAttribute('data-where', 'id=' + WR.pe(id)); },
+  swap(el, text) {
+    el.classList.remove('dash-skeleton');
+    if (el.dataset.v === text) return;
+    el.textContent = text; el.dataset.v = text;
+    el.classList.remove('wr-swap'); void el.offsetWidth; el.classList.add('wr-swap');
+  },
+  draws: ['periodo','kpi_horas','kpi_artistas','kpi_canciones','kpi_dias','art_top','can_top','can_top_art','generos','anios','artistas_list','canciones_list','albumes_list','reloj'],
+  setYear(y) {
+    WR.year = y;
+    document.querySelectorAll('.wr-pill').forEach((b) => {
+      const on = b.dataset.year === y;
+      b.classList.toggle('is-on', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    WR.draws.forEach((n) => dash.draw(n));
+  }
+};
+document.querySelectorAll('.wr-pill').forEach((b) => b.addEventListener('click', () => WR.setYear(b.dataset.year)));
+</script>
+<script>
+// Hero: cifras y nombres del resumen
+dash.draw('periodo', (el) => WR.swap(el, WR.year === 'Todos' ? 'desde 2019' : 'en ' + WR.year));
+
+function resumenCell(name, field, fmt) {
+  dash.draw(name, (el) => {
+    const r = WR.rows('resumen');
+    el.setAttribute('data-source', 'resumen');
+    el.setAttribute('data-field', field);
+    el.setAttribute('data-where', 'anio=' + WR.pe(WR.year));
+    if (r && r.length) WR.swap(el, fmt(r[0][field]));
+    else if (WR.failed('resumen')) { el.classList.remove('dash-skeleton'); el.textContent = 'sin datos'; }
+  });
+}
+resumenCell('kpi_horas', 'horas', WR.fint);
+resumenCell('kpi_artistas', 'artistas', WR.fint);
+resumenCell('kpi_canciones', 'canciones', WR.fint);
+resumenCell('kpi_dias', 'dias', WR.fint);
+resumenCell('art_top', 'artista_top', String);
+resumenCell('can_top', 'cancion_top', String);
+resumenCell('can_top_art', 'cancion_top_artista', String);
+</script>
+<script>
+// Géneros: el metal lleva el acento, el resto en grises
+dash.draw('generos', (el) => {
+  const r = WR.rows('resumen');
+  if (!r || !r.length) { el.replaceChildren(); if (WR.failed('resumen')) { const p = document.createElement('p'); p.className = 'wr-err'; p.textContent = 'No se pudieron cargar los datos.'; el.append(p); } return; }
+  const row = r[0];
+  const gens = [['Metal', 'horas_metal', 'var(--accent)'], ['Rock pesado', 'horas_rock', '#8a8990'], ['Rap', 'horas_rap', '#5f5f66'], ['Electrónica', 'horas_electronica', '#404046']];
+  let strip = el.querySelector('.wr-strip'), leg = el.querySelector('.wr-legend');
+  if (!strip) {
+    el.replaceChildren();
+    strip = document.createElement('div'); strip.className = 'wr-strip';
+    strip.setAttribute('role', 'img'); strip.setAttribute('aria-label', 'Reparto de horas por género');
+    gens.forEach(([, , c]) => { const s = document.createElement('span'); s.style.background = c; strip.append(s); });
+    leg = document.createElement('div'); leg.className = 'wr-legend';
+    gens.forEach(([name, , c]) => {
+      const it = document.createElement('span');
+      const sw = document.createElement('span'); sw.className = 'sw'; sw.style.background = c;
+      const v = document.createElement('b'); v.className = 'num';
+      it.append(sw, name + ' ', v, ' h');
+      leg.append(it);
+    });
+    el.append(strip, leg);
+  }
+  const segs = strip.querySelectorAll('span'), vals = leg.querySelectorAll('b');
+  gens.forEach(([, f], i) => {
+    segs[i].style.flexGrow = Math.max(+row[f] || 0, 0.0001);
+    vals[i].setAttribute('data-source', 'resumen'); vals[i].setAttribute('data-field', f); vals[i].setAttribute('data-where', 'anio=' + WR.pe(WR.year));
+    vals[i].textContent = WR.fint(row[f]);
+  });
+});
+</script>
+<script>
+// Año por año: barras grises, el año elegido (o el mejor año) en rojo
+dash.draw('anios', (el) => {
+  const d = dash.data('resumen');
+  if (d.status !== 'ok') { el.replaceChildren(); if (d.status === 'error') { const p = document.createElement('p'); p.className = 'wr-err'; p.textContent = 'No se pudieron cargar los datos.'; el.append(p); } return; }
+  const data = d.data.filter((r) => r.anio !== 'Todos');
+  const best = d3.max(data, (r) => +r.horas);
+  const first = !el.querySelector('svg');
+  el.replaceChildren();
+  const W = Math.max(280, el.clientWidth), H = 240, m = { t: 22, r: 0, b: 26, l: 0 };
+  const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`)
+    .attr('role', 'img').attr('aria-label', 'Horas de tu música por año, de 2019 a 2026');
+  const x = d3.scaleBand().domain(data.map((r) => String(r.anio))).range([m.l, W - m.r]).padding(0.28);
+  const y = d3.scaleLinear().domain([0, best * 1.08]).range([H - m.b, m.t]);
+  const tip = d3.select(el).append('div').attr('class', 'wr-tip').style('display', 'none');
+  const color = (r) => WR.year === 'Todos' ? (+r.horas === best ? 'var(--accent)' : '#4a4a51') : (String(r.anio) === WR.year ? 'var(--accent)' : 'var(--bar)');
+  const g = svg.selectAll('g.b').data(data).join('g').attr('class', 'b');
+  g.append('rect').attr('class', (r, i) => 'bar' + (first ? ' wr-grow' : ''))
+    .attr('style', (r, i) => `--i:${i};fill:${color(r)}`)
+    .attr('x', (r) => x(String(r.anio))).attr('width', x.bandwidth())
+    .attr('y', (r) => y(+r.horas)).attr('height', (r) => y(0) - y(+r.horas)).attr('rx', 3)
+    .on('pointermove', (ev, r) => {
+      const [px, py] = d3.pointer(ev, el);
+      tip.style('display', null).selectAll('*').remove();
+      tip.append('b').text(`${r.anio}: ${WR.fint(r.horas)} h`);
+      tip.append('span').attr('class', 't-sub').text('Top: ' + r.artista_top);
+      const tw = tip.node().offsetWidth;
+      tip.style('left', Math.max(0, Math.min(px + 12, el.clientWidth - tw)) + 'px').style('top', Math.max(py - 58, 0) + 'px');
+    })
+    .on('pointerleave', () => tip.style('display', 'none'))
+    .on('click', (ev, r) => WR.setYear(WR.year === String(r.anio) ? 'Todos' : String(r.anio)));
+  g.append('text').attr('x', (r) => x(String(r.anio)) + x.bandwidth() / 2).attr('y', (r) => y(+r.horas) - 7)
+    .attr('text-anchor', 'middle').style('fill', (r) => color(r) === 'var(--accent)' ? 'var(--fg)' : 'var(--muted)')
+    .text((r) => WR.fint(r.horas));
+  g.append('text').attr('x', (r) => x(String(r.anio)) + x.bandwidth() / 2).attr('y', H - 6).attr('text-anchor', 'middle').text((r) => r.anio);
+});
+</script>
+<script>
+// Artistas: podio de tres y el resto en dos columnas
+dash.draw('artistas_list', (el) => {
+  el.replaceChildren();
+  const rows = WR.rows('artistas');
+  if (!rows) { if (WR.failed('artistas')) { const p = document.createElement('p'); p.className = 'wr-err'; p.textContent = 'No se pudieron cargar los datos.'; el.append(p); } return; }
+  rows.sort((a, b) => a.puesto - b.puesto);
+  const pod = document.createElement('div'); pod.className = 'wr-podium';
+  const rest = document.createElement('div'); rest.className = 'wr-rest';
+  rows.forEach((r, i) => {
+    const big = i < 3;
+    const row = document.createElement('div'); row.className = (big ? 'wr-prow' : 'wr-rrow') + ' wr-enter'; row.style.setProperty('--i', i);
+    const rk = document.createElement('span'); rk.className = 'rk num'; rk.textContent = r.puesto;
+    const nm = document.createElement('span'); nm.className = 'nm'; nm.textContent = r.artista; WR.mark(nm, 'artistas', 'artista', r.id);
+    const hr = document.createElement('span'); hr.className = 'hr';
+    const hv = document.createElement('span'); hv.className = 'num'; hv.textContent = WR.fint(r.horas); WR.mark(hv, 'artistas', 'horas', r.id);
+    hr.append(hv, ' h');
+    row.append(rk, nm, hr);
+    (big ? pod : rest).append(row);
+  });
+  el.append(pod, rest);
+});
+
+// Canciones: dos columnas de cinco
+dash.draw('canciones_list', (el) => {
+  el.replaceChildren();
+  const rows = WR.rows('canciones');
+  if (!rows) { if (WR.failed('canciones')) { const li = document.createElement('li'); li.className = 'wr-err'; li.textContent = 'No se pudieron cargar los datos.'; el.append(li); } return; }
+  rows.sort((a, b) => a.puesto - b.puesto).forEach((r, i) => {
+    const li = document.createElement('li'); li.className = 'wr-song wr-enter'; li.style.setProperty('--i', i);
+    const rk = document.createElement('span'); rk.className = 'rk num'; rk.textContent = r.puesto;
+    const mid = document.createElement('div');
+    const tt = document.createElement('div'); tt.className = 'tt'; tt.textContent = r.cancion; WR.mark(tt, 'canciones', 'cancion', r.id);
+    const ar = document.createElement('div'); ar.className = 'ar'; ar.textContent = r.artista; WR.mark(ar, 'canciones', 'artista', r.id);
+    mid.append(tt, ar);
+    const ct = document.createElement('span'); ct.className = 'ct';
+    const cv = document.createElement('b'); cv.className = 'num'; cv.textContent = WR.fint(r.reproducciones); WR.mark(cv, 'canciones', 'reproducciones', r.id);
+    ct.append(cv, ' veces');
+    li.append(rk, mid, ct);
+    el.append(li);
+  });
+});
+
+// Álbumes
+dash.draw('albumes_list', (el) => {
+  el.replaceChildren();
+  const rows = WR.rows('albumes');
+  if (!rows) { if (WR.failed('albumes')) { const p = document.createElement('p'); p.className = 'wr-err'; p.textContent = 'No se pudieron cargar los datos.'; el.append(p); } return; }
+  rows.sort((a, b) => a.puesto - b.puesto).forEach((r, i) => {
+    const row = document.createElement('div'); row.className = 'wr-album wr-enter'; row.style.setProperty('--i', i);
+    const mid = document.createElement('div');
+    const tt = document.createElement('div'); tt.className = 'tt'; tt.textContent = r.album; WR.mark(tt, 'albumes', 'album', r.id);
+    const ar = document.createElement('div'); ar.className = 'ar'; ar.textContent = r.artista; WR.mark(ar, 'albumes', 'artista', r.id);
+    mid.append(tt, ar);
+    const hr = document.createElement('span'); hr.className = 'hr';
+    const hv = document.createElement('span'); hv.className = 'num'; hv.textContent = WR.fint(r.horas); WR.mark(hv, 'albumes', 'horas', r.id);
+    hr.append(hv, ' h');
+    row.append(mid, hr);
+    el.append(row);
+  });
+});
+</script>
+<script>
+// Reloj de 24 horas: medianoche arriba, la hora fuerte en rojo
+dash.draw('reloj', (el) => {
+  el.replaceChildren();
+  const data = WR.rows('horas_dia');
+  if (!data) { if (WR.failed('horas_dia')) { const p = document.createElement('p'); p.className = 'wr-err'; p.textContent = 'No se pudieron cargar los datos.'; el.append(p); } return; }
+  data.sort((a, b) => a.hora - b.hora);
+  const S = Math.min(380, Math.max(260, el.clientWidth)), c = S / 2;
+  const r0 = S * 0.2, r1 = S * 0.4;
+  const max = d3.max(data, (r) => +r.horas) || 1;
+  const peak = data.find((r) => +r.horas === max);
+  const rs = d3.scaleSqrt().domain([0, max]).range([r0 + 3, r1]);
+  const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${S} ${S}`)
+    .attr('role', 'img').attr('aria-label', 'Horas escuchadas según la hora del día, en forma de reloj');
+  const g = svg.append('g').attr('transform', `translate(${c},${c})`);
+  const step = (2 * Math.PI) / 24;
+  const arc = d3.arc().innerRadius(r0).outerRadius((r) => rs(+r.horas))
+    .startAngle((r) => r.hora * step).endAngle((r) => (r.hora + 1) * step).padAngle(0.035).cornerRadius(2);
+  g.append('circle').attr('r', r0 - 6).style('fill', 'none').style('stroke', 'var(--line)');
+  const tip = d3.select(el).append('div').attr('class', 'wr-tip').style('display', 'none');
+  g.selectAll('path.arc').data(data).join('path').attr('class', 'arc wr-fade').attr('d', arc)
+    .attr('style', (r, i) => `--i:${i};fill:${r === peak ? 'var(--accent)' : (+r.horas >= max * 0.6 ? '#6a6970' : 'var(--bar)')}`)
+    .on('pointermove', (ev, r) => {
+      const [px, py] = d3.pointer(ev, el);
+      tip.style('display', null).selectAll('*').remove();
+      tip.append('b').text(`${r.hora}:00 a ${r.hora}:59`);
+      tip.append('span').attr('class', 't-sub').text(`${WR.fint(r.horas)} h`);
+      const tw = tip.node().offsetWidth;
+      tip.style('left', Math.max(0, Math.min(px + 12, el.clientWidth - tw)) + 'px').style('top', Math.max(py - 56, 0) + 'px');
+    })
+    .on('pointerleave', () => tip.style('display', 'none'));
+  [0, 6, 12, 18].forEach((h) => {
+    const a = h * step - Math.PI / 2, rr = r1 + 16;
+    g.append('text').attr('x', Math.cos(a) * rr).attr('y', Math.sin(a) * rr + 4).attr('text-anchor', 'middle').text(h + ' h');
+  });
+  const ctr = document.createElement('div'); ctr.className = 'wr-clock-c';
+  const b = document.createElement('b'); b.className = 'num'; b.textContent = peak.hora + ' h'; WR.mark(b, 'horas_dia', 'hora', peak.id);
+  const s = document.createElement('span'); s.textContent = 'tu hora fuerte';
+  ctr.append(b, s);
+  el.append(ctr);
+});
+</script>
+</body>
+</html>

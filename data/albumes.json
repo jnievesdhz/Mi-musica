@@ -1,0 +1,362 @@
+[
+ {
+  "id": "Todos-01",
+  "anio": "Todos",
+  "puesto": 1,
+  "album": "Fear Inoculum",
+  "artista": "TOOL",
+  "horas": 60.6
+ },
+ {
+  "id": "Todos-02",
+  "anio": "Todos",
+  "puesto": 2,
+  "album": "Train of Thought",
+  "artista": "Dream Theater",
+  "horas": 58.2
+ },
+ {
+  "id": "Todos-03",
+  "anio": "Todos",
+  "puesto": 3,
+  "album": "The way of all flesh",
+  "artista": "Gojira",
+  "horas": 46.6
+ },
+ {
+  "id": "Todos-04",
+  "anio": "Todos",
+  "puesto": 4,
+  "album": "Finisterra",
+  "artista": "Mägo de Oz",
+  "horas": 45.3
+ },
+ {
+  "id": "Todos-05",
+  "anio": "Todos",
+  "puesto": 5,
+  "album": "Eye of Providence",
+  "artista": "The Agonist",
+  "horas": 41.0
+ },
+ {
+  "id": "2019-01",
+  "anio": "2019",
+  "puesto": 1,
+  "album": "Train of Thought",
+  "artista": "Dream Theater",
+  "horas": 27.2
+ },
+ {
+  "id": "2019-02",
+  "anio": "2019",
+  "puesto": 2,
+  "album": "Muerte",
+  "artista": "Canserbero",
+  "horas": 17.3
+ },
+ {
+  "id": "2019-03",
+  "anio": "2019",
+  "puesto": 3,
+  "album": "From Mars to Sirius",
+  "artista": "Gojira",
+  "horas": 15.9
+ },
+ {
+  "id": "2019-04",
+  "anio": "2019",
+  "puesto": 4,
+  "album": "L'Enfant Sauvage",
+  "artista": "Gojira",
+  "horas": 13.6
+ },
+ {
+  "id": "2019-05",
+  "anio": "2019",
+  "puesto": 5,
+  "album": "The way of all flesh",
+  "artista": "Gojira",
+  "horas": 13.5
+ },
+ {
+  "id": "2020-01",
+  "anio": "2020",
+  "puesto": 1,
+  "album": "Train of Thought",
+  "artista": "Dream Theater",
+  "horas": 9.3
+ },
+ {
+  "id": "2020-02",
+  "anio": "2020",
+  "puesto": 2,
+  "album": "The Blackening",
+  "artista": "Machine Head",
+  "horas": 8.5
+ },
+ {
+  "id": "2020-03",
+  "anio": "2020",
+  "puesto": 3,
+  "album": "Finisterra",
+  "artista": "Mägo de Oz",
+  "horas": 7.1
+ },
+ {
+  "id": "2020-04",
+  "anio": "2020",
+  "puesto": 4,
+  "album": "The way of all flesh",
+  "artista": "Gojira",
+  "horas": 6.8
+ },
+ {
+  "id": "2020-05",
+  "anio": "2020",
+  "puesto": 5,
+  "album": "Eye of Providence",
+  "artista": "The Agonist",
+  "horas": 5.7
+ },
+ {
+  "id": "2021-01",
+  "anio": "2021",
+  "puesto": 1,
+  "album": "Beyond the Silence of These Years",
+  "artista": "Ankor",
+  "horas": 10.4
+ },
+ {
+  "id": "2021-02",
+  "anio": "2021",
+  "puesto": 2,
+  "album": "Eye of Providence",
+  "artista": "The Agonist",
+  "horas": 7.5
+ },
+ {
+  "id": "2021-03",
+  "anio": "2021",
+  "puesto": 3,
+  "album": "Finisterra",
+  "artista": "Mägo de Oz",
+  "horas": 5.8
+ },
+ {
+  "id": "2021-04",
+  "anio": "2021",
+  "puesto": 4,
+  "album": "The way of all flesh",
+  "artista": "Gojira",
+  "horas": 5.3
+ },
+ {
+  "id": "2021-05",
+  "anio": "2021",
+  "puesto": 5,
+  "album": "Train of Thought",
+  "artista": "Dream Theater",
+  "horas": 5.2
+ },
+ {
+  "id": "2022-01",
+  "anio": "2022",
+  "puesto": 1,
+  "album": "Beyond the Silence of These Years",
+  "artista": "Ankor",
+  "horas": 9.2
+ },
+ {
+  "id": "2022-02",
+  "anio": "2022",
+  "puesto": 2,
+  "album": "The Blackening",
+  "artista": "Machine Head",
+  "horas": 9.1
+ },
+ {
+  "id": "2022-03",
+  "anio": "2022",
+  "puesto": 3,
+  "album": "Come the Tide",
+  "artista": "Eternal Storm",
+  "horas": 9.0
+ },
+ {
+  "id": "2022-04",
+  "anio": "2022",
+  "puesto": 4,
+  "album": "Finisterra",
+  "artista": "Mägo de Oz",
+  "horas": 7.6
+ },
+ {
+  "id": "2022-05",
+  "anio": "2022",
+  "puesto": 5,
+  "album": "The Fall of Hearts",
+  "artista": "Katatonia",
+  "horas": 7.4
+ },
+ {
+  "id": "2023-01",
+  "anio": "2023",
+  "puesto": 1,
+  "album": "Vector",
+  "artista": "Haken",
+  "horas": 17.3
+ },
+ {
+  "id": "2023-02",
+  "anio": "2023",
+  "puesto": 2,
+  "album": "Affinity",
+  "artista": "Haken",
+  "horas": 16.7
+ },
+ {
+  "id": "2023-03",
+  "anio": "2023",
+  "puesto": 3,
+  "album": "Arktis.",
+  "artista": "Ihsahn",
+  "horas": 11.6
+ },
+ {
+  "id": "2023-04",
+  "anio": "2023",
+  "puesto": 4,
+  "album": "Feathergun",
+  "artista": "Rishloo",
+  "horas": 11.1
+ },
+ {
+  "id": "2023-05",
+  "anio": "2023",
+  "puesto": 5,
+  "album": "Shrine Of New Generation Slaves",
+  "artista": "Riverside",
+  "horas": 6.9
+ },
+ {
+  "id": "2024-01",
+  "anio": "2024",
+  "puesto": 1,
+  "album": "Fear Inoculum",
+  "artista": "TOOL",
+  "horas": 45.2
+ },
+ {
+  "id": "2024-02",
+  "anio": "2024",
+  "puesto": 2,
+  "album": "Feathergun",
+  "artista": "Rishloo",
+  "horas": 15.5
+ },
+ {
+  "id": "2024-03",
+  "anio": "2024",
+  "puesto": 3,
+  "album": "Bloom",
+  "artista": "Caligula's Horse",
+  "horas": 15.2
+ },
+ {
+  "id": "2024-04",
+  "anio": "2024",
+  "puesto": 4,
+  "album": "10,000 Days",
+  "artista": "TOOL",
+  "horas": 13.0
+ },
+ {
+  "id": "2024-05",
+  "anio": "2024",
+  "puesto": 5,
+  "album": "Lateralus",
+  "artista": "TOOL",
+  "horas": 10.8
+ },
+ {
+  "id": "2025-01",
+  "anio": "2025",
+  "puesto": 1,
+  "album": "10,000 Days",
+  "artista": "TOOL",
+  "horas": 13.7
+ },
+ {
+  "id": "2025-02",
+  "anio": "2025",
+  "puesto": 2,
+  "album": "Fear Inoculum",
+  "artista": "TOOL",
+  "horas": 11.4
+ },
+ {
+  "id": "2025-03",
+  "anio": "2025",
+  "puesto": 3,
+  "album": "Being and Nothingness",
+  "artista": "HeXeN",
+  "horas": 9.4
+ },
+ {
+  "id": "2025-04",
+  "anio": "2025",
+  "puesto": 4,
+  "album": "White Pony",
+  "artista": "Deftones",
+  "horas": 8.2
+ },
+ {
+  "id": "2025-05",
+  "anio": "2025",
+  "puesto": 5,
+  "album": "Nightmare",
+  "artista": "Avenged Sevenfold",
+  "horas": 6.7
+ },
+ {
+  "id": "2026-01",
+  "anio": "2026",
+  "puesto": 1,
+  "album": "A Mortal Binding",
+  "artista": "My Dying Bride",
+  "horas": 6.4
+ },
+ {
+  "id": "2026-02",
+  "anio": "2026",
+  "puesto": 2,
+  "album": "In Cauda Venenum (Extended Edition)",
+  "artista": "Opeth",
+  "horas": 5.2
+ },
+ {
+  "id": "2026-03",
+  "anio": "2026",
+  "puesto": 3,
+  "album": "10,000 Days",
+  "artista": "TOOL",
+  "horas": 4.8
+ },
+ {
+  "id": "2026-04",
+  "anio": "2026",
+  "puesto": 4,
+  "album": "The way of all flesh",
+  "artista": "Gojira",
+  "horas": 4.5
+ },
+ {
+  "id": "2026-05",
+  "anio": "2026",
+  "puesto": 5,
+  "album": "Fear Inoculum",
+  "artista": "TOOL",
+  "horas": 4.0
+ }
+]

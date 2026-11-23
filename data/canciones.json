@@ -1,0 +1,722 @@
+[
+ {
+  "id": "Todos-01",
+  "anio": "Todos",
+  "puesto": 1,
+  "cancion": "Initiate",
+  "artista": "Haken",
+  "reproducciones": 127
+ },
+ {
+  "id": "Todos-02",
+  "anio": "Todos",
+  "puesto": 2,
+  "cancion": "512",
+  "artista": "Lamb of God",
+  "reproducciones": 122
+ },
+ {
+  "id": "Todos-03",
+  "anio": "Todos",
+  "puesto": 3,
+  "cancion": "Hijo de la Luna",
+  "artista": "Stravaganzza",
+  "reproducciones": 121
+ },
+ {
+  "id": "Todos-04",
+  "anio": "Todos",
+  "puesto": 4,
+  "cancion": "Y seras canción - 2010",
+  "artista": "Mägo de Oz",
+  "reproducciones": 120
+ },
+ {
+  "id": "Todos-05",
+  "anio": "Todos",
+  "puesto": 5,
+  "cancion": "Toxicity",
+  "artista": "System Of A Down",
+  "reproducciones": 113
+ },
+ {
+  "id": "Todos-06",
+  "anio": "Todos",
+  "puesto": 6,
+  "cancion": "Dance With The Devil",
+  "artista": "Breaking Benjamin",
+  "reproducciones": 112
+ },
+ {
+  "id": "Todos-07",
+  "anio": "Todos",
+  "puesto": 7,
+  "cancion": "The Shift",
+  "artista": "Eye of the Enemy",
+  "reproducciones": 106
+ },
+ {
+  "id": "Todos-08",
+  "anio": "Todos",
+  "puesto": 8,
+  "cancion": "Stream of Consciousness",
+  "artista": "Dream Theater",
+  "reproducciones": 105
+ },
+ {
+  "id": "Todos-09",
+  "anio": "Todos",
+  "puesto": 9,
+  "cancion": "Satania",
+  "artista": "Mägo de Oz",
+  "reproducciones": 104
+ },
+ {
+  "id": "Todos-10",
+  "anio": "Todos",
+  "puesto": 10,
+  "cancion": "Nana",
+  "artista": "Ankor",
+  "reproducciones": 103
+ },
+ {
+  "id": "2019-01",
+  "anio": "2019",
+  "puesto": 1,
+  "cancion": "Stream of Consciousness",
+  "artista": "Dream Theater",
+  "reproducciones": 51
+ },
+ {
+  "id": "2019-02",
+  "anio": "2019",
+  "puesto": 2,
+  "cancion": "Vacuity",
+  "artista": "Gojira",
+  "reproducciones": 49
+ },
+ {
+  "id": "2019-03",
+  "anio": "2019",
+  "puesto": 3,
+  "cancion": "L'enfant sauvage",
+  "artista": "Gojira",
+  "reproducciones": 41
+ },
+ {
+  "id": "2019-04",
+  "anio": "2019",
+  "puesto": 4,
+  "cancion": "The Pursuit of Emptiness",
+  "artista": "The Agonist",
+  "reproducciones": 40
+ },
+ {
+  "id": "2019-05",
+  "anio": "2019",
+  "puesto": 5,
+  "cancion": "House of Eternal Hunt",
+  "artista": "Avatar",
+  "reproducciones": 39
+ },
+ {
+  "id": "2019-06",
+  "anio": "2019",
+  "puesto": 6,
+  "cancion": "The Gift of Guilt",
+  "artista": "Gojira",
+  "reproducciones": 38
+ },
+ {
+  "id": "2019-07",
+  "anio": "2019",
+  "puesto": 7,
+  "cancion": "The Shooting Star",
+  "artista": "Gojira",
+  "reproducciones": 37
+ },
+ {
+  "id": "2019-08",
+  "anio": "2019",
+  "puesto": 8,
+  "cancion": "Endless Sacrifice",
+  "artista": "Dream Theater",
+  "reproducciones": 34
+ },
+ {
+  "id": "2019-09",
+  "anio": "2019",
+  "puesto": 9,
+  "cancion": "Vacant",
+  "artista": "Dream Theater",
+  "reproducciones": 34
+ },
+ {
+  "id": "2019-10",
+  "anio": "2019",
+  "puesto": 10,
+  "cancion": "Honor Thy Father",
+  "artista": "Dream Theater",
+  "reproducciones": 34
+ },
+ {
+  "id": "2020-01",
+  "anio": "2020",
+  "puesto": 1,
+  "cancion": "Halo",
+  "artista": "Machine Head",
+  "reproducciones": 29
+ },
+ {
+  "id": "2020-02",
+  "anio": "2020",
+  "puesto": 2,
+  "cancion": "Up North",
+  "artista": "Borknagar",
+  "reproducciones": 28
+ },
+ {
+  "id": "2020-03",
+  "anio": "2020",
+  "puesto": 3,
+  "cancion": "Bloody Angel",
+  "artista": "Avatar",
+  "reproducciones": 25
+ },
+ {
+  "id": "2020-04",
+  "anio": "2020",
+  "puesto": 4,
+  "cancion": "Satania",
+  "artista": "Mägo de Oz",
+  "reproducciones": 24
+ },
+ {
+  "id": "2020-05",
+  "anio": "2020",
+  "puesto": 5,
+  "cancion": "Nana",
+  "artista": "Ankor",
+  "reproducciones": 24
+ },
+ {
+  "id": "2020-06",
+  "anio": "2020",
+  "puesto": 6,
+  "cancion": "Immortal",
+  "artista": "Lorna Shore",
+  "reproducciones": 22
+ },
+ {
+  "id": "2020-07",
+  "anio": "2020",
+  "puesto": 7,
+  "cancion": "Hijo de la Luna",
+  "artista": "Stravaganzza",
+  "reproducciones": 20
+ },
+ {
+  "id": "2020-08",
+  "anio": "2020",
+  "puesto": 8,
+  "cancion": "Kuraman",
+  "artista": "Soen",
+  "reproducciones": 20
+ },
+ {
+  "id": "2020-09",
+  "anio": "2020",
+  "puesto": 9,
+  "cancion": "Another World",
+  "artista": "Gojira",
+  "reproducciones": 20
+ },
+ {
+  "id": "2020-10",
+  "anio": "2020",
+  "puesto": 10,
+  "cancion": "Fathoms",
+  "artista": "Rest, Repose",
+  "reproducciones": 19
+ },
+ {
+  "id": "2021-01",
+  "anio": "2021",
+  "puesto": 1,
+  "cancion": "Y seras canción - 2010",
+  "artista": "Mägo de Oz",
+  "reproducciones": 37
+ },
+ {
+  "id": "2021-02",
+  "anio": "2021",
+  "puesto": 2,
+  "cancion": "Señorita",
+  "artista": "Ankor",
+  "reproducciones": 37
+ },
+ {
+  "id": "2021-03",
+  "anio": "2021",
+  "puesto": 3,
+  "cancion": "Toxicity",
+  "artista": "System Of A Down",
+  "reproducciones": 33
+ },
+ {
+  "id": "2021-04",
+  "anio": "2021",
+  "puesto": 4,
+  "cancion": "Nana",
+  "artista": "Ankor",
+  "reproducciones": 33
+ },
+ {
+  "id": "2021-05",
+  "anio": "2021",
+  "puesto": 5,
+  "cancion": "Fathoms",
+  "artista": "Rest, Repose",
+  "reproducciones": 30
+ },
+ {
+  "id": "2021-06",
+  "anio": "2021",
+  "puesto": 6,
+  "cancion": "Bad Guy",
+  "artista": "Ankor",
+  "reproducciones": 30
+ },
+ {
+  "id": "2021-07",
+  "anio": "2021",
+  "puesto": 7,
+  "cancion": "Hunger",
+  "artista": "Amaranthe",
+  "reproducciones": 30
+ },
+ {
+  "id": "2021-08",
+  "anio": "2021",
+  "puesto": 8,
+  "cancion": "Huelo el Miedo",
+  "artista": "Warcry",
+  "reproducciones": 30
+ },
+ {
+  "id": "2021-09",
+  "anio": "2021",
+  "puesto": 9,
+  "cancion": "Courtesy Call",
+  "artista": "Thousand Foot Krutch",
+  "reproducciones": 29
+ },
+ {
+  "id": "2021-10",
+  "anio": "2021",
+  "puesto": 10,
+  "cancion": "Endless Road",
+  "artista": "Ankor",
+  "reproducciones": 28
+ },
+ {
+  "id": "2022-01",
+  "anio": "2022",
+  "puesto": 1,
+  "cancion": "Through the Wall of Light Pt. I",
+  "artista": "Eternal Storm",
+  "reproducciones": 51
+ },
+ {
+  "id": "2022-02",
+  "anio": "2022",
+  "puesto": 2,
+  "cancion": "Cry Baby (From \"Tokyo Revengers\")",
+  "artista": "Tricker",
+  "reproducciones": 47
+ },
+ {
+  "id": "2022-03",
+  "anio": "2022",
+  "puesto": 3,
+  "cancion": "Fuyu No Hanashi (From \"Given\")",
+  "artista": "Tricker",
+  "reproducciones": 36
+ },
+ {
+  "id": "2022-04",
+  "anio": "2022",
+  "puesto": 4,
+  "cancion": "Learning to Fly",
+  "artista": "Stratovarius",
+  "reproducciones": 35
+ },
+ {
+  "id": "2022-05",
+  "anio": "2022",
+  "puesto": 5,
+  "cancion": "White Rabbit",
+  "artista": "Egypt Central",
+  "reproducciones": 34
+ },
+ {
+  "id": "2022-06",
+  "anio": "2022",
+  "puesto": 6,
+  "cancion": "Through the Wall of Light Pt. II",
+  "artista": "Eternal Storm",
+  "reproducciones": 33
+ },
+ {
+  "id": "2022-07",
+  "anio": "2022",
+  "puesto": 7,
+  "cancion": "Clenching The Fists Of Dissent",
+  "artista": "Machine Head",
+  "reproducciones": 31
+ },
+ {
+  "id": "2022-08",
+  "anio": "2022",
+  "puesto": 8,
+  "cancion": "Stage Kara Kimi Ni Sasagu - Spanish Cover",
+  "artista": "Tricker",
+  "reproducciones": 31
+ },
+ {
+  "id": "2022-09",
+  "anio": "2022",
+  "puesto": 9,
+  "cancion": "Going Hunting",
+  "artista": "Avatar",
+  "reproducciones": 30
+ },
+ {
+  "id": "2022-10",
+  "anio": "2022",
+  "puesto": 10,
+  "cancion": "Kizuato (From \"Given\")",
+  "artista": "Tricker",
+  "reproducciones": 30
+ },
+ {
+  "id": "2023-01",
+  "anio": "2023",
+  "puesto": 1,
+  "cancion": "Initiate",
+  "artista": "Haken",
+  "reproducciones": 99
+ },
+ {
+  "id": "2023-02",
+  "anio": "2023",
+  "puesto": 2,
+  "cancion": "The Depth of Self-Delusion",
+  "artista": "Riverside",
+  "reproducciones": 57
+ },
+ {
+  "id": "2023-03",
+  "anio": "2023",
+  "puesto": 3,
+  "cancion": "Celestial Violence",
+  "artista": "Ihsahn",
+  "reproducciones": 56
+ },
+ {
+  "id": "2023-04",
+  "anio": "2023",
+  "puesto": 4,
+  "cancion": "Veil",
+  "artista": "Haken",
+  "reproducciones": 56
+ },
+ {
+  "id": "2023-05",
+  "anio": "2023",
+  "puesto": 5,
+  "cancion": "Kingslayer (feat. BABYMETAL)",
+  "artista": "Bring Me The Horizon",
+  "reproducciones": 53
+ },
+ {
+  "id": "2023-06",
+  "anio": "2023",
+  "puesto": 6,
+  "cancion": "A Cell Divides",
+  "artista": "Haken",
+  "reproducciones": 53
+ },
+ {
+  "id": "2023-07",
+  "anio": "2023",
+  "puesto": 7,
+  "cancion": "Jinn",
+  "artista": "Soen",
+  "reproducciones": 48
+ },
+ {
+  "id": "2023-08",
+  "anio": "2023",
+  "puesto": 8,
+  "cancion": "Systematomatic",
+  "artista": "Rishloo",
+  "reproducciones": 46
+ },
+ {
+  "id": "2023-09",
+  "anio": "2023",
+  "puesto": 9,
+  "cancion": "The Shift",
+  "artista": "Eye of the Enemy",
+  "reproducciones": 44
+ },
+ {
+  "id": "2023-10",
+  "anio": "2023",
+  "puesto": 10,
+  "cancion": "Sleep City",
+  "artista": "Rest, Repose",
+  "reproducciones": 33
+ },
+ {
+  "id": "2024-01",
+  "anio": "2024",
+  "puesto": 1,
+  "cancion": "Bloom",
+  "artista": "Caligula's Horse",
+  "reproducciones": 71
+ },
+ {
+  "id": "2024-02",
+  "anio": "2024",
+  "puesto": 2,
+  "cancion": "Marigold",
+  "artista": "Caligula's Horse",
+  "reproducciones": 68
+ },
+ {
+  "id": "2024-03",
+  "anio": "2024",
+  "puesto": 3,
+  "cancion": "Pneuma",
+  "artista": "TOOL",
+  "reproducciones": 68
+ },
+ {
+  "id": "2024-04",
+  "anio": "2024",
+  "puesto": 4,
+  "cancion": "Descending",
+  "artista": "TOOL",
+  "reproducciones": 63
+ },
+ {
+  "id": "2024-05",
+  "anio": "2024",
+  "puesto": 5,
+  "cancion": "Lethe",
+  "artista": "Dark Tranquillity",
+  "reproducciones": 58
+ },
+ {
+  "id": "2024-06",
+  "anio": "2024",
+  "puesto": 6,
+  "cancion": "Invincible",
+  "artista": "TOOL",
+  "reproducciones": 43
+ },
+ {
+  "id": "2024-07",
+  "anio": "2024",
+  "puesto": 7,
+  "cancion": "Sober",
+  "artista": "TOOL",
+  "reproducciones": 41
+ },
+ {
+  "id": "2024-08",
+  "anio": "2024",
+  "puesto": 8,
+  "cancion": "Freaks & Animals",
+  "artista": "Rishloo",
+  "reproducciones": 41
+ },
+ {
+  "id": "2024-09",
+  "anio": "2024",
+  "puesto": 9,
+  "cancion": "Flower",
+  "artista": "Novembre",
+  "reproducciones": 41
+ },
+ {
+  "id": "2024-10",
+  "anio": "2024",
+  "puesto": 10,
+  "cancion": "Pulled Under at 2000 Metres a Second - Remastered",
+  "artista": "Anathema",
+  "reproducciones": 40
+ },
+ {
+  "id": "2025-01",
+  "anio": "2025",
+  "puesto": 1,
+  "cancion": "Passenger",
+  "artista": "Deftones",
+  "reproducciones": 63
+ },
+ {
+  "id": "2025-02",
+  "anio": "2025",
+  "puesto": 2,
+  "cancion": "Radio/Video",
+  "artista": "System Of A Down",
+  "reproducciones": 55
+ },
+ {
+  "id": "2025-03",
+  "anio": "2025",
+  "puesto": 3,
+  "cancion": "Vicarious",
+  "artista": "TOOL",
+  "reproducciones": 34
+ },
+ {
+  "id": "2025-04",
+  "anio": "2025",
+  "puesto": 4,
+  "cancion": "Nocturne",
+  "artista": "HeXeN",
+  "reproducciones": 34
+ },
+ {
+  "id": "2025-05",
+  "anio": "2025",
+  "puesto": 5,
+  "cancion": "Save Me",
+  "artista": "Avenged Sevenfold",
+  "reproducciones": 33
+ },
+ {
+  "id": "2025-06",
+  "anio": "2025",
+  "puesto": 6,
+  "cancion": "The Pot",
+  "artista": "TOOL",
+  "reproducciones": 30
+ },
+ {
+  "id": "2025-07",
+  "anio": "2025",
+  "puesto": 7,
+  "cancion": "Ángeles Con una Sola Ala - Con José Andrea",
+  "artista": "Dragonfly",
+  "reproducciones": 27
+ },
+ {
+  "id": "2025-08",
+  "anio": "2025",
+  "puesto": 8,
+  "cancion": "Periscope",
+  "artista": "Andromeda",
+  "reproducciones": 26
+ },
+ {
+  "id": "2025-09",
+  "anio": "2025",
+  "puesto": 9,
+  "cancion": "Sleep City",
+  "artista": "Rest, Repose",
+  "reproducciones": 22
+ },
+ {
+  "id": "2025-10",
+  "anio": "2025",
+  "puesto": 10,
+  "cancion": "Wings For Marie (Pt 1)",
+  "artista": "TOOL",
+  "reproducciones": 22
+ },
+ {
+  "id": "2026-01",
+  "anio": "2026",
+  "puesto": 1,
+  "cancion": "Descending",
+  "artista": "Lamb of God",
+  "reproducciones": 31
+ },
+ {
+  "id": "2026-02",
+  "anio": "2026",
+  "puesto": 2,
+  "cancion": "The Apocalyptist",
+  "artista": "My Dying Bride",
+  "reproducciones": 30
+ },
+ {
+  "id": "2026-03",
+  "anio": "2026",
+  "puesto": 3,
+  "cancion": "Nobody",
+  "artista": "Avenged Sevenfold",
+  "reproducciones": 25
+ },
+ {
+  "id": "2026-04",
+  "anio": "2026",
+  "puesto": 4,
+  "cancion": "SPARK",
+  "artista": "ZEXSING",
+  "reproducciones": 25
+ },
+ {
+  "id": "2026-05",
+  "anio": "2026",
+  "puesto": 5,
+  "cancion": "Passenger",
+  "artista": "Deftones",
+  "reproducciones": 24
+ },
+ {
+  "id": "2026-06",
+  "anio": "2026",
+  "puesto": 6,
+  "cancion": "Courtesy Call",
+  "artista": "Thousand Foot Krutch",
+  "reproducciones": 17
+ },
+ {
+  "id": "2026-07",
+  "anio": "2026",
+  "puesto": 7,
+  "cancion": "Joseph",
+  "artista": "Falling In Reverse",
+  "reproducciones": 15
+ },
+ {
+  "id": "2026-08",
+  "anio": "2026",
+  "puesto": 8,
+  "cancion": "God Is A Weapon",
+  "artista": "Falling In Reverse",
+  "reproducciones": 14
+ },
+ {
+  "id": "2026-09",
+  "anio": "2026",
+  "puesto": 9,
+  "cancion": "Nocturne",
+  "artista": "HeXeN",
+  "reproducciones": 14
+ },
+ {
+  "id": "2026-10",
+  "anio": "2026",
+  "puesto": 10,
+  "cancion": "Vicarious",
+  "artista": "TOOL",
+  "reproducciones": 12
+ }
+]
