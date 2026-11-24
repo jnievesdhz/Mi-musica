@@ -188,7 +188,7 @@ a.int { color: var(--accent-ink); text-underline-offset: 3px; text-decoration-th
 .tabla-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .tabla table { width: 100%; border-collapse: collapse; font: 14px/1.45 var(--sans); min-width: 640px; }
 .tabla th { text-align: left; font-weight: 600; font-size: 13px; color: var(--muted); padding: 0 12px 10px 0; border-bottom: 1px solid var(--line); white-space: nowrap; vertical-align: bottom; }
-.tabla td { padding: 11px 12px 11px 0; border-bottom: 1px solid rgb(38 39 46 / .7); vertical-align: top; color: var(--muted); }
+.tabla td { padding: 10px 12px 10px 0; border-bottom: 1px solid rgb(38 39 46 / .7); vertical-align: middle; color: var(--muted); }
 .tabla td:first-child { color: var(--fg); font-weight: 500; }
 .tabla td.num { font-variant-numeric: tabular-nums; color: var(--fg); white-space: nowrap; }
 .tabla tr.oculta, .tabla tr.filtrada { display: none; }
@@ -305,6 +305,34 @@ a.int { color: var(--accent-ink); text-underline-offset: 3px; text-decoration-th
 .rastro-leyenda { display: flex; flex-wrap: wrap; gap: 8px 24px; font: 13px var(--sans); color: var(--muted); margin-top: 6px; }
 .rastro-leyenda i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 8px; vertical-align: -1px; }
 
+/* ---------- Portadas (enlaces a las de Spotify) ---------- */
+.cov { position: relative; flex: none; display: block; width: var(--cs, 40px); height: var(--cs, 40px); border-radius: 4px; overflow: hidden; background: #22232a; box-shadow: 0 4px 14px rgb(0 0 0 / .45); }
+.cov img { display: block; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 280ms ease; }
+.cov img.listo { opacity: 1; }
+.cov-vacia { display: grid; place-items: center; font: 600 calc(var(--cs, 40px) * .38) var(--sans); color: var(--dim); box-shadow: none; }
+a.cov { transition: transform 160ms var(--ease-out); }
+a.cov:active { transform: scale(0.96); }
+a.cov:focus-visible { outline: 2px solid var(--accent-ink); outline-offset: 2px; }
+.celda-cov { display: flex; align-items: center; gap: 12px; }
+.tabla tbody tr { transition: background-color 160ms ease; }
+@media (hover: hover) and (pointer: fine) { .tabla tbody tr:hover { background: rgb(255 255 255 / .04); } }
+
+.destacado { display: grid; grid-template-columns: 1fr; gap: 20px; align-items: end; margin: 28px 0 36px; padding: 20px; border-radius: 12px;
+  background: linear-gradient(180deg, var(--tinte, rgb(255 255 255 / .06)), rgb(255 255 255 / .015)); }
+@media (min-width: 620px) { .destacado { grid-template-columns: auto 1fr; gap: 28px; padding: 24px; } }
+.destacado .cov { --cs: clamp(160px, 30vw, 220px); border-radius: 6px; box-shadow: 0 16px 44px rgb(0 0 0 / .55); }
+.dest-k { font: 600 13px var(--sans) !important; color: var(--fg) !important; margin: 0 0 6px !important; }
+.dest-t { font: 700 clamp(30px, 4.4vw, 56px)/1 var(--sans) !important; letter-spacing: -0.04em; color: var(--fg) !important; margin: 0 0 12px !important; text-wrap: balance; }
+.dest-p { font: 14px/1.5 var(--sans) !important; color: var(--muted) !important; margin: 0 0 16px !important; }
+.dest-ir { display: inline-flex; align-items: center; padding: 9px 16px; border-radius: 999px; background: var(--fg); color: var(--bg); font: 600 14px var(--sans); text-decoration: none; transition: transform 160ms var(--ease-out); }
+.dest-ir:active { transform: scale(0.97); }
+
+.par > div[data-titulo] { display: grid; grid-template-columns: 64px 1fr; grid-template-rows: auto auto; column-gap: 14px; align-items: center; }
+.par > div[data-titulo] .cov { --cs: 64px; grid-row: span 2; }
+.anio-cab { display: flex; align-items: center; gap: 14px; }
+.anio-cab .cov { --cs: 56px; }
+.anio-cab small { display: block; font: 13px/1.35 var(--sans); color: var(--muted); margin-top: 4px; }
+
 .sin-js { font: 14px var(--sans); color: var(--muted); }
 </style>
 </head>
@@ -351,6 +379,7 @@ a.int { color: var(--accent-ink); text-underline-offset: 3px; text-decoration-th
   <nav aria-label="Otras páginas"><a href="index.html">Ver el Wrapped</a><a href="#resumen">Volver al inicio</a></nav>
 </footer>
 
+<script>window.PORTADAS_LETRAS = {{PORTADAS}};</script>
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
 <script>
 (() => {
@@ -414,14 +443,16 @@ function alVer(node, fn) {
 /* ---------- Figura: los tres años ---------- */
 function figAnios(f) {
   const A = [
-    ['2024', 'crecía', 27, 'Fear Inoculum de TOOL y “Marigold”: crecer y perderle el miedo a envejecer.'],
-    ['2025', 'lloraba', 27, 'El duelo por personas reales pasa del 3 % al 15 %, con “Save Me” y las “Wings” de TOOL.'],
-    ['2026', 'mira de frente a la muerte', 52, '“Nocturne”, “Nobody” y “The Apocalyptist”: la muerte como idea más que como duelo.'],
+    ['2024', 'crecía', 27, 'Fear Inoculum de TOOL y “Marigold”: crecer y perderle el miedo a envejecer.', ['d', 'TOOL', 'Fear Inoculum', 'Fear Inoculum, TOOL']],
+    ['2025', 'lloraba', 27, 'El duelo por personas reales pasa del 3 % al 15 %, con “Save Me” y las “Wings” de TOOL.', ['c', 'HeXeN', 'Nocturne', '“Nocturne”, tu #1 del año']],
+    ['2026', 'mira de frente a la muerte', 52, '“Nocturne”, “Nobody” y “The Apocalyptist”: la muerte como idea más que como duelo.', ['c', 'My Dying Bride', 'The Apocalyptist', '“The Apocalyptist”, tu #1 del año']],
   ];
   const w = el('div', 'anios');
-  A.forEach(([y, frase, m, d]) => {
+  A.forEach(([y, frase, m, d, [t, ar, ti, pie]]) => {
     const a = el('div', 'anio');
-    a.append(el('div', 'anio-y', y), el('p', 'anio-f', frase));
+    const cab = el('div', 'anio-cab'); const tx = el('div'); tx.append(el('div', 'anio-y', y), el('small', null, pie));
+    cab.append(cov(portada(t, ar, ti), ti, 56), tx);
+    a.append(cab, el('p', 'anio-f', frase));
     const mm = el('div', 'anio-m'); const i = el('i'); i.style.width = (m * 1.6) + 'px';
     const b = el('b', null, m + NN + '%'); mm.append(i, b);
     a.append(mm, el('p', 'anio-d', d.replace(/(\d) %/g, '$1' + NN + '%')));
@@ -609,16 +640,16 @@ function figRastro(f) {
   const YRS = [2020, 2021, 2022, 2023, 2024, 2025, 2026];
   const box = el('div', 'rastro-graf'); const tip = el('div', 'tip'); tip.style.display = 'none';
   const ley = el('div', 'rastro-leyenda');
-  const l1 = el('span'); const i1 = el('i'); i1.style.background = '#8d8c94'; l1.append(i1, 'Pico antes de 2024, fuera de la ventana del análisis');
-  const l2 = el('span'); const i2 = el('i'); i2.style.background = 'var(--accent)'; l2.append(i2, 'Pico entre 2024 y 2026');
+  const l1 = el('span'); const i1 = el('i'); i1.style.background = '#8d8c94'; i1.style.background = 'transparent'; i1.style.boxShadow = 'inset 0 0 0 2px #8d8c94'; l1.append(i1, 'Pico antes de 2024, fuera de la ventana del análisis');
+  const l2 = el('span'); const i2 = el('i'); i2.style.background = 'var(--accent)'; i2.style.background = 'transparent'; i2.style.boxShadow = 'inset 0 0 0 2px var(--accent)'; l2.append(i2, 'Pico entre 2024 y 2026');
   ley.append(l1, l2);
-  f.replaceChildren(box, ley, el('p', 'fig-pie', 'Cada círculo es una de las 19 canciones, puesta en el año en que más la escuchaste. El tamaño son sus horas desde 2019. Pasa el cursor por un círculo para ver su nombre.'));
+  f.replaceChildren(box, ley, el('p', 'fig-pie', 'Cada círculo es una de las 19 canciones, puesta en el año en que más la escuchaste. El tamaño son sus horas desde 2019 y el borde dice si su pico cae dentro de la ventana del análisis. Toca una portada para abrirla en Spotify.'));
   box.append(tip);
   const draw = () => {
     box.querySelectorAll('svg').forEach((s) => s.remove());
     const W = Math.max(300, box.clientWidth), narrow = W < 620;
-    const rr = (h) => (narrow ? 2.5 : 3) + Math.sqrt(h) * (narrow ? 3.6 : 4.6);
-    const ROW = narrow ? 40 : 46, top = 34, labW = 48;
+    const rr = (h) => (narrow ? 5 : 7) + Math.sqrt(h) * (narrow ? 3.4 : 4.8);
+    const ROW = narrow ? 44 : 54, top = 34, labW = 48;
     const H = top + YRS.length * ROW + 6;
     const svg = d3.select(box).insert('svg', '.tip').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img')
       .attr('aria-label', 'Las 19 canciones según su año pico. Antes de 2024: Up North, Antagonist, July, For My Demons, Systematomatic, Jinn y Lost to Apathy. El resto tuvo su pico entre 2024 y 2026, casi todas en 2024.');
@@ -644,9 +675,17 @@ function figRastro(f) {
         }
       });
     });
+    const defs = svg.append('defs');
+    S.forEach((s, i) => { s.p = portada('c', s.a, s.n); s.clip = 'rc' + i; defs.append('clipPath').attr('id', s.clip).append('circle').attr('cx', s.cx).attr('cy', s.cy).attr('r', s.r); });
+    gC.selectAll('image').data(S.filter((s) => s.p)).join('image')
+      .attr('href', (s) => s.p.img).attr('x', (s) => s.cx - s.r).attr('y', (s) => s.cy - s.r).attr('width', (s) => s.r * 2).attr('height', (s) => s.r * 2)
+      .attr('clip-path', (s) => `url(#${s.clip})`).attr('preserveAspectRatio', 'xMidYMid slice').style('pointer-events', 'none');
     gC.selectAll('circle').data(S).join('circle')
       .attr('cx', (s) => s.cx).attr('cy', (s) => s.cy).attr('r', (s) => s.r)
-      .style('fill', (s) => s.y >= 2024 ? 'var(--accent)' : '#8d8c94').style('fill-opacity', 0.9)
+      .style('fill', (s) => s.p ? 'transparent' : (s.y >= 2024 ? 'var(--accent)' : '#8d8c94')).style('fill-opacity', 0.9)
+      .style('stroke', (s) => s.y >= 2024 ? 'var(--accent)' : '#8d8c94').attr('stroke-width', (s) => s.p ? 2 : 0)
+      .style('cursor', (s) => s.p ? 'pointer' : 'default')
+      .on('click', (ev, s) => { if (s.p) window.open(s.p.url, '_blank', 'noopener'); })
       .on('pointermove', (ev, s) => {
         const [px, py] = d3.pointer(ev, box);
         tip.style.display = ''; tip.replaceChildren(el('b', null, s.n), el('span', null, `${s.a}, ${fmt(s.h)}${NN}h, pico en ${s.y}`));
@@ -656,6 +695,66 @@ function figRastro(f) {
   };
   draw(); let rw = box.clientWidth, t;
   new ResizeObserver(() => { if (Math.abs(box.clientWidth - rw) < 4) return; rw = box.clientWidth; clearTimeout(t); t = setTimeout(draw, 120); }).observe(box);
+}
+
+
+/* ---------- Portadas: enlaces a las de Spotify, buscadas por artista y título ---------- */
+const PORT = window.PORTADAS_LETRAS || [];
+const nrm = (x) => String(x).toLowerCase().replace(/æ/g, 'ae').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]/g, '');
+const base = (x) => nrm(String(x).replace(/\s*[\(\[].*$/, '').replace(/\s+-\s+.*$/, ''));
+const IDX = { exacto: new Map(), base: new Map() };
+PORT.forEach((p) => {
+  const k1 = p.t + '|' + nrm(p.a) + '|' + nrm(p.n), k2 = p.t + '|' + nrm(p.a) + '|' + base(p.n);
+  if (!IDX.exacto.has(k1)) IDX.exacto.set(k1, p);
+  if (!IDX.base.has(k2)) IDX.base.set(k2, p);
+});
+function portada(t, artista, titulo) {
+  const a = nrm(artista);
+  return IDX.exacto.get(`${t}|${a}|${nrm(titulo)}`) || IDX.base.get(`${t}|${a}|${base(titulo)}`) || null;
+}
+function cov(p, titulo, tam) {
+  const n = p ? document.createElement('a') : el('span', 'cov cov-vacia', (String(titulo).match(/[A-Za-zÀ-ÿ0-9]/) || ['·'])[0].toUpperCase());
+  if (tam) n.style.setProperty('--cs', tam + 'px');
+  if (!p) { n.setAttribute('aria-hidden', 'true'); return n; }
+  n.className = 'cov'; n.href = p.url; n.target = '_blank'; n.rel = 'noopener';
+  n.setAttribute('aria-label', `Abrir “${titulo}” en Spotify`); n.title = 'Abrir en Spotify';
+  const img = new Image(); img.alt = ''; img.loading = 'lazy'; img.decoding = 'async'; img.src = p.img; img.width = 300; img.height = 300;
+  const listo = () => img.classList.add('listo');
+  if (img.complete) listo(); else { img.addEventListener('load', listo); img.addEventListener('error', () => n.replaceWith(cov(null, titulo, tam))); }
+  n.append(img); return n;
+}
+const sinAnio = (x) => String(x).replace(/\s*\(\d{4}\)\s*$/, '').trim();
+const antesComa = (x) => String(x).split(',')[0].replace(/\s*\(.*\)\s*$/, '').trim();
+const FILAS = {
+  opeth: (c) => ['d', 'Opeth', sinAnio(c[0])],
+  ultimo: (c) => ['c', c[1], c[0]],
+  rastro: (c) => ['c', antesComa(c[1]), c[0]],
+  ventana: (c) => /^Cinco de Sorceress/.test(c[0]) ? ['d', 'Opeth', 'Sorceress'] : ['c', antesComa(c[1]), c[0]],
+  discos: (c) => ['d', c[1], sinAnio(c[0])],
+  'soen-belakor': (c) => ['d', c[0].split(',')[0], sinAnio(c[0].split(',').slice(1).join(',').trim())],
+};
+function portadasTablas() {
+  document.querySelectorAll('.tabla[data-tabla]').forEach((wrap) => {
+    const f = FILAS[wrap.dataset.tabla]; if (!f) return;
+    wrap.querySelectorAll('tbody tr').forEach((r) => {
+      const celdas = [...r.cells].map((c) => c.textContent.trim());
+      const [t, a, n] = f(celdas);
+      // si el artista lleva coma en su nombre (Rest, Repose), se prueba con la celda completa
+      const pp = portada(t, a, n) || (celdas[1] && portada(t, celdas[1].replace(/\s*\(.*\)\s*$/, ''), n));
+      const td = r.cells[0]; const caja = el('div', 'celda-cov'); const txt = el('span'); txt.append(...td.childNodes);
+      caja.append(cov(pp, n, 40), txt); td.replaceChildren(caja);
+    });
+  });
+}
+function portadasSueltas() {
+  document.querySelectorAll('.destacado[data-titulo]').forEach((d) => {
+    const p = portada(d.dataset.tipo, d.dataset.artista, d.dataset.titulo);
+    const der = el('div');
+    der.append(el('p', 'dest-k', d.dataset.etiqueta || ''), el('p', 'dest-t', d.dataset.titulo), el('p', 'dest-p', (d.dataset.pie || '').replace(/(\d) h\b/g, '$1' + NN + 'h')));
+    if (p) { const ir = el('a', 'dest-ir', 'Abrir en Spotify'); ir.href = p.url; ir.target = '_blank'; ir.rel = 'noopener'; der.append(ir); }
+    d.replaceChildren(cov(p, d.dataset.titulo), der);
+  });
+  document.querySelectorAll('.par > div[data-titulo]').forEach((d) => d.prepend(cov(portada(d.dataset.tipo, d.dataset.artista, d.dataset.titulo), d.dataset.titulo, 64)));
 }
 
 /* ---------- Tablas: barras pequeñas, fuentes, orden, búsqueda ---------- */
@@ -738,7 +837,7 @@ function tablas() {
   });
 }
 
-cielo(); indice(); tablas();
+cielo(); indice(); tablas(); portadasTablas(); portadasSueltas();
 const figs = { anios: figAnios, temas: figTemas, ultimo: figUltimo, biw: figBiw, rastro: figRastro };
 document.querySelectorAll('[data-fig]').forEach((f) => {
   const fn = figs[f.dataset.fig]; if (!fn) return;

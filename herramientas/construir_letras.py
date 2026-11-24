@@ -2,6 +2,7 @@
 
 Uso: python3 herramientas/construir_letras.py
 """
+import json
 import re
 from pathlib import Path
 
@@ -11,6 +12,7 @@ RAIZ = Path(__file__).resolve().parent.parent
 FUENTE = RAIZ / "fuente" / "letras.md"
 PLANTILLA = RAIZ / "fuente" / "letras.plantilla.html"
 SALIDA = RAIZ / "letras.html"
+PORTADAS = RAIZ / "fuente" / "portadas-letras.json"  # lo genera portadas.py del repo Historial-de-reproduccion
 
 NNBSP = " "  # espacio fino que no corta línea, entre número y unidad
 
@@ -74,7 +76,9 @@ def main():
         if ch in cuerpo:
             raise SystemExit(f"Hay un guion largo ({ch!r}) en el contenido. Cámbialo antes de publicar.")
     pagina = PLANTILLA.read_text(encoding="utf-8")
-    pagina = pagina.replace("{{INDICE}}", toc).replace("{{CONTENIDO}}", cuerpo)
+    portadas = PORTADAS.read_text(encoding="utf-8") if PORTADAS.exists() else "[]"
+    portadas = json.dumps(json.loads(portadas), ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+    pagina = pagina.replace("{{INDICE}}", toc).replace("{{PORTADAS}}", portadas).replace("{{CONTENIDO}}", cuerpo)
     SALIDA.write_text(pagina, encoding="utf-8")
     print(f"Listo: {SALIDA.relative_to(RAIZ)} ({len(pagina):,} bytes)")
 

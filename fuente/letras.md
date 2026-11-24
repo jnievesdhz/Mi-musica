@@ -122,6 +122,8 @@ Dos matices. Casi la mitad de tus horas de *In Cauda Venenum* son de la versión
 
 *Sorceress* suma **8,2 h en 2024 a 2026 repartidas en 14 canciones**, y la más escuchada (“Era”) apenas llega a 1,3 h. Lo notable es su estabilidad, alrededor del 0,5 % de tu escucha cada año. Åkerfeldt dijo que el disco trata sobre todo del amor, pero de *“the negative emotions you can get with a positive feeling like love”*: paranoia, inseguridad, rabia, celos e incluso odio, y que no lo planeó [Louder](https://www.loudersound.com/features/opeth-come-clean-on-what-sorceress-is-really-about). En otra entrevista reconoció que el divorcio lo inspiró, pero que exagera los sentimientos por efecto y que las letras no son autobiográficas [Louder](https://loudersound.com/features/love-loss-and-learning-to-move-on-the-story-behind-opeths-sorceress). De las cinco canciones que más escuchas solo comentó una: dijo que la letra de “Will O the Wisp” es muy, muy oscura [Louder](https://www.loudersound.com/features/opeth-s-track-by-track-guide-to-sorceress).
 
+<div class="destacado" data-tipo="d" data-artista="Opeth" data-titulo="Sorceress" data-etiqueta="Disco" data-pie="Opeth, 2016. 8,2 h entre 2024 y 2026, repartidas en 14 canciones."></div>
+
 <ol class="curva">
 <li><b>The Wilde Flowers</b><span>rabia febril y aislamiento</span></li>
 <li><b>Chrysalis</b><span>reproche a una expareja que termina en metamorfosis</span></li>
@@ -282,6 +284,8 @@ Solo **7 canciones (7,6 h, 13 %) ofrecen consuelo o salida**, como la flor que h
 
 ### La canción {#biw-cancion}
 
+<div class="destacado" data-tipo="c" data-artista="Gojira" data-titulo="Born in Winter" data-etiqueta="Canción" data-pie="Gojira, L'Enfant Sauvage (2012). Pista 10, 3:51."></div>
+
 Es la pista 10 de *L'Enfant Sauvage* (2012), dura 3:51 y está firmada por los hermanos Joe y Mario Duplantier [Metal Kingdom](https://www.metalkingdom.net/lyrics-song/gojira-born-in-winter-226553). Tuvo video oficial en marzo de 2014. No encontré ninguna declaración de la banda sobre esta canción en concreto, así que lo que sigue es lectura de la letra.
 
 La letra habla en segunda persona a alguien que aprende, antes de cualquier renacer, lo doloroso del paso del tiempo. Una mañana fría le hace estirar los brazos hacia el calor del sol. Hay una línea breve contra un mundo enloquecido por el oro. Luego la canción abre el plano: todo nació de la noche y todos venimos del estallido de una estrella. El cierre es una promesa. Ese corazón recibido en invierno, si mira el frío con los ojos abiertos, le dará la fuerza para luchar y mantenerse en pie [Letras](https://www.letras.mus.br/gojira/born-in-winter/print.html). Sitios de significados sin autor la leen igual, como crecimiento a través de la dureza [Lyreka](https://www.lyreka.com/song/gojira-born-in-winter-lyrics).
@@ -339,8 +343,8 @@ Leída en una transcripción, la letra coincide con él [Metal Kingdom](https://
 Con “Born in Winter” comparte casi todo: un invierno que prueba en lugar de matar, un origen en las estrellas y un final de salida. La diferencia está en de quién es la fuerza. En Gojira el invierno le entrega a un “tú” la fuerza para mantenerse en pie. En “Up North” la fuerza no es de nadie en particular, es del ciclo, y uno se sostiene porque forma parte de algo que no se acaba.
 
 <div class="par">
-<div><p class="par-k">Gojira</p><p class="par-v">promete que vas a crecer.</p></div>
-<div><p class="par-k">Borknagar</p><p class="par-v">promete que no vas a terminar.</p></div>
+<div data-tipo="c" data-artista="Gojira" data-titulo="Born in Winter"><p class="par-k">Gojira, “Born in Winter”</p><p class="par-v">promete que vas a crecer.</p></div>
+<div data-tipo="c" data-artista="Borknagar" data-titulo="Up North"><p class="par-k">Borknagar, “Up North”</p><p class="par-v">promete que no vas a terminar.</p></div>
 </div>
 
 ### Soen, el enemigo con nombre {#soen}
