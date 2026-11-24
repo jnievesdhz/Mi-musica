@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0f1014">
+<meta name="color-scheme" content="dark">
+<meta name="robots" content="noindex, nofollow">
+<title>Las letras de mi música, 2024 a 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter+Tight:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/sitio.css">
+<!-- Este archivo se genera con herramientas/construir_letras.py. Edita fuente/letras.md y fuente/letras.plantilla.html, no este. -->
+<style>
+/* ---------- Portada ---------- */
+.hero { position: relative; isolation: isolate; overflow: hidden; min-height: min(86dvh, 780px); display: flex; align-items: flex-end; border-bottom: 1px solid var(--line); }
+.cielo { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; }
+.hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgb(15 16 20 / 0) 40%, var(--bg) 100%); pointer-events: none; }
+.hero-in { width: 100%; max-width: 1320px; margin: 0 auto; padding: 96px clamp(20px, 5vw, 56px) clamp(48px, 8vh, 88px); box-sizing: border-box; }
+.hero-in::before { content: ""; display: block; width: 72px; height: 3px; background: var(--accent); border-radius: 2px; margin-bottom: 28px; }
+.hero h1 { margin: 0; font-size: clamp(48px, 9vw, 112px); font-weight: 650; letter-spacing: -0.045em; line-height: 0.94; max-width: 9ch; text-wrap: balance; }
+.hero-anios { margin: 22px 0 0; font-size: clamp(20px, 2.4vw, 28px); font-weight: 500; color: var(--frost); letter-spacing: -0.01em; }
+.hero-lead { margin: 18px 0 0; font-family: var(--serif); font-size: clamp(19px, 2vw, 23px); line-height: 1.45; color: rgb(236 235 232 / .82); max-width: 34ch; }
+.boton {
+  display: inline-flex; align-items: center; gap: 10px; margin-top: 32px; padding: 12px 20px; border-radius: 999px;
+  background: var(--fg); color: var(--bg); font: 600 15px var(--sans); text-decoration: none; white-space: nowrap;
+  transition: transform 160ms var(--ease-out), background-color 160ms ease;
+}
+.boton:active { transform: scale(0.97); }
+@media (hover: hover) and (pointer: fine) { .boton:hover { background: #fff8f6; } }
+@media (prefers-reduced-motion: no-preference) {
+  .hero-in > * { animation: subir 640ms var(--ease-out) both; animation-delay: calc(var(--i, 0) * 70ms + 120ms); }
+  .hero-in::before { animation: trazo 700ms var(--ease-out) both 60ms; transform-origin: 0 50%; }
+  .cielo { animation: aparecer 1400ms ease both; }
+}
+@keyframes subir { from { opacity: 0; transform: translateY(14px); } }
+@keyframes trazo { from { transform: scaleX(0.2); opacity: 0; } }
+@keyframes aparecer { from { opacity: 0; } }
+
+/* ---------- Estructura de lectura ---------- */
+.lectura { max-width: 1320px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 56px); box-sizing: border-box; display: grid; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 1100px) { .lectura { grid-template-columns: 210px minmax(0, 1fr); column-gap: clamp(40px, 5vw, 80px); } }
+.toc { display: none; }
+@media (min-width: 1100px) {
+  .toc { display: block; position: sticky; top: calc(var(--nav-h) + 40px); align-self: start; padding-top: 96px; }
+}
+.toc ol, .toc-movil ol { list-style: none; margin: 0; padding: 0; }
+.toc a { display: grid; grid-template-columns: 18px 1fr; gap: 10px; padding: 8px 0 8px 14px; border-left: 2px solid var(--line); color: var(--dim); text-decoration: none; font-size: 14px; line-height: 1.35; transition: color 160ms ease, border-color 160ms ease; }
+.toc a.activo { color: var(--fg); border-left-color: var(--accent); }
+@media (hover: hover) and (pointer: fine) { .toc a:not(.activo):hover { color: var(--muted); } }
+.toc-n { font-variant-numeric: tabular-nums; color: inherit; opacity: .8; }
+.toc-titulo { font-size: 13px; color: var(--muted); margin: 0 0 12px 16px; font-weight: 500; }
+
+.toc-movil { position: sticky; top: var(--nav-h); z-index: 15; margin: 0 calc(-1 * clamp(20px, 5vw, 56px)); background: rgb(15 16 20 / .9); border-bottom: 1px solid var(--line); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
+@media (min-width: 1100px) { .toc-movil { display: none; } }
+.toc-movil ol { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding: 10px clamp(20px, 5vw, 56px); scroll-padding-inline: 20px; }
+.toc-movil ol::-webkit-scrollbar { display: none; }
+.toc-movil li { margin: 0 !important; padding: 0 !important; font-family: var(--sans) !important; font-size: 13px !important; line-height: 1.3 !important; }
+.toc-movil a { display: inline-flex; gap: 6px; white-space: nowrap; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); font-size: 13px; text-decoration: none; transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease; }
+.toc-movil a:active { transform: scale(0.97); }
+.toc-movil a.activo { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.toc-movil .toc-n:empty { display: none; }
+
+article { min-width: 0; padding-bottom: 48px; }
+.cap { padding-top: clamp(64px, 10vw, 120px); }
+.cap > * { max-width: 680px; }
+.cap > .fig-ancha, .cap > .tabla, .cap > .hilos, .cap > .veredictos, .cap > .balance, .cap > .invierno, .cap > .curva, .cap > .plegable, .cap > .para-ti { max-width: 1000px; }
+
+.cap-n { margin: 0 0 14px !important; font-family: var(--sans) !important; font-size: 14px !important; font-weight: 600; color: var(--accent-ink); }
+.cap-title { margin: 0 0 40px; font-size: clamp(32px, 4.4vw, 54px); font-weight: 650; letter-spacing: -0.035em; line-height: 1.04; max-width: 19ch !important; text-wrap: balance; }
+.cap-title::after { content: ""; display: block; width: 56px; height: 3px; background: var(--accent); border-radius: 2px; margin-top: 22px; }
+
+article p, article li, article dd { font-family: var(--serif); font-size: clamp(18.5px, 1.4vw, 20.5px); line-height: 1.62; color: rgb(236 235 232 / .9); }
+article p { margin: 0 0 1.05em; }
+article strong, article b { font-weight: 600; color: var(--fg); }
+article em { font-style: italic; }
+article ul { margin: 0 0 1.4em; padding-left: 1.1em; }
+article li { margin-bottom: .55em; padding-left: .2em; }
+article li::marker { color: var(--accent); }
+article h3 { margin: 2.4em 0 .7em; font-size: clamp(22px, 2.2vw, 27px); font-weight: 600; letter-spacing: -0.025em; line-height: 1.18; text-wrap: balance; }
+article h4 { margin: 0 0 .5em; font-size: 17px; font-weight: 600; letter-spacing: -0.01em; }
+.tesis { font-family: var(--sans) !important; font-size: clamp(28px, 3.6vw, 44px) !important; line-height: 1.12 !important; letter-spacing: -0.03em; font-weight: 500; color: var(--muted) !important; margin: 0 0 32px !important; text-wrap: balance; }
+.tesis strong { font-weight: 650; }
+
+/* Fuentes como píldoras pequeñas al lado de la frase */
+a.src {
+  display: inline-block; font: 500 12px/1.4 var(--sans); color: var(--muted); text-decoration: none; white-space: nowrap;
+  border: 1px solid var(--line); border-radius: 999px; padding: 1px 8px; vertical-align: 2px; margin-left: 2px;
+  transition: color 160ms ease, border-color 160ms ease;
+}
+@media (hover: hover) and (pointer: fine) { a.src:hover { color: var(--fg); border-color: var(--dim); } }
+a.int { color: var(--accent-ink); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+
+/* Notas y recuadros */
+.nota { background: var(--surface); border-left: 3px solid var(--accent); border-radius: 0 12px 12px 0; padding: 20px 24px 4px; margin: 32px 0; }
+.nota p { font-size: 18px; }
+.invierno {
+  position: relative; overflow: hidden; margin: 40px 0; padding: clamp(24px, 4vw, 44px); border-radius: 12px;
+  background:
+    radial-gradient(1px 1px at 12% 18%, rgb(255 255 255 / .55), transparent 60%),
+    radial-gradient(1px 1px at 78% 30%, rgb(255 255 255 / .4), transparent 60%),
+    radial-gradient(1.5px 1.5px at 62% 72%, rgb(255 255 255 / .35), transparent 60%),
+    radial-gradient(1px 1px at 30% 82%, rgb(255 255 255 / .3), transparent 60%),
+    radial-gradient(1px 1px at 90% 86%, rgb(255 255 255 / .45), transparent 60%),
+    linear-gradient(160deg, #141a25, #0e1117 70%);
+  box-shadow: inset 0 0 0 1px rgb(169 188 208 / .16);
+}
+.inv-k { font: 600 14px var(--sans) !important; color: var(--frost) !important; margin: 0 0 14px !important; }
+.inv-grande { font-size: clamp(21px, 2.2vw, 27px) !important; line-height: 1.45 !important; color: var(--fg) !important; max-width: 40ch; }
+.inv-nota { font: 400 16px/1.55 var(--sans) !important; color: var(--frost) !important; margin: 0 !important; max-width: 62ch; }
+
+.veredictos { display: grid; grid-template-columns: 1fr; gap: 0 40px; margin: 8px 0 24px; }
+@media (min-width: 760px) { .veredictos { grid-template-columns: 1fr 1fr; } }
+.ver { border-top: 2px solid var(--line); padding: 16px 0 18px; }
+.ver[data-v="cambia"] { border-top-color: var(--accent); }
+.ver[data-v="mixto"] { border-top-color: #7c4a45; }
+.ver-h { font: 600 16px/1.35 var(--sans) !important; color: var(--fg) !important; margin: 0 0 8px !important; letter-spacing: -0.01em; }
+.ver-t { font-size: 17px !important; margin: 0 !important; color: var(--muted) !important; }
+.ver-t b { color: var(--fg); }
+.leyenda-ver { display: flex; flex-wrap: wrap; gap: 8px 22px; font: 14px var(--sans); color: var(--muted); margin: 0 0 4px; }
+.leyenda-ver span::before { content: ""; display: inline-block; width: 14px; height: 2px; margin-right: 8px; vertical-align: 4px; background: var(--line); }
+.leyenda-ver .l-cambia::before { background: var(--accent); }
+.leyenda-ver .l-mixto::before { background: #7c4a45; }
+
+.curva { list-style: none; padding: 0; margin: 28px 0 32px; display: grid; grid-template-columns: 1fr; gap: 0; counter-reset: paso; }
+@media (min-width: 860px) { .curva { grid-template-columns: repeat(5, 1fr); gap: 0 20px; } }
+.curva li { counter-increment: paso; position: relative; padding: 14px 0 14px 40px; margin: 0; font-family: var(--sans); border-top: 1px solid var(--line); }
+@media (min-width: 860px) { .curva li { padding: 18px 0 0; border-top: 0; } .curva li::after { content: ""; position: absolute; left: 0; right: -20px; top: 0; height: 2px; background: linear-gradient(90deg, #8d8c94, var(--accent)); opacity: calc(.25 + var(--k, 0) * .18); } .curva li:last-child::after { right: 0; } }
+.curva li::before { content: counter(paso); position: absolute; left: 0; top: 14px; font: 600 14px var(--sans); color: var(--accent-ink); font-variant-numeric: tabular-nums; }
+@media (min-width: 860px) { .curva li::before { position: static; display: block; margin-bottom: 10px; } }
+.curva b { display: block; font: 600 16px/1.3 var(--sans); color: var(--fg); margin-bottom: 4px; }
+.curva span { display: block; font: 15px/1.45 var(--sans); color: var(--muted); }
+
+.hilos { display: grid; grid-template-columns: 1fr; gap: 8px 48px; margin-top: 8px; }
+@media (min-width: 900px) { .hilos { grid-template-columns: 1fr 1fr; } }
+.hilo { border-top: 1px solid var(--line); padding-top: 20px; }
+.hilo p { font-size: 18px; }
+
+.cita-grande { margin: 44px 0; padding: 0; }
+.cita-grande p { font-size: clamp(26px, 3vw, 36px) !important; line-height: 1.25 !important; font-style: italic; color: var(--fg) !important; margin: 0 0 14px !important; letter-spacing: -0.01em; }
+.cita-grande footer { font: 14px var(--sans); color: var(--muted); }
+
+.ficha { display: grid; gap: 0; margin: 24px 0 8px; }
+.ficha > div { display: grid; grid-template-columns: 1fr; gap: 2px; padding: 12px 0; border-top: 1px solid var(--line); }
+@media (min-width: 640px) { .ficha > div { grid-template-columns: 120px 1fr; gap: 20px; } }
+.ficha dt { font: 600 14px/1.9 var(--sans); color: var(--frost); }
+.ficha dd { margin: 0; }
+
+.para-ti { margin: 56px 0 16px; padding: clamp(28px, 5vw, 56px) 0 0; border-top: 1px solid rgb(169 188 208 / .3); }
+.para-ti figcaption { font: 600 14px var(--sans); color: var(--frost); margin-bottom: 18px; }
+.para-ti blockquote { margin: 0; }
+.para-ti blockquote p { font-size: clamp(27px, 3.6vw, 44px) !important; line-height: 1.22 !important; font-style: italic; font-weight: 400; color: var(--fg) !important; max-width: 26ch; letter-spacing: -0.01em; margin: 0 !important; }
+
+.par { display: grid; grid-template-columns: 1fr; gap: 0; margin: 12px 0 32px; }
+@media (min-width: 640px) { .par { grid-template-columns: 1fr 1fr; gap: 32px; } }
+.par > div { border-top: 2px solid var(--line); padding-top: 14px; }
+.par > div:first-child { border-top-color: var(--frost); }
+.par-k { font: 600 14px var(--sans) !important; color: var(--muted) !important; margin: 0 0 6px !important; }
+.par-v { font: 600 clamp(22px, 2.6vw, 30px)/1.15 var(--sans) !important; letter-spacing: -0.025em; color: var(--fg) !important; margin: 0 !important; }
+
+.balance { display: grid; grid-template-columns: 1fr; gap: 8px 48px; margin-top: 4px; }
+@media (min-width: 900px) { .balance { grid-template-columns: 1fr 1fr; } }
+.bal-col h4 { font-size: 15px; color: var(--muted); font-weight: 600; margin-bottom: 4px; }
+.bal-col[data-b="nuevo"] h4 { color: var(--accent-ink); }
+.bal { border-top: 1px solid var(--line); padding: 16px 0 6px; }
+.bal p { font-size: 17.5px; margin-bottom: .6em; }
+.bal-h { font: 600 16px/1.35 var(--sans) !important; color: var(--fg) !important; margin-bottom: 6px !important; }
+
+.bases { display: grid; grid-template-columns: 1fr; gap: 0; margin: 12px 0 0; }
+@media (min-width: 640px) { .bases { grid-template-columns: 1fr 1fr; gap: 0 32px; } }
+.bases > div { display: grid; grid-template-columns: 44px 1fr; gap: 10px; padding: 8px 0; border-top: 1px solid var(--line); }
+.bases dt { font: 600 14px/1.7 var(--sans); color: var(--fg); }
+.bases dd { margin: 0; font-family: var(--sans) !important; font-size: 15px !important; color: var(--muted) !important; }
+
+.plegable { border-top: 1px solid var(--line); margin: 0; }
+.plegable:last-of-type { border-bottom: 1px solid var(--line); }
+.plegable summary { cursor: pointer; list-style: none; display: flex; align-items: baseline; gap: 16px; padding: 18px 0; font: 600 17px var(--sans); letter-spacing: -0.01em; -webkit-tap-highlight-color: transparent; }
+.plegable summary::-webkit-details-marker { display: none; }
+.plegable summary span { margin-left: auto; font-weight: 400; font-size: 14px; color: var(--muted); white-space: nowrap; }
+.plegable summary::after { content: ""; flex: none; width: 9px; height: 9px; border-right: 1.5px solid var(--muted); border-bottom: 1.5px solid var(--muted); transform: translateY(-3px) rotate(45deg); transition: transform 200ms var(--ease-out); }
+.plegable[open] summary::after { transform: translateY(1px) rotate(225deg); }
+.plegable > :not(summary) { padding-bottom: 20px; }
+.plegable ul { max-width: 680px; }
+
+/* ---------- Tablas ---------- */
+.tabla { margin: 24px 0 36px; }
+.tabla-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.tabla table { width: 100%; border-collapse: collapse; font: 14px/1.45 var(--sans); min-width: 640px; }
+.tabla th { text-align: left; font-weight: 600; font-size: 13px; color: var(--muted); padding: 0 12px 10px 0; border-bottom: 1px solid var(--line); white-space: nowrap; vertical-align: bottom; }
+.tabla td { padding: 11px 12px 11px 0; border-bottom: 1px solid rgb(38 39 46 / .7); vertical-align: top; color: var(--muted); }
+.tabla td:first-child { color: var(--fg); font-weight: 500; }
+.tabla td.num { font-variant-numeric: tabular-nums; color: var(--fg); white-space: nowrap; }
+.tabla tr.oculta, .tabla tr.filtrada { display: none; }
+.tabla th button { all: unset; cursor: pointer; display: inline-flex; gap: 6px; align-items: center; border-radius: 4px; }
+.tabla th button:focus-visible { outline: 2px solid var(--accent-ink); outline-offset: 2px; }
+.tabla th button::after { content: ""; width: 6px; height: 6px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg) translateY(-2px); opacity: .35; }
+.tabla th[aria-sort="ascending"] button::after { transform: rotate(225deg) translateY(-2px); opacity: 1; }
+.tabla th[aria-sort="descending"] button::after { opacity: 1; }
+.tabla th[aria-sort] button { color: var(--fg); }
+.base-chip { display: inline-block; white-space: nowrap; font: 500 12px/1.4 var(--sans); color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 1px 8px; text-decoration: none; }
+.base-chip[data-fuerte] { color: var(--fg); border-color: #4a4b53; }
+@media (hover: hover) and (pointer: fine) { .base-chip:hover { border-color: var(--dim); color: var(--fg); } }
+
+.spark { display: inline-flex; align-items: flex-end; gap: 2px; height: 20px; width: 26px; margin-right: 10px; vertical-align: -4px; }
+.spark i { flex: 1; min-height: 1px; border-radius: 2px 2px 0 0; background: #55565e; }
+.spark i:nth-child(2) { background: #8d8c94; }
+.spark i:nth-child(3) { background: var(--accent); }
+.spark-t { color: var(--muted); }
+
+.tabla-ctrl { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px 24px; margin-bottom: 14px; }
+.tabla-ctrl label { display: grid; gap: 6px; font: 500 13px var(--sans); color: var(--muted); flex: 1 1 260px; max-width: 360px; }
+.tabla-ctrl input { font: 15px var(--sans); color: var(--fg); background: var(--surface); border: 1px solid #3a3b43; border-radius: 10px; padding: 10px 12px; outline: none; transition: border-color 160ms ease; }
+.tabla-ctrl input::placeholder { color: var(--dim); }
+.tabla-ctrl input:focus-visible { border-color: var(--accent-ink); outline: none; box-shadow: 0 0 0 3px var(--accent-soft); }
+.tabla-cuenta { font: 13px var(--sans); color: var(--muted); font-variant-numeric: tabular-nums; }
+.tabla-vacia { font: 15px var(--sans); color: var(--muted); padding: 18px 0; margin: 0; display: none; }
+.tabla-mas { all: unset; cursor: pointer; margin-top: 14px; font: 600 14px var(--sans); color: var(--fg); padding: 9px 16px; border-radius: 999px; box-shadow: inset 0 0 0 1px var(--line); transition: transform 160ms var(--ease-out), box-shadow 160ms ease; }
+.tabla-mas:active { transform: scale(0.97); }
+.tabla-mas:focus-visible { outline: 2px solid var(--accent-ink); outline-offset: 2px; }
+@media (hover: hover) and (pointer: fine) { .tabla-mas:hover { box-shadow: inset 0 0 0 1px var(--dim); } }
+
+/* ---------- Gráficas ---------- */
+.fig { margin: 36px 0 40px; }
+.fig-pie { font: 14px/1.5 var(--sans); color: var(--muted); margin: 14px 0 0; max-width: 68ch; }
+.fig svg { display: block; overflow: visible; }
+.fig svg text { font-family: var(--sans); font-size: 12px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+.tip { position: absolute; pointer-events: none; z-index: 5; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; font: 13px/1.4 var(--sans); color: var(--fg); white-space: nowrap; box-shadow: 0 12px 32px rgb(0 0 0 / .45); }
+.tip span { display: block; color: var(--muted); }
+
+/* Tres años */
+.anios { display: grid; grid-template-columns: 1fr; gap: 0; border-top: 1px solid var(--line); }
+@media (min-width: 720px) { .anios { grid-template-columns: repeat(3, 1fr); gap: 28px; border-top: 0; } }
+.anio { padding: 18px 0; border-bottom: 1px solid var(--line); }
+@media (min-width: 720px) { .anio { border-bottom: 0; border-top: 1px solid var(--line); } }
+.anio-y { font: 650 clamp(34px, 4vw, 48px)/1 var(--sans); letter-spacing: -0.04em; font-variant-numeric: tabular-nums; }
+.anio-f { font: 500 17px/1.3 var(--sans); color: var(--fg); margin: 8px 0 14px; }
+.anio-m { display: flex; align-items: center; gap: 10px; font: 13px var(--sans); color: var(--muted); min-height: 18px; }
+.anio-m i { display: block; height: 6px; border-radius: 3px; background: var(--accent); flex: none; }
+.anio-m b { color: var(--fg); font-weight: 600; font-variant-numeric: tabular-nums; }
+.anio-d { font: 14px/1.45 var(--sans); color: var(--muted); margin-top: 10px; }
+
+/* Temas por año */
+.temas { display: grid; grid-template-columns: 1fr; gap: 20px 40px; }
+@media (min-width: 900px) { .temas { grid-template-columns: minmax(0, 1fr) 280px; } }
+.temas-graf { position: relative; min-height: 300px; }
+.lentes { display: inline-flex; padding: 3px; border-radius: 999px; background: var(--surface); box-shadow: inset 0 0 0 1px var(--line); margin-bottom: 18px; }
+.lentes button { all: unset; cursor: pointer; font: 500 14px var(--sans); color: var(--muted); padding: 7px 14px; border-radius: 999px; transition: background-color 180ms ease, color 180ms ease, transform 160ms var(--ease-out); -webkit-tap-highlight-color: transparent; }
+.lentes button:active { transform: scale(0.97); }
+.lentes button[aria-pressed="true"] { background: var(--fg); color: var(--bg); }
+.lentes button:focus-visible { outline: 2px solid var(--accent-ink); outline-offset: 2px; }
+.temas-lista { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; align-content: start; }
+.temas-lista button { all: unset; box-sizing: border-box; cursor: pointer; width: 100%; display: grid; grid-template-columns: 18px 1fr auto; gap: 10px; align-items: center; padding: 8px 10px; border-radius: 8px; font: 14px/1.3 var(--sans); color: var(--muted); transition: background-color 160ms ease, color 160ms ease, opacity 200ms ease; }
+.temas-lista button:focus-visible { outline: 2px solid var(--accent-ink); outline-offset: 0; }
+.temas-lista button[aria-pressed="true"] { background: var(--surface); color: var(--fg); }
+.temas-lista .sw { height: 2px; border-radius: 1px; }
+.temas-lista .sw.dash { background: repeating-linear-gradient(90deg, var(--frost) 0 4px, transparent 4px 7px) !important; }
+.temas-lista .v { font-variant-numeric: tabular-nums; color: var(--fg); font-weight: 600; }
+.temas.enfocado .temas-lista button[aria-pressed="false"] { opacity: .55; }
+@media (hover: hover) and (pointer: fine) { .temas-lista button:hover { background: var(--surface); color: var(--fg); } }
+.temas-pista { font: 13px/1.45 var(--sans); color: var(--dim); margin: 10px 10px 0; }
+.calor { margin-top: 18px; }
+.calor table { min-width: 560px; }
+.calor td.c { text-align: center; font-variant-numeric: tabular-nums; color: var(--fg); padding-right: 0; }
+.calor th.c { text-align: center; padding-right: 0; }
+.calor tr.sub td:first-child { padding-left: 18px; color: var(--muted); font-weight: 400; }
+.calor .grupo th { border-bottom: 0; padding-bottom: 2px; color: var(--fg); }
+
+/* Barras horizontales */
+.hbar-g { margin-bottom: 26px; }
+.hbar-g h4 { font: 600 14px var(--sans); color: var(--muted); margin: 0 0 10px; }
+.hbar { display: grid; grid-template-columns: minmax(130px, 210px) 1fr; gap: 6px 16px; align-items: center; padding: 7px 0; }
+.hbar-n { font: 14px/1.3 var(--sans); color: var(--fg); }
+@media (max-width: 560px) { .hbar { grid-template-columns: 1fr; gap: 6px; padding: 9px 0; } .hbar-b i { max-width: calc(100% - 92px); } }
+.hbar-n small { display: block; color: var(--muted); font-size: 12.5px; }
+.hbar-b { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.hbar-b i { display: block; height: 10px; border-radius: 0 3px 3px 0; background: #6d6c74; flex: none; transform-origin: 0 50%; }
+.hbar.fuerte .hbar-b i { background: var(--accent); }
+.hbar-b span { font: 13px var(--sans); color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.hbar-b span b { color: var(--fg); font-weight: 600; }
+@media (prefers-reduced-motion: no-preference) {
+  .va-crecer .hbar-b i { animation: crecer 700ms var(--ease-out) both; animation-delay: calc(var(--i, 0) * 45ms); }
+}
+@keyframes crecer { from { transform: scaleX(0.04); opacity: .4; } }
+
+/* Born in Winter */
+.cap-invierno .cap-n { color: var(--frost); }
+.cap-invierno .cap-title::after { background: var(--frost); }
+.cap-invierno article li::marker, .cap-invierno li::marker { color: var(--frost); }
+.biw { display: grid; grid-template-columns: repeat(8, 1fr); gap: 8px; align-items: end; height: 190px; padding-top: 24px; border-bottom: 1px solid var(--line); max-width: 560px; }
+.biw div { display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; gap: 6px; }
+.biw i { display: block; width: 100%; max-width: 44px; border-radius: 4px 4px 0 0; background: rgb(169 188 208 / .55); transform-origin: 50% 100%; }
+.biw .pico i { background: var(--frost); }
+.biw span { font: 12px var(--sans); color: var(--muted); font-variant-numeric: tabular-nums; }
+.biw-x { display: grid; grid-template-columns: repeat(8, 1fr); gap: 8px; max-width: 560px; margin-top: 8px; }
+.biw-x span { text-align: center; font: 12px var(--sans); color: var(--muted); font-variant-numeric: tabular-nums; }
+@media (prefers-reduced-motion: no-preference) {
+  .va-crecer .biw i { animation: subirbarra 700ms var(--ease-out) both; animation-delay: calc(var(--i, 0) * 50ms); }
+}
+@keyframes subirbarra { from { transform: scaleY(0.06); opacity: .3; } }
+
+/* Rastro */
+.rastro-graf { position: relative; }
+.rastro-graf circle { transition: opacity 160ms ease; }
+.rastro-leyenda { display: flex; flex-wrap: wrap; gap: 8px 24px; font: 13px var(--sans); color: var(--muted); margin-top: 6px; }
+.rastro-leyenda i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 8px; vertical-align: -1px; }
+
+.sin-js { font: 14px var(--sans); color: var(--muted); }
+</style>
+</head>
+<body>
+<a class="saltar" href="#resumen">Saltar al texto</a>
+<header class="nav">
+  <a class="nav-marca" href="index.html">Mi música</a>
+  <nav class="nav-links" aria-label="Secciones del sitio">
+    <a href="index.html">Wrapped</a>
+    <a href="letras.html" aria-current="page">Letras</a>
+  </nav>
+  <span class="nav-progreso" aria-hidden="true"></span>
+</header>
+
+<header class="hero">
+  <canvas class="cielo" aria-hidden="true"></canvas>
+  <div class="hero-in">
+    <h1 style="--i:0">Las letras de mi música</h1>
+    <p class="hero-anios" style="--i:1">2024 a 2026</p>
+    <p class="hero-lead" style="--i:2">Qué dicen las canciones y los discos que más escucho, y cómo cambiaron sus temas de un año a otro.</p>
+    <a class="boton" href="#resumen" style="--i:3">Empezar a leer</a>
+  </div>
+</header>
+
+<div class="lectura">
+  <aside class="toc" aria-label="Capítulos">
+    <p class="toc-titulo">Capítulos</p>
+    <ol>
+{{INDICE}}
+    </ol>
+  </aside>
+  <article>
+    <nav class="toc-movil" aria-label="Capítulos">
+      <ol>
+{{INDICE}}
+      </ol>
+    </nav>
+{{CONTENIDO}}
+  </article>
+</div>
+
+<footer class="pie">
+  <p>Análisis hecho a partir de mi historial de Spotify, con corte al 18 de noviembre de 2026. Solo cuenta mi música, porque la cuenta es compartida. No se reproducen letras, solo paráfrasis y citas cortas de entrevistas.</p>
+  <nav aria-label="Otras páginas"><a href="index.html">Ver el Wrapped</a><a href="#resumen">Volver al inicio</a></nav>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+<script>
+(() => {
+const RM = matchMedia('(prefers-reduced-motion: reduce)');
+const fmt = (v, d = 1) => (+v).toLocaleString('es-CO', { minimumFractionDigits: 0, maximumFractionDigits: d });
+const NN = ' ';
+const el = (tag, cls, txt) => { const n = document.createElement(tag); if (cls) n.className = cls; if (txt != null) n.textContent = txt; return n; };
+
+/* Cielo de la portada: estrellas fijas con semilla, como la portada del PDF */
+function cielo() {
+  const c = document.querySelector('.cielo'); if (!c) return;
+  const draw = () => {
+    const r = c.getBoundingClientRect(), dpr = Math.min(devicePixelRatio || 1, 2);
+    c.width = Math.round(r.width * dpr); c.height = Math.round(r.height * dpr);
+    const x = c.getContext('2d'); x.scale(dpr, dpr); x.clearRect(0, 0, r.width, r.height);
+    let s = 1983; const rnd = () => (s = (s * 16807) % 2147483647) / 2147483647;
+    const n = Math.round(r.width * r.height / 3600);
+    for (let i = 0; i < n; i++) {
+      const px = rnd() * r.width, py = rnd() * r.height, rad = 0.35 + rnd() * 1.1, o = 0.12 + rnd() * 0.6;
+      x.beginPath(); x.arc(px, py, rad, 0, Math.PI * 2); x.fillStyle = `rgba(236,240,246,${o * (1 - py / r.height * 0.55)})`; x.fill();
+    }
+    // una sola estrella más grande, la que da origen a todo en "Born in Winter"
+    const gx = r.width * 0.78, gy = r.height * 0.26;
+    const g = x.createRadialGradient(gx, gy, 0, gx, gy, 26); g.addColorStop(0, 'rgba(169,188,208,.55)'); g.addColorStop(1, 'rgba(169,188,208,0)');
+    x.fillStyle = g; x.beginPath(); x.arc(gx, gy, 26, 0, Math.PI * 2); x.fill();
+    x.fillStyle = 'rgba(244,247,250,.95)'; x.beginPath(); x.arc(gx, gy, 1.8, 0, Math.PI * 2); x.fill();
+  };
+  draw(); let t; new ResizeObserver(() => { clearTimeout(t); t = setTimeout(draw, 150); }).observe(c);
+}
+
+/* Índice: marca el capítulo que se está leyendo */
+function indice() {
+  const secs = [...document.querySelectorAll('section.cap')];
+  const links = [...document.querySelectorAll('[data-sec]')];
+  const barra = document.querySelector('.toc-movil ol');
+  let actual = null;
+  const marcar = (id) => {
+    if (id === actual) return; actual = id;
+    links.forEach((a) => { const on = a.dataset.sec === id; a.classList.toggle('activo', on); if (on) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current'); });
+    const chip = barra && barra.querySelector(`[data-sec="${id}"]`);
+    if (chip && getComputedStyle(barra).overflowX !== 'visible') {
+      const left = chip.offsetLeft - 20;
+      barra.scrollTo({ left, behavior: RM.matches ? 'auto' : 'smooth' });
+    }
+  };
+  const vis = new Map();
+  const io = new IntersectionObserver((ents) => {
+    ents.forEach((e) => vis.set(e.target.id, e.isIntersecting));
+    const primero = secs.find((s) => vis.get(s.id));
+    if (primero) marcar(primero.id);
+  }, { rootMargin: '-35% 0px -60% 0px' });
+  secs.forEach((s) => io.observe(s));
+}
+
+/* Animación de entrada para gráficas, solo cuando aparecen */
+function alVer(node, fn) {
+  const io = new IntersectionObserver((ents) => { if (ents.some((e) => e.isIntersecting)) { io.disconnect(); fn(); } }, { rootMargin: '0px 0px -12% 0px' });
+  io.observe(node);
+}
+
+/* ---------- Figura: los tres años ---------- */
+function figAnios(f) {
+  const A = [
+    ['2024', 'crecía', 27, 'Fear Inoculum de TOOL y “Marigold”: crecer y perderle el miedo a envejecer.'],
+    ['2025', 'lloraba', 27, 'El duelo por personas reales pasa del 3 % al 15 %, con “Save Me” y las “Wings” de TOOL.'],
+    ['2026', 'mira de frente a la muerte', 52, '“Nocturne”, “Nobody” y “The Apocalyptist”: la muerte como idea más que como duelo.'],
+  ];
+  const w = el('div', 'anios');
+  A.forEach(([y, frase, m, d]) => {
+    const a = el('div', 'anio');
+    a.append(el('div', 'anio-y', y), el('p', 'anio-f', frase));
+    const mm = el('div', 'anio-m'); const i = el('i'); i.style.width = (m * 1.6) + 'px';
+    const b = el('b', null, m + NN + '%'); mm.append(i, b);
+    a.append(mm, el('p', 'anio-d', d.replace(/(\d) %/g, '$1' + NN + '%')));
+    w.append(a);
+  });
+  f.replaceChildren(w, el('p', 'fig-pie', 'La barra roja es la parte de las horas de tu top 25 de cada año que habla de muerte.'));
+}
+
+/* ---------- Figura: temas por año, dos lentes ---------- */
+function figTemas(f) {
+  const T = [
+    { k: 'muerte', n: 'Muerte en cualquier forma', c: [27, 27, 52], d: [21, 33, 34], col: 'var(--accent)', w: 2.6, base: true },
+    { k: 'crec', n: 'Crecimiento y transformación', c: [19, 6, 3], d: [40, 24, 19], col: '#d4d3d8', w: 2, base: true },
+    { k: 'critica', n: 'Crítica social o política', c: [25, 15, 16], d: [17, 27, 30], col: '#8d8c94', w: 2, base: true },
+    { k: 'mente', n: 'Mente que sufre por dentro', c: [18, 8, 18], d: [19, 20, 19], col: 'var(--frost)', w: 2, dash: true, base: true },
+    { k: 'espir', n: 'Espiritualidad sin iglesia', c: [23, 5, 10], d: [6, 5, 3], col: '#5c5d66', w: 1.4 },
+    { k: 'amor', n: 'Amor y desamor', c: [19, 18, 11], d: [5, 10, 8], col: '#5c5d66', w: 1.4 },
+    { k: 'relig', n: 'Religión institucional criticada', c: [3, 7, 14], d: [7, 9, 6], col: '#5c5d66', w: 1.4 },
+  ];
+  const Y = [2024, 2025, 2026];
+  let lente = 'c', foco = null;
+
+  const wrap = el('div', 'temas');
+  const izq = el('div');
+  const lentes = el('div', 'lentes'); lentes.setAttribute('role', 'group'); lentes.setAttribute('aria-label', 'Lente');
+  [['c', 'Tus 25 canciones de cada año'], ['d', 'Los 46 discos investigados']].forEach(([k, t]) => {
+    const b = el('button', null, t); b.type = 'button'; b.dataset.k = k; b.setAttribute('aria-pressed', k === lente);
+    b.addEventListener('click', () => { lente = k; lentes.querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', x.dataset.k === k)); dibujar(true); });
+    lentes.append(b);
+  });
+  const graf = el('div', 'temas-graf');
+  izq.append(lentes, graf);
+  const der = el('div');
+  const lista = el('ul', 'temas-lista'); lista.setAttribute('aria-label', 'Temas. Toca uno para resaltarlo');
+  T.forEach((t) => {
+    const li = el('li'); const b = el('button'); b.type = 'button'; b.dataset.k = t.k; b.setAttribute('aria-pressed', 'false');
+    const sw = el('span', 'sw' + (t.dash ? ' dash' : '')); sw.style.background = t.col;
+    b.append(sw, el('span', null, t.n), el('span', 'v'));
+    b.addEventListener('click', () => { foco = foco === t.k ? null : t.k; dibujar(false); });
+    li.append(b); lista.append(li);
+  });
+  der.append(lista, el('p', 'temas-pista', 'Toca un tema para resaltarlo. Las cifras de la derecha son de 2026.'));
+  wrap.append(izq, der);
+
+  // Tabla completa con las cifras, como mapa de calor
+  const det = document.createElement('details'); det.className = 'plegable calor';
+  const sum = el('summary'); sum.append('Ver todas las cifras', el('span', null, '10 filas'));
+  const filas = [
+    ['Muerte en cualquier forma', [27, 27, 52], [21, 33, 34]], ['como idea o mortalidad', [13, 14, 18], [2, 7, 7], 1], ['duelo por alguien concreto', [3, 15, 6], [15, 20, 13], 1],
+    ['Crecimiento y transformación', [19, 6, 3], [40, 24, 19]], ['Espiritualidad sin iglesia', [23, 5, 10], [6, 5, 3]], ['Crítica social o política', [25, 15, 16], [17, 27, 30]],
+    ['Mente que sufre por dentro', [18, 8, 18], [19, 20, 19]], ['Amor y desamor', [19, 18, 11], [5, 10, 8]], ['Religión institucional criticada', [3, 7, 14], [7, 9, 6]], ['Sin datos u otros temas', [2, 21, 6], [22, 16, 18]],
+  ];
+  const sc = el('div', 'tabla-scroll'); const tb = document.createElement('table');
+  tb.innerHTML = '<thead><tr class="grupo"><th></th><th class="c" colspan="3">Canciones</th><th class="c" colspan="3">Discos</th></tr><tr><th>Tema</th>' + '<th class="c">2024</th><th class="c">2025</th><th class="c">2026</th>'.repeat(2) + '</tr></thead>';
+  const body = document.createElement('tbody');
+  filas.forEach(([n, c, d, sub]) => {
+    const tr = document.createElement('tr'); if (sub) tr.className = 'sub';
+    tr.append(el('td', null, n));
+    [...c, ...d].forEach((v) => { const td = el('td', 'c', v + NN + '%'); td.style.background = `rgb(217 72 59 / ${Math.min(v / 55, 1) * 0.55})`; tr.append(td); });
+    body.append(tr);
+  });
+  tb.append(body); sc.append(tb);
+  const tw = el('div', 'tabla'); tw.append(sc);
+  det.append(sum, tw);
+  f.replaceChildren(wrap, det);
+  f.insertAdjacentElement('beforeend', el('p', 'fig-pie', 'Porcentaje de horas de cada conjunto que toca cada tema. Una canción o un disco puede tener varios temas, así que no suman 100. 2026 llega hasta el 18 de noviembre.'));
+
+  const tip = el('div', 'tip'); tip.style.display = 'none'; graf.append(tip);
+  let svg, x, y, W, H;
+  const m = { t: 16, r: 46, b: 28, l: 34 };
+  function base() {
+    graf.querySelectorAll('svg').forEach((s) => s.remove());
+    W = Math.max(300, graf.clientWidth); H = 300;
+    x = d3.scalePoint().domain(Y).range([m.l, W - m.r]).padding(0.15);
+    y = d3.scaleLinear().domain([0, 55]).range([H - m.b, m.t]);
+    svg = d3.select(graf).insert('svg', '.tip').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img')
+      .attr('aria-label', 'Porcentaje de horas por tema en 2024, 2025 y 2026. La tabla con todas las cifras está debajo.');
+    const g = svg.append('g');
+    [0, 20, 40].forEach((v) => {
+      g.append('line').attr('x1', m.l).attr('x2', W - m.r).attr('y1', y(v)).attr('y2', y(v)).style('stroke', 'var(--line)');
+      g.append('text').attr('x', m.l - 8).attr('y', y(v) + 4).attr('text-anchor', 'end').text(v + NN + '%');
+    });
+    Y.forEach((yr) => g.append('text').attr('x', x(yr)).attr('y', H - 6).attr('text-anchor', 'middle').text(yr));
+    svg.append('g').attr('class', 'lineas');
+    svg.append('g').attr('class', 'puntos');
+    svg.append('g').attr('class', 'etqs');
+  }
+  const line = d3.line().x((d, i) => x(Y[i])).y((d) => y(d)).curve(d3.curveMonotoneX);
+  function dibujar(anim) {
+    const dur = anim && !RM.matches ? 520 : 0;
+    const vis = (t) => foco ? t.k === foco : t.base;
+    wrap.classList.toggle('enfocado', !!foco);
+    lista.querySelectorAll('button').forEach((b) => { const t = T.find((q) => q.k === b.dataset.k); b.setAttribute('aria-pressed', foco === t.k); b.querySelector('.v').textContent = t[lente][2] + NN + '%'; });
+    const orden = [...T].sort((a, b) => (vis(a) - vis(b)));
+    svg.select('.lineas').selectAll('path').data(orden, (t) => t.k).join('path')
+      .attr('fill', 'none').attr('stroke-linecap', 'round')
+      .style('stroke', (t) => !vis(t) ? '#33343b' : (foco && !['muerte', 'mente'].includes(t.k) ? 'var(--fg)' : t.col))
+      .attr('stroke-width', (t) => !vis(t) ? 1.2 : (foco ? 2.6 : t.w))
+      .attr('stroke-dasharray', (t) => t.dash ? '5 4' : null)
+      .order()
+      .transition().duration(dur).ease(d3.easeCubicInOut)
+      .attr('d', (t) => line(t[lente]));
+    const pts = T.filter(vis).flatMap((t) => t[lente].map((v, i) => ({ t, v, i })));
+    svg.select('.puntos').selectAll('circle').data(pts, (p) => p.t.k + p.i).join('circle')
+      .attr('r', 3.6).style('fill', (p) => foco && !['muerte', 'mente'].includes(p.t.k) ? 'var(--fg)' : p.t.col).style('stroke', 'var(--bg)').attr('stroke-width', 2).attr('cx', (p) => x(Y[p.i]))
+      .on('pointermove', (ev, p) => {
+        const [px, py] = d3.pointer(ev, graf);
+        tip.style.display = ''; tip.replaceChildren(el('b', null, `${Y[p.i]}: ${p.v}${NN}%`), el('span', null, p.t.n));
+        tip.style.left = Math.max(0, Math.min(px + 12, graf.clientWidth - tip.offsetWidth)) + 'px'; tip.style.top = Math.max(py - 58, 0) + 'px';
+      })
+      .on('pointerleave', () => { tip.style.display = 'none'; })
+      .transition().duration(dur).ease(d3.easeCubicInOut).attr('cy', (p) => y(p.v));
+    // etiquetas al final de cada línea visible, separadas para que no se pisen
+    const fin = T.filter(vis).map((t) => ({ t, yy: y(t[lente][2]) })).sort((a, b) => a.yy - b.yy);
+    for (let i = 1; i < fin.length; i++) if (fin[i].yy - fin[i - 1].yy < 15) fin[i].yy = fin[i - 1].yy + 15;
+    svg.select('.etqs').selectAll('text').data(fin, (d) => d.t.k).join('text')
+      .attr('x', x(2026) + 10).attr('text-anchor', 'start').style('fill', (d) => d.t.k === 'muerte' ? 'var(--fg)' : 'var(--muted)')
+      .style('font-weight', (d) => d.t.k === 'muerte' ? 600 : 400)
+      .text((d) => d.t[lente][2] + NN + '%')
+      .transition().duration(dur).ease(d3.easeCubicInOut).attr('y', (d) => d.yy + 4);
+    if (foco) {
+      const t = T.find((q) => q.k === foco);
+      svg.select('.etqs').selectAll('text.ini').data(t[lente].slice(0, 2)).join('text').attr('class', 'ini')
+        .attr('x', (d, i) => x(Y[i])).attr('text-anchor', 'middle').style('fill', 'var(--muted)')
+        .text((d) => d + NN + '%').attr('y', (d) => y(d) - 10);
+    }
+  }
+  base(); dibujar(false);
+  let rw = graf.clientWidth, rt;
+  new ResizeObserver(() => { if (Math.abs(graf.clientWidth - rw) < 4) return; rw = graf.clientWidth; clearTimeout(rt); rt = setTimeout(() => { base(); dibujar(false); }, 120); }).observe(graf);
+}
+
+/* ---------- Figura: el último año en horas ---------- */
+function figUltimo(f) {
+  const total = 56;
+  const G = [
+    ['De qué hablan', [
+      ['Muerte', 26, 17, 'como idea 9,3 h, duelo 5,5 h', true], ['Mente que sufre por dentro', 15.9, 15], ['Crítica social o política', 8.45, 7],
+      ['Amor', 8.45, 7], ['Religión institucional criticada', 8.4, 4], ['Espiritualidad sin iglesia', 5.9, 4],
+    ]],
+    ['Cómo terminan', [['Aceptación o desafío', 14.6, 6, 'incluye tu #1, tu #2 y tu #4'], ['Consuelo o salida', 7.6, 7]]],
+  ];
+  const max = 26; const wrap = el('div');
+  let i = 0;
+  G.forEach(([tit, rows]) => {
+    const g = el('div', 'hbar-g'); g.append(el('h4', null, tit));
+    rows.forEach(([n, h, c, nota, fuerte]) => {
+      const r = el('div', 'hbar' + (fuerte ? ' fuerte' : ''));
+      const nm = el('div', 'hbar-n', n); nm.append(el('small', null, `${c} canciones` + (nota ? `, ${nota.replace(/(\d) h/g, '$1' + NN + 'h')}` : '')));
+      const b = el('div', 'hbar-b'); const bar = el('i'); bar.style.width = `calc((100% - 92px) * ${h / max})`; bar.style.setProperty('--i', i++);
+      const v = el('span'); v.append(el('b', null, fmt(h, 2) + NN + 'h'), ` ${Math.round(h / total * 100)}${NN}%`);
+      b.append(bar, v); r.append(nm, b); g.append(r);
+    });
+    wrap.append(g);
+  });
+  f.replaceChildren(wrap, el('p', 'fig-pie', 'Horas de las 44 canciones con letra entre el 18 de noviembre de 2025 y el 18 de noviembre de 2026, que suman 56 h. Una canción puede tocar varios temas.'.replace(/(\d) h/g, '$1' + NN + 'h')));
+  if (!RM.matches) alVer(f, () => f.classList.add('va-crecer'));
+}
+
+/* ---------- Figura: Born in Winter por año ---------- */
+function figBiw(f) {
+  const D = [[2019, 0.69], [2020, 0.19], [2021, 1.06], [2022, 0.99], [2023, 0.37], [2024, 0.13], [2025, 0.13], [2026, 0]];
+  const max = 1.2;
+  const w = el('div', 'biw'); w.setAttribute('role', 'img');
+  w.setAttribute('aria-label', 'Horas de Born in Winter por año: ' + D.map(([y, h]) => `${y}, ${fmt(h, 2)} horas`).join('. '));
+  D.forEach(([y, h], i) => {
+    const c = el('div', h === 1.06 ? 'pico' : null); c.setAttribute('aria-hidden', 'true');
+    const b = el('i'); b.style.height = (h / max * 100) + '%'; b.style.setProperty('--i', i);
+    c.append(el('span', null, h ? fmt(h, 2) : '0'), b); w.append(c);
+  });
+  const xs = el('div', 'biw-x'); xs.setAttribute('aria-hidden', 'true'); D.forEach(([y]) => xs.append(el('span', null, y)));
+  f.replaceChildren(w, xs, el('p', 'fig-pie', `Horas de “Born in Winter” por año, unas 3,6${NN}h desde 2019. Su mejor año fue 2021.`));
+  if (!RM.matches) alVer(f, () => f.classList.add('va-crecer'));
+}
+
+/* ---------- Figura: canciones que dejaron rastro, en su año pico ---------- */
+function figRastro(f) {
+  const S = [
+    ['Up North', 'Borknagar', 8.5, 2020], ['Antagonist', 'Soen', 7.0, 2021], ['Systematomatic', 'Rishloo', 6.3, 2023], ['Jinn', 'Soen', 6.1, 2023],
+    ['July', 'Katatonia', 5.9, 2021], ['Freaks & Animals', 'Rishloo', 5.8, 2024], ['For My Demons', 'Katatonia', 3.7, 2022], ['Lost to Apathy', 'Dark Tranquillity', 3.4, 2023],
+    ['Monarch', 'Soen', 3.3, 2024], ['...of Melancholy Burning', 'Dark Tranquillity', 3.0, 2024], ['Iridium', 'Dark Tranquillity', 2.1, 2024], ['Spiders', 'System Of A Down', 1.8, 2025],
+    ['Therein', 'Dark Tranquillity', 1.4, 2026], ['Forward Momentum', 'Dark Tranquillity', 1.3, 2024], ['The Gallery', 'Dark Tranquillity', 1.1, 2024], ['Punish My Heaven', 'Dark Tranquillity', 1.0, 2024],
+    ['The Wonders at Your Feet', 'Dark Tranquillity', 0.8, 2024], ["Misery's Crown", 'Dark Tranquillity', 0.5, 2024], ['Mine Is the Grandeur...', 'Dark Tranquillity', 0.5, 2025],
+  ].map(([n, a, h, y]) => ({ n, a, h, y }));
+  const YRS = [2020, 2021, 2022, 2023, 2024, 2025, 2026];
+  const box = el('div', 'rastro-graf'); const tip = el('div', 'tip'); tip.style.display = 'none';
+  const ley = el('div', 'rastro-leyenda');
+  const l1 = el('span'); const i1 = el('i'); i1.style.background = '#8d8c94'; l1.append(i1, 'Pico antes de 2024, fuera de la ventana del análisis');
+  const l2 = el('span'); const i2 = el('i'); i2.style.background = 'var(--accent)'; l2.append(i2, 'Pico entre 2024 y 2026');
+  ley.append(l1, l2);
+  f.replaceChildren(box, ley, el('p', 'fig-pie', 'Cada círculo es una de las 19 canciones, puesta en el año en que más la escuchaste. El tamaño son sus horas desde 2019. Pasa el cursor por un círculo para ver su nombre.'));
+  box.append(tip);
+  const draw = () => {
+    box.querySelectorAll('svg').forEach((s) => s.remove());
+    const W = Math.max(300, box.clientWidth), narrow = W < 620;
+    const rr = (h) => (narrow ? 2.5 : 3) + Math.sqrt(h) * (narrow ? 3.6 : 4.6);
+    const ROW = narrow ? 40 : 46, top = 34, labW = 48;
+    const H = top + YRS.length * ROW + 6;
+    const svg = d3.select(box).insert('svg', '.tip').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img')
+      .attr('aria-label', 'Las 19 canciones según su año pico. Antes de 2024: Up North, Antagonist, July, For My Demons, Systematomatic, Jinn y Lost to Apathy. El resto tuvo su pico entre 2024 y 2026, casi todas en 2024.');
+    const yRow = (y) => top + YRS.indexOf(y) * ROW + ROW / 2;
+    const y0 = top + YRS.indexOf(2024) * ROW;
+    svg.append('rect').attr('x', 0).attr('y', y0).attr('width', W).attr('height', ROW * 3).attr('rx', 10).style('fill', 'rgb(217 72 59 / .07)');
+    svg.append('text').attr('x', W - 12).attr('y', y0 + ROW * 2.5 + 4).attr('text-anchor', 'end').style('fill', 'var(--accent-ink)').text('Ventana del análisis');
+    svg.append('text').attr('x', labW).attr('y', 16).text('Año pico de cada canción, de la que más horas suma a la que menos');
+    YRS.forEach((y) => {
+      svg.append('text').attr('x', 10).attr('y', yRow(y) + 4).style('fill', y >= 2024 ? 'var(--fg)' : 'var(--muted)').text(y);
+      if (y < 2024) svg.append('line').attr('x1', 0).attr('x2', W).attr('y1', yRow(y) + ROW / 2).attr('y2', yRow(y) + ROW / 2).style('stroke', 'var(--line)');
+    });
+    // en cada fila, las canciones de mayor a menor; el nombre al lado de las que pesan más
+    const cols = d3.group(S, (s) => s.y);
+    const gC = svg.append('g'), gT = svg.append('g');
+    cols.forEach((arr, y) => {
+      arr.sort((a, b) => b.h - a.h); let xx = labW + 14;
+      arr.forEach((s, i) => {
+        s.r = rr(s.h); s.cx = xx + s.r; s.cy = yRow(y); xx += s.r * 2 + 5;
+        if (narrow ? i === 0 && arr.length <= 3 : s.h >= 3) {
+          const t = gT.append('text').attr('x', xx + 2).attr('y', s.cy + 4).style('fill', 'var(--fg)').style('font-size', '12.5px').text(`${s.n} ${fmt(s.h)}${NN}h`);
+          xx += t.node().getComputedTextLength() + 16;
+        }
+      });
+    });
+    gC.selectAll('circle').data(S).join('circle')
+      .attr('cx', (s) => s.cx).attr('cy', (s) => s.cy).attr('r', (s) => s.r)
+      .style('fill', (s) => s.y >= 2024 ? 'var(--accent)' : '#8d8c94').style('fill-opacity', 0.9)
+      .on('pointermove', (ev, s) => {
+        const [px, py] = d3.pointer(ev, box);
+        tip.style.display = ''; tip.replaceChildren(el('b', null, s.n), el('span', null, `${s.a}, ${fmt(s.h)}${NN}h, pico en ${s.y}`));
+        tip.style.left = Math.max(0, Math.min(px + 12, box.clientWidth - tip.offsetWidth)) + 'px'; tip.style.top = Math.max(py - 60, 0) + 'px';
+      })
+      .on('pointerleave', () => { tip.style.display = 'none'; });
+  };
+  draw(); let rw = box.clientWidth, t;
+  new ResizeObserver(() => { if (Math.abs(box.clientWidth - rw) < 4) return; rw = box.clientWidth; clearTimeout(t); t = setTimeout(draw, 120); }).observe(box);
+}
+
+/* ---------- Tablas: barras pequeñas, fuentes, orden, búsqueda ---------- */
+const BASES = { A: 'el artista habló de la canción', Ad: 'el artista habló del disco', C: 'crítica o medio', F: 'fans o sitio sin autor', L: 'lectura de letra transcrita', t: 'tentativa' };
+const NOMBRES = { ultimo: 'canciones', rastro: 'canciones', ventana: 'canciones', discos: 'discos' };
+const num = (s) => { const v = parseFloat(String(s).replace(',', '.')); return isNaN(v) ? -1 : v; };
+function tablas() {
+  document.querySelectorAll('.tabla[data-tabla]').forEach((wrap) => {
+    const table = wrap.querySelector('table'); if (!table) return;
+    const tbody = table.tBodies[0]; const rows = [...tbody.rows]; const ths = [...table.tHead.rows[0].cells];
+    const tri = /^(\d+,\d) \/ (\d+,\d) \/ (\d+,\d)$/;
+    let triMax = 0;
+    rows.forEach((r) => [...r.cells].forEach((c) => { const m = c.textContent.trim().match(tri); if (m) triMax = Math.max(triMax, ...m.slice(1).map(num)); }));
+    rows.forEach((r) => {
+      [...r.cells].forEach((c, ci) => {
+        const txt = c.textContent.trim(); const head = ths[ci].textContent.trim();
+        const m = txt.match(tri);
+        if (m) {
+          const v = m.slice(1).map(num); c.classList.add('num'); c.dataset.orden = v.reduce((a, b) => a + b, 0);
+          const sp = el('span', 'spark'); sp.setAttribute('aria-hidden', 'true');
+          v.forEach((x) => { const i = el('i'); i.style.height = Math.max(x / triMax * 100, 4) + '%'; sp.append(i); });
+          const t = el('span', 'spark-t', txt); t.setAttribute('aria-label', `2024: ${m[1]} horas, 2025: ${m[2]} horas, 2026: ${m[3]} horas`);
+          c.replaceChildren(sp, t);
+        } else if (head === 'h' || head === 'Pico') { c.classList.add('num'); c.dataset.orden = num(txt); }
+        const a = c.querySelector('a');
+        if (head === 'Base' && a) {
+          a.className = 'base-chip';
+          const codes = txt.split(/,\s*/).map((s) => s.split(' ')[0]);
+          const desc = codes.map((k) => BASES[k] ? `${k}: ${BASES[k]}` : null).filter(Boolean);
+          if (desc.length) a.title = desc.join(', ');
+          if (codes[0] === 'A' || /^Artista/.test(txt)) a.dataset.fuerte = '';
+          a.target = '_blank'; a.rel = 'noopener';
+        }
+      });
+    });
+    // Orden por columnas numéricas
+    ths.forEach((th, ci) => {
+      const h = th.textContent.trim();
+      if (!(h === 'h' || h.startsWith('h 2') || h === 'Pico')) return;
+      const b = el('button', null, h); b.type = 'button'; th.replaceChildren(b);
+      b.addEventListener('click', () => {
+        const dir = th.getAttribute('aria-sort') === 'descending' ? 'ascending' : 'descending';
+        ths.forEach((x) => x.removeAttribute('aria-sort')); th.setAttribute('aria-sort', dir);
+        const key = (r) => +(r.cells[ci].dataset.orden || -1);
+        [...tbody.rows].sort((a, z) => dir === 'descending' ? key(z) - key(a) : key(a) - key(z)).forEach((r) => tbody.append(r));
+        aplicar();
+      });
+    });
+    // Búsqueda y vista corta en las tablas largas
+    const filtrable = wrap.dataset.filtro === '1';
+    const LIM = 10; let abierta = !filtrable || rows.length <= LIM + 2; let q = '';
+    const cosa = NOMBRES[wrap.dataset.tabla] || 'filas';
+    let cuenta, vacia, mas;
+    if (filtrable) {
+      const ctrl = el('div', 'tabla-ctrl');
+      const lab = el('label'); lab.append('Buscar por nombre, artista o tema');
+      const inp = document.createElement('input'); inp.type = 'search'; inp.autocomplete = 'off'; inp.placeholder = 'Por ejemplo, agua o Opeth';
+      lab.append(inp); cuenta = el('span', 'tabla-cuenta'); cuenta.setAttribute('aria-live', 'polite');
+      ctrl.append(lab, cuenta); wrap.prepend(ctrl);
+      vacia = el('p', 'tabla-vacia'); wrap.append(vacia);
+      inp.addEventListener('input', () => { q = inp.value.trim().toLowerCase(); aplicar(); });
+      if (!abierta) {
+        mas = el('button', 'tabla-mas'); mas.type = 'button';
+        mas.addEventListener('click', () => { abierta = !abierta; aplicar(); if (!abierta) wrap.scrollIntoView({ block: 'start', behavior: RM.matches ? 'auto' : 'smooth' }); });
+        wrap.append(mas);
+      }
+    }
+    function aplicar() {
+      let vis = 0, k = 0;
+      [...tbody.rows].forEach((r) => {
+        const ok = !q || r.textContent.toLowerCase().includes(q);
+        r.classList.toggle('filtrada', !ok);
+        if (ok) { vis++; r.classList.toggle('oculta', !abierta && !q && k >= LIM); k++; } else r.classList.remove('oculta');
+      });
+      if (cuenta) cuenta.textContent = q ? `${vis} de ${rows.length} ${cosa}` : `${rows.length} ${cosa}`;
+      if (vacia) { vacia.style.display = vis ? 'none' : 'block'; vacia.textContent = `Ninguna fila tiene “${q}”. Prueba con otro nombre o tema.`; }
+      if (mas) { mas.style.display = q ? 'none' : ''; mas.textContent = abierta ? 'Ver menos' : `Ver las ${rows.length} ${cosa}`; mas.setAttribute('aria-expanded', abierta); }
+    }
+    aplicar();
+  });
+}
+
+cielo(); indice(); tablas();
+const figs = { anios: figAnios, temas: figTemas, ultimo: figUltimo, biw: figBiw, rastro: figRastro };
+document.querySelectorAll('[data-fig]').forEach((f) => {
+  const fn = figs[f.dataset.fig]; if (!fn) return;
+  if (['temas', 'rastro'].includes(f.dataset.fig) && !window.d3) { f.replaceChildren(el('p', 'sin-js', 'No se pudo cargar la librería de gráficas. Revisa la conexión y recarga la página.')); return; }
+  try { fn(f); } catch (e) { console.error(f.dataset.fig, e); }
+});
+})();
+</script>
+</body>
+</html>
