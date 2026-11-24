@@ -103,24 +103,40 @@ body { --font-anthropic-sans: var(--sans); min-height: 100dvh; }
 /* Canciones */
 .wr-songs { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr; gap: 6px 40px; }
 @container (min-width: 760px) { .wr-songs { grid-template-columns: 1fr 1fr; grid-auto-flow: column; grid-template-rows: repeat(5, auto); } }
-.wr-song { display: grid; grid-template-columns: 44px 1fr auto; gap: 12px; align-items: center; padding: 12px 0; }
-.wr-song .rk { font-size: 22px; font-weight: 600; color: var(--dim); letter-spacing: -0.03em; }
+.wr-song a { display: grid; grid-template-columns: 30px 48px 1fr auto; gap: 14px; align-items: center; padding: 8px 10px 8px 6px; margin: 0 -10px 0 -6px; border-radius: 6px; color: inherit; text-decoration: none; transition: background-color 160ms ease; -webkit-tap-highlight-color: transparent; }
+.wr-song a:focus-visible { outline: 2px solid var(--accent); outline-offset: 0; }
+@media (hover: hover) and (pointer: fine) { .wr-song a:hover { background: rgb(255 255 255 / .07); } .wr-song a:hover .tt { text-decoration: underline; text-underline-offset: 3px; } }
+.wr-song .rk { font-size: 18px; font-weight: 600; color: var(--dim); letter-spacing: -0.03em; text-align: right; }
 .wr-song:first-child .rk { color: var(--accent); }
-.wr-song .tt { font-size: 17px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.25; overflow-wrap: anywhere; }
+.wr-song .tt { font-size: 16px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.25; overflow-wrap: anywhere; }
 .wr-song .ar { font-size: 14px; color: var(--muted); margin-top: 2px; }
 .wr-song .ct { font-size: 14px; color: var(--muted); white-space: nowrap; text-align: right; }
 .wr-song .ct b { color: var(--fg); font-weight: 600; font-size: 17px; }
 
-/* Álbumes + reloj */
-.wr-split { display: grid; grid-template-columns: 1fr; gap: 56px; }
-@container (min-width: 760px) { .wr-split { grid-template-columns: 1fr 1fr; align-items: start; } }
-.wr-albums { display: flex; flex-direction: column; }
-.wr-album { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: baseline; padding: 14px 0; border-top: 1px solid var(--line); }
-.wr-album:last-child { border-bottom: 1px solid var(--line); }
-.wr-album .tt { font-size: 18px; font-weight: 600; letter-spacing: -0.015em; overflow-wrap: anywhere; }
-.wr-album .ar { font-size: 14px; color: var(--muted); margin-top: 2px; }
-.wr-album .hr { font-size: 14px; color: var(--muted); white-space: nowrap; }
-.wr-clock { position: relative; aspect-ratio: 1; max-width: 380px; width: 100%; margin: 0 auto; }
+/* Portadas (enlaces a las de Spotify, no se guardan imágenes) */
+.wr-cov { position: relative; display: block; width: var(--cs, 48px); height: var(--cs, 48px); flex: none; border-radius: 4px; overflow: hidden; background: #22232a; }
+.wr-cov img { display: block; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 280ms ease; }
+.wr-cov img.listo { opacity: 1; }
+.wr-cov.vacia { display: grid; place-items: center; color: var(--dim); font-weight: 600; font-size: calc(var(--cs, 48px) * .38); }
+
+/* Discos de cabecera: tarjetas al estilo de Spotify */
+.wr-albums { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(150px, 44%); gap: 8px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; margin: 0 -10px; padding: 0 10px 4px; scroll-padding-inline: 10px; }
+.wr-albums::-webkit-scrollbar { display: none; }
+@container (min-width: 640px) { .wr-albums { grid-auto-flow: row; grid-template-columns: repeat(3, 1fr); overflow: visible; padding: 0; } }
+@container (min-width: 980px) { .wr-albums { grid-template-columns: repeat(5, 1fr); } }
+.wr-album { scroll-snap-align: start; display: flex; flex-direction: column; gap: 4px; padding: 10px 10px 14px; border-radius: 8px; color: inherit; text-decoration: none; transition: background-color 200ms ease; -webkit-tap-highlight-color: transparent; }
+.wr-album:focus-visible { outline: 2px solid var(--accent); outline-offset: 0; }
+@media (hover: hover) and (pointer: fine) { .wr-album:hover { background: rgb(255 255 255 / .07); } }
+.wr-album .wr-cov { --cs: 100%; height: auto; aspect-ratio: 1; border-radius: 6px; margin-bottom: 10px; box-shadow: 0 10px 28px rgb(0 0 0 / .5); }
+.wr-album .rk { font-size: 13px; color: var(--accent); font-weight: 600; font-variant-numeric: tabular-nums; }
+.wr-album .tt { font-size: 16px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.25; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow-wrap: anywhere; }
+.wr-album .ar { font-size: 14px; color: var(--muted); }
+
+.wr-clock { position: relative; aspect-ratio: 1; max-width: 380px; width: 100%; margin: 0; }
+
+/* Canción top con su portada */
+.wr-cancion-top { display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: center; }
+.wr-cancion-top .wr-cov { --cs: 84px; border-radius: 6px; box-shadow: 0 10px 28px rgb(0 0 0 / .5); }
 .wr-clock-c { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; pointer-events: none; text-align: center; }
 .wr-clock-c b { font-size: clamp(30px, 6cqi, 40px); font-weight: 600; letter-spacing: -0.04em; }
 .wr-clock-c span { font-size: 13px; color: var(--muted); }
@@ -202,10 +218,13 @@ body { --font-anthropic-sans: var(--sans); min-height: 100dvh; }
         <p class="wr-label">Tu número uno</p>
         <p class="artist dash-skeleton" data-draw="art_top">—</p>
       </div>
-      <div>
-        <p class="wr-label">La canción que más repetiste</p>
-        <p class="song dash-skeleton" data-draw="can_top">—</p>
-        <p class="by">de <span class="dash-skeleton" data-draw="can_top_art">—</span></p>
+      <div class="wr-cancion-top">
+        <div data-draw="can_top_cov"><span class="wr-cov vacia" style="--cs:84px" aria-hidden="true"></span></div>
+        <div>
+          <p class="wr-label">La canción que más repetiste</p>
+          <p class="song dash-skeleton" data-draw="can_top">—</p>
+          <p class="by">de <span class="dash-skeleton" data-draw="can_top_art">—</span></p>
+        </div>
       </div>
     </div>
   </section>
@@ -237,26 +256,25 @@ body { --font-anthropic-sans: var(--sans); min-height: 100dvh; }
   <section class="wr-sec" id="top-canciones">
     <div>
       <h2>Las que más sonaron</h2>
-      <p class="sub">Reproducciones de 30 segundos o más.</p>
+      <p class="sub">Reproducciones de 30 segundos o más. Toca una para abrirla en Spotify.</p>
     </div>
     <ol class="wr-songs" data-draw="canciones_list" data-source="canciones"></ol>
   </section>
 
-  <section class="wr-split" id="mas">
-    <div class="wr-sec" id="top-albumes">
-      <div>
-        <h2>Discos de cabecera</h2>
-        <p class="sub">Los cinco con más horas.</p>
-      </div>
-      <div class="wr-albums" data-draw="albumes_list" data-source="albumes"></div>
+  <section class="wr-sec" id="top-albumes">
+    <div>
+      <h2>Discos de cabecera</h2>
+      <p class="sub">Los cinco con más horas. Toca uno para abrir en Spotify tu canción más escuchada de ese disco.</p>
     </div>
-    <div class="wr-sec" id="hora-dia">
-      <div>
-        <h2>Tu reloj</h2>
-        <p class="sub">Horas escuchadas en cada hora del día, en hora de Bogotá.</p>
-      </div>
-      <div class="wr-clock" data-draw="reloj" data-source="horas_dia"></div>
+    <div class="wr-albums" data-draw="albumes_list" data-source="albumes"></div>
+  </section>
+
+  <section class="wr-sec" id="hora-dia">
+    <div>
+      <h2>Tu reloj</h2>
+      <p class="sub">Horas escuchadas en cada hora del día, en hora de Bogotá.</p>
     </div>
+    <div class="wr-clock" data-draw="reloj" data-source="horas_dia"></div>
   </section>
 
   <section class="wr-sec wr-letras" id="letras">
@@ -286,6 +304,7 @@ body { --font-anthropic-sans: var(--sans); min-height: 100dvh; }
 
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
 <script src="data/wrapped-data.js"></script>
+<script src="data/portadas.js"></script>
 <script>
 // Versión independiente: reemplaza el entorno de Claude con datos incluidos en la página.
 window.dash = (() => {
@@ -319,7 +338,22 @@ window.WR = {
     el.textContent = text; el.dataset.v = text;
     el.classList.remove('wr-swap'); void el.offsetWidth; el.classList.add('wr-swap');
   },
-  draws: ['periodo','kpi_horas','kpi_artistas','kpi_canciones','kpi_dias','art_top','can_top','can_top_art','generos','anios','artistas_list','canciones_list','albumes_list','reloj'],
+  draws: ['periodo','kpi_horas','kpi_artistas','kpi_canciones','kpi_dias','art_top','can_top','can_top_art','can_top_cov','generos','anios','artistas_list','canciones_list','albumes_list','reloj'],
+  portada(tipo, artista, titulo) { const P = window.PORTADAS; return (P && P[tipo] && P[tipo][artista + '|' + titulo]) || null; },
+  cov(p, titulo, tam) {
+    const n = document.createElement('span'); n.className = 'wr-cov' + (p ? '' : ' vacia'); n.setAttribute('aria-hidden', 'true');
+    if (tam) n.style.setProperty('--cs', tam + 'px');
+    if (!p) { n.textContent = (String(titulo).match(/[A-Za-zÀ-ÿ0-9]/) || [''])[0].toUpperCase(); return n; }
+    const img = new Image(); img.alt = ''; img.loading = 'lazy'; img.decoding = 'async'; img.width = 300; img.height = 300; img.src = p.img;
+    const ok = () => img.classList.add('listo');
+    if (img.complete) ok(); else { img.addEventListener('load', ok); img.addEventListener('error', () => n.replaceWith(WR.cov(null, titulo, tam))); }
+    n.append(img); return n;
+  },
+  enlace(p, etiqueta) {
+    const a = document.createElement(p ? 'a' : 'div');
+    if (p) { a.href = p.url; a.target = '_blank'; a.rel = 'noopener'; a.setAttribute('aria-label', etiqueta); }
+    return a;
+  },
   setYear(y) {
     WR.year = y;
     document.querySelectorAll('.wr-pill').forEach((b) => {
@@ -353,6 +387,14 @@ resumenCell('kpi_dias', 'dias', WR.fint);
 resumenCell('art_top', 'artista_top', String);
 resumenCell('can_top', 'cancion_top', String);
 resumenCell('can_top_art', 'cancion_top_artista', String);
+dash.draw('can_top_cov', (el) => {
+  const r = WR.rows('resumen'); if (!r || !r.length) return;
+  const { cancion_top: t, cancion_top_artista: a } = r[0];
+  if (el.dataset.v === a + '|' + t) return; el.dataset.v = a + '|' + t;
+  const p = WR.portada('canciones', a, t);
+  const box = WR.enlace(p, `Abrir “${t}” en Spotify`); box.append(WR.cov(p, t, 84));
+  el.replaceChildren(box);
+});
 </script>
 <script>
 // Géneros: el metal lleva el acento, el resto en grises
@@ -452,6 +494,8 @@ dash.draw('canciones_list', (el) => {
   if (!rows) { if (WR.failed('canciones')) { const li = document.createElement('li'); li.className = 'wr-err'; li.textContent = 'No se pudieron cargar los datos.'; el.append(li); } return; }
   rows.sort((a, b) => a.puesto - b.puesto).forEach((r, i) => {
     const li = document.createElement('li'); li.className = 'wr-song wr-enter'; li.style.setProperty('--i', i);
+    const p = WR.portada('canciones', r.artista, r.cancion);
+    const fila = WR.enlace(p, `${r.cancion} de ${r.artista}. Abrir en Spotify`);
     const rk = document.createElement('span'); rk.className = 'rk num'; rk.textContent = r.puesto;
     const mid = document.createElement('div');
     const tt = document.createElement('div'); tt.className = 'tt'; tt.textContent = r.cancion; WR.mark(tt, 'canciones', 'cancion', r.id);
@@ -460,7 +504,8 @@ dash.draw('canciones_list', (el) => {
     const ct = document.createElement('span'); ct.className = 'ct';
     const cv = document.createElement('b'); cv.className = 'num'; cv.textContent = WR.fint(r.reproducciones); WR.mark(cv, 'canciones', 'reproducciones', r.id);
     ct.append(cv, ' veces');
-    li.append(rk, mid, ct);
+    fila.append(rk, WR.cov(p, r.cancion, 48), mid, ct);
+    li.append(fila);
     el.append(li);
   });
 });
@@ -471,15 +516,14 @@ dash.draw('albumes_list', (el) => {
   const rows = WR.rows('albumes');
   if (!rows) { if (WR.failed('albumes')) { const p = document.createElement('p'); p.className = 'wr-err'; p.textContent = 'No se pudieron cargar los datos.'; el.append(p); } return; }
   rows.sort((a, b) => a.puesto - b.puesto).forEach((r, i) => {
-    const row = document.createElement('div'); row.className = 'wr-album wr-enter'; row.style.setProperty('--i', i);
-    const mid = document.createElement('div');
+    const p = WR.portada('discos', r.artista, r.album);
+    const row = WR.enlace(p, `${r.album} de ${r.artista}. Abrir en Spotify`); row.className = 'wr-album wr-enter'; row.style.setProperty('--i', i);
+    const rk = document.createElement('span'); rk.className = 'rk';
+    const hv = document.createElement('span'); hv.className = 'num'; hv.textContent = WR.fint(r.horas); WR.mark(hv, 'albumes', 'horas', r.id);
+    rk.append('#' + r.puesto + ', ', hv, ' h');
     const tt = document.createElement('div'); tt.className = 'tt'; tt.textContent = r.album; WR.mark(tt, 'albumes', 'album', r.id);
     const ar = document.createElement('div'); ar.className = 'ar'; ar.textContent = r.artista; WR.mark(ar, 'albumes', 'artista', r.id);
-    mid.append(tt, ar);
-    const hr = document.createElement('span'); hr.className = 'hr';
-    const hv = document.createElement('span'); hv.className = 'num'; hv.textContent = WR.fint(r.horas); WR.mark(hv, 'albumes', 'horas', r.id);
-    hr.append(hv, ' h');
-    row.append(mid, hr);
+    row.append(WR.cov(p, r.album), rk, tt, ar);
     el.append(row);
   });
 });

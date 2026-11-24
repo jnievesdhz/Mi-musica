@@ -15,6 +15,7 @@ Los datos van de enero de 2019 al 18 de noviembre de 2026.
 
 - `index.html`: el Wrapped.
 - `letras.html`: el análisis de letras. **No se edita a mano**, se genera (ver abajo).
+- `data/portadas.js` y `fuente/portadas-letras.json`: enlaces a las portadas de los discos en Spotify. No hay imágenes guardadas en el repo, el navegador carga cada portada desde Spotify y al tocarla se abre la canción en Spotify. Se generan con `portadas.py` del repo Historial-de-reproduccion (`python portadas.py sitio ../Mi-musica`). Después de regenerarlas hay que volver a correr `construir_letras.py`.
 - `assets/sitio.css`: colores, letras, barra de navegación y pie que comparten las dos páginas.
 - `data/`: los totales que usa el Wrapped, en JSON. `wrapped-data.js` es lo que carga la página. Los `.json` son los mismos datos por separado. Se generan con `actualizar.py` del repo privado Historial-de-reproduccion.
 - `fuente/letras.md`: el texto del análisis de letras, en Markdown con algunos bloques en HTML.
