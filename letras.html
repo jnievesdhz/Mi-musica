@@ -1,0 +1,2312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0f1014">
+<meta name="color-scheme" content="dark">
+<meta name="robots" content="noindex, nofollow">
+<title>Las letras de mi música, 2024 a 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter+Tight:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/sitio.css">
+<!-- Este archivo se genera con herramientas/construir_letras.py. Edita fuente/letras.md y fuente/letras.plantilla.html, no este. -->
+<style>
+/* ---------- Portada ---------- */
+.hero { position: relative; isolation: isolate; overflow: hidden; min-height: min(86dvh, 780px); display: flex; align-items: flex-end; border-bottom: 1px solid var(--line); }
+.cielo { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; }
+.hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgb(15 16 20 / 0) 40%, var(--bg) 100%); pointer-events: none; }
+.hero-in { width: 100%; max-width: 1320px; margin: 0 auto; padding: 96px clamp(20px, 5vw, 56px) clamp(48px, 8vh, 88px); box-sizing: border-box; }
+.hero-in::before { content: ""; display: block; width: 72px; height: 3px; background: var(--accent); border-radius: 2px; margin-bottom: 28px; }
+.hero h1 { margin: 0; font-size: clamp(48px, 9vw, 112px); font-weight: 650; letter-spacing: -0.045em; line-height: 0.94; max-width: 9ch; text-wrap: balance; }
+.hero-anios { margin: 22px 0 0; font-size: clamp(20px, 2.4vw, 28px); font-weight: 500; color: var(--frost); letter-spacing: -0.01em; }
+.hero-lead { margin: 18px 0 0; font-family: var(--serif); font-size: clamp(19px, 2vw, 23px); line-height: 1.45; color: rgb(236 235 232 / .82); max-width: 34ch; }
+.boton {
+  display: inline-flex; align-items: center; gap: 10px; margin-top: 32px; padding: 12px 20px; border-radius: 999px;
+  background: var(--fg); color: var(--bg); font: 600 15px var(--sans); text-decoration: none; white-space: nowrap;
+  transition: transform 160ms var(--ease-out), background-color 160ms ease;
+}
+.boton:active { transform: scale(0.97); }
+@media (hover: hover) and (pointer: fine) { .boton:hover { background: #fff8f6; } }
+@media (prefers-reduced-motion: no-preference) {
+  .hero-in > * { animation: subir 640ms var(--ease-out) both; animation-delay: calc(var(--i, 0) * 70ms + 120ms); }
+  .hero-in::before { animation: trazo 700ms var(--ease-out) both 60ms; transform-origin: 0 50%; }
+  .cielo { animation: aparecer 1400ms ease both; }
+}
+@keyframes subir { from { opacity: 0; transform: translateY(14px); } }
+@keyframes trazo { from { transform: scaleX(0.2); opacity: 0; } }
+@keyframes aparecer { from { opacity: 0; } }
+
+/* ---------- Estructura de lectura ---------- */
+.lectura { max-width: 1320px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 56px); box-sizing: border-box; display: grid; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 1100px) { .lectura { grid-template-columns: 210px minmax(0, 1fr); column-gap: clamp(40px, 5vw, 80px); } }
+.toc { display: none; }
+@media (min-width: 1100px) {
+  .toc { display: block; position: sticky; top: calc(var(--nav-h) + 40px); align-self: start; padding-top: 96px; }
+}
+.toc ol, .toc-movil ol { list-style: none; margin: 0; padding: 0; }
+.toc a { display: grid; grid-template-columns: 18px 1fr; gap: 10px; padding: 8px 0 8px 14px; border-left: 2px solid var(--line); color: var(--dim); text-decoration: none; font-size: 14px; line-height: 1.35; transition: color 160ms ease, border-color 160ms ease; }
+.toc a.activo { color: var(--fg); border-left-color: var(--accent); }
+@media (hover: hover) and (pointer: fine) { .toc a:not(.activo):hover { color: var(--muted); } }
+.toc-n { font-variant-numeric: tabular-nums; color: inherit; opacity: .8; }
+.toc-titulo { font-size: 13px; color: var(--muted); margin: 0 0 12px 16px; font-weight: 500; }
+
+.toc-movil { position: sticky; top: var(--nav-h); z-index: 15; margin: 0 calc(-1 * clamp(20px, 5vw, 56px)); background: rgb(15 16 20 / .9); border-bottom: 1px solid var(--line); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
+@media (min-width: 1100px) { .toc-movil { display: none; } }
+.toc-movil ol { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding: 10px clamp(20px, 5vw, 56px); scroll-padding-inline: 20px; }
+.toc-movil ol::-webkit-scrollbar { display: none; }
+.toc-movil li { margin: 0 !important; padding: 0 !important; font-family: var(--sans) !important; font-size: 13px !important; line-height: 1.3 !important; }
+.toc-movil a { display: inline-flex; gap: 6px; white-space: nowrap; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); font-size: 13px; text-decoration: none; transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease; }
+.toc-movil a:active { transform: scale(0.97); }
+.toc-movil a.activo { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.toc-movil .toc-n:empty { display: none; }
+
+article { min-width: 0; padding-bottom: 48px; }
+.cap { padding-top: clamp(64px, 10vw, 120px); }
+.cap > * { max-width: 680px; }
+.cap > .fig-ancha, .cap > .tabla, .cap > .hilos, .cap > .veredictos, .cap > .balance, .cap > .invierno, .cap > .curva, .cap > .plegable, .cap > .para-ti { max-width: 1000px; }
+
+.cap-n { margin: 0 0 14px !important; font-family: var(--sans) !important; font-size: 14px !important; font-weight: 600; color: var(--accent-ink); }
+.cap-title { margin: 0 0 40px; font-size: clamp(32px, 4.4vw, 54px); font-weight: 650; letter-spacing: -0.035em; line-height: 1.04; max-width: 19ch !important; text-wrap: balance; }
+.cap-title::after { content: ""; display: block; width: 56px; height: 3px; background: var(--accent); border-radius: 2px; margin-top: 22px; }
+
+article p, article li, article dd { font-family: var(--serif); font-size: clamp(18.5px, 1.4vw, 20.5px); line-height: 1.62; color: rgb(236 235 232 / .9); }
+article p { margin: 0 0 1.05em; }
+article strong, article b { font-weight: 600; color: var(--fg); }
+article em { font-style: italic; }
+article ul { margin: 0 0 1.4em; padding-left: 1.1em; }
+article li { margin-bottom: .55em; padding-left: .2em; }
+article li::marker { color: var(--accent); }
+article h3 { margin: 2.4em 0 .7em; font-size: clamp(22px, 2.2vw, 27px); font-weight: 600; letter-spacing: -0.025em; line-height: 1.18; text-wrap: balance; }
+article h4 { margin: 0 0 .5em; font-size: 17px; font-weight: 600; letter-spacing: -0.01em; }
+.tesis { font-family: var(--sans) !important; font-size: clamp(28px, 3.6vw, 44px) !important; line-height: 1.12 !important; letter-spacing: -0.03em; font-weight: 500; color: var(--muted) !important; margin: 0 0 32px !important; text-wrap: balance; }
+.tesis strong { font-weight: 650; }
+
+/* Fuentes como píldoras pequeñas al lado de la frase */
+a.src {
+  display: inline-block; font: 500 12px/1.4 var(--sans); color: var(--muted); text-decoration: none; white-space: nowrap;
+  border: 1px solid var(--line); border-radius: 999px; padding: 1px 8px; vertical-align: 2px; margin-left: 2px;
+  transition: color 160ms ease, border-color 160ms ease;
+}
+@media (hover: hover) and (pointer: fine) { a.src:hover { color: var(--fg); border-color: var(--dim); } }
+a.int { color: var(--accent-ink); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+
+/* Notas y recuadros */
+.nota { background: var(--surface); border-left: 3px solid var(--accent); border-radius: 0 12px 12px 0; padding: 20px 24px 4px; margin: 32px 0; }
+.nota p { font-size: 18px; }
+.invierno {
+  position: relative; overflow: hidden; margin: 40px 0; padding: clamp(24px, 4vw, 44px); border-radius: 12px;
+  background:
+    radial-gradient(1px 1px at 12% 18%, rgb(255 255 255 / .55), transparent 60%),
+    radial-gradient(1px 1px at 78% 30%, rgb(255 255 255 / .4), transparent 60%),
+    radial-gradient(1.5px 1.5px at 62% 72%, rgb(255 255 255 / .35), transparent 60%),
+    radial-gradient(1px 1px at 30% 82%, rgb(255 255 255 / .3), transparent 60%),
+    radial-gradient(1px 1px at 90% 86%, rgb(255 255 255 / .45), transparent 60%),
+    linear-gradient(160deg, #141a25, #0e1117 70%);
+  box-shadow: inset 0 0 0 1px rgb(169 188 208 / .16);
+}
+.inv-k { font: 600 14px var(--sans) !important; color: var(--frost) !important; margin: 0 0 14px !important; }
+.inv-grande { font-size: clamp(21px, 2.2vw, 27px) !important; line-height: 1.45 !important; color: var(--fg) !important; max-width: 40ch; }
+.inv-nota { font: 400 16px/1.55 var(--sans) !important; color: var(--frost) !important; margin: 0 !important; max-width: 62ch; }
+
+.veredictos { display: grid; grid-template-columns: 1fr; gap: 0 40px; margin: 8px 0 24px; }
+@media (min-width: 760px) { .veredictos { grid-template-columns: 1fr 1fr; } }
+.ver { border-top: 2px solid var(--line); padding: 16px 0 18px; }
+.ver[data-v="cambia"] { border-top-color: var(--accent); }
+.ver[data-v="mixto"] { border-top-color: #7c4a45; }
+.ver-h { font: 600 16px/1.35 var(--sans) !important; color: var(--fg) !important; margin: 0 0 8px !important; letter-spacing: -0.01em; }
+.ver-t { font-size: 17px !important; margin: 0 !important; color: var(--muted) !important; }
+.ver-t b { color: var(--fg); }
+.leyenda-ver { display: flex; flex-wrap: wrap; gap: 8px 22px; font: 14px var(--sans); color: var(--muted); margin: 0 0 4px; }
+.leyenda-ver span::before { content: ""; display: inline-block; width: 14px; height: 2px; margin-right: 8px; vertical-align: 4px; background: var(--line); }
+.leyenda-ver .l-cambia::before { background: var(--accent); }
+.leyenda-ver .l-mixto::before { background: #7c4a45; }
+
+.curva { list-style: none; padding: 0; margin: 28px 0 32px; display: grid; grid-template-columns: 1fr; gap: 0; counter-reset: paso; }
+@media (min-width: 860px) { .curva { grid-template-columns: repeat(5, 1fr); gap: 0 20px; } }
+.curva li { counter-increment: paso; position: relative; padding: 14px 0 14px 40px; margin: 0; font-family: var(--sans); border-top: 1px solid var(--line); }
+@media (min-width: 860px) { .curva li { padding: 18px 0 0; border-top: 0; } .curva li::after { content: ""; position: absolute; left: 0; right: -20px; top: 0; height: 2px; background: linear-gradient(90deg, #8d8c94, var(--accent)); opacity: calc(.25 + var(--k, 0) * .18); } .curva li:last-child::after { right: 0; } }
+.curva li::before { content: counter(paso); position: absolute; left: 0; top: 14px; font: 600 14px var(--sans); color: var(--accent-ink); font-variant-numeric: tabular-nums; }
+@media (min-width: 860px) { .curva li::before { position: static; display: block; margin-bottom: 10px; } }
+.curva b { display: block; font: 600 16px/1.3 var(--sans); color: var(--fg); margin-bottom: 4px; }
+.curva span { display: block; font: 15px/1.45 var(--sans); color: var(--muted); }
+
+.hilos { display: grid; grid-template-columns: 1fr; gap: 8px 48px; margin-top: 8px; }
+@media (min-width: 900px) { .hilos { grid-template-columns: 1fr 1fr; } }
+.hilo { border-top: 1px solid var(--line); padding-top: 20px; }
+.hilo p { font-size: 18px; }
+
+.cita-grande { margin: 44px 0; padding: 0; }
+.cita-grande p { font-size: clamp(26px, 3vw, 36px) !important; line-height: 1.25 !important; font-style: italic; color: var(--fg) !important; margin: 0 0 14px !important; letter-spacing: -0.01em; }
+.cita-grande footer { font: 14px var(--sans); color: var(--muted); }
+
+.ficha { display: grid; gap: 0; margin: 24px 0 8px; }
+.ficha > div { display: grid; grid-template-columns: 1fr; gap: 2px; padding: 12px 0; border-top: 1px solid var(--line); }
+@media (min-width: 640px) { .ficha > div { grid-template-columns: 120px 1fr; gap: 20px; } }
+.ficha dt { font: 600 14px/1.9 var(--sans); color: var(--frost); }
+.ficha dd { margin: 0; }
+
+.para-ti { margin: 56px 0 16px; padding: clamp(28px, 5vw, 56px) 0 0; border-top: 1px solid rgb(169 188 208 / .3); }
+.para-ti figcaption { font: 600 14px var(--sans); color: var(--frost); margin-bottom: 18px; }
+.para-ti blockquote { margin: 0; }
+.para-ti blockquote p { font-size: clamp(27px, 3.6vw, 44px) !important; line-height: 1.22 !important; font-style: italic; font-weight: 400; color: var(--fg) !important; max-width: 26ch; letter-spacing: -0.01em; margin: 0 !important; }
+
+.par { display: grid; grid-template-columns: 1fr; gap: 0; margin: 12px 0 32px; }
+@media (min-width: 640px) { .par { grid-template-columns: 1fr 1fr; gap: 32px; } }
+.par > div { border-top: 2px solid var(--line); padding-top: 14px; }
+.par > div:first-child { border-top-color: var(--frost); }
+.par-k { font: 600 14px var(--sans) !important; color: var(--muted) !important; margin: 0 0 6px !important; }
+.par-v { font: 600 clamp(22px, 2.6vw, 30px)/1.15 var(--sans) !important; letter-spacing: -0.025em; color: var(--fg) !important; margin: 0 !important; }
+
+.balance { display: grid; grid-template-columns: 1fr; gap: 8px 48px; margin-top: 4px; }
+@media (min-width: 900px) { .balance { grid-template-columns: 1fr 1fr; } }
+.bal-col h4 { font-size: 15px; color: var(--muted); font-weight: 600; margin-bottom: 4px; }
+.bal-col[data-b="nuevo"] h4 { color: var(--accent-ink); }
+.bal { border-top: 1px solid var(--line); padding: 16px 0 6px; }
+.bal p { font-size: 17.5px; margin-bottom: .6em; }
+.bal-h { font: 600 16px/1.35 var(--sans) !important; color: var(--fg) !important; margin-bottom: 6px !important; }
+
+.bases { display: grid; grid-template-columns: 1fr; gap: 0; margin: 12px 0 0; }
+@media (min-width: 640px) { .bases { grid-template-columns: 1fr 1fr; gap: 0 32px; } }
+.bases > div { display: grid; grid-template-columns: 44px 1fr; gap: 10px; padding: 8px 0; border-top: 1px solid var(--line); }
+.bases dt { font: 600 14px/1.7 var(--sans); color: var(--fg); }
+.bases dd { margin: 0; font-family: var(--sans) !important; font-size: 15px !important; color: var(--muted) !important; }
+
+.plegable { border-top: 1px solid var(--line); margin: 0; }
+.plegable:last-of-type { border-bottom: 1px solid var(--line); }
+.plegable summary { cursor: pointer; list-style: none; display: flex; align-items: baseline; gap: 16px; padding: 18px 0; font: 600 17px var(--sans); letter-spacing: -0.01em; -webkit-tap-highlight-color: transparent; }
+.plegable summary::-webkit-details-marker { display: none; }
+.plegable summary span { margin-left: auto; font-weight: 400; font-size: 14px; color: var(--muted); white-space: nowrap; }
+.plegable summary::after { content: ""; flex: none; width: 9px; height: 9px; border-right: 1.5px solid var(--muted); border-bottom: 1.5px solid var(--muted); transform: translateY(-3px) rotate(45deg); transition: transform 200ms var(--ease-out); }
+.plegable[open] summary::after { transform: translateY(1px) rotate(225deg); }
+.plegable > :not(summary) { padding-bottom: 20px; }
+.plegable ul { max-width: 680px; }
+
+/* ---------- Tablas ---------- */
+.tabla { margin: 24px 0 36px; }
+.tabla-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.tabla table { width: 100%; border-collapse: collapse; font: 14px/1.45 var(--sans); min-width: 640px; }
+.tabla th { text-align: left; font-weight: 600; font-size: 13px; color: var(--muted); padding: 0 12px 10px 0; border-bottom: 1px solid var(--line); white-space: nowrap; vertical-align: bottom; }
+.tabla td { padding: 11px 12px 11px 0; border-bottom: 1px solid rgb(38 39 46 / .7); vertical-align: top; color: var(--muted); }
+.tabla td:first-child { color: var(--fg); font-weight: 500; }
+.tabla td.num { font-variant-numeric: tabular-nums; color: var(--fg); white-space: nowrap; }
+.tabla tr.oculta, .tabla tr.filtrada { display: none; }
+.tabla th button { all: unset; cursor: pointer; display: inline-flex; gap: 6px; align-items: center; border-radius: 4px; }
+.tabla th button:focus-visible { outline: 2px solid var(--accent-ink); outline-offset: 2px; }
+.tabla th button::after { content: ""; width: 6px; height: 6px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg) translateY(-2px); opacity: .35; }
+.tabla th[aria-sort="ascending"] button::after { transform: rotate(225deg) translateY(-2px); opacity: 1; }
+.tabla th[aria-sort="descending"] button::after { opacity: 1; }
+.tabla th[aria-sort] button { color: var(--fg); }
+.base-chip { display: inline-block; white-space: nowrap; font: 500 12px/1.4 var(--sans); color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 1px 8px; text-decoration: none; }
+.base-chip[data-fuerte] { color: var(--fg); border-color: #4a4b53; }
+@media (hover: hover) and (pointer: fine) { .base-chip:hover { border-color: var(--dim); color: var(--fg); } }
+
+.spark { display: inline-flex; align-items: flex-end; gap: 2px; height: 20px; width: 26px; margin-right: 10px; vertical-align: -4px; }
+.spark i { flex: 1; min-height: 1px; border-radius: 2px 2px 0 0; background: #55565e; }
+.spark i:nth-child(2) { background: #8d8c94; }
+.spark i:nth-child(3) { background: var(--accent); }
+.spark-t { color: var(--muted); }
+
+.tabla-ctrl { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px 24px; margin-bottom: 14px; }
+.tabla-ctrl label { display: grid; gap: 6px; font: 500 13px var(--sans); color: var(--muted); flex: 1 1 260px; max-width: 360px; }
+.tabla-ctrl input { font: 15px var(--sans); color: var(--fg); background: var(--surface); border: 1px solid #3a3b43; border-radius: 10px; padding: 10px 12px; outline: none; transition: border-color 160ms ease; }
+.tabla-ctrl input::placeholder { color: var(--dim); }
+.tabla-ctrl input:focus-visible { border-color: var(--accent-ink); outline: none; box-shadow: 0 0 0 3px var(--accent-soft); }
+.tabla-cuenta { font: 13px var(--sans); color: var(--muted); font-variant-numeric: tabular-nums; }
+.tabla-vacia { font: 15px var(--sans); color: var(--muted); padding: 18px 0; margin: 0; display: none; }
+.tabla-mas { all: unset; cursor: pointer; margin-top: 14px; font: 600 14px var(--sans); color: var(--fg); padding: 9px 16px; border-radius: 999px; box-shadow: inset 0 0 0 1px var(--line); transition: transform 160ms var(--ease-out), box-shadow 160ms ease; }
+.tabla-mas:active { transform: scale(0.97); }
+.tabla-mas:focus-visible { outline: 2px solid var(--accent-ink); outline-offset: 2px; }
+@media (hover: hover) and (pointer: fine) { .tabla-mas:hover { box-shadow: inset 0 0 0 1px var(--dim); } }
+
+/* ---------- Gráficas ---------- */
+.fig { margin: 36px 0 40px; }
+.fig-pie { font: 14px/1.5 var(--sans); color: var(--muted); margin: 14px 0 0; max-width: 68ch; }
+.fig svg { display: block; overflow: visible; }
+.fig svg text { font-family: var(--sans); font-size: 12px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+.tip { position: absolute; pointer-events: none; z-index: 5; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; font: 13px/1.4 var(--sans); color: var(--fg); white-space: nowrap; box-shadow: 0 12px 32px rgb(0 0 0 / .45); }
+.tip span { display: block; color: var(--muted); }
+
+/* Tres años */
+.anios { display: grid; grid-template-columns: 1fr; gap: 0; border-top: 1px solid var(--line); }
+@media (min-width: 720px) { .anios { grid-template-columns: repeat(3, 1fr); gap: 28px; border-top: 0; } }
+.anio { padding: 18px 0; border-bottom: 1px solid var(--line); }
+@media (min-width: 720px) { .anio { border-bottom: 0; border-top: 1px solid var(--line); } }
+.anio-y { font: 650 clamp(34px, 4vw, 48px)/1 var(--sans); letter-spacing: -0.04em; font-variant-numeric: tabular-nums; }
+.anio-f { font: 500 17px/1.3 var(--sans); color: var(--fg); margin: 8px 0 14px; }
+.anio-m { display: flex; align-items: center; gap: 10px; font: 13px var(--sans); color: var(--muted); min-height: 18px; }
+.anio-m i { display: block; height: 6px; border-radius: 3px; background: var(--accent); flex: none; }
+.anio-m b { color: var(--fg); font-weight: 600; font-variant-numeric: tabular-nums; }
+.anio-d { font: 14px/1.45 var(--sans); color: var(--muted); margin-top: 10px; }
+
+/* Temas por año */
+.temas { display: grid; grid-template-columns: 1fr; gap: 20px 40px; }
+@media (min-width: 900px) { .temas { grid-template-columns: minmax(0, 1fr) 280px; } }
+.temas-graf { position: relative; min-height: 300px; }
+.lentes { display: inline-flex; padding: 3px; border-radius: 999px; background: var(--surface); box-shadow: inset 0 0 0 1px var(--line); margin-bottom: 18px; }
+.lentes button { all: unset; cursor: pointer; font: 500 14px var(--sans); color: var(--muted); padding: 7px 14px; border-radius: 999px; transition: background-color 180ms ease, color 180ms ease, transform 160ms var(--ease-out); -webkit-tap-highlight-color: transparent; }
+.lentes button:active { transform: scale(0.97); }
+.lentes button[aria-pressed="true"] { background: var(--fg); color: var(--bg); }
+.lentes button:focus-visible { outline: 2px solid var(--accent-ink); outline-offset: 2px; }
+.temas-lista { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; align-content: start; }
+.temas-lista button { all: unset; box-sizing: border-box; cursor: pointer; width: 100%; display: grid; grid-template-columns: 18px 1fr auto; gap: 10px; align-items: center; padding: 8px 10px; border-radius: 8px; font: 14px/1.3 var(--sans); color: var(--muted); transition: background-color 160ms ease, color 160ms ease, opacity 200ms ease; }
+.temas-lista button:focus-visible { outline: 2px solid var(--accent-ink); outline-offset: 0; }
+.temas-lista button[aria-pressed="true"] { background: var(--surface); color: var(--fg); }
+.temas-lista .sw { height: 2px; border-radius: 1px; }
+.temas-lista .sw.dash { background: repeating-linear-gradient(90deg, var(--frost) 0 4px, transparent 4px 7px) !important; }
+.temas-lista .v { font-variant-numeric: tabular-nums; color: var(--fg); font-weight: 600; }
+.temas.enfocado .temas-lista button[aria-pressed="false"] { opacity: .55; }
+@media (hover: hover) and (pointer: fine) { .temas-lista button:hover { background: var(--surface); color: var(--fg); } }
+.temas-pista { font: 13px/1.45 var(--sans); color: var(--dim); margin: 10px 10px 0; }
+.calor { margin-top: 18px; }
+.calor table { min-width: 560px; }
+.calor td.c { text-align: center; font-variant-numeric: tabular-nums; color: var(--fg); padding-right: 0; }
+.calor th.c { text-align: center; padding-right: 0; }
+.calor tr.sub td:first-child { padding-left: 18px; color: var(--muted); font-weight: 400; }
+.calor .grupo th { border-bottom: 0; padding-bottom: 2px; color: var(--fg); }
+
+/* Barras horizontales */
+.hbar-g { margin-bottom: 26px; }
+.hbar-g h4 { font: 600 14px var(--sans); color: var(--muted); margin: 0 0 10px; }
+.hbar { display: grid; grid-template-columns: minmax(130px, 210px) 1fr; gap: 6px 16px; align-items: center; padding: 7px 0; }
+.hbar-n { font: 14px/1.3 var(--sans); color: var(--fg); }
+@media (max-width: 560px) { .hbar { grid-template-columns: 1fr; gap: 6px; padding: 9px 0; } .hbar-b i { max-width: calc(100% - 92px); } }
+.hbar-n small { display: block; color: var(--muted); font-size: 12.5px; }
+.hbar-b { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.hbar-b i { display: block; height: 10px; border-radius: 0 3px 3px 0; background: #6d6c74; flex: none; transform-origin: 0 50%; }
+.hbar.fuerte .hbar-b i { background: var(--accent); }
+.hbar-b span { font: 13px var(--sans); color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.hbar-b span b { color: var(--fg); font-weight: 600; }
+@media (prefers-reduced-motion: no-preference) {
+  .va-crecer .hbar-b i { animation: crecer 700ms var(--ease-out) both; animation-delay: calc(var(--i, 0) * 45ms); }
+}
+@keyframes crecer { from { transform: scaleX(0.04); opacity: .4; } }
+
+/* Born in Winter */
+.cap-invierno .cap-n { color: var(--frost); }
+.cap-invierno .cap-title::after { background: var(--frost); }
+.cap-invierno article li::marker, .cap-invierno li::marker { color: var(--frost); }
+.biw { display: grid; grid-template-columns: repeat(8, 1fr); gap: 8px; align-items: end; height: 190px; padding-top: 24px; border-bottom: 1px solid var(--line); max-width: 560px; }
+.biw div { display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; gap: 6px; }
+.biw i { display: block; width: 100%; max-width: 44px; border-radius: 4px 4px 0 0; background: rgb(169 188 208 / .55); transform-origin: 50% 100%; }
+.biw .pico i { background: var(--frost); }
+.biw span { font: 12px var(--sans); color: var(--muted); font-variant-numeric: tabular-nums; }
+.biw-x { display: grid; grid-template-columns: repeat(8, 1fr); gap: 8px; max-width: 560px; margin-top: 8px; }
+.biw-x span { text-align: center; font: 12px var(--sans); color: var(--muted); font-variant-numeric: tabular-nums; }
+@media (prefers-reduced-motion: no-preference) {
+  .va-crecer .biw i { animation: subirbarra 700ms var(--ease-out) both; animation-delay: calc(var(--i, 0) * 50ms); }
+}
+@keyframes subirbarra { from { transform: scaleY(0.06); opacity: .3; } }
+
+/* Rastro */
+.rastro-graf { position: relative; }
+.rastro-graf circle { transition: opacity 160ms ease; }
+.rastro-leyenda { display: flex; flex-wrap: wrap; gap: 8px 24px; font: 13px var(--sans); color: var(--muted); margin-top: 6px; }
+.rastro-leyenda i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 8px; vertical-align: -1px; }
+
+.sin-js { font: 14px var(--sans); color: var(--muted); }
+</style>
+</head>
+<body>
+<a class="saltar" href="#resumen">Saltar al texto</a>
+<header class="nav">
+  <a class="nav-marca" href="index.html">Mi música</a>
+  <nav class="nav-links" aria-label="Secciones del sitio">
+    <a href="index.html">Wrapped</a>
+    <a href="letras.html" aria-current="page">Letras</a>
+  </nav>
+  <span class="nav-progreso" aria-hidden="true"></span>
+</header>
+
+<header class="hero">
+  <canvas class="cielo" aria-hidden="true"></canvas>
+  <div class="hero-in">
+    <h1 style="--i:0">Las letras de mi música</h1>
+    <p class="hero-anios" style="--i:1">2024 a 2026</p>
+    <p class="hero-lead" style="--i:2">Qué dicen las canciones y los discos que más escucho, y cómo cambiaron sus temas de un año a otro.</p>
+    <a class="boton" href="#resumen" style="--i:3">Empezar a leer</a>
+  </div>
+</header>
+
+<div class="lectura">
+  <aside class="toc" aria-label="Capítulos">
+    <p class="toc-titulo">Capítulos</p>
+    <ol>
+<li><a href="#resumen" data-sec="resumen"><span class="toc-n"></span><span class="toc-t">Resumen</span></a></li>
+<li><a href="#cap-1" data-sec="cap-1"><span class="toc-n">1</span><span class="toc-t">2024 crecía, 2025 lloraba</span></a></li>
+<li><a href="#cap-2" data-sec="cap-2"><span class="toc-n">2</span><span class="toc-t">Los discos enteros</span></a></li>
+<li><a href="#cap-3" data-sec="cap-3"><span class="toc-n">3</span><span class="toc-t">El último año</span></a></li>
+<li><a href="#cap-4" data-sec="cap-4"><span class="toc-n">4</span><span class="toc-t">Born in Winter</span></a></li>
+<li><a href="#cap-5" data-sec="cap-5"><span class="toc-n">5</span><span class="toc-t">Canciones que dejaron rastro</span></a></li>
+<li><a href="#tablas" data-sec="tablas"><span class="toc-n"></span><span class="toc-t">Tablas y límites</span></a></li>
+    </ol>
+  </aside>
+  <article>
+    <nav class="toc-movil" aria-label="Capítulos">
+      <ol>
+<li><a href="#resumen" data-sec="resumen"><span class="toc-n"></span><span class="toc-t">Resumen</span></a></li>
+<li><a href="#cap-1" data-sec="cap-1"><span class="toc-n">1</span><span class="toc-t">2024 crecía, 2025 lloraba</span></a></li>
+<li><a href="#cap-2" data-sec="cap-2"><span class="toc-n">2</span><span class="toc-t">Los discos enteros</span></a></li>
+<li><a href="#cap-3" data-sec="cap-3"><span class="toc-n">3</span><span class="toc-t">El último año</span></a></li>
+<li><a href="#cap-4" data-sec="cap-4"><span class="toc-n">4</span><span class="toc-t">Born in Winter</span></a></li>
+<li><a href="#cap-5" data-sec="cap-5"><span class="toc-n">5</span><span class="toc-t">Canciones que dejaron rastro</span></a></li>
+<li><a href="#tablas" data-sec="tablas"><span class="toc-n"></span><span class="toc-t">Tablas y límites</span></a></li>
+      </ol>
+    </nav>
+<section class="cap" data-toc="Resumen" id="resumen">
+<h2 class="cap-title">Resumen</h2>
+<p class="tesis">Tus letras pasaron de <strong>crecer</strong> a <strong>despedirse</strong>.</p>
+<p>En 2024 tu escucha giraba alrededor de crecer, madurar y perderle el miedo a envejecer, con <em>Fear Inoculum</em> de TOOL y “Marigold” de Caligula's Horse. En 2025 ganó peso el duelo por personas reales. En 2026 la muerte ocupa el <strong>52 % de las horas de tus 25 canciones más escuchadas</strong>, frente al 27 % de los dos años anteriores, y aparece más como idea que como duelo: Sartre en “Nocturne”, Camus en “Nobody”, la profecía de “The Apocalyptist”.</p>
+<div class="fig" data-fig="anios"></div>
+<p>Lo que no cambia en los tres años es una postura más que un tema:</p>
+<ul>
+<li><strong>Una mente que sufre por dentro</strong>, sin un enemigo afuera. Es la constante más estable, cerca de una quinta parte de las horas de tus discos cada año.</li>
+<li><strong>Desconfianza de la religión institucional</strong>, mientras la espiritualidad sin iglesia sale bien parada.</li>
+<li><strong>El agua como amenaza</strong> y la noche como escenario.</li>
+<li><strong>Finales que rara vez rescatan.</strong> El consuelo ronda el 10 % de las horas y casi siempre llega a través de un vínculo con alguien.</li>
+</ul>
+<p>Las canciones que repites y los discos que dejas sonar enteros cuentan cosas distintas. Las canciones hablan de terminar y perder. Los discos, con Opeth como tu artista #1 de 2026, suman crítica social (del 17 % al 30 % de sus horas), familia y el desamor adulto de <em>Sorceress</em>. “Born in Winter” de Gojira casi no aparece en tus horas, pero es la excepción luminosa del mapa: una de las pocas letras donde la fuerza para seguir nace de adentro, y del invierno mismo.</p>
+<p>Todo es interpretación con fuentes desiguales, porque los músicos explicaron su canción o su disco en una minoría de casos. Cada lectura lleva su fuente al lado.</p>
+</section>
+<section class="cap" data-num="1" data-toc="2024 crecía, 2025 lloraba" id="cap-1">
+<p class="cap-n">Capítulo 1</p>
+<h2 class="cap-title">2024 crecía, 2025 lloraba y 2026 mira de frente a la muerte</h2>
+<p>La comparación usa dos lentes, porque cada una favorece algo distinto. La <strong>lente de canciones</strong> toma tus 25 canciones más escuchadas de cada año (112 h, 70 h y 37 h, es decir el 18 %, 12 % y 9 % de cada año). Premia lo que repites y castiga los discos que pones enteros en aleatorio. La <strong>lente de discos</strong> toma los 46 discos investigados, 12 de ellos de Opeth (241 h, 179 h y 110 h, el 40 %, 32 % y 28 % de cada año), y supone que escuchas todas sus pistas por igual.</p>
+<p>Las etiquetas se agruparon en ocho grandes temas y se mide el porcentaje de horas de cada conjunto. Una canción o un disco puede tener varios temas, así que las columnas no suman 100. Como 2026 llega solo al 18 de noviembre, se comparan porcentajes y no horas.</p>
+<div class="fig fig-ancha" data-fig="temas"></div>
+<h3 id="disco-2024">2024, el año de un solo disco</h3>
+<p>En 2024 tu escucha giraba alrededor de <em>Fear Inoculum</em>. Sumó 45 h, y tres de sus canciones fueron tus tres más escuchadas del año: “Descending” (13,1 h), “Pneuma” (12,4 h) e “Invincible” (8,2 h). La banda dio el marco. Keenan dijo que el disco trata de <em>“embracing where we are right now, acknowledging where we've come from”</em>, y Danny Carey resumió el tema central como envejecer, sentirse más cómodo con uno mismo y superar miedos <a class="src" href="https://loudwire.com/tool-new-album-fear-inoculum-theme-aging-wisdom/" target="_blank" rel="noopener">Loudwire</a>. La canción titular, según Justin Chancellor, va de inmunizarse contra los miedos y la falta de esperanza <a class="src" href="https://www.kerrang.com/amp/why-tools-new-album-is-called-fear-inoculum" target="_blank" rel="noopener">Kerrang!</a>.</p>
+<p>Caligula's Horse completa el cuadro. “Marigold” (7,1 h) fue tu #4 del año, y Jim Grey explicó que su mensaje es que <em>“a person can not be judged by what they earn, or what they own”</em> <a class="src" href="https://heavymag.com.au/exclusive-australian-premiere-caligulas-horse-marigold/" target="_blank" rel="noopener">Heavy Mag</a>. Grey escribió <em>Bloom</em> tras perder a un amigo cercano y convertirse en padre, y lo describió como un disco sobre la fragilidad de la vida, pero también sobre el crecimiento y la confianza en uno mismo <a class="src" href="https://loudersound.com/features/caligula-s-horse" target="_blank" rel="noopener">Louder</a>. Súmale la espiral de “Lateralus”, que Wikipedia lee como el deseo de expandirse hacia un conocimiento más profundo <a class="src" href="https://en.wikipedia.org/wiki/Lateralus" target="_blank" rel="noopener">Wikipedia</a>. <strong>2024 fue sobre todo un año de transformación y crecimiento.</strong></p>
+<p>Más esperanzador, en cambio, no tanto. Solo “Marigold” y “Bloom” cierran en consuelo, y el final de “Bloom” depende de una lectura generada por IA porque la letra no se pudo verificar. Debajo de la capa luminosa había otra oscura y casi igual de pesada: el olvido autodestructivo de “Lethe” (5,2 h) <a class="src" href="https://www.metalkingdom.net/lyrics-song/dark-tranquillity-lethe-821" target="_blank" rel="noopener">Metal Kingdom</a>, el hundimiento mental y la culpa de “Pulled Under at 2000 Metres a Second” (3,5 h) <a class="src" href="https://www.metalkingdom.net/lyrics-song/anathema-pulled-under-at-2000-metres-a-second-6409" target="_blank" rel="noopener">Metal Kingdom</a>, la relación que consume al hablante en “Clay” <a class="src" href="https://eyeoftheenemy.bandcamp.com/track/clay-2" target="_blank" rel="noopener">Bandcamp</a> y el creador que solo funciona drogado en “Sober”, según Adam Jones <a class="src" href="https://en.wikipedia.org/wiki/Sober_(Tool_song)" target="_blank" rel="noopener">Wikipedia</a>.</p>
+<p>La “mente que sufre” ya pesaba un 18 %. La “muerte como idea” apenas existía. Su 13 % sale de “Invincible”, que la crítica lee como un guerrero que envejece <a class="src" href="https://www.loudersound.com/features/tools-fear-inoculum-your-definitive-track-by-track-guide" target="_blank" rel="noopener">Louder</a>, y de “Downhill” y “Weevil Bride” de Rishloo, que se leen como tránsitos hacia la muerte con confianza baja. Sin Rishloo queda en 7 %.</p>
+<p>Novembre “Flower” fue tu #7 de 2024 (4,5 h) y casi desapareció después (0,9 h en 2025 y 0,2 h en 2026). La letra, leída en una transcripción, es una elegía en tercera persona: dos amantes frágiles como flores, un invierno nórdico, lluvia que consuela a uno de ellos, y al final los dos mueren en invierno sin que sus súplicas reciban respuesta <a class="src" href="https://www.metalkingdom.net/lyrics-song/novembre-flower-29708" target="_blank" rel="noopener">Metal Kingdom</a>. No hay explicación del autor. Carmelo Orlando dijo en 2002 que no explica sus letras y que el nombre Novembre evoca frío, soledad, sueño e invierno <a class="src" href="https://metalmessage.de/Interview_NOVEMBRE_2002_en.php" target="_blank" rel="noopener">Metal Message</a>. “Flower” encaja en el amor doliente que dominaba 2024 (19 % de las horas), y su caída acompaña la del disco entero <em>Novembrine Waltz</em> (de 8,0 h a 1,4 h).</p>
+<p>Rishloo es el gran hueco de 2024. Cuatro de sus canciones estaban en tu top 25 (12 h), y <em>Feathergun</em> y <em>Eidolon</em> sumaron el 3,9 % de tu año. La banda dijo en 2011 que no quiere fijar de qué trata cada canción <a class="src" href="https://eternal-terror.com/2011/11/21/rishloo-art-rock/" target="_blank" rel="noopener">Eternal Terror</a>. Las lecturas disponibles salen de transcripciones de fans: un circo donde el público resulta ser el espectáculo en “Freaks &amp; Animals”, rabia contra poderosos que invocan autoridad divina en “The Great Rain Beatle” y un viaje onírico hacia algo más allá en “Downhill” <a class="src" href="https://lyricstranslate.com/en/rishloo-freaks-animals-lyrics.html" target="_blank" rel="noopener">lyricstranslate</a>. Sirven como pistas, no como datos.</p>
+<h3 id="duelo-2025">2025, el año del duelo concreto</h3>
+<p>En 2025 cambia el centro. “Nocturne” de HeXeN entra como tu #1 (8,1 h) y con ella el existencialismo declarado: Andre Hartoonian tomó el título del disco de Sartre y dijo que las letras tratan el caos del universo y el absurdo de la existencia <a class="src" href="https://metalcrypt.com/pages/interviews.php?intid=277" target="_blank" rel="noopener">The Metal Crypt</a>. Pero lo que más crece es el <strong>duelo por personas reales</strong>, que pasa del 3 % al 15 % de tu top 25. “Save Me” (6,0 h) llora a The Rev, y <em>Nightmare</em> entero (6,7 h, casi nada en 2024) gira en torno a su muerte según la banda <a class="src" href="https://en.wikipedia.org/wiki/Nightmare_(Avenged_Sevenfold_album)" target="_blank" rel="noopener">Wikipedia</a>. Las dos “Wings” de TOOL, escritas para la madre de Keenan, suman 4,6 h, y “Wings for Marie (Pt 1)” es la única de las canciones de TOOL estudiadas que sube de 2024 a 2025 <a class="src" href="https://faroutmagazine.co.uk/the-tool-songs-maynard-james-keenan-wrote-for-his-mother/" target="_blank" rel="noopener">Far Out</a>. En los discos llega <em>The Last Will and Testament</em> de Opeth, sobre la muerte de un patriarca y la lectura de su testamento <a class="src" href="https://www.loudersound.com/news/opeth-explain-succession-inspired-new-album-2024" target="_blank" rel="noopener">Louder</a>, y el duelo concreto toca su máximo (20 %).</p>
+<p>El amor también cambia de forma. En 2024 era vínculo (“Marigold”) o relación rota (“Schism”, “Clay”). En 2025 es deseo (“Passenger”, 6,6 h, y <em>White Pony</em>, 8,2 h, que Chino Moreno describió como una historia de sexo y violencia de la que se sacó a sí mismo <a class="src" href="https://en.wikipedia.org/wiki/White_Pony" target="_blank" rel="noopener">Wikipedia</a>) o arrepentimiento (“Ángeles con una sola ala”, 3,0 h, leída solo por un sitio sin autor como una ruptura que el narrador entiende tarde). “Periscope” de Andromeda (2,6 h, casi solo en 2025) añade a alguien que mira el mundo desde un caparazón sellado sin formar parte de él <a class="src" href="https://www.metalkingdom.net/lyrics-song/andromeda-periscope-6700" target="_blank" rel="noopener">Metal Kingdom</a>. Es el año con la evidencia más floja: un 21 % del top 25 queda sin datos o en temas fuera del esquema.</p>
+<h3 id="muerte-2026">2026, el año en que la muerte se vuelve tema principal</h3>
+<p>En 2026 la muerte llega al 52 % del top 25, y al 44 % si quitas “The Apocalyptist” (5,2 h). Ya no es duelo por alguien (6 %) sino mortalidad pensada (18 %) y muerte ritual o mítica. La transformación casi desaparece (3 %) y la religión criticada sube al 14 %, casi toda por el altar derribado de My Dying Bride.</p>
+<p>En discos el cuadro es más repartido: la muerte se queda en 34 %, la crítica social sube al 30 % y la mente que sufre sigue en 19 %. Tu top 25 de 2026 es solo el 9 % del año, la mitad que en 2024. Hoy escuchas más repartido, y las canciones sueltas representan peor tu escucha. Ese es otro motivo para mirar los discos. El detalle de este año está en el <a class="int" href="#cap-3">capítulo 3</a>.</p>
+<h3 id="sostiene">Qué se sostiene, qué cambia y qué se rompe</h3>
+<p class="leyenda-ver"><span>Se sostiene</span><span class="l-mixto">Depende del año o de la lente</span><span class="l-cambia">Cambia</span></p>
+<div class="veredictos">
+<div class="ver" data-v="cambia">
+<p class="ver-h">La muerte ocupa casi la mitad de tus horas</p>
+<p class="ver-t"><b>Cambia.</b> Solo es cierto para 2026. En 2024 y 2025 era el 27 % del top 25.</p>
+</div>
+<div class="ver" data-v="mixto">
+<p class="ver-h">Pesa más la muerte como idea que el duelo concreto</p>
+<p class="ver-t"><b>Se sostiene en 2026 y se invierte en 2025</b> (duelo 15 % contra idea 14 % en canciones, 20 % contra 7 % en discos). En 2024 es débil.</p>
+</div>
+<div class="ver" data-v="sostiene">
+<p class="ver-h">Una mente que sufre por dentro, sin enemigo afuera</p>
+<p class="ver-t"><b>Se sostiene.</b> Es la constante más estable, 19 a 20 % de los discos los tres años.</p>
+</div>
+<div class="ver" data-v="sostiene">
+<p class="ver-h">La iglesia sale mal, la espiritualidad sin iglesia sale bien</p>
+<p class="ver-t"><b>Se sostiene en dirección</b>, pero el polo positivo era sobre todo de 2024 (TOOL) y se encoge después.</p>
+</div>
+<div class="ver" data-v="mixto">
+<p class="ver-h">La crítica social se queda en TOOL y casi no entra al doom</p>
+<p class="ver-t"><b>Se sostiene en canciones y se rompe en discos.</b> Opeth, Novembre (<em>Ursa</em>) y el groove la llevan al 30 %.</p>
+</div>
+<div class="ver" data-v="sostiene">
+<p class="ver-h">Finales sin rescate</p>
+<p class="ver-t"><b>Se sostiene incluso en 2024.</b> El consuelo ronda el 10 % en todos los cortes.</p>
+</div>
+</div>
+</section>
+<section class="cap" data-num="2" data-toc="Los discos enteros" id="cap-2">
+<p class="cap-n">Capítulo 2</p>
+<h2 class="cap-title">Los discos enteros hablan del mundo, no solo de la muerte</h2>
+<p>La lente de discos cuenta otra historia porque los discos que más pesan tienen marcos amplios. Los cinco de TOOL comparten un hilo de transformación personal según lo que dijo la banda: reconocer el ciclo del abuso en <em>Undertow</em>, que Keenan presentó como el primer paso para trabajarlo <a class="src" href="https://www.revolvermag.com/music/how-tool-became-genre-unto-themselves-1993s-game-changing-undertow" target="_blank" rel="noopener">Revolver</a>, la evolución y el tercer ojo en <em>Ænima</em> <a class="src" href="https://en.wikipedia.org/wiki/%C3%86nima" target="_blank" rel="noopener">Wikipedia</a>, la espiral de <em>Lateralus</em>, el retorno de Saturno en <em>10,000 Days</em> <a class="src" href="https://en.wikipedia.org/wiki/10,000_Days_(Tool_album)" target="_blank" rel="noopener">Wikipedia</a> y el envejecer de <em>Fear Inoculum</em>.</p>
+<p>Ese hilo explica casi todo el 40 % de transformación de 2024, porque <strong>solo <em>Fear Inoculum</em> es el 19 % de las horas del conjunto de discos ese año</strong> y cae al 4 % en 2026. <em>10,000 Days</em> es el disco más estable de tu historial (13,0 h, 13,7 h y 4,8 h), y es justo el que une duelo, la fe de otra persona y transformación.</p>
+<p>En 2025 el conjunto se oscurece con tres discos que casi no estaban: <em>Being and Nothingness</em> (absurdo y crítica de la tecnología y los medios), <em>White Pony</em> (deseo y violencia como ficción) y <em>Nightmare</em> (duelo). Al mismo tiempo pesan mucho los discos de crítica social con concepto declarado. Novembre presentó <em>Ursa</em> como una declaración contra el apocalipsis orwelliano que la humanidad le inflige a la Tierra y a los animales <a class="src" href="https://burningshed.com/novembre_ursa_cd" target="_blank" rel="noopener">Burning Shed</a>. <em>Finisterra</em> de Mägo de Oz es una ópera rock distópica en una Tierra arrasada y gobernada por un régimen que adora a una deidad llamada “deseos.com” <a class="src" href="https://mariskalrock.com/actualidad/20-anos-de-finisterra-el-disco-que-cambio-la-historia-de-mago-de-oz-y-que-hubo-que-obligar-a-grabar-a-jose-andrea/" target="_blank" rel="noopener">Mariskal Rock</a>. Tommaso Riccardi explicó que el rey de <em>King</em> es la parte valiente de uno mismo frente a cortesanos que encarnan los miedos <a class="src" href="https://en.wikipedia.org/wiki/King_(Fleshgod_Apocalypse_album)" target="_blank" rel="noopener">Wikipedia</a>. <em>The Blackening</em> y <em>VII: Sturm und Drang</em> aportan guerra, religión organizada, encierro e historia checa <a class="src" href="https://en.wikipedia.org/wiki/VII:_Sturm_und_Drang" target="_blank" rel="noopener">Wikipedia</a>. Ninguno de estos discos tiene una canción en tu top 25, y por eso la crítica social parecía estancada al mirar solo canciones.</p>
+<p>El lado doom y gótico tiene un tono común que sus autores declaran. Morten Veland dijo que el tema central de <em>Dim Days of Dolor</em> es <em>“feeling alive when you're dead, and feeling dead when you are alive”</em> <a class="src" href="https://www.metalmessage.de/Interview_SIRENIA_2016_en.php" target="_blank" rel="noopener">Metal Message</a>. Jonas Renkse admitió que los temas de Katatonia casi no se renuevan en un estilo tan oscuro <a class="src" href="https://web.archive.org/web/20160526074243/http://www.metalblast.net/interviews/hearts-are-falling-an-interview-with-katatonias-jonas-renkse/" target="_blank" rel="noopener">Metal Blast</a>. Joe Duplantier fue directo sobre <em>The Way of All Flesh</em>: <em>“Lyrically, this album is about death”</em> <a class="src" href="https://www.loudersound.com/features/every-gojira-album-in-their-own-words" target="_blank" rel="noopener">Louder</a>.</p>
+<div class="nota">
+<p><strong>Ojo con un límite.</strong> En tus datos completos, el doom y el gótico suben del 9 % de tu escucha en 2024 y 2025 al 13 % en 2026 y al 18 % en los últimos tres meses, mientras lo progresivo baja del 35 % al 16 %. <strong>Los discos investigados no muestran esa subida por sí solos.</strong> Los ocho discos doom y góticos del conjunto, más <em>A Mortal Binding</em>, se quedan entre el 5 % y el 7 % de tu año. La subida viene de artistas y discos fuera de este conjunto.</p>
+<p>Dentro de él, el doom se concentra en My Dying Bride. Stainthorpe explicó que “Thornwyck Hymn” trata de un pueblo costero acosado por el mar y por la gente oculta que vive en sus profundidades <a class="src" href="https://en.wikipedia.org/wiki/A_Mortal_Binding" target="_blank" rel="noopener">Wikipedia</a>, y ese disco (6,4 h, todo en 2026) es el que más pesa del bloque este año.</p>
+</div>
+<h3 id="opeth">Opeth, tu #1, se escucha por discos y un tercio no tiene letras explicadas</h3>
+<p>Opeth es tu artista #1 de 2026 y de los últimos 12 meses, y el #2 de 2025 detrás de TOOL. En el total de 2024 a 2026 también va segundo, con 90 h frente a 130 h de TOOL. Su peso crece año a año (4,8 %, 6,1 % y 6,7 % de tu escucha), pero repartido en 130 canciones de más de una docena de discos. Ninguna supera las 3 h en tres años, y las que más suman (“The Night and the Silent Water”, “To Bid You Farewell”, “Advent”) son pistas de 13 o 14 minutos de <em>Morningrise</em>. Por eso Opeth casi no aparece en la lente de canciones.</p>
+<div class="tabla" data-tabla="opeth">
+<div class="tabla-scroll"><table>
+<thead>
+<tr>
+<th>Disco de Opeth</th>
+<th>h 2024 / 25 / 26</th>
+<th>Eje temático</th>
+<th>Base</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>In Cauda Venenum (2019)</td>
+<td>2,5 / 5,6 / 5,2</td>
+<td>sociedad sueca, letras semipolíticas</td>
+<td><a class="src" href="https://loudersound.com/features/i-ended-up-with-what-i-think-is-a-beautiful-record-how-opeth-made-in-cauda-venenum" target="_blank" rel="noopener">Artista</a></td>
+</tr>
+<tr>
+<td>Morningrise (1996)</td>
+<td>3,8 / 4,3 / 2,4</td>
+<td>duelo por el abuelo en una canción, letras personales</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/Morningrise" target="_blank" rel="noopener">Dato y crítica</a></td>
+</tr>
+<tr>
+<td>Sorceress (2016)</td>
+<td>3,2 / 3,2 / 1,8</td>
+<td>los lados oscuros del amor</td>
+<td><a class="src" href="https://www.loudersound.com/features/opeth-come-clean-on-what-sorceress-is-really-about" target="_blank" rel="noopener">Artista</a></td>
+</tr>
+<tr>
+<td>Heritage (2011)</td>
+<td>3,1 / 2,8 / 2,1</td>
+<td>homenaje a Dio, portada de árbol de la vida</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/Heritage_(Opeth_album)" target="_blank" rel="noopener">Débil</a></td>
+</tr>
+<tr>
+<td>Orchid (1995)</td>
+<td>3,4 / 2,6 / 1,2</td>
+<td>satanismo “nada serio”, luna y bosque</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/Orchid_(Opeth_album)" target="_blank" rel="noopener">Artista</a></td>
+</tr>
+<tr>
+<td>Ghost Reveries (2005)</td>
+<td>3,1 / 2,6 / 1,5</td>
+<td>ocultismo adulto, culpa por un acto imperdonable</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/Ghost_Reveries" target="_blank" rel="noopener">Artista</a></td>
+</tr>
+<tr>
+<td>Blackwater Park (2001)</td>
+<td>2,3 / 2,3 / 2,2</td>
+<td>peste y decadencia, solo en la canción titular</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/Blackwater_Park" target="_blank" rel="noopener">Lectura de letra</a></td>
+</tr>
+<tr>
+<td>My Arms, Your Hearse (1998)</td>
+<td>2,2 / 1,9 / 2,4</td>
+<td>un fantasma que no acepta morir y teme el olvido</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/My_Arms,_Your_Hearse" target="_blank" rel="noopener">Concepto documentado</a></td>
+</tr>
+<tr>
+<td>Pale Communion (2014)</td>
+<td>1,7 / 2,1 / 2,8</td>
+<td>letras brumosas, falso líder en “Moon Above, Sun Below”</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/Pale_Communion" target="_blank" rel="noopener">Crítica y lectura</a></td>
+</tr>
+<tr>
+<td>The Last Will and Testament (2024)</td>
+<td>0,0 / 3,2 / 2,1</td>
+<td>herencia, padre, dinero y poder</td>
+<td><a class="src" href="https://www.loudersound.com/news/opeth-explain-succession-inspired-new-album-2024" target="_blank" rel="noopener">Artista</a></td>
+</tr>
+<tr>
+<td>Damnation (2003)</td>
+<td>1,5 / 1,8 / 1,5</td>
+<td>sin descripción de letras, dedicado a la abuela</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/Damnation_(Opeth_album)" target="_blank" rel="noopener">Dato</a></td>
+</tr>
+<tr>
+<td>Deliverance (2002)</td>
+<td>1,2 / 1,8 / 0,9</td>
+<td>sin descripción de letras, dedicado a la abuela</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/Deliverance_(Opeth_album)" target="_blank" rel="noopener">Dato</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p>Dentro de Opeth se ve un desplazamiento claro. Los discos de <strong>crítica social y familia</strong> (<em>In Cauda Venenum</em> y <em>The Last Will and Testament</em>) pasan del 9 % de tus horas de Opeth en 2024 al 26 % en 2025 y al 28 % en 2026. Åkerfeldt dijo que escribir en sueco le quitó las palabras inglesas ornamentadas y dejó letras modernas, contemporáneas y en parte semipolíticas <a class="src" href="https://loudersound.com/features/i-ended-up-with-what-i-think-is-a-beautiful-record-how-opeth-made-in-cauda-venenum" target="_blank" rel="noopener">Louder</a>. <em>The Last Will and Testament</em> nació en parte de ver a unos hijos rechazar la colección de discos de su padre muerto, lo que llevó a Åkerfeldt a pensar <em>“I will die someday, and I have two daughters”</em> <a class="src" href="https://www.loudersound.com/features/how-opeth-wrote-their-prog-metal-rock-opera-the-last-will-and-testament" target="_blank" rel="noopener">Louder</a>.</p>
+<p>En sentido contrario, el ocultismo juvenil de <em>Orchid</em> cae del 12 % al 4 %, y Åkerfeldt mismo admitió que varias de esas letras no significan mucho. El duelo (<em>Morningrise</em> y <em>The Last Will and Testament</em>) va de 13 % a 22 % y a 17 %, y el amor (<em>Sorceress</em>, <em>My Arms, Your Hearse</em>, <em>Still Life</em>) se mantiene entre 15 % y 21 %.</p>
+<p>Dos matices. Casi la mitad de tus horas de <em>In Cauda Venenum</em> son de la versión en sueco, así que el mensaje de ese disco te llega más por la música que por la letra si no hablas el idioma. Y entre el 32 % y el 36 % de tus horas de Opeth cada año caen en discos sin declaraciones de Åkerfeldt sobre sus letras (<em>Heritage</em>, <em>Blackwater Park</em>, <em>Pale Communion</em>, <em>Damnation</em>, <em>Deliverance</em>). Ese es el punto ciego más grande de todo este análisis.</p>
+<h3 id="sorceress">Sorceress, el disco que la lente de canciones no ve</h3>
+<p><em>Sorceress</em> suma <strong>8,2 h en 2024 a 2026 repartidas en 14 canciones</strong>, y la más escuchada (“Era”) apenas llega a 1,3 h. Lo notable es su estabilidad, alrededor del 0,5 % de tu escucha cada año. Åkerfeldt dijo que el disco trata sobre todo del amor, pero de <em>“the negative emotions you can get with a positive feeling like love”</em>: paranoia, inseguridad, rabia, celos e incluso odio, y que no lo planeó <a class="src" href="https://www.loudersound.com/features/opeth-come-clean-on-what-sorceress-is-really-about" target="_blank" rel="noopener">Louder</a>. En otra entrevista reconoció que el divorcio lo inspiró, pero que exagera los sentimientos por efecto y que las letras no son autobiográficas <a class="src" href="https://loudersound.com/features/love-loss-and-learning-to-move-on-the-story-behind-opeths-sorceress" target="_blank" rel="noopener">Louder</a>. De las cinco canciones que más escuchas solo comentó una: dijo que la letra de “Will O the Wisp” es muy, muy oscura <a class="src" href="https://www.loudersound.com/features/opeth-s-track-by-track-guide-to-sorceress" target="_blank" rel="noopener">Louder</a>.</p>
+<ol class="curva">
+<li><b>The Wilde Flowers</b><span>rabia febril y aislamiento</span></li>
+<li><b>Chrysalis</b><span>reproche a una expareja que termina en metamorfosis</span></li>
+<li><b>Will O the Wisp</b><span>un sermón sobre la culpa y el olvido tras la muerte</span></li>
+<li><b>Era</b><span>duda ante el fin de una etapa</span></li>
+<li><b>The Seventh Sojourn</b><span>una despedida que alivia</span></li>
+</ol>
+<p>Leídas en transcripciones, las cinco forman esa curva <a class="src" href="https://www.metalkingdom.net/lyrics-song/opeth-chrysalis-131122" target="_blank" rel="noopener">Metal Kingdom</a>. El orden es una lectura propia, no del disco, y atribuir cada letra al divorcio sería lectura de fan. Lo que sí dice tu escucha es que el desamor adulto, con rabia y sin rescate, es una presencia de fondo constante que ninguna canción suelta revela.</p>
+<h3 id="hilos">Los hilos que cruzan los tres años</h3>
+<div class="hilos">
+<div class="hilo">
+<h4>Las flores</h4>
+<p>Es una observación propia, no de ninguna fuente. En el top 10 de 2024 conviven “Marigold” y “Bloom”, que usan la flor como crecimiento, y “Flower”, donde los amantes se marchitan como flores en invierno. En el último año aparece “The Last Flower” de Shores of Null, cuyo autor habló de preservar la belleza pase lo que pase <a class="src" href="https://mhf-mag.com/?p=86386" target="_blank" rel="noopener">MHF Magazine</a>. En <em>Sorceress</em>, “The Wilde Flowers” pone a un hablante que da la espalda al sol. La flor pasa de crecer, a morir, a resistir. El <a class="int" href="#cap-4">capítulo 4</a> añade una más.</p>
+</div>
+<div class="hilo">
+<h4>El agua es amenaza, nunca consuelo</h4>
+<p>En el grupo progresivo aparece en cuatro de ocho canciones, siempre como profundidad o ahogo: el submarino sellado de “Periscope”, el océano consciente que inunda de recuerdos en “The Endless Knot”, la caída de “Pulled Under” y el reflejo superficial de “Sincere”. En los discos se repite con el mar de My Dying Bride, el río del olvido de Dark Tranquillity, las ballenas de <em>From Mars to Sirius</em> <a class="src" href="https://en.wikipedia.org/wiki/From_Mars_to_Sirius" target="_blank" rel="noopener">Wikipedia</a> y el océano de “Embers” en Lamb of God <a class="src" href="https://loudwire.com/lamb-of-god-embers-deftones-chino-moreno/" target="_blank" rel="noopener">Loudwire</a>.</p>
+</div>
+<div class="hilo">
+<h4>El consuelo llega casi siempre a través de un vínculo</h4>
+<p>Mark Morton escribió “Walk with Me in Hell” recién enamorado, con la idea de no estar nunca solos, y años después ella lo acompañó en una pérdida muy dolorosa <a class="src" href="https://www.vice.com/da/article/lamb-of-god-embers-morton-essay/" target="_blank" rel="noopener">Vice</a>. Johannes Eckerström dijo de “A Secret Door”: <em>“Ultimately, at the core of it is the idea of hope”</em> <a class="src" href="https://www.loudersound.com/features/johannes-eckerstroms-track-by-track-guide-to-avatars-new-album-hunter-gatherer" target="_blank" rel="noopener">Louder</a>. En “Hijo de la Luna” el niño abandonado sobrevive porque la Luna lo adopta <a class="src" href="https://en.wikipedia.org/wiki/Hijo_de_la_Luna" target="_blank" rel="noopener">Wikipedia</a>, y en “The Shift” el hablante sale del duelo por su padre al prometerse a su hijo <a class="src" href="https://www.metalkingdom.net/lyrics-song/eye-of-the-enemy-the-shift-119824" target="_blank" rel="noopener">Metal Kingdom</a>. Las canciones que quedan sin resolver suelen ser monólogos de alguien solo.</p>
+</div>
+<div class="hilo">
+<h4>Los ciclos y las trampas</h4>
+<p>“Octavarium” termina en la misma nota con la que empieza el disco <a class="src" href="https://en.wikipedia.org/wiki/Octavarium_(song)" target="_blank" rel="noopener">Wikipedia</a>, “The Stage” acaba, según M. Shadows, con la simulación reiniciándose <a class="src" href="https://www.songfacts.com/facts/avenged-sevenfold/the-stage" target="_blank" rel="noopener">Songfacts</a>, “Systematomatic” deshace nudos solo para volver a atarlos y el fantasma de <em>My Arms, Your Hearse</em> queda en un limbo sin fin. Hay incluso un motivo de médico y paciente en dos bandas: la sección de LaBrie en “Octavarium”, basada en <em>Despertares</em>, y el psiquiatra sádico de <em>Vector</em> de Haken.</p>
+</div>
+<div class="hilo">
+<h4>La religión institucional sale mal parada</h4>
+<p>Satanismo como pose en <em>Orchid</em>, historia anticristiana en <em>Still Life</em> <a class="src" href="https://en.wikipedia.org/wiki/Still_Life_(Opeth_album)" target="_blank" rel="noopener">Wikipedia</a>, el dios que los humanos crean a su imagen en “The Stage”, la deidad “deseos.com” de <em>Finisterra</em>. La excepción es la fe de la madre de Keenan, vista con respeto en <em>10,000 Days</em>.</p>
+</div>
+</div>
+</section>
+<section class="cap" data-num="3" data-toc="El último año" id="cap-3">
+<p class="cap-n">Capítulo 3</p>
+<h2 class="cap-title">El último año: tus canciones miran la muerte sin pedir rescate</h2>
+<p>Este capítulo mira solo tus 45 canciones más escuchadas entre el 18 de noviembre de 2025 y el 18 de noviembre de 2026. La muerte aparece en <strong>17 de las 44 canciones con letra</strong> y suma unas <strong>26 de 56 horas (46 %)</strong>. Sigue siendo el tema más pesado aunque quites “The Apocalyptist” (baja a 41 %). Pesa más <strong>la muerte como idea</strong> (la nada, la disolución del ego, el tránsito) que el <strong>duelo por alguien concreto</strong>, con 9,3 h frente a 5,5 h. “SPARK” de ZEXSING (1,05 h) queda fuera del conteo porque probablemente es instrumental, aunque no está confirmado.</p>
+<div class="fig" data-fig="ultimo"></div>
+<h3 id="muerte-idea">La muerte, casi siempre como idea</h3>
+<p>El <strong>duelo por una persona real</strong> suma 5 canciones y 5,5 h: la elegía de Opeth a un abuelo de Åkerfeldt en “The Night and the Silent Water” <a class="src" href="https://en.wikipedia.org/wiki/Morningrise" target="_blank" rel="noopener">Wikipedia</a>, “And My Father Left Forever”, que Stainthorpe describió como la desesperación de recoger cuerpos caídos <a class="src" href="https://blabbermouth.net/news/my-dying-bride-new-song-and-my-father-left-forever-available-for-streaming" target="_blank" rel="noopener">Blabbermouth</a>, “Save Me”, ligada a la muerte de The Rev <a class="src" href="https://www.songfacts.com/facts/avenged-sevenfold/save-me" target="_blank" rel="noopener">Songfacts</a>, “10,000 Days (Wings Pt 2)”, sobre la madre de Keenan <a class="src" href="https://loudersound.com/features/tool-10000-days-wings-story-behind-song" target="_blank" rel="noopener">Louder</a>, y la fábula de los dos pájaros de “In Parting”. La <strong>muerte como problema filosófico</strong> suma 9,3 h en otras 5 canciones, y ahí están dos de tus cuatro más escuchadas.</p>
+<p>“Nocturne” de HeXeN (3,7 h, tu #2) tiene letra, aunque a veces se confunde con una instrumental. Su autor, Andre Hartoonian, explicó que el título del disco viene de <em>El ser y la nada</em> de Sartre y que las letras tratan el caos del universo y el absurdo de la existencia <a class="src" href="https://metalcrypt.com/pages/interviews.php?intid=277" target="_blank" rel="noopener">The Metal Crypt</a>. La letra acepta la nada sin resentimiento y aun así elige resistir. En “Nobody” (2,5 h), M. Shadows dijo que el disco explora el <em>“existentialism and absurdism”</em> y que parte del material viene de Camus <a class="src" href="https://blabbermouth.net/news/avenged-sevenfold-singer-says-lyrics-on-life-is-but-a-dream-album-are-tied-together" target="_blank" rel="noopener">Blabbermouth</a>. En otra entrevista describió la canción como una muerte del ego en la que uno deja de existir como individuo y se funde con el universo <a class="src" href="https://www.altpress.com/?p=214724" target="_blank" rel="noopener">Alternative Press</a>. Gojira completa el cuadro con <em>The Way of All Flesh</em>, un disco que Duplantier dijo que trata de la muerte. Se suman “Countless Skies”, donde el tiempo borra todo lo humano, e “Invincible”, que la crítica lee como un guerrero que envejece.</p>
+<p>Alrededor de esos polos hay muerte en otros registros: la casi muerte infantil de Petrucci en “A Nightmare to Remember” <a class="src" href="https://www.songfacts.com/facts/dream-theater/a-nightmare-to-remember" target="_blank" rel="noopener">Songfacts</a>, el deseo de Hamlet de escapar de su cuerpo en “Pull Me Under” <a class="src" href="https://en.wikipedia.org/wiki/Pull_Me_Under" target="_blank" rel="noopener">Wikipedia</a> y el olvido que también mata en “Lethe”. <strong>Te atrae la muerte como algo para pensar, no solo para llorar.</strong> El existencialismo declarado por los propios artistas suma 6,2 h (11 %) y sube a unas 9 h con las lecturas más amplias de “Countless Skies”, “The Art of Dying” y “Anesthetize”.</p>
+<h3 id="mente">Una mente que sufre por dentro, sin enemigo afuera</h3>
+<p>En <strong>15 canciones (15,9 h, 28 %)</strong> el conflicto es interno, y llega a 16 canciones y 18 h si cuentas el “Descending” de Lamb of God, que es tentativo. Dream Theater pone la crisis en el cuerpo: “Panic Attack”, con letra de John Petrucci, describe el pánico desde adentro y termina sin salida <a class="src" href="https://en.wikipedia.org/wiki/Octavarium" target="_blank" rel="noopener">Wikipedia</a>. Haken lo vuelve ficción. “Veil” y “Carousel” son capítulos de la misma saga de <em>Vector</em> y <em>Virus</em>, que Richard Henshall explicó como la historia de un médico sádico que aplica electroshock a un paciente, con un tema general de psicoanálisis <a class="src" href="https://metalinjection.net/interviews/haken-discuss-new-album-vector-unusual-influences-and-mental-health" target="_blank" rel="noopener">Metal Injection</a>.</p>
+<p>Las confesiones reales vienen del rock y del groove. Adam Gontier escribió “Animal I Have Become” en rehabilitación por su adicción a la OxyContin y la llamó <em>“my realization that change had to happen”</em> <a class="src" href="https://en.wikipedia.org/wiki/Animal_I_Have_Become" target="_blank" rel="noopener">Wikipedia</a>. Randy Blythe escribió “512” en la celda de ese número en una prisión de Praga, sobre cómo el encierro lo estaba cambiando <a class="src" href="https://en.wikipedia.org/wiki/512_(song)" target="_blank" rel="noopener">Wikipedia</a>. Para “Descending” de Lamb of God (2,1 h) no hay declaración sobre la canción, solo que <em>Sacrament</em> trata de depresión, pareja y abuso de sustancias <a class="src" href="https://www.loudersound.com/features/lamb-of-god-sacrament-album-interview-2006" target="_blank" rel="noopener">Louder</a>.</p>
+<p>Dentro de este patrón hay un subhilo menos obvio, <strong>la anestesia</strong>: la sedación del hospital en “A Nightmare to Remember”, el adolescente medicado de “Anesthetize” y el entumecimiento emocional de “Panic Attack”. Steven Wilson resumió esa idea con <em>“that word blank seems to sum up that whole kind of existence”</em> <a class="src" href="https://musicplayers.com/?p=18137" target="_blank" rel="noopener">MusicPlayers</a>. Las 7 canciones claramente autobiográficas están todas entre 0,8 y 1,3 h. Tus canciones más escuchadas son proféticas, filosóficas o de personaje, no confesiones.</p>
+<h3 id="iglesia">La iglesia sale mal parada, la espiritualidad sin iglesia sale bien</h3>
+<p><strong>Cuatro canciones con 8,4 h</strong> tratan la religión institucional como algo corrompido. En “The Apocalyptist” el hablante pide no consultar un libro sagrado manchado y termina exhortando a derribar el propio altar <a class="src" href="https://www.metalkingdom.net/lyrics-song/my-dying-bride-the-apocalyptist-280125" target="_blank" rel="noopener">Metal Kingdom</a>. En “Moon Above, Sun Below” un líder manipulador explota a seguidores de algo parecido a una secta. La crítica lee “God Is a Weapon” como la obsesión vuelta religión y la religión vuelta guerra <a class="src" href="https://neonmusic.co.uk/falling-in-reverses-god-is-a-weapon-lyrics-meaning-a-slow-burn-sermon-in-sin-obsession-and-power" target="_blank" rel="noopener">Neon Music</a>, y “Ænema” nació en parte del rechazo de TOOL a la Cienciología <a class="src" href="https://www.songfacts.com/facts/tool/aenema" target="_blank" rel="noopener">Songfacts</a>. La cifra es frágil porque 5,2 de esas 8,4 h son de una sola canción con letra fragmentaria.</p>
+<p>Del otro lado, <strong>la espiritualidad sin dios ni iglesia suma 5,9 h en 4 canciones</strong> y siempre es positiva: la disolución en el todo de “Nobody”, “The Chant”, que Gojira presentó como un ritual de sanación <a class="src" href="https://www.rollingstone.com/music/music-news/gojira-the-chant-teaser-1161254/" target="_blank" rel="noopener">Rolling Stone</a>, “Pneuma”, centrada en el aliento y una esencia común según la crítica, y la muerte como arte de “The Art of Dying”. Hay excepciones. “A Nightmare to Remember” agradece a un poder superior la supervivencia de la familia. “Wings Pt 2” ataca a la iglesia que convenció a la madre de Keenan de que su parálisis era castigo de Dios, pero termina aceptando el consuelo de la fe de ella. Lo que estas letras rechazan es la institución que controla o culpa, no la fe de una persona.</p>
+<h3 id="critica">La crítica social se queda en TOOL y casi no entra al doom</h3>
+<p>La crítica social o política con buena fuente suma <strong>7 canciones y 8,45 h (15 %)</strong>, y <strong>4,7 h de eso (56 %) son de TOOL</strong>: los espectadores de la violencia en “Vicarious” <a class="src" href="https://en.wikipedia.org/wiki/Vicarious_(song)" target="_blank" rel="noopener">Wikipedia</a>, la hipocresía de “The Pot”, la complacencia de “Descending” de TOOL y la purga de Los Ángeles en “Ænema”, de la que Keenan dijo <em>“People in L.A. have lost touch with what really matters”</em> <a class="src" href="https://www.rollingstone.com/music/music-news/tool-get-spiritual-and-scatological-on-aenima-187540/" target="_blank" rel="noopener">Rolling Stone</a>. Fuera de TOOL solo quedan la guerra de Irak en “Clenching the Fists of Dissent”, la generación anestesiada de “Anesthetize” y “Joseph”, que Songfacts describe como antibélica.</p>
+<p>El bloque doom, gótico y death melódico es tu grupo más grande (12 canciones, 16,4 h) y no tiene ninguna canción de crítica social con fuente sólida. “The Apocalyptist” funciona como puente: conserva la rabia pero la traslada a un registro profético. Stainthorpe lo resumió en <em>“The apocalypse is always on the horizon”</em> <a class="src" href="https://www.nuclearblast.com/pages/album/a-mortal-binding" target="_blank" rel="noopener">Nuclear Blast</a>. El <a class="int" href="#cap-2">capítulo 2</a> muestra que, al mirar discos y no canciones, la crítica social sí crece fuera de TOOL.</p>
+<h3 id="agua-noche">Agua, noche y finales sin rescate</h3>
+<p>En el bloque doom el <strong>agua aparece en 7 de 12 canciones (10,7 h)</strong>: marineros ahogados en “The Apocalyptist”, el lago quieto donde Åkerfeldt llora a su abuelo, el río del duelo en “Moon Above, Sun Below”, el río griego del olvido que da nombre a “Lethe”, la marea de “Serac” y los ríos y olas de “Countless Skies”. <strong>La noche, la luna o el ocaso están en 9 de 12 (12,9 h).</strong> Fuera de ese bloque, “Nocturne” presenta la noche como más honesta que el día.</p>
+<p>Solo <strong>7 canciones (7,6 h, 13 %) ofrecen consuelo o salida</strong>, como la flor que hay que salvar en “The Last Flower”, sobre la que Straccione habló de preservar la belleza pase lo que pase <a class="src" href="https://mhf-mag.com/?p=86386" target="_blank" rel="noopener">MHF Magazine</a>, la supervivencia de “A Nightmare to Remember”, el pedido de ayuda de “Animal I Have Become” o el ritual de “The Chant”. Más peso tienen los finales de <strong>aceptación o desafío (6 canciones, 14,6 h)</strong>, entre ellos tu #1, tu #2 y tu #4. Incluso el amor (7 canciones, 8,45 h) viene sin rescate: solo “Nothing Else Matters” es romántica sin sombra, y Hetfield consideraba las canciones de amor una señal de debilidad <a class="src" href="https://www.loudersound.com/news/before-he-wrote-nothing-else-matters-james-hetfield-considered-love-songs-a-sign-of-weakness" target="_blank" rel="noopener">Louder</a>.</p>
+<blockquote class="cita-grande">
+<p>“But I think sorrowful music can be uplifting.”</p>
+<footer>Mikael Åkerfeldt, explicando esta lógica mejor que nadie <a class="src" href="https://www.loudersound.com/features/how-opeth-ditched-the-death-metal-on-heritage" target="_blank" rel="noopener">Louder</a></footer>
+</blockquote>
+<h3 id="tabla-44">Las 44 canciones con letra del último año</h3>
+<div class="tabla" data-filtro="1" data-tabla="ultimo">
+<div class="tabla-scroll"><table>
+<thead>
+<tr>
+<th>Canción</th>
+<th>Artista</th>
+<th>h</th>
+<th>Temas principales</th>
+<th>Base</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The Apocalyptist</td>
+<td>My Dying Bride</td>
+<td>5,2</td>
+<td>apocalipsis, religión corrupta, duelo, desafío final, agua</td>
+<td><a class="src" href="https://www.metalkingdom.net/lyrics-song/my-dying-bride-the-apocalyptist-280125" target="_blank" rel="noopener">L, Ad</a></td>
+</tr>
+<tr>
+<td>Nocturne</td>
+<td>HeXeN</td>
+<td>3,7</td>
+<td>existencialismo, muerte como nada, rebeldía sin esperanza, noche</td>
+<td><a class="src" href="https://metalcrypt.com/pages/interviews.php?intid=277" target="_blank" rel="noopener">Ad, L</a></td>
+</tr>
+<tr>
+<td>Passenger</td>
+<td>Deftones</td>
+<td>2,6</td>
+<td>deseo, entrega o pérdida de control</td>
+<td><a class="src" href="https://www.songfacts.com/facts/deftones/passenger" target="_blank" rel="noopener">C, A (proceso)</a></td>
+</tr>
+<tr>
+<td>Nobody</td>
+<td>Avenged Sevenfold</td>
+<td>2,5</td>
+<td>existencialismo, muerte del ego, espiritualidad sin religión</td>
+<td><a class="src" href="https://www.altpress.com/?p=214724" target="_blank" rel="noopener">A</a></td>
+</tr>
+<tr>
+<td>Descending</td>
+<td>Lamb of God</td>
+<td>2,1</td>
+<td>angustia, adicción (t)</td>
+<td><a class="src" href="https://www.loudersound.com/features/lamb-of-god-sacrament-album-interview-2006" target="_blank" rel="noopener">Ad, t</a></td>
+</tr>
+<tr>
+<td>Clenching the Fists of Dissent</td>
+<td>Machine Head</td>
+<td>1,7</td>
+<td>guerra, crítica política, rabia</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/The_Blackening" target="_blank" rel="noopener">C</a></td>
+</tr>
+<tr>
+<td>Blackwater Park</td>
+<td>Opeth</td>
+<td>1,4</td>
+<td>peste, muerte colectiva, lenguaje de pecado, luna</td>
+<td><a class="src" href="https://www.songtexte.com/songtext/opeth/blackwater-park-63dcbe03.html" target="_blank" rel="noopener">L, F</a></td>
+</tr>
+<tr>
+<td>And My Father Left Forever</td>
+<td>My Dying Bride</td>
+<td>1,3</td>
+<td>duelo, familia</td>
+<td><a class="src" href="https://blabbermouth.net/news/my-dying-bride-new-song-and-my-father-left-forever-available-for-streaming" target="_blank" rel="noopener">A</a></td>
+</tr>
+<tr>
+<td>Save Me</td>
+<td>Avenged Sevenfold</td>
+<td>1,3</td>
+<td>duelo por The Rev, súplica</td>
+<td><a class="src" href="https://www.songfacts.com/facts/avenged-sevenfold/save-me" target="_blank" rel="noopener">C, Ad</a></td>
+</tr>
+<tr>
+<td>Radio/Video</td>
+<td>System Of A Down</td>
+<td>1,3</td>
+<td>nostalgia de infancia, ironía sobre la fama</td>
+<td><a class="src" href="https://www.songfacts.com/facts/system-of-a-down/radio-video" target="_blank" rel="noopener">C</a></td>
+</tr>
+<tr>
+<td>Vicarious</td>
+<td>TOOL</td>
+<td>1,3</td>
+<td>medios y violencia como espectáculo</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/Vicarious_(song)" target="_blank" rel="noopener">C</a></td>
+</tr>
+<tr>
+<td>Ænema</td>
+<td>TOOL</td>
+<td>1,25</td>
+<td>purga apocalíptica, crítica social, renacimiento</td>
+<td><a class="src" href="https://www.rollingstone.com/music/music-news/tool-get-spiritual-and-scatological-on-aenima-187540/" target="_blank" rel="noopener">A</a></td>
+</tr>
+<tr>
+<td>The Pot</td>
+<td>TOOL</td>
+<td>1,25</td>
+<td>hipocresía, rabia</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/The_Pot" target="_blank" rel="noopener">C débil</a></td>
+</tr>
+<tr>
+<td>The Last Flower</td>
+<td>Shores of Null</td>
+<td>1,2</td>
+<td>belleza efímera, esperanza frágil, poscatástrofe</td>
+<td><a class="src" href="https://mhf-mag.com/?p=86386" target="_blank" rel="noopener">A</a></td>
+</tr>
+<tr>
+<td>The Night and the Silent Water</td>
+<td>Opeth</td>
+<td>1,2</td>
+<td>duelo por el abuelo, memoria, agua, luna</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/Morningrise" target="_blank" rel="noopener">C, L</a></td>
+</tr>
+<tr>
+<td>The Chant</td>
+<td>Gojira</td>
+<td>1,2</td>
+<td>sanación, espiritualidad sin religión</td>
+<td><a class="src" href="https://www.rollingstone.com/music/music-news/gojira-the-chant-teaser-1161254/" target="_blank" rel="noopener">A</a></td>
+</tr>
+<tr>
+<td>The Art of Dying</td>
+<td>Gojira</td>
+<td>1,2</td>
+<td>muerte como tránsito, transformación</td>
+<td><a class="src" href="https://www.loudersound.com/features/every-gojira-album-in-their-own-words" target="_blank" rel="noopener">Ad, C</a></td>
+</tr>
+<tr>
+<td>God Is a Weapon</td>
+<td>Falling In Reverse</td>
+<td>1,15</td>
+<td>religión como arma, amor obsesivo</td>
+<td><a class="src" href="https://neonmusic.co.uk/falling-in-reverses-god-is-a-weapon-lyrics-meaning-a-slow-burn-sermon-in-sin-obsession-and-power" target="_blank" rel="noopener">C</a></td>
+</tr>
+<tr>
+<td>Veil</td>
+<td>Haken</td>
+<td>1,1</td>
+<td>psicoterapia, trauma, manipulación</td>
+<td><a class="src" href="https://metalinjection.net/interviews/haken-discuss-new-album-vector-unusual-influences-and-mental-health" target="_blank" rel="noopener">Ad, F</a></td>
+</tr>
+<tr>
+<td>Carousel</td>
+<td>Haken</td>
+<td>1,1</td>
+<td>ciclo, transformación, miedo colectivo</td>
+<td><a class="src" href="https://hakenarchive.co.uk/songs/virus/carousel" target="_blank" rel="noopener">Ad, F</a></td>
+</tr>
+<tr>
+<td>A Nightmare to Remember</td>
+<td>Dream Theater</td>
+<td>1,1</td>
+<td>casi muerte, trauma, sedación, gratitud</td>
+<td><a class="src" href="https://www.songfacts.com/facts/dream-theater/a-nightmare-to-remember" target="_blank" rel="noopener">A</a></td>
+</tr>
+<tr>
+<td>Invincible</td>
+<td>TOOL</td>
+<td>1,1</td>
+<td>envejecimiento, mortalidad</td>
+<td><a class="src" href="https://www.loudersound.com/features/tools-fear-inoculum-your-definitive-track-by-track-guide" target="_blank" rel="noopener">C</a></td>
+</tr>
+<tr>
+<td>Courtesy Call</td>
+<td>Thousand Foot Krutch</td>
+<td>1,1</td>
+<td>arenga, resiliencia</td>
+<td><a class="src" href="https://www.songfacts.com/facts/thousand-foot-krutch/courtesy-call" target="_blank" rel="noopener">F débil</a></td>
+</tr>
+<tr>
+<td>Y serás canción, 2010</td>
+<td>Mägo de Oz</td>
+<td>1,1</td>
+<td>sin asignar</td>
+<td><a class="src" href="https://www.lahiguera.net/musicalia/artistas/mago_de_oz/disco/4514" target="_blank" rel="noopener">sin fuente</a></td>
+</tr>
+<tr>
+<td>Anesthetize</td>
+<td>Porcupine Tree</td>
+<td>1,05</td>
+<td>fármacos, apatía, crítica a la tecnología</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/Fear_of_a_Blank_Planet" target="_blank" rel="noopener">Ad</a></td>
+</tr>
+<tr>
+<td>Onirica East</td>
+<td>Novembre</td>
+<td>1,0</td>
+<td>desamor, huida, soledad, océano</td>
+<td><a class="src" href="https://www.last.fm/zh/music/Novembre/_/Onirica+East/+lyrics" target="_blank" rel="noopener">L</a></td>
+</tr>
+<tr>
+<td>Once My Light</td>
+<td>Sirenia</td>
+<td>1,0</td>
+<td>pérdida (muerte o ruptura), noche</td>
+<td><a class="src" href="https://www.metalkingdom.net/lyrics-song/sirenia-once-my-light-118675" target="_blank" rel="noopener">L</a></td>
+</tr>
+<tr>
+<td>Pneuma</td>
+<td>TOOL</td>
+<td>1,0</td>
+<td>espíritu, aliento, esencia común</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/Pneuma_(song)" target="_blank" rel="noopener">C</a></td>
+</tr>
+<tr>
+<td>Joseph</td>
+<td>Falling In Reverse</td>
+<td>1,0</td>
+<td>guerra, mortalidad, imaginería religiosa</td>
+<td><a class="src" href="https://www.songfacts.com/facts/falling-in-reverse/joseph" target="_blank" rel="noopener">F</a></td>
+</tr>
+<tr>
+<td>Nothing Else Matters</td>
+<td>Metallica</td>
+<td>1,0</td>
+<td>amor a distancia, soledad</td>
+<td><a class="src" href="https://www.loudersound.com/news/before-he-wrote-nothing-else-matters-james-hetfield-considered-love-songs-a-sign-of-weakness" target="_blank" rel="noopener">A</a></td>
+</tr>
+<tr>
+<td>512</td>
+<td>Lamb of God</td>
+<td>0,95</td>
+<td>encierro, cambio interior</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/512_(song)" target="_blank" rel="noopener">A</a></td>
+</tr>
+<tr>
+<td>Serac</td>
+<td>Katatonia</td>
+<td>0,9</td>
+<td>traición, rencor, memoria, marea</td>
+<td><a class="src" href="https://www.metalkingdom.net/lyrics-song/katatonia-serac-135069" target="_blank" rel="noopener">L</a></td>
+</tr>
+<tr>
+<td>Panic Attack</td>
+<td>Dream Theater</td>
+<td>0,9</td>
+<td>pánico, aislamiento, sin salida</td>
+<td><a class="src" href="https://www.metalkingdom.net/lyrics-song/dream-theater-panic-attack-1584" target="_blank" rel="noopener">L</a></td>
+</tr>
+<tr>
+<td>Pull Me Under</td>
+<td>Dream Theater</td>
+<td>0,9</td>
+<td>Hamlet, venganza, deseo de morir</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/Pull_Me_Under" target="_blank" rel="noopener">A</a></td>
+</tr>
+<tr>
+<td>10,000 Days (Wings Pt 2)</td>
+<td>TOOL</td>
+<td>0,9</td>
+<td>duelo por la madre, fe ambivalente</td>
+<td><a class="src" href="https://loudersound.com/features/tool-10000-days-wings-story-behind-song" target="_blank" rel="noopener">A, C</a></td>
+</tr>
+<tr>
+<td>Descending</td>
+<td>TOOL</td>
+<td>0,9</td>
+<td>complacencia, catástrofe autoprovocada</td>
+<td><a class="src" href="https://www.loudersound.com/features/tools-fear-inoculum-your-definitive-track-by-track-guide" target="_blank" rel="noopener">C</a></td>
+</tr>
+<tr>
+<td>Wolf Down the Earth</td>
+<td>Gojira</td>
+<td>0,85</td>
+<td>destrucción del planeta (t)</td>
+<td><a class="src" href="https://www.loudersound.com/features/every-gojira-album-in-their-own-words" target="_blank" rel="noopener">Ad, t</a></td>
+</tr>
+<tr>
+<td>Moon Above, Sun Below</td>
+<td>Opeth</td>
+<td>0,8</td>
+<td>culto falso, desesperanza, río, sol y luna</td>
+<td><a class="src" href="https://www.metalkingdom.net/lyrics-song/opeth-moon-above%2c-sun-below-109036" target="_blank" rel="noopener">L</a></td>
+</tr>
+<tr>
+<td>In Parting</td>
+<td>Be'lakor</td>
+<td>0,8</td>
+<td>hermanos, muerte, ironía trágica</td>
+<td><a class="src" href="https://www.metalkingdom.net/lyrics-song/be%27lakor-in-parting-104152" target="_blank" rel="noopener">L</a></td>
+</tr>
+<tr>
+<td>Countless Skies</td>
+<td>Be'lakor</td>
+<td>0,8</td>
+<td>tiempo indiferente, cosmos, resignación</td>
+<td><a class="src" href="https://www.metalkingdom.net/lyrics-song/be%27lakor-countless-skies-60203" target="_blank" rel="noopener">L</a></td>
+</tr>
+<tr>
+<td>Lethe</td>
+<td>Dark Tranquillity</td>
+<td>0,8</td>
+<td>olvido, autodestrucción, río</td>
+<td><a class="src" href="https://www.metalkingdom.net/lyrics-song/dark-tranquillity-lethe-821" target="_blank" rel="noopener">L</a></td>
+</tr>
+<tr>
+<td>Pushit</td>
+<td>TOOL</td>
+<td>0,8</td>
+<td>angustia, relación dolorosa (lecturas en disputa)</td>
+<td><a class="src" href="https://www.songfacts.com/facts/tool/pushit" target="_blank" rel="noopener">F</a></td>
+</tr>
+<tr>
+<td>Animal I Have Become</td>
+<td>Three Days Grace</td>
+<td>0,8</td>
+<td>adicción, pedido de ayuda</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/Animal_I_Have_Become" target="_blank" rel="noopener">A</a></td>
+</tr>
+<tr>
+<td>VINUSHKA</td>
+<td>DIR EN GREY</td>
+<td>0,8</td>
+<td>culpa, contradicción</td>
+<td><a class="src" href="https://wikiwiki.jp/deg-archives/VINUSHKA" target="_blank" rel="noopener">F débil</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</section>
+<section class="cap cap-invierno" data-num="4" data-toc="Born in Winter" id="cap-4">
+<p class="cap-n">Capítulo 4</p>
+<h2 class="cap-title">Born in Winter, la fuerza que nace del frío</h2>
+<div class="invierno">
+<p class="inv-grande">“Born in Winter” pesa poco en tus horas, unas 3,6 h desde 2019, con su mejor año en 2021 (1,1 h). En el mapa de tus letras, en cambio, ocupa un lugar único. Es de las pocas canciones donde el invierno no mata sino que forma, y donde la fuerza para seguir no llega de un rescate sino de adentro.</p>
+<p class="inv-nota">Las horas miden repetición, no significado, y esta canción es la prueba.</p>
+</div>
+<div class="fig" data-fig="biw"></div>
+<h3 id="biw-cancion">La canción</h3>
+<p>Es la pista 10 de <em>L'Enfant Sauvage</em> (2012), dura 3:51 y está firmada por los hermanos Joe y Mario Duplantier <a class="src" href="https://www.metalkingdom.net/lyrics-song/gojira-born-in-winter-226553" target="_blank" rel="noopener">Metal Kingdom</a>. Tuvo video oficial en marzo de 2014. No encontré ninguna declaración de la banda sobre esta canción en concreto, así que lo que sigue es lectura de la letra.</p>
+<p>La letra habla en segunda persona a alguien que aprende, antes de cualquier renacer, lo doloroso del paso del tiempo. Una mañana fría le hace estirar los brazos hacia el calor del sol. Hay una línea breve contra un mundo enloquecido por el oro. Luego la canción abre el plano: todo nació de la noche y todos venimos del estallido de una estrella. El cierre es una promesa. Ese corazón recibido en invierno, si mira el frío con los ojos abiertos, le dará la fuerza para luchar y mantenerse en pie <a class="src" href="https://www.letras.mus.br/gojira/born-in-winter/print.html" target="_blank" rel="noopener">Letras</a>. Sitios de significados sin autor la leen igual, como crecimiento a través de la dureza <a class="src" href="https://www.lyreka.com/song/gojira-born-in-winter-lyrics" target="_blank" rel="noopener">Lyreka</a>.</p>
+<dl class="ficha">
+<div>
+<dt>Temas</dt>
+<dd>transformación y renacimiento, naturaleza y cosmos, esperanza. Como secundarios, el tiempo y una pizca de crítica social (el oro).</dd>
+</div>
+<div>
+<dt>Imágenes</dt>
+<dd>invierno, noche, sol, estrella.</dd>
+</div>
+<div>
+<dt>Final</dt>
+<dd>consuelo. Sería de las pocas canciones con final de salida de todo el análisis.</dd>
+</div>
+</dl>
+<h3 id="biw-disco">El disco que la rodea</h3>
+<p>Duplantier explicó que <em>L'Enfant Sauvage</em> nació de preguntarse qué es la libertad para un músico sin jefe, y lo resumió en <em>“With freedom comes responsibility”</em> <a class="src" href="https://loudwire.com/gojira-unveil-new-album-lenfant-sauvage-release-date-and-tracklisting/" target="_blank" rel="noopener">Loudwire</a>. También aclaró que “sauvage” no es para él algo fuera de control, sino algo libre en la naturaleza, como una flor silvestre que crece donde quiere y se vuelve algo hermoso <a class="src" href="https://blabbermouth.net/news/gojira-frontman-talks-about-the-making-of-l-enfant-sauvage" target="_blank" rel="noopener">Blabbermouth</a>. El disco se inspira en parte en la película de Truffaut sobre Victor de Aveyron, el niño hallado solo en el bosque, y Joe Duplantier se convirtió en padre durante la grabación <a class="src" href="https://en.wikipedia.org/wiki/L%27Enfant_sauvage_(album)" target="_blank" rel="noopener">Wikipedia</a>.</p>
+<h3 id="biw-mapa">Dónde encaja en tu mapa</h3>
+<ul>
+<li><strong>Es el reverso de “Flower”.</strong> En las dos el invierno es el escenario. En “Flower” los amantes mueren en invierno y sus súplicas no reciben respuesta. En “Born in Winter” alguien nace en el invierno y saca de ahí su fuerza.</li>
+<li><strong>Cierra el hilo de las flores.</strong> La flor silvestre con la que Duplantier explicó el título del disco se suma a “Marigold” y “Bloom” (crecer), “Flower” (morir) y “The Last Flower” (resistir). Aquí la flor crece libre.</li>
+<li><strong>El cosmos cambia de signo.</strong> En “Countless Skies” y “Nocturne” el universo es indiferente o absurdo. En “Born in Winter” el cosmos es el origen: venimos de una estrella.</li>
+<li><strong>Una excepción parcial al consuelo por vínculo.</strong> En casi todas tus canciones con final de salida, alguien llega o se queda al lado. Aquí la fuerza viene del propio origen, de algo que se recibió al nacer.</li>
+<li><strong>Un patrón que no estaba en los otros capítulos.</strong> Esto es inferencia propia, no de una fuente. Tres de tus canciones de salida fueron escritas por músicos que acababan de ser padres o hablaban a un hijo: “Marigold” (Jim Grey escribió <em>Bloom</em> al volverse padre), “The Shift” (el hablante sale del duelo al prometerse a su hijo) y “Born in Winter” (Duplantier fue padre durante la grabación). La letra no dice quién entregó ese corazón, así que leerla como un mensaje de padre a hijo es una posibilidad, no un hecho.</li>
+<li><strong>Dentro de Gojira es su canción más luminosa.</strong> <em>The Way of All Flesh</em> trata de la muerte, <em>From Mars to Sirius</em> de resucitar un planeta y “The Chant” es un ritual de sanación. “Born in Winter” es la que habla de nacer.</li>
+</ul>
+<figure class="para-ti">
+<figcaption>Lo que significa para ti</figcaption>
+<blockquote>
+<p>“La idea de que una vida se fortalece con el tiempo, y algún día se volverá suficientemente fuerte para pararse recto y hacer frente a las dificultades que vendrán en la vida, me da mucho ánimo.”</p>
+</blockquote>
+</figure>
+</section>
+<section class="cap" data-num="5" data-toc="Canciones que dejaron rastro" id="cap-5">
+<p class="cap-n">Capítulo 5</p>
+<h2 class="cap-title">Canciones que dejaron rastro</h2>
+<p>Después de leer los capítulos anteriores nombraste otras canciones que te dejaron huella aunque no aparezcan en tus 25 más escuchadas de cada año: “Up North” de Borknagar, Soen y Be'lakor enteros, dos de Rishloo, “Spiders” de System Of A Down, diez de Dark Tranquillity y dos de Katatonia. Este capítulo responde una pregunta: ¿repiten tus patrones o traen algo nuevo? La sinergia que sientes entre “Flower” y “Born in Winter” ya está en el <a class="int" href="#cap-4">capítulo 4</a>, con el mismo invierno que en una mata y en la otra forma.</p>
+<h3 id="rastro">Dos clases de rastro</h3>
+<p>Las 19 canciones que nombraste suman <strong>63,6 h desde 2019, y el 56 % de esas horas es anterior a 2024</strong>. Las cinco que más suman tuvieron su mejor año antes de la ventana de este análisis: “Up North” en 2020 (3,1 h), “Antagonist” en 2021 (2,1 h entre el sencillo y el disco), “July” en 2021, “Jinn” en 2023 (4,5 h en un solo año) y “Systematomatic” en 2023 (3,3 h). “For My Demons” y “Lost to Apathy” siguen el mismo camino. Son capas más viejas de tu escucha, de 2020 a 2023, que una ventana de 2024 a 2026 no podía ver.</p>
+<div class="fig fig-ancha" data-fig="rastro"></div>
+<p>La otra clase de rastro funciona al revés. Soen y Be'lakor no son pasado. <strong>Soen tuvo su mejor año en 2024 (19,4 h) y Be'lakor en 2025 (15,2 h)</strong>, y los cinco discos de Be'lakor alcanzaron su máximo ese mismo año. Les pasa lo mismo que a Opeth en el capítulo 2: las horas se reparten en decenas de canciones y ninguna llega al top 25. Tres de las cuatro de <em>The Gallery</em> de Dark Tranquillity también tuvieron su pico en 2024. Algunas ya asomaban antes (“Freaks &amp; Animals”, “Countless Skies”, <em>Memorial</em>), pero sueltas.</p>
+<div class="nota">
+<p><strong>Qué tan firme es esto.</strong> De las 18 canciones con letra, solo “Up North” y “Monarch” tienen una explicación de la banda sobre la canción misma. Para el resto hay, como mucho, declaraciones sobre el disco. “Mine Is the Grandeur...” es instrumental. Lo demás es lectura de letras transcritas por fans, que pueden tener errores.</p>
+</div>
+<h3 id="up-north">Up North, la pariente más cercana de Born in Winter</h3>
+<p>“Up North” es la canción que más suma del grupo (8,5 h), más del doble que “Born in Winter”, y vivió sus mejores años al mismo tiempo que ella, entre 2020 y 2022. Es la única pista de <em>True North</em> (2019) con letra y música de una sola persona, ICS Vortex <a class="src" href="https://en.wikipedia.org/wiki/True_North_(Borknagar_album)" target="_blank" rel="noopener">Wikipedia</a>. Øystein Brun, líder de la banda, dijo que la letra trata del círculo de la vida, del cambio de las estaciones y de la idea de que la energía del universo se conserva y todos somos polvo de estrellas <a class="src" href="https://blabbermouth.net/news/video-premiere-borknagars-up-north" target="_blank" rel="noopener">Blabbermouth</a>. Ojo, Brun explica una letra que no escribió.</p>
+<p>Leída en una transcripción, la letra coincide con él <a class="src" href="https://www.metalkingdom.net/lyrics-song/borknagar-up-north-206514" target="_blank" rel="noopener">Metal Kingdom</a>. Un narrador describe una tierra del norte como el lugar al que pertenece y recorre las estaciones como si fueran la vida. El otoño trae hojas que caen, lluvia y muerte. El invierno es una fuerza que no cede, pone a prueba la fe, humilla y muestra los límites de lo que uno sabe. La primavera renueva. El agua está, pero como hielo que se derrite y cambia de forma, no como ahogo. El final declara un ciclo sin punto final, donde nada termina del todo. Es aceptación.</p>
+<p>Con “Born in Winter” comparte casi todo: un invierno que prueba en lugar de matar, un origen en las estrellas y un final de salida. La diferencia está en de quién es la fuerza. En Gojira el invierno le entrega a un “tú” la fuerza para mantenerse en pie. En “Up North” la fuerza no es de nadie en particular, es del ciclo, y uno se sostiene porque forma parte de algo que no se acaba.</p>
+<div class="par">
+<div>
+<p class="par-k">Gojira</p>
+<p class="par-v">promete que vas a crecer.</p>
+</div>
+<div>
+<p class="par-k">Borknagar</p>
+<p class="par-v">promete que no vas a terminar.</p>
+</div>
+</div>
+<h3 id="soen">Soen, el enemigo con nombre</h3>
+<p>Soen suma 87,5 h desde 2020, y solo <em>Memorial</em> había entrado al análisis. Joel Ekelöf contó sus dos primeros discos como filosóficos y <em>Lykaia</em> como un giro hacia lo personal, del que dijo <em>“Martin and I have partly plunged into our own abysses in our lyrics”</em> <a class="src" href="https://www.eclipsed.de/en/current-issue/soen-explore-their-own-abysses-their-new-album" target="_blank" rel="noopener">eclipsed</a>. <em>Imperial</em> y <em>Memorial</em> son políticos, y Martin Lopez prometió seguir luchando por la libertad y por el desvalido <a class="src" href="https://www.loudersound.com/features/soen-the-story-behind-imperial" target="_blank" rel="noopener">Louder</a>.</p>
+<p>“Antagonist” (7,0 h entre el sencillo de 2020 y el disco) no tiene explicación de la banda. En la transcripción, el hablante se pone del lado de los excluidos, los solitarios, los pobres y los adictos, y acusa a un “tú” privilegiado que levanta muros contra ellos. El estribillo honra a quienes desafían a los gobernantes y dice que sus doctrinas dañan al pueblo. Una estrofa de aforismos sostiene que el sufrimiento refina y que sobrevivir no alcanza para vivir, y el puente pide fuego y rabia <a class="src" href="https://www.metalkingdom.net/lyrics-song/soen-antagonist-234948" target="_blank" rel="noopener">Metal Kingdom</a>. Termina en desafío.</p>
+<p>“Monarch” (3,3 h, con su pico en 2024) sí tiene explicación. Ekelöf dijo que trata de cómo se convierte a los jóvenes en criaturas violentas, en un mundo donde <em>“bullies are kings and the rest are prey”</em> <a class="src" href="https://blabbermouth.net/news/soen-feat-ex-opeth-drummer-martin-lopez-monarch-music-video-available" target="_blank" rel="noopener">Blabbermouth</a>. En la letra habla un señor de la guerra que reina desde una pira, le dice a alguien cercano que la compasión no es fuerza y cierra preguntando a quién se manda a morir <a class="src" href="https://www.metalkingdom.net/lyrics-song/soen-monarch-238742" target="_blank" rel="noopener">Metal Kingdom</a>. No resuelve.</p>
+<p>“Jinn” es lo contrario. Es tu canción más escuchada de Soen (6,1 h) y no tiene poder, ni sistema, ni enemigo. Firmada por Ekelöf y Lars Enok Åhlund <a class="src" href="https://www.elyrics.net/read/s/soen-lyrics/jinn-lyrics.html" target="_blank" rel="noopener">eLyrics</a>, no tiene explicación propia. En la letra, alguien mira atrás a una larga dependencia de otra persona con la que fue joven y decide soltarla. Se piensa mortal y pesado, concluye que buscar certezas solo trae dudas y que los dos terminan como extraños. Se apaga en un instrumental, sin reencuentro <a class="src" href="https://lyricstranslate.com/en/soen-jinn-lyrics.html" target="_blank" rel="noopener">Lyrics Translate</a>. Hay noche, y agua como ahogo y lágrimas.</p>
+<p>Las otras íntimas van por el mismo lado: la deriva y el ahogo de “Kuraman” (5,6 h) <a class="src" href="https://lyricstranslate.com/en/soen-kuraman-lyrics.html" target="_blank" rel="noopener">Lyrics Translate</a>, las olas de “Void” y la mente que se rompe de noche en “Lunacy”, que cierra deseando que la luz de otra persona todavía la abrigue <a class="src" href="https://www.metalkingdom.net/lyrics-song/soen-lunacy-196471" target="_blank" rel="noopener">Metal Kingdom</a>. Es lo más cercano a un consuelo por vínculo en toda la banda.</p>
+<p><strong>Soen rompe tu patrón más estable.</strong> Casi siempre nombra a un enemigo de afuera (el gobernante, el tirano, el sistema), trae la rabia como respuesta válida y cambia el agua por el fuego en <em>Imperial</em>. Las canciones íntimas, en cambio, repiten tu mapa: agua o noche y finales sin rescate. Que nombres a la vez “Jinn” y “Antagonist” sugiere que Soen ocupa dos lugares para ti. Hay también un hilo que no estaba en tus patrones, el de hombres criados para la violencia o el aislamiento, de “Monarch” a <em>Memorial</em> y a “Discordia” (2026), cuyo personaje Ekelöf describió como el macho alfa solitario y misántropo <a class="src" href="https://wpcms.glidemagazine.com/?p=321382" target="_blank" rel="noopener">Glide</a>.</p>
+<h3 id="dark-tranquillity">Dark Tranquillity, la rabia y el nosotros</h3>
+<p>Las diez canciones suman 15 h. No encontré ninguna explicación de Mikael Stanne ni de Niklas Sundin sobre ninguna de ellas. “Mine Is the Grandeur...” es instrumental, de Sundin y Henriksson <a class="src" href="https://en.wikipedia.org/wiki/The_Gallery_(album)" target="_blank" rel="noopener">Wikipedia</a>.</p>
+<p>Por horas, el peso cae en dos polos. En “Lost to Apathy” (3,4 h) una voz fría le habla a un “tú” hueco, al que el dolor solo le produce indiferencia y que se esconde de la realidad. Es una muerte emocional, no física <a class="src" href="https://www.metalkingdom.net/lyrics-song/dark-tranquillity-lost-to-apathy-977" target="_blank" rel="noopener">Metal Kingdom</a>. En “...of Melancholy Burning” (3,0 h) una figura herida acusa a quien le causó el dolor y pide que su ira se desate, entre noche, tormenta y fuego <a class="src" href="https://www.metalkingdom.net/lyrics-song/dark-tranquillity-...of-melancholy-burning-824" target="_blank" rel="noopener">Metal Kingdom</a>. Alrededor hay más rabia: la traición de “Misery's Crown”, que convierte el dolor en una corona burlona, el “nosotros” febril de “The Wonders at Your Feet” (la lectura menos segura), el artista de “The Gallery” que termina quemando su propia obra y el “yo” de “Punish My Heaven”, que le pide al cielo que sea castigado por haberlo abandonado <a class="src" href="https://www.metalkingdom.net/lyrics-song/dark-tranquillity-punish-my-heaven-814" target="_blank" rel="noopener">Metal Kingdom</a>.</p>
+<p>Tres canciones tienen otro tono. “Iridium” es un “nosotros” que sube hacia el cielo nocturno, vuelve a casa como un alma y se deshace entre estrellas con asombro, no con duelo <a class="src" href="https://www.metalkingdom.net/lyrics-song/dark-tranquillity-iridium-1005" target="_blank" rel="noopener">Metal Kingdom</a>. “Therein” contrapone orden y caos, ve belleza en el desorden e invita a soltar el miedo. “Forward Momentum” prohíbe mirar atrás y pide resistir. De <em>Atoma</em>, Stanne dijo que estaba más enojado que deprimido: <em>“It comes from frustration of feeling hopeless in a way”</em> <a class="src" href="https://blabbermouth.net/news/video-premiere-dark-tranquillity-forward-momentum" target="_blank" rel="noopener">Blabbermouth</a>.</p>
+<p><strong>Dark Tranquillity trae la rabia, el fuego y un “tú” acusado.</strong> El fuego aparece en cinco de nueve letras, el agua se reduce a lágrimas y la voz colectiva de “Iridium”, “Forward Momentum” y “The Wonders at Your Feet” reemplaza la confesión en primera persona de tu doom. Ninguna termina en consuelo. Hay un matiz. Stanne dijo que <em>Character</em> sale de sus propias inseguridades <a class="src" href="https://www.apeshit.org/features/dark-tranquillity-locus-of-control/" target="_blank" rel="noopener">APESHIT</a> y que en <em>Fiction</em> les dio sus sentimientos a personajes inventados <a class="src" href="https://blabbermouth.net/news/dark-tranquillity-singer-on-new-cd-we-wanted-to-focus-on-each-individual-emotion-and-feeling" target="_blank" rel="noopener">Blabbermouth</a>. El “tú” apático o traidor podría ser una máscara de él mismo, y entonces el enemigo de afuera sería otra cara de la mente que sufre por dentro. Él no lo dijo de estas canciones.</p>
+<h3 id="belakor">Be'lakor, crecer para caer</h3>
+<p>Be'lakor suma 47,2 h, casi todas desde 2023, repartidas en 38 canciones. Ninguna pasa de 2,7 h. Según una entrevista de 2021, las letras las escriben George Kosmas y Steve Merry al final, cuando la música ya está hecha, y la banda no comenta el mundo ni la política <a class="src" href="https://www.metalmessage.de/Interview_BE_LAKOR_2021_en.php" target="_blank" rel="noopener">Metal Message</a>. Solo dos discos tienen un concepto explicado. Merry describió <em>Vessels</em> (2016) como <em>“a story of life and how everything is connected”</em>, que sigue la luz desde que se forma en el Sol hasta la Tierra y luego pasa por distintas formas de vida <a class="src" href="https://heavymag.com.au/?p=29243" target="_blank" rel="noopener">Heavy Mag</a>. <em>Coherence</em> (2021) gira alrededor de una montaña y de cómo la mente intenta imponer orden donde no lo hay <a class="src" href="https://metallerium.com/belakor-interview-melodic-death-metal" target="_blank" rel="noopener">Metallerium</a>.</p>
+<p>Eso es lo primero nuevo, <strong>la forma</strong>. Casi todo es fábula en tercera persona o historia natural, no confesión. Una chispa nace dentro de una estrella y parte hacia la Tierra en “An Ember's Arc” <a class="src" href="https://www.metalkingdom.net/lyrics-song/be%27lakor-an-ember%27s-arc-129475" target="_blank" rel="noopener">Metal Kingdom</a>. “Withering Strands” (2,6 h), la única canción explicada por la banda, trata de una planta del sotobosque que intenta alcanzar la luz <a class="src" href="https://heavymag.com.au/?p=29243" target="_blank" rel="noopener">Heavy Mag</a>. En la letra cae un árbol gigante, entra el sol y el tallo crece rápido, obsesionado con el cielo y sin cuidar su fragilidad, hasta que unos insectos le roen la base <a class="src" href="https://www.metalkingdom.net/lyrics-song/be%27lakor-withering-strands-129476" target="_blank" rel="noopener">Metal Kingdom</a>.</p>
+<p>Mucho coincide con tu mapa. La muerte es idea, el tiempo pasa por encima de las personas (“Countless Skies”, “Outlive the Hand”) <a class="src" href="https://www.metalkingdom.net/lyrics-song/be%27lakor-outlive-the-hand-60199" target="_blank" rel="noopener">Metal Kingdom</a>, ninguna de diez letras revisadas termina en consuelo y en “Valence” un pescador se hunde en un lago <a class="src" href="https://www.metalkingdom.net/lyrics-song/be%27lakor-valence-259193" target="_blank" rel="noopener">Metal Kingdom</a>.</p>
+<p><strong>Pero Be'lakor invierte dos de tus patrones.</strong> El vínculo no consuela. En “In Parting” el pájaro que se hace fuerte mata sin reconocerlo a su hermano débil <a class="src" href="https://www.metalkingdom.net/lyrics-song/be%27lakor-in-parting-104152" target="_blank" rel="noopener">Metal Kingdom</a>, y en “By Moon and Star” un muchacho cumple su rito de paso y vuelve a casa para encontrar a su familia muerta <a class="src" href="https://www.metalkingdom.net/lyrics-song/be%27lakor-by-moon-and-star-104154" target="_blank" rel="noopener">Metal Kingdom</a>. Y crecer no fortalece. En “Born in Winter” una mañana fría hace que estires los brazos hacia el sol y el invierno te da fuerza. En “Withering Strands” estirarse hacia el sol es justo lo que expone a la planta. En Be'lakor crecer lleva a la ruina o a la soledad.</p>
+<p>Las excepciones son “An Ember's Arc”, donde la luz nace y parte sin castigo, y “Grasping Light”, donde un hombre junto a un río se entiende como un recipiente pasajero y bebe hasta saciarse <a class="src" href="https://www.metalkingdom.net/lyrics-song/be%27lakor-grasping-light-129480" target="_blank" rel="noopener">Metal Kingdom</a>. Es de las pocas veces en todo este análisis en que el agua da de beber en vez de ahogar.</p>
+<h3 id="katatonia">Katatonia, Rishloo y System Of A Down</h3>
+<p>La letra de “July” es de Jonas Renkse <a class="src" href="https://en.wikipedia.org/wiki/The_Great_Cold_Distance" target="_blank" rel="noopener">Wikipedia</a>, que no habló de ella. En la transcripción, un narrador le habla a alguien que lo dejó entrar y luego se retiró. Después de una noche íntima queda entumecido, atrapado en un apego obsesivo que no es correspondido, y la noche termina devorándolo entre olas y calor de julio <a class="src" href="https://www.metalkingdom.net/lyrics-song/katatonia-july-9677" target="_blank" rel="noopener">Metal Kingdom</a>. “For My Demons” (3,7 h, todavía 0,6 h en 2026) está acreditada a Nyström y Renkse sin separar letra de música <a class="src" href="https://en.wikipedia.org/wiki/Tonight%27s_Decision" target="_blank" rel="noopener">Wikipedia</a>. Un narrador que está por irse de un pueblo le pide a un “tú” que rece por él, admite que el dominio del otro duró demasiado y deja que la oscuridad siga llegando <a class="src" href="https://www.metalkingdom.net/lyrics-song/katatonia-for-my-demons-9633" target="_blank" rel="noopener">Metal Kingdom</a>. Los demonios no tienen nombre, y ahí sí está tu mente que sufre por dentro. <strong>Katatonia trae el amor obsesivo y el verano.</strong> En las dos el vínculo es lo que hace daño.</p>
+<p>En “Spiders” la letra es de Serj Tankian <a class="src" href="https://en.wikipedia.org/wiki/Spiders_(System_of_a_Down)" target="_blank" rel="noopener">Wikipedia</a>. Según Songfacts, el librillo del disco dice que los pensamientos y los sueños ya no son sagrados porque quedan expuestos a la vigilancia <a class="src" href="https://www.songfacts.com/facts/system-of-a-down/spiders" target="_blank" rel="noopener">Songfacts</a>. En la letra, una voz advierte a un “ustedes” que vive expuesto a un observador invisible. Las arañas son una red de vigilantes y los sueños, el último refugio, también están amenazados. <strong>Aquí la amenaza viene de afuera</strong>, como en Soen.</p>
+<p>Con “Systematomatic” comparte la araña y la red, pero en sentido opuesto. En Rishloo la red la tejen los propios implicados: dos personas vuelven a tejer la misma red de mentiras, el hablante admite su parte y los nudos se deshacen solo para volver a atarse <a class="src" href="https://lyricsondemand.com/rishloo/systematomatic" target="_blank" rel="noopener">Lyrics On Demand</a>. En “Freaks &amp; Animals” el espectador del circo resulta ser el espectáculo <a class="src" href="https://lyricstranslate.com/en/rishloo-freaks-animals-lyrics.html" target="_blank" rel="noopener">lyricstranslate</a>. Las dos terminan en bucle.</p>
+<h3 id="repiten">Qué repiten y qué traen</h3>
+<div class="balance">
+<div class="bal-col" data-b="repite">
+<h4>Se repite</h4>
+<div class="bal" data-b="repite">
+<p class="bal-h">La muerte como idea se repite</p>
+<p>Ninguna de las 18 llora a una persona concreta. La muerte llega como ciclo (“Up North”), mortalidad propia (“Jinn”) o muerte emocional (“Lost to Apathy”).</p>
+</div>
+<div class="bal" data-b="repite">
+<p class="bal-h">Los finales sin rescate se cumplen más que nunca</p>
+<p>Once quedan sin resolución (40,6 h, 64 %), cuatro en desafío, tres en aceptación y ninguna en consuelo, que en el resto del análisis rondaba el 10 %.</p>
+</div>
+<div class="bal" data-b="repite">
+<p class="bal-h">La religión sale igual que siempre</p>
+<p>En “Antagonist” los gobernantes predican doctrinas que dañan al pueblo, y “Punish My Heaven” se rebela contra el cielo mismo más que contra una iglesia. La espiritualidad sin iglesia sale bien (“Up North”, “Iridium”).</p>
+</div>
+<div class="bal" data-b="repite">
+<p class="bal-h">Las flores no están en ninguna letra, pero el hilo sigue</p>
+<p>Ekelöf explicó así <em>Lotus</em>: <em>“The lotus is something beautiful that grows up in the mud”</em> <a class="src" href="https://www.loudersound.com/features/soen-lotus" target="_blank" rel="noopener">Louder</a>. La planta de “Withering Strands” hace el recorrido opuesto al de Gojira: crece hacia la luz y la destruyen.</p>
+</div>
+</div>
+<div class="bal-col" data-b="nuevo">
+<h4>Trae algo nuevo</h4>
+<div class="bal" data-b="nuevo">
+<p class="bal-h">La mente sin enemigo afuera se rompe</p>
+<p>Siete canciones con 17,4 h (28 % de las horas con letra) ponen al culpable afuera: “Antagonist”, “Monarch”, “Spiders” y cuatro de Dark Tranquillity. Es lo más nuevo, aunque el “tú” de Stanne podría ser él mismo.</p>
+</div>
+<div class="bal" data-b="nuevo">
+<p class="bal-h">El consuelo por un vínculo se invierte</p>
+<p>En Katatonia el vínculo hace daño, en Dark Tranquillity es traición y en Be'lakor se rompe o se castiga.</p>
+</div>
+<div class="bal" data-b="nuevo">
+<p class="bal-h">La noche se queda, el agua cede ante el fuego</p>
+<p>Hay noche, luna o sol en 10 de 18 letras. Agua que no sea solo lágrimas hay en tres (“Up North”, “July” y “Jinn”), y lágrimas en otras dos. El fuego está en siete, con 18,3 h. El invierno solo aparece en “Up North”, y Katatonia trae el verano.</p>
+</div>
+</div>
+</div>
+<h3 id="tabla-19">Las 19 canciones</h3>
+<div class="tabla" data-filtro="1" data-tabla="rastro">
+<div class="tabla-scroll"><table>
+<thead>
+<tr>
+<th>Canción</th>
+<th>Artista y disco</th>
+<th>h</th>
+<th>Pico</th>
+<th>Temas principales</th>
+<th>Final</th>
+<th>Base</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Up North</td>
+<td>Borknagar, True North (2019)</td>
+<td>8,5</td>
+<td>2020</td>
+<td>ciclo de las estaciones, invierno que prueba, polvo de estrellas</td>
+<td>aceptación</td>
+<td><a class="src" href="https://blabbermouth.net/news/video-premiere-borknagars-up-north" target="_blank" rel="noopener">A, L</a></td>
+</tr>
+<tr>
+<td>Antagonist</td>
+<td>Soen, Imperial (2021)</td>
+<td>7,0</td>
+<td>2021</td>
+<td>solidaridad con los excluidos, rabia contra los gobernantes</td>
+<td>desafío</td>
+<td><a class="src" href="https://www.metalkingdom.net/lyrics-song/soen-antagonist-234948" target="_blank" rel="noopener">L, Ad</a></td>
+</tr>
+<tr>
+<td>Systematomatic</td>
+<td>Rishloo, Feathergun (2009)</td>
+<td>6,3</td>
+<td>2023</td>
+<td>red de mentiras que se repite</td>
+<td>sin resolución</td>
+<td><a class="src" href="https://lyricsondemand.com/rishloo/systematomatic" target="_blank" rel="noopener">L</a></td>
+</tr>
+<tr>
+<td>Jinn</td>
+<td>Soen, Lykaia (2017)</td>
+<td>6,1</td>
+<td>2023</td>
+<td>soltar a alguien, mortalidad propia, duda</td>
+<td>sin resolución</td>
+<td><a class="src" href="https://lyricstranslate.com/en/soen-jinn-lyrics.html" target="_blank" rel="noopener">L, Ad</a></td>
+</tr>
+<tr>
+<td>July</td>
+<td>Katatonia, The Great Cold Distance (2006)</td>
+<td>5,9</td>
+<td>2021</td>
+<td>apego obsesivo, verano, noche que devora</td>
+<td>sin resolución</td>
+<td><a class="src" href="https://www.metalkingdom.net/lyrics-song/katatonia-july-9677" target="_blank" rel="noopener">L</a></td>
+</tr>
+<tr>
+<td>Freaks &amp; Animals</td>
+<td>Rishloo, Eidolon (2007)</td>
+<td>5,8</td>
+<td>2024</td>
+<td>espectáculo, el público como show</td>
+<td>sin resolución</td>
+<td><a class="src" href="https://lyricstranslate.com/en/rishloo-freaks-animals-lyrics.html" target="_blank" rel="noopener">L</a></td>
+</tr>
+<tr>
+<td>For My Demons</td>
+<td>Katatonia, Tonight's Decision (1999)</td>
+<td>3,7</td>
+<td>2022</td>
+<td>partida, oscuridad que llega</td>
+<td>sin resolución</td>
+<td><a class="src" href="https://www.metalkingdom.net/lyrics-song/katatonia-for-my-demons-9633" target="_blank" rel="noopener">L</a></td>
+</tr>
+<tr>
+<td>Lost to Apathy</td>
+<td>Dark Tranquillity, Character (2005)</td>
+<td>3,4</td>
+<td>2023</td>
+<td>apatía, muerte emocional</td>
+<td>sin resolución</td>
+<td><a class="src" href="https://www.metalkingdom.net/lyrics-song/dark-tranquillity-lost-to-apathy-977" target="_blank" rel="noopener">L, Ad</a></td>
+</tr>
+<tr>
+<td>Monarch</td>
+<td>Soen, Imperial (2021)</td>
+<td>3,3</td>
+<td>2024</td>
+<td>poder que fabrica soldados, guerra</td>
+<td>sin resolución</td>
+<td><a class="src" href="https://blabbermouth.net/news/soen-feat-ex-opeth-drummer-martin-lopez-monarch-music-video-available" target="_blank" rel="noopener">A, L</a></td>
+</tr>
+<tr>
+<td>...of Melancholy Burning</td>
+<td>Dark Tranquillity, The Gallery (1995)</td>
+<td>3,0</td>
+<td>2024</td>
+<td>rabia contra quien hirió, duelo</td>
+<td>sin resolución</td>
+<td><a class="src" href="https://www.metalkingdom.net/lyrics-song/dark-tranquillity-...of-melancholy-burning-824" target="_blank" rel="noopener">L</a></td>
+</tr>
+<tr>
+<td>Iridium</td>
+<td>Dark Tranquillity, We Are the Void (2010)</td>
+<td>2,1</td>
+<td>2024</td>
+<td>alma que vuelve a las estrellas, asombro</td>
+<td>aceptación</td>
+<td><a class="src" href="https://www.metalkingdom.net/lyrics-song/dark-tranquillity-iridium-1005" target="_blank" rel="noopener">L</a></td>
+</tr>
+<tr>
+<td>Spiders</td>
+<td>System Of A Down, System Of A Down (1998)</td>
+<td>1,8</td>
+<td>2025</td>
+<td>vigilancia, sueños invadidos</td>
+<td>sin resolución</td>
+<td><a class="src" href="https://www.songfacts.com/facts/system-of-a-down/spiders" target="_blank" rel="noopener">C, L</a></td>
+</tr>
+<tr>
+<td>Therein</td>
+<td>Dark Tranquillity, Projector (1999)</td>
+<td>1,4</td>
+<td>2026</td>
+<td>orden y caos, soltar el miedo</td>
+<td>aceptación</td>
+<td><a class="src" href="https://www.metalkingdom.net/lyrics-song/dark-tranquillity-therein-858" target="_blank" rel="noopener">L</a></td>
+</tr>
+<tr>
+<td>Forward Momentum</td>
+<td>Dark Tranquillity, Atoma (2016)</td>
+<td>1,3</td>
+<td>2024</td>
+<td>no mirar atrás, resistir</td>
+<td>desafío</td>
+<td><a class="src" href="https://blabbermouth.net/news/video-premiere-dark-tranquillity-forward-momentum" target="_blank" rel="noopener">L, Ad</a></td>
+</tr>
+<tr>
+<td>The Gallery</td>
+<td>Dark Tranquillity, The Gallery (1995)</td>
+<td>1,1</td>
+<td>2024</td>
+<td>artista que quema su obra</td>
+<td>desafío</td>
+<td><a class="src" href="https://www.metalkingdom.net/lyrics-song/dark-tranquillity-the-gallery-818" target="_blank" rel="noopener">L</a></td>
+</tr>
+<tr>
+<td>Punish My Heaven</td>
+<td>Dark Tranquillity, The Gallery (1995)</td>
+<td>1,0</td>
+<td>2024</td>
+<td>fin de los días, rebelión contra el cielo</td>
+<td>desafío</td>
+<td><a class="src" href="https://www.metalkingdom.net/lyrics-song/dark-tranquillity-punish-my-heaven-814" target="_blank" rel="noopener">L</a></td>
+</tr>
+<tr>
+<td>The Wonders at Your Feet</td>
+<td>Dark Tranquillity, Haven (2000)</td>
+<td>0,8</td>
+<td>2024 y 2025</td>
+<td>rabia colectiva, fuego</td>
+<td>sin resolución</td>
+<td><a class="src" href="https://www.metalkingdom.net/lyrics-song/dark-tranquillity-the-wonders-at-your-feet-867" target="_blank" rel="noopener">L</a></td>
+</tr>
+<tr>
+<td>Misery's Crown</td>
+<td>Dark Tranquillity, Fiction (2007)</td>
+<td>0,5</td>
+<td>2024</td>
+<td>traición, encierro defensivo</td>
+<td>sin resolución</td>
+<td><a class="src" href="https://www.metalkingdom.net/lyrics-song/dark-tranquillity-misery%c2%b4s-crown-991" target="_blank" rel="noopener">L, Ad</a></td>
+</tr>
+<tr>
+<td>Mine Is the Grandeur...</td>
+<td>Dark Tranquillity, The Gallery (1995)</td>
+<td>0,5</td>
+<td>2025</td>
+<td>instrumental</td>
+<td>no aplica</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/The_Gallery_(album)" target="_blank" rel="noopener">sin fuente</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<h3 id="discos-soen-belakor">Los discos de Soen y Be'lakor</h3>
+<p>Horas desde 2020 para Soen y desde 2022 para Be'lakor. Faltan <em>Lykaia Revisited</em> (7,4 h), <em>Cognitive</em> (5,7 h) y dos sencillos.</p>
+<div class="tabla" data-tabla="soen-belakor">
+<div class="tabla-scroll"><table>
+<thead>
+<tr>
+<th>Disco</th>
+<th>h</th>
+<th>Pico</th>
+<th>Eje temático</th>
+<th>Base</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Soen, Tellurian (2014)</td>
+<td>23,7</td>
+<td>2022</td>
+<td>depredador y presa, resistir al sistema</td>
+<td><a class="src" href="https://loudersound.com/features/dinner-is-served-soen" target="_blank" rel="noopener">Ad, C</a></td>
+</tr>
+<tr>
+<td>Soen, Imperial (2021)</td>
+<td>18,1</td>
+<td>2021</td>
+<td>polarización, opresión, el desvalido</td>
+<td><a class="src" href="https://www.loudersound.com/features/soen-the-story-behind-imperial" target="_blank" rel="noopener">Ad</a></td>
+</tr>
+<tr>
+<td>Soen, Memorial (2023)</td>
+<td>12,1</td>
+<td>2024</td>
+<td>la guerra, el soldado y su familia</td>
+<td><a class="src" href="https://glidemagazine.com/?p=296022" target="_blank" rel="noopener">Ad</a></td>
+</tr>
+<tr>
+<td>Soen, Lotus (2019)</td>
+<td>9,6</td>
+<td>2023</td>
+<td>belleza que crece del barro, letras terapéuticas</td>
+<td><a class="src" href="https://www.loudersound.com/features/soen-lotus" target="_blank" rel="noopener">Ad</a></td>
+</tr>
+<tr>
+<td>Soen, Lykaia (2017)</td>
+<td>7,1</td>
+<td>2023</td>
+<td>lo personal, los propios abismos</td>
+<td><a class="src" href="https://www.loudersound.com/features/listen-to-the-new-album-from-soen-lykaia" target="_blank" rel="noopener">Ad</a></td>
+</tr>
+<tr>
+<td>Be'lakor, Stone's Reach (2009)</td>
+<td>11,1</td>
+<td>2025</td>
+<td>el tiempo que sobrevive a las personas</td>
+<td><a class="src" href="https://everythingisnoise.net/features/a-scene-in-retrospect-belakor-stones-reach/" target="_blank" rel="noopener">C, L</a></td>
+</tr>
+<tr>
+<td>Be'lakor, Of Breath and Bone (2012)</td>
+<td>11,0</td>
+<td>2025</td>
+<td>tono de libro de cuentos</td>
+<td><a class="src" href="https://www.teethofthedivine.com/interviews/interview-with-belakor-3/" target="_blank" rel="noopener">Ad</a></td>
+</tr>
+<tr>
+<td>Be'lakor, Vessels (2016)</td>
+<td>10,4</td>
+<td>2025</td>
+<td>la luz del Sol y las formas de vida, todo conectado</td>
+<td><a class="src" href="https://heavymag.com.au/?p=29243" target="_blank" rel="noopener">Ad</a></td>
+</tr>
+<tr>
+<td>Be'lakor, Coherence (2021)</td>
+<td>8,5</td>
+<td>2025</td>
+<td>la mente que impone orden, una montaña</td>
+<td><a class="src" href="https://metallerium.com/belakor-interview-melodic-death-metal" target="_blank" rel="noopener">Ad</a></td>
+</tr>
+<tr>
+<td>Be'lakor, The Frail Tide (2007)</td>
+<td>6,3</td>
+<td>2025</td>
+<td>sin declaraciones, una letra revisada</td>
+<td><a class="src" href="https://www.metalkingdom.net/lyrics-song/be%27lakor-sanguinary-60196" target="_blank" rel="noopener">L</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="invierno">
+<p class="inv-k">La respuesta</p>
+<p class="inv-grande">Las dos cosas. Repiten tu manera de terminar, con la muerte como idea y sin rescate, y traen lo que a tu mapa de 2024 a 2026 le faltaba, un enemigo con nombre y rabia para enfrentarlo.</p>
+<p class="inv-nota">“Up North”, la más escuchada del grupo, es pariente cercana de “Born in Winter”, y que las dos brillaran entre 2020 y 2022 sugiere que la idea de fortalecerte con el tiempo hasta pararte recto te acompaña desde antes de 2024.</p>
+</div>
+</section>
+<section class="cap" data-toc="Tablas y límites" id="tablas">
+<h2 class="cap-title">Tablas, correcciones y límites</h2>
+<p>Aquí está el material de consulta: las canciones de 2024 y 2025 que entraron al ampliar la ventana, los discos investigados y las correcciones que conviene arrastrar. Las 44 canciones del último año están en el <a class="int" href="#cap-3">capítulo 3</a>.</p>
+<details class="plegable">
+<summary>Canciones de 2024 y 2025 que entraron al ampliar la ventana <span>37 filas</span></summary>
+<div class="tabla" data-filtro="1" data-tabla="ventana">
+<div class="tabla-scroll"><table>
+<thead>
+<tr>
+<th>Canción</th>
+<th>Artista y disco</th>
+<th>h 24 / 25 / 26</th>
+<th>Temas principales</th>
+<th>Base</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Marigold</td>
+<td>Caligula's Horse, Bloom</td>
+<td>7,1 / 0,5 / 0,4</td>
+<td>el valor está en los vínculos, no en el dinero</td>
+<td><a class="src" href="https://heavymag.com.au/exclusive-australian-premiere-caligulas-horse-marigold/" target="_blank" rel="noopener">A</a></td>
+</tr>
+<tr>
+<td>7empest</td>
+<td>TOOL, Fear Inoculum</td>
+<td>5,7 / 4,0 / 0,7</td>
+<td>condena a un engañador, tormenta</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/7empest" target="_blank" rel="noopener">C</a></td>
+</tr>
+<tr>
+<td>Flower</td>
+<td>Novembre, Novembrine Waltz</td>
+<td>4,5 / 0,9 / 0,2</td>
+<td>amantes frágiles que mueren en invierno</td>
+<td><a class="src" href="https://www.metalkingdom.net/lyrics-song/novembre-flower-29708" target="_blank" rel="noopener">L</a></td>
+</tr>
+<tr>
+<td>Fear Inoculum</td>
+<td>TOOL</td>
+<td>3,9 / 1,4 / 0,6</td>
+<td>expulsar el miedo, madurez</td>
+<td><a class="src" href="https://www.kerrang.com/amp/why-tools-new-album-is-called-fear-inoculum" target="_blank" rel="noopener">Ad</a></td>
+</tr>
+<tr>
+<td>Bloom</td>
+<td>Caligula's Horse</td>
+<td>3,9 / 0,3 / 0,1</td>
+<td>crecer, florecer</td>
+<td><a class="src" href="https://loudersound.com/features/caligula-s-horse" target="_blank" rel="noopener">Ad, F</a></td>
+</tr>
+<tr>
+<td>The Shift</td>
+<td>Eye of the Enemy, The Vengeance Paradox</td>
+<td>3,9 / 0,7 / 0,3</td>
+<td>duelo por el padre, volverse padre</td>
+<td><a class="src" href="https://www.metalkingdom.net/lyrics-song/eye-of-the-enemy-the-shift-119824" target="_blank" rel="noopener">L</a></td>
+</tr>
+<tr>
+<td>Sober</td>
+<td>TOOL, Undertow</td>
+<td>3,5 / 1,0 / 0,6</td>
+<td>adicción, creador que solo funciona drogado</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/Sober_(Tool_song)" target="_blank" rel="noopener">A (origen)</a></td>
+</tr>
+<tr>
+<td>Pulled Under at 2000 Metres a Second</td>
+<td>Anathema</td>
+<td>3,5 / 0,5 / 0,2</td>
+<td>hundimiento mental, culpa, paranoia</td>
+<td><a class="src" href="https://www.metalkingdom.net/lyrics-song/anathema-pulled-under-at-2000-metres-a-second-6409" target="_blank" rel="noopener">L</a></td>
+</tr>
+<tr>
+<td>Schism</td>
+<td>TOOL, Lateralus</td>
+<td>3,4 / 1,5 / 0,5</td>
+<td>relaciones que se rompen, incomunicación</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/Schism_(song)" target="_blank" rel="noopener">Ad</a></td>
+</tr>
+<tr>
+<td>Clay</td>
+<td>Eye of the Enemy, Titan</td>
+<td>3,1 / 0,1 / 0,0</td>
+<td>relación tóxica, agotamiento</td>
+<td><a class="src" href="https://eyeoftheenemy.bandcamp.com/track/clay-2" target="_blank" rel="noopener">L</a></td>
+</tr>
+<tr>
+<td>Weevil Bride</td>
+<td>Rishloo, Feathergun</td>
+<td>3,1 / 0,8 / 0,3</td>
+<td>guerra, muerte como tránsito</td>
+<td><a class="src" href="https://www.songtexte.com/songtext/rishloo/weevil-bride-63e09ab3.html" target="_blank" rel="noopener">L, t</a></td>
+</tr>
+<tr>
+<td>Freaks &amp; Animals</td>
+<td>Rishloo, Eidolon</td>
+<td>3,1 / 0,5 / 0,2</td>
+<td>espectáculo, el público como show</td>
+<td><a class="src" href="https://lyricstranslate.com/en/rishloo-freaks-animals-lyrics.html" target="_blank" rel="noopener">L</a></td>
+</tr>
+<tr>
+<td>The Great Rain Beatle</td>
+<td>Rishloo, Living as Ghosts...</td>
+<td>3,1 / 0,2 / 0,2</td>
+<td>rabia contra el poder que invoca a Dios</td>
+<td><a class="src" href="https://lyricstranslate.com/en/rishloo-great-rain-beatle-lyrics.html" target="_blank" rel="noopener">L</a></td>
+</tr>
+<tr>
+<td>Lateralus</td>
+<td>TOOL</td>
+<td>3,0 / 1,6 / 0,2</td>
+<td>espiral, expandir la conciencia</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/Lateralus_(song)" target="_blank" rel="noopener">C</a></td>
+</tr>
+<tr>
+<td>Memorial</td>
+<td>Soen</td>
+<td>2,8 / 0,8 / 0,2</td>
+<td>la guerra y el soldado que vuelve vacío</td>
+<td><a class="src" href="https://glidemagazine.com/?p=296022" target="_blank" rel="noopener">Ad</a></td>
+</tr>
+<tr>
+<td>Downhill</td>
+<td>Rishloo, Feathergun</td>
+<td>2,7 / 0,4 / 0,1</td>
+<td>viaje onírico hacia la muerte</td>
+<td><a class="src" href="https://lyricstranslate.com/hu/rishloo-downhill-lyrics.html" target="_blank" rel="noopener">L</a></td>
+</tr>
+<tr>
+<td>Periscope</td>
+<td>Andromeda, Chimera</td>
+<td>0,0 / 2,6 / 0,1</td>
+<td>aislamiento, mirar sin participar</td>
+<td><a class="src" href="https://www.metalkingdom.net/lyrics-song/andromeda-periscope-6700" target="_blank" rel="noopener">L</a></td>
+</tr>
+<tr>
+<td>Sincere</td>
+<td>Soen, Memorial</td>
+<td>2,4 / 0,8 / 0,1</td>
+<td>fama, redes, codicia</td>
+<td><a class="src" href="https://www.metalkingdom.net/lyrics-song/soen-sincere-275621" target="_blank" rel="noopener">L</a></td>
+</tr>
+<tr>
+<td>A Secret Door</td>
+<td>Avatar, Hunter Gatherer</td>
+<td>2,2 / 1,4 / 0,1</td>
+<td>esperanza, salida oculta</td>
+<td><a class="src" href="https://www.loudersound.com/features/johannes-eckerstroms-track-by-track-guide-to-avatars-new-album-hunter-gatherer" target="_blank" rel="noopener">A</a></td>
+</tr>
+<tr>
+<td>Systematomatic</td>
+<td>Rishloo, Feathergun</td>
+<td>2,2 / 0,5 / 0,3</td>
+<td>red de mentiras que se repite</td>
+<td><a class="src" href="https://lyricsondemand.com/rishloo/systematomatic" target="_blank" rel="noopener">L, t</a></td>
+</tr>
+<tr>
+<td>...of Melancholy Burning</td>
+<td>Dark Tranquillity</td>
+<td>1,9 / 0,9 / 0,1</td>
+<td>rabia contra quien hirió, duelo</td>
+<td><a class="src" href="https://www.metalkingdom.net/lyrics-song/dark-tranquillity-...of-melancholy-burning-824" target="_blank" rel="noopener">L</a></td>
+</tr>
+<tr>
+<td>Octavarium</td>
+<td>Dream Theater</td>
+<td>1,8 / 1,9 / 0,6</td>
+<td>ciclo vital, todo vuelve al origen</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/Octavarium_(song)" target="_blank" rel="noopener">C</a></td>
+</tr>
+<tr>
+<td>Wings for Marie (Pt 1)</td>
+<td>TOOL</td>
+<td>1,2 / 1,7 / 0,6</td>
+<td>la madre, una fe que no comparte</td>
+<td><a class="src" href="https://faroutmagazine.co.uk/the-tool-songs-maynard-james-keenan-wrote-for-his-mother/" target="_blank" rel="noopener">C</a></td>
+</tr>
+<tr>
+<td>Stress and Colours</td>
+<td>Eye of the Enemy, Titan</td>
+<td>1,5 / 1,6 / 0,3</td>
+<td>desprecio por la masa complaciente</td>
+<td><a class="src" href="https://eyeoftheenemy.bandcamp.com/track/stress-and-colours" target="_blank" rel="noopener">L</a></td>
+</tr>
+<tr>
+<td>Sleep City</td>
+<td>Rest, Repose</td>
+<td>1,4 / 1,6 / 0,6</td>
+<td>sin datos</td>
+<td><a class="src" href="https://rest-repose.fandom.com/wiki/Rest,_Repose?oldid=412" target="_blank" rel="noopener">sin fuente</a></td>
+</tr>
+<tr>
+<td>Walk with Me in Hell</td>
+<td>Lamb of God</td>
+<td>1,4 / 0,6 / 0,4</td>
+<td>amor como compañía en el infierno</td>
+<td><a class="src" href="https://www.songfacts.com/facts/lamb-of-god/walk-with-me-in-hell" target="_blank" rel="noopener">A</a></td>
+</tr>
+<tr>
+<td>Lullaby (Death All Over)</td>
+<td>Avatar</td>
+<td>1,4 / 0,8 / 0,4</td>
+<td>estaciones, memoria, rechazo de los dioses</td>
+<td><a class="src" href="https://www.metalkingdom.net/lyrics-song/avatar-lullaby-death-all-over-290216" target="_blank" rel="noopener">L</a></td>
+</tr>
+<tr>
+<td>The Grudge</td>
+<td>TOOL, Lateralus</td>
+<td>1,4 / 0,8 / 0,1</td>
+<td>soltar el rencor, retorno de Saturno</td>
+<td><a class="src" href="https://www.songfacts.com/facts/tool/the-grudge" target="_blank" rel="noopener">Ad, F</a></td>
+</tr>
+<tr>
+<td>The Endless Knot</td>
+<td>Haken, Affinity</td>
+<td>1,3 / 0,7 / 0,3</td>
+<td>extinción, unidad nacida de la tragedia</td>
+<td><a class="src" href="https://hakenarchive.co.uk/songs/affinity/the_endless_knot" target="_blank" rel="noopener">Ad (fans)</a></td>
+</tr>
+<tr>
+<td>Cold</td>
+<td>At The Gates</td>
+<td>1,2 / 0,8 / 0,5</td>
+<td>corrupción, alma que se enfría</td>
+<td><a class="src" href="https://www.loudersound.com/features/at-the-gates-slaughter-of-the-soul-story-behind-album" target="_blank" rel="noopener">Ad</a></td>
+</tr>
+<tr>
+<td>The Stage</td>
+<td>Avenged Sevenfold</td>
+<td>1,0 / 1,1 / 0,7</td>
+<td>humanidad que repite su violencia, dios a nuestra imagen</td>
+<td><a class="src" href="https://www.songfacts.com/facts/avenged-sevenfold/the-stage" target="_blank" rel="noopener">A</a></td>
+</tr>
+<tr>
+<td>Hijo de la Luna</td>
+<td>Stravaganzza (versión de Mecano)</td>
+<td>1,0 / 0,9 / 0,7</td>
+<td>leyenda gitana, madre asesinada, la Luna como madre</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/Hijo_de_la_Luna" target="_blank" rel="noopener">C</a></td>
+</tr>
+<tr>
+<td>Advent</td>
+<td>Opeth, Morningrise</td>
+<td>0,8 / 1,2 / 0,5</td>
+<td>pérdida, recuerdos, baile hacia el vacío</td>
+<td><a class="src" href="https://www.metalkingdom.net/lyrics-song/opeth-advent-1908" target="_blank" rel="noopener">L, t</a></td>
+</tr>
+<tr>
+<td>Ángeles con una sola ala</td>
+<td>Dragonfly</td>
+<td>0,1 / 3,0 / 0,1</td>
+<td>ruptura y arrepentimiento</td>
+<td><a class="src" href="https://lyricfluent.com/lessons/dragonfly_angeles_con_una_sola_ala_english" target="_blank" rel="noopener">F</a></td>
+</tr>
+<tr>
+<td>Last Intervention</td>
+<td>Implode, I of Everything</td>
+<td>0,0 / 1,7 / 0,6</td>
+<td>solo el concepto del disco (el ser humano en el cosmos)</td>
+<td><a class="src" href="https://www.metal.de/reviews/implode-i-of-everything-60558/" target="_blank" rel="noopener">C, t</a></td>
+</tr>
+<tr>
+<td>Cinco de Sorceress</td>
+<td>Opeth</td>
+<td>1,7 / 2,1 / 1,2</td>
+<td>rabia, reproche, culpa, cambio, despedida</td>
+<td><a class="src" href="https://www.loudersound.com/features/opeth-come-clean-on-what-sorceress-is-really-about" target="_blank" rel="noopener">Ad, L</a></td>
+</tr>
+<tr>
+<td>Born in Winter</td>
+<td>Gojira, L'Enfant Sauvage</td>
+<td>0,1 / 0,1 / 0,0</td>
+<td>nacer en la dureza, fuerza interior, cosmos</td>
+<td><a class="src" href="https://www.letras.mus.br/gojira/born-in-winter/print.html" target="_blank" rel="noopener">L</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</details>
+<details class="plegable">
+<summary>Discos investigados, sin Opeth <span>34 filas</span></summary>
+<div class="tabla" data-filtro="1" data-tabla="discos">
+<div class="tabla-scroll"><table>
+<thead>
+<tr>
+<th>Disco</th>
+<th>Artista</th>
+<th>h 24 / 25 / 26</th>
+<th>Eje temático</th>
+<th>Base</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fear Inoculum</td>
+<td>TOOL</td>
+<td>45,2 / 11,4 / 4,0</td>
+<td>envejecer, madurez, vencer el miedo</td>
+<td><a class="src" href="https://loudwire.com/tool-new-album-fear-inoculum-theme-aging-wisdom/" target="_blank" rel="noopener">Ad</a></td>
+</tr>
+<tr>
+<td>Feathergun (2009)</td>
+<td>Rishloo</td>
+<td>15,5 / 3,7 / 1,9</td>
+<td>sin significado declarado</td>
+<td><a class="src" href="https://eternal-terror.com/2011/11/21/rishloo-art-rock/" target="_blank" rel="noopener">sin fuente</a></td>
+</tr>
+<tr>
+<td>Bloom</td>
+<td>Caligula's Horse</td>
+<td>15,2 / 4,7 / 1,6</td>
+<td>fragilidad de la vida, crecimiento</td>
+<td><a class="src" href="https://loudersound.com/features/caligula-s-horse" target="_blank" rel="noopener">Ad</a></td>
+</tr>
+<tr>
+<td>10,000 Days</td>
+<td>TOOL</td>
+<td>13,0 / 13,7 / 4,8</td>
+<td>la madre de Keenan, fe, retorno de Saturno</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/10,000_Days_(Tool_album)" target="_blank" rel="noopener">Ad</a></td>
+</tr>
+<tr>
+<td>Lateralus</td>
+<td>TOOL</td>
+<td>10,8 / 5,0 / 1,1</td>
+<td>expansión, espiral, relaciones</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/Lateralus" target="_blank" rel="noopener">Ad, C</a></td>
+</tr>
+<tr>
+<td>The Gallery</td>
+<td>Dark Tranquillity</td>
+<td>9,3 / 4,9 / 1,6</td>
+<td>olvido, bebida, introspección</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/The_Gallery_(album)" target="_blank" rel="noopener">C, t</a></td>
+</tr>
+<tr>
+<td>Being and Nothingness</td>
+<td>HeXeN</td>
+<td>1,0 / 9,4 / 3,6</td>
+<td>absurdo, Sartre, crítica de medios</td>
+<td><a class="src" href="https://metalcrypt.com/pages/interviews.php?intid=277" target="_blank" rel="noopener">Ad</a></td>
+</tr>
+<tr>
+<td>Eidolon</td>
+<td>Rishloo</td>
+<td>8,2 / 1,1 / 0,3</td>
+<td>sin significado declarado</td>
+<td><a class="src" href="https://www.progarchives.com/album.asp?id=27236" target="_blank" rel="noopener">sin fuente</a></td>
+</tr>
+<tr>
+<td>Novembrine Waltz</td>
+<td>Novembre</td>
+<td>8,0 / 3,6 / 1,4</td>
+<td>sin explicación, tono melancólico</td>
+<td><a class="src" href="https://metalmessage.de/Interview_NOVEMBRE_2002_en.php" target="_blank" rel="noopener">t</a></td>
+</tr>
+<tr>
+<td>White Pony</td>
+<td>Deftones</td>
+<td>0,0 / 8,2 / 2,2</td>
+<td>sexo y violencia como ficción</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/White_Pony" target="_blank" rel="noopener">Ad</a></td>
+</tr>
+<tr>
+<td>Nightmare</td>
+<td>Avenged Sevenfold</td>
+<td>0,8 / 6,7 / 2,1</td>
+<td>duelo por The Rev</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/Nightmare_(Avenged_Sevenfold_album)" target="_blank" rel="noopener">Ad</a></td>
+</tr>
+<tr>
+<td>A Mortal Binding</td>
+<td>My Dying Bride</td>
+<td>0,0 / 0,0 / 6,4</td>
+<td>muerte, mar, profecía</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/A_Mortal_Binding" target="_blank" rel="noopener">A (una)</a></td>
+</tr>
+<tr>
+<td>Undertow</td>
+<td>TOOL</td>
+<td>5,9 / 3,0 / 2,0</td>
+<td>ciclo del abuso, adicción, alienación</td>
+<td><a class="src" href="https://www.revolvermag.com/music/how-tool-became-genre-unto-themselves-1993s-game-changing-undertow" target="_blank" rel="noopener">Ad</a></td>
+</tr>
+<tr>
+<td>Octavarium</td>
+<td>Dream Theater</td>
+<td>5,6 / 4,7 / 2,0</td>
+<td>recuperación del alcoholismo, pánico, ciclo</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/Octavarium_(album)" target="_blank" rel="noopener">Ad</a></td>
+</tr>
+<tr>
+<td>Memorial</td>
+<td>Soen</td>
+<td>5,4 / 4,5 / 2,1</td>
+<td>guerra, derechos humanos</td>
+<td><a class="src" href="https://blabbermouth.net/features/soen-continues-fight-for-equality-and-human-rights-on-new-album-memorial" target="_blank" rel="noopener">Ad</a></td>
+</tr>
+<tr>
+<td>The Vengeance Paradox</td>
+<td>Eye of the Enemy</td>
+<td>5,3 / 2,5 / 1,2</td>
+<td>sin datos, los títulos sugieren venganza</td>
+<td><a class="src" href="https://eyeoftheenemy.bandcamp.com/album/the-vengeance-paradox" target="_blank" rel="noopener">t</a></td>
+</tr>
+<tr>
+<td>Affinity</td>
+<td>Haken</td>
+<td>5,3 / 3,3 / 1,6</td>
+<td>hombre y máquina, sociedad moderna</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/Affinity_(Haken_album)" target="_blank" rel="noopener">Ad, C</a></td>
+</tr>
+<tr>
+<td>Venus Doom</td>
+<td>HIM</td>
+<td>4,9 / 4,3 / 1,8</td>
+<td>ruptura, alcohol, recuperar la cordura</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/Venus_Doom" target="_blank" rel="noopener">Ad</a></td>
+</tr>
+<tr>
+<td>The Blackening</td>
+<td>Machine Head</td>
+<td>4,8 / 4,3 / 2,5</td>
+<td>guerra, religión organizada, odio social</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/The_Blackening" target="_blank" rel="noopener">C</a></td>
+</tr>
+<tr>
+<td>The Way of All Flesh</td>
+<td>Gojira</td>
+<td>4,7 / 3,1 / 4,5</td>
+<td>la muerte</td>
+<td><a class="src" href="https://www.loudersound.com/features/every-gojira-album-in-their-own-words" target="_blank" rel="noopener">Ad</a></td>
+</tr>
+<tr>
+<td>Ænima</td>
+<td>TOOL</td>
+<td>4,6 / 3,6 / 1,8</td>
+<td>evolución, Jung, Los Ángeles</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/%C3%86nima" target="_blank" rel="noopener">Ad</a></td>
+</tr>
+<tr>
+<td>VII: Sturm und Drang</td>
+<td>Lamb of God</td>
+<td>4,6 / 3,3 / 2,6</td>
+<td>cárcel, historia checa, miedo mediático</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/VII:_Sturm_und_Drang" target="_blank" rel="noopener">Ad</a></td>
+</tr>
+<tr>
+<td>Ursa</td>
+<td>Novembre</td>
+<td>4,1 / 3,4 / 2,4</td>
+<td>manifiesto animalista contra la destrucción humana</td>
+<td><a class="src" href="https://thrash.thrashocore.com/interviews/interview/370-novembre-pour-l-album-ursa-2016-interview.html?vo=1" target="_blank" rel="noopener">Ad</a></td>
+</tr>
+<tr>
+<td>Perils of the Deep Blue</td>
+<td>Sirenia</td>
+<td>3,9 / 2,3 / 2,9</td>
+<td>el lado oscuro de la vida</td>
+<td><a class="src" href="https://soniccathedral.com/zine/index.php/band-interviews/445-Sirenia%20Interview%202013" target="_blank" rel="noopener">Ad, t</a></td>
+</tr>
+<tr>
+<td>Train of Thought</td>
+<td>Dream Theater</td>
+<td>3,6 / 3,8 / 1,7</td>
+<td>odio al padrastro, recaída, hija en coma</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/Train_of_Thought_(Dream_Theater_album)" target="_blank" rel="noopener">Ad</a></td>
+</tr>
+<tr>
+<td>Dim Days of Dolor</td>
+<td>Sirenia</td>
+<td>3,5 / 5,0 / 3,1</td>
+<td>sentirse vivo muerto y muerto vivo</td>
+<td><a class="src" href="https://www.metalmessage.de/Interview_SIRENIA_2016_en.php" target="_blank" rel="noopener">Ad</a></td>
+</tr>
+<tr>
+<td>Finisterra</td>
+<td>Mägo de Oz</td>
+<td>3,5 / 3,2 / 3,6</td>
+<td>distopía totalitaria, Camino de Santiago</td>
+<td><a class="src" href="https://es.wikipedia.org/wiki/Finisterra_(%C3%A1lbum)" target="_blank" rel="noopener">C</a></td>
+</tr>
+<tr>
+<td>Eye of Providence</td>
+<td>The Agonist</td>
+<td>3,1 / 3,3 / 2,5</td>
+<td>sin datos</td>
+<td><a class="src" href="https://deadrhetoric.com/features/the-agonist-caught-in-the-eye-of-providence/2" target="_blank" rel="noopener">t</a></td>
+</tr>
+<tr>
+<td>Beyond the Silence of These Years</td>
+<td>Ankor</td>
+<td>3,0 / 3,9 / 2,7</td>
+<td>sin datos</td>
+<td><a class="src" href="https://www.metalkingdom.net/album/ankor-beyond-the-silence-of-these-years-137235" target="_blank" rel="noopener">t</a></td>
+</tr>
+<tr>
+<td>King</td>
+<td>Fleshgod Apocalypse</td>
+<td>2,5 / 2,0 / 2,7</td>
+<td>el rey interior contra los miedos</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/King_(Fleshgod_Apocalypse_album)" target="_blank" rel="noopener">Ad</a></td>
+</tr>
+<tr>
+<td>The Seventh Life Path</td>
+<td>Sirenia</td>
+<td>2,4 / 3,2 / 2,7</td>
+<td>la Muerte, lado oscuro de la vida</td>
+<td><a class="src" href="https://soniccathedral.com/zine/index.php/band-interviews/486-Sirenia%20Interview%202015" target="_blank" rel="noopener">Ad</a></td>
+</tr>
+<tr>
+<td>The Fall of Hearts</td>
+<td>Katatonia</td>
+<td>2,2 / 3,4 / 3,4</td>
+<td>pérdida, alienación, trascendencia</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/The_Fall_of_Hearts" target="_blank" rel="noopener">C</a></td>
+</tr>
+<tr>
+<td>From Mars to Sirius</td>
+<td>Gojira</td>
+<td>2,1 / 2,2 / 2,9</td>
+<td>resurrección de un planeta, ecología</td>
+<td><a class="src" href="https://en.wikipedia.org/wiki/From_Mars_to_Sirius" target="_blank" rel="noopener">C</a></td>
+</tr>
+<tr>
+<td>Sacrament</td>
+<td>Lamb of God</td>
+<td>1,8 / 1,2 / 2,6</td>
+<td>depresión, pareja, abuso de sustancias</td>
+<td><a class="src" href="https://www.loudersound.com/features/lamb-of-god-sacrament-album-interview-2006" target="_blank" rel="noopener">Ad</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</details>
+<details class="plegable">
+<summary>Correcciones que conviene arrastrar <span>7 grupos</span></summary>
+<ul>
+<li><strong>Gojira.</strong> “The Art of Dying” y “Wolf Down the Earth” son de <em>The Way of All Flesh</em> (2008), no de <em>Fortitude</em>, y la primera no trata de la madre de Duplantier, que murió en 2015 <a class="src" href="https://en.wikipedia.org/wiki/Joe_Duplantier" target="_blank" rel="noopener">Wikipedia</a>. “The Chant” no trata de la Amazonía, que es otra canción del disco.</li>
+<li><strong>Opeth.</strong> “Moon Above, Sun Below” es de <em>Pale Communion</em> (2014), no de <em>Heritage</em> <a class="src" href="https://en.wikipedia.org/wiki/Pale_Communion" target="_blank" rel="noopener">Wikipedia</a>. <em>Still Life</em> y <em>Watershed</em> sí aparecen en tu historial, con menos de una hora cada uno en 2024.</li>
+<li><strong>Haken.</strong> “Carousel” es de <em>Virus</em> (2020), no de <em>Affinity</em>, y “The Endless Knot” sí es de <em>Affinity</em>.</li>
+<li><strong>Letristas.</strong> La letra de “Radio/Video” es de Daron Malakian, no de Serj Tankian. La de “Panic Attack” es de Petrucci, no de LaBrie. La de “Walk with Me in Hell” es de Mark Morton, no de Randy Blythe. La suite “Octavarium” tiene tres letristas (Petrucci, LaBrie y Portnoy). Zac Greensill también aportó letra a “Marigold”. “Pulled Under at 2000 Metres a Second” lleva crédito solo de Daniel Cavanagh <a class="src" href="https://en.wikipedia.org/wiki/A_Natural_Disaster" target="_blank" rel="noopener">Wikipedia</a>.</li>
+<li><strong>Rishloo.</strong> “Weevil Bride”, “Downhill” y “Systematomatic” son de <em>Feathergun</em> (2009). “Freaks &amp; Animals” es de <em>Eidolon</em> (que Prog Archives fecha en 2007) y “The Great Rain Beatle” de <em>Living as Ghosts with Buildings as Teeth</em> (2015).</li>
+<li><strong>Eye of the Enemy.</strong> “Clay” y “Stress and Colours” son de <em>Titan</em> (2019). Solo “The Shift” es de <em>The Vengeance Paradox</em> (2014) <a class="src" href="https://eyeoftheenemy.bandcamp.com/album/titan" target="_blank" rel="noopener">Bandcamp</a>.</li>
+<li><strong>Otras.</strong> “Nocturne” de HeXeN tiene letra. La supuesta “letra demo” de “Nobody” que publicó M. Shadows era en realidad de “Girl I Know”. Hay dos “Descending” distintas en tu lista, la de TOOL y la de Lamb of God. La versión 2010 de “Y serás canción” está en <em>Gaia: Epílogo</em>. “A Secret Door” es de <em>Hunter Gatherer</em> (2020). La atribución a Adam Jones del tema de “The Pot” no tiene fuente, y la lectura de “Pushit” como abuso infantil no tiene respaldo de Keenan. El disco de “Ángeles con una sola ala” sigue sin confirmar.</li>
+</ul>
+</details>
+<h3 id="limites">Lo que estas cifras no pueden afirmar</h3>
+<ul>
+<li><strong>Las etiquetas son interpretación, y el respaldo es muy desigual.</strong> Los músicos explicaron su canción concreta en una minoría de casos. El resto depende del marco del disco, de la crítica, de sitios sin autor o de transcripciones de letras hechas por fans, que pueden tener errores.</li>
+<li><strong>Hay huecos grandes.</strong> Rishloo no tiene ningún significado fiable, porque la banda se niega a fijarlos. Eye of the Enemy tampoco explicó ninguna letra concreta. Las lecturas de “Marigold” y “Bloom” en Songtell están generadas con IA y chocan con lo que dijo Jim Grey, así que valen las del autor. “Y serás canción” y “Sleep City” no tienen ninguna lectura. “The Apocalyptist”, la canción que más pesa del último año, tiene una letra fragmentaria y ninguna explicación de Stainthorpe.</li>
+<li><strong>Los porcentajes dependen de cómo se agruparon las etiquetas</strong> en ocho temas, y otra persona podría agruparlas distinto. La lente de canciones cubre solo el 18 %, 12 % y 9 % de cada año, y la de discos el 40 %, 32 % y 28 %. La lente de discos supone que escuchas todas las pistas por igual.</li>
+<li><strong>Las horas favorecen a las canciones largas</strong> (“Octavarium” dura 24 minutos, “Anesthetize” casi 18 y “Nocturne” casi 15) y no dicen si prestas atención a la letra, algo especialmente relevante para la versión sueca de <em>In Cauda Venenum</em>. Tampoco miden el significado, como muestra “Born in Winter”.</li>
+<li><strong>2026 llega solo al 18 de noviembre</strong>, por eso los años se comparan en porcentajes.</li>
+</ul>
+<details class="plegable">
+<summary>Cómo leer la columna Base</summary>
+<dl class="bases">
+<div>
+<dt>A</dt>
+<dd>el artista habló de la canción</dd>
+</div>
+<div>
+<dt>Ad</dt>
+<dd>el artista habló solo del disco</dd>
+</div>
+<div>
+<dt>C</dt>
+<dd>crítica o medio</dd>
+</div>
+<div>
+<dt>F</dt>
+<dd>fans o sitio de significados sin autor</dd>
+</div>
+<div>
+<dt>L</dt>
+<dd>lectura propia de una letra transcrita por fans</dd>
+</div>
+<div>
+<dt>t</dt>
+<dd>etiqueta tentativa</dd>
+</div>
+</dl>
+</details>
+<div class="invierno invierno-final">
+<p class="inv-k">En una frase</p>
+<p class="inv-grande">Ampliar la ventana no desmiente tu perfil, lo fecha. La obsesión con la muerte que parecía definirte es sobre todo de 2026, y 2024 tenía otra pregunta, cómo crecer y perderle el miedo a envejecer.</p>
+<p class="inv-nota">Lo que persiste en los tres años es una postura: sufrir por dentro sin un enemigo claro, desconfiar de las instituciones y no esperar que nadie llegue a rescatarte, salvo alguien que se queda al lado o algo que recibiste al nacer, como en “Born in Winter”. El punto ciego más grande que queda son los discos de Opeth sin letras explicadas (<em>Heritage</em>, <em>Blackwater Park</em>, <em>Pale Communion</em>, <em>Damnation</em>, <em>Deliverance</em>), un tercio de tu artista #1.</p>
+</div>
+</section>
+  </article>
+</div>
+
+<footer class="pie">
+  <p>Análisis hecho a partir de mi historial de Spotify, con corte al 18 de noviembre de 2026. Solo cuenta mi música, porque la cuenta es compartida. No se reproducen letras, solo paráfrasis y citas cortas de entrevistas.</p>
+  <nav aria-label="Otras páginas"><a href="index.html">Ver el Wrapped</a><a href="#resumen">Volver al inicio</a></nav>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+<script>
+(() => {
+const RM = matchMedia('(prefers-reduced-motion: reduce)');
+const fmt = (v, d = 1) => (+v).toLocaleString('es-CO', { minimumFractionDigits: 0, maximumFractionDigits: d });
+const NN = ' ';
+const el = (tag, cls, txt) => { const n = document.createElement(tag); if (cls) n.className = cls; if (txt != null) n.textContent = txt; return n; };
+
+/* Cielo de la portada: estrellas fijas con semilla, como la portada del PDF */
+function cielo() {
+  const c = document.querySelector('.cielo'); if (!c) return;
+  const draw = () => {
+    const r = c.getBoundingClientRect(), dpr = Math.min(devicePixelRatio || 1, 2);
+    c.width = Math.round(r.width * dpr); c.height = Math.round(r.height * dpr);
+    const x = c.getContext('2d'); x.scale(dpr, dpr); x.clearRect(0, 0, r.width, r.height);
+    let s = 1983; const rnd = () => (s = (s * 16807) % 2147483647) / 2147483647;
+    const n = Math.round(r.width * r.height / 3600);
+    for (let i = 0; i < n; i++) {
+      const px = rnd() * r.width, py = rnd() * r.height, rad = 0.35 + rnd() * 1.1, o = 0.12 + rnd() * 0.6;
+      x.beginPath(); x.arc(px, py, rad, 0, Math.PI * 2); x.fillStyle = `rgba(236,240,246,${o * (1 - py / r.height * 0.55)})`; x.fill();
+    }
+    // una sola estrella más grande, la que da origen a todo en "Born in Winter"
+    const gx = r.width * 0.78, gy = r.height * 0.26;
+    const g = x.createRadialGradient(gx, gy, 0, gx, gy, 26); g.addColorStop(0, 'rgba(169,188,208,.55)'); g.addColorStop(1, 'rgba(169,188,208,0)');
+    x.fillStyle = g; x.beginPath(); x.arc(gx, gy, 26, 0, Math.PI * 2); x.fill();
+    x.fillStyle = 'rgba(244,247,250,.95)'; x.beginPath(); x.arc(gx, gy, 1.8, 0, Math.PI * 2); x.fill();
+  };
+  draw(); let t; new ResizeObserver(() => { clearTimeout(t); t = setTimeout(draw, 150); }).observe(c);
+}
+
+/* Índice: marca el capítulo que se está leyendo */
+function indice() {
+  const secs = [...document.querySelectorAll('section.cap')];
+  const links = [...document.querySelectorAll('[data-sec]')];
+  const barra = document.querySelector('.toc-movil ol');
+  let actual = null;
+  const marcar = (id) => {
+    if (id === actual) return; actual = id;
+    links.forEach((a) => { const on = a.dataset.sec === id; a.classList.toggle('activo', on); if (on) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current'); });
+    const chip = barra && barra.querySelector(`[data-sec="${id}"]`);
+    if (chip && getComputedStyle(barra).overflowX !== 'visible') {
+      const left = chip.offsetLeft - 20;
+      barra.scrollTo({ left, behavior: RM.matches ? 'auto' : 'smooth' });
+    }
+  };
+  const vis = new Map();
+  const io = new IntersectionObserver((ents) => {
+    ents.forEach((e) => vis.set(e.target.id, e.isIntersecting));
+    const primero = secs.find((s) => vis.get(s.id));
+    if (primero) marcar(primero.id);
+  }, { rootMargin: '-35% 0px -60% 0px' });
+  secs.forEach((s) => io.observe(s));
+}
+
+/* Animación de entrada para gráficas, solo cuando aparecen */
+function alVer(node, fn) {
+  const io = new IntersectionObserver((ents) => { if (ents.some((e) => e.isIntersecting)) { io.disconnect(); fn(); } }, { rootMargin: '0px 0px -12% 0px' });
+  io.observe(node);
+}
+
+/* ---------- Figura: los tres años ---------- */
+function figAnios(f) {
+  const A = [
+    ['2024', 'crecía', 27, 'Fear Inoculum de TOOL y “Marigold”: crecer y perderle el miedo a envejecer.'],
+    ['2025', 'lloraba', 27, 'El duelo por personas reales pasa del 3 % al 15 %, con “Save Me” y las “Wings” de TOOL.'],
+    ['2026', 'mira de frente a la muerte', 52, '“Nocturne”, “Nobody” y “The Apocalyptist”: la muerte como idea más que como duelo.'],
+  ];
+  const w = el('div', 'anios');
+  A.forEach(([y, frase, m, d]) => {
+    const a = el('div', 'anio');
+    a.append(el('div', 'anio-y', y), el('p', 'anio-f', frase));
+    const mm = el('div', 'anio-m'); const i = el('i'); i.style.width = (m * 1.6) + 'px';
+    const b = el('b', null, m + NN + '%'); mm.append(i, b);
+    a.append(mm, el('p', 'anio-d', d.replace(/(\d) %/g, '$1' + NN + '%')));
+    w.append(a);
+  });
+  f.replaceChildren(w, el('p', 'fig-pie', 'La barra roja es la parte de las horas de tu top 25 de cada año que habla de muerte.'));
+}
+
+/* ---------- Figura: temas por año, dos lentes ---------- */
+function figTemas(f) {
+  const T = [
+    { k: 'muerte', n: 'Muerte en cualquier forma', c: [27, 27, 52], d: [21, 33, 34], col: 'var(--accent)', w: 2.6, base: true },
+    { k: 'crec', n: 'Crecimiento y transformación', c: [19, 6, 3], d: [40, 24, 19], col: '#d4d3d8', w: 2, base: true },
+    { k: 'critica', n: 'Crítica social o política', c: [25, 15, 16], d: [17, 27, 30], col: '#8d8c94', w: 2, base: true },
+    { k: 'mente', n: 'Mente que sufre por dentro', c: [18, 8, 18], d: [19, 20, 19], col: 'var(--frost)', w: 2, dash: true, base: true },
+    { k: 'espir', n: 'Espiritualidad sin iglesia', c: [23, 5, 10], d: [6, 5, 3], col: '#5c5d66', w: 1.4 },
+    { k: 'amor', n: 'Amor y desamor', c: [19, 18, 11], d: [5, 10, 8], col: '#5c5d66', w: 1.4 },
+    { k: 'relig', n: 'Religión institucional criticada', c: [3, 7, 14], d: [7, 9, 6], col: '#5c5d66', w: 1.4 },
+  ];
+  const Y = [2024, 2025, 2026];
+  let lente = 'c', foco = null;
+
+  const wrap = el('div', 'temas');
+  const izq = el('div');
+  const lentes = el('div', 'lentes'); lentes.setAttribute('role', 'group'); lentes.setAttribute('aria-label', 'Lente');
+  [['c', 'Tus 25 canciones de cada año'], ['d', 'Los 46 discos investigados']].forEach(([k, t]) => {
+    const b = el('button', null, t); b.type = 'button'; b.dataset.k = k; b.setAttribute('aria-pressed', k === lente);
+    b.addEventListener('click', () => { lente = k; lentes.querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', x.dataset.k === k)); dibujar(true); });
+    lentes.append(b);
+  });
+  const graf = el('div', 'temas-graf');
+  izq.append(lentes, graf);
+  const der = el('div');
+  const lista = el('ul', 'temas-lista'); lista.setAttribute('aria-label', 'Temas. Toca uno para resaltarlo');
+  T.forEach((t) => {
+    const li = el('li'); const b = el('button'); b.type = 'button'; b.dataset.k = t.k; b.setAttribute('aria-pressed', 'false');
+    const sw = el('span', 'sw' + (t.dash ? ' dash' : '')); sw.style.background = t.col;
+    b.append(sw, el('span', null, t.n), el('span', 'v'));
+    b.addEventListener('click', () => { foco = foco === t.k ? null : t.k; dibujar(false); });
+    li.append(b); lista.append(li);
+  });
+  der.append(lista, el('p', 'temas-pista', 'Toca un tema para resaltarlo. Las cifras de la derecha son de 2026.'));
+  wrap.append(izq, der);
+
+  // Tabla completa con las cifras, como mapa de calor
+  const det = document.createElement('details'); det.className = 'plegable calor';
+  const sum = el('summary'); sum.append('Ver todas las cifras', el('span', null, '10 filas'));
+  const filas = [
+    ['Muerte en cualquier forma', [27, 27, 52], [21, 33, 34]], ['como idea o mortalidad', [13, 14, 18], [2, 7, 7], 1], ['duelo por alguien concreto', [3, 15, 6], [15, 20, 13], 1],
+    ['Crecimiento y transformación', [19, 6, 3], [40, 24, 19]], ['Espiritualidad sin iglesia', [23, 5, 10], [6, 5, 3]], ['Crítica social o política', [25, 15, 16], [17, 27, 30]],
+    ['Mente que sufre por dentro', [18, 8, 18], [19, 20, 19]], ['Amor y desamor', [19, 18, 11], [5, 10, 8]], ['Religión institucional criticada', [3, 7, 14], [7, 9, 6]], ['Sin datos u otros temas', [2, 21, 6], [22, 16, 18]],
+  ];
+  const sc = el('div', 'tabla-scroll'); const tb = document.createElement('table');
+  tb.innerHTML = '<thead><tr class="grupo"><th></th><th class="c" colspan="3">Canciones</th><th class="c" colspan="3">Discos</th></tr><tr><th>Tema</th>' + '<th class="c">2024</th><th class="c">2025</th><th class="c">2026</th>'.repeat(2) + '</tr></thead>';
+  const body = document.createElement('tbody');
+  filas.forEach(([n, c, d, sub]) => {
+    const tr = document.createElement('tr'); if (sub) tr.className = 'sub';
+    tr.append(el('td', null, n));
+    [...c, ...d].forEach((v) => { const td = el('td', 'c', v + NN + '%'); td.style.background = `rgb(217 72 59 / ${Math.min(v / 55, 1) * 0.55})`; tr.append(td); });
+    body.append(tr);
+  });
+  tb.append(body); sc.append(tb);
+  const tw = el('div', 'tabla'); tw.append(sc);
+  det.append(sum, tw);
+  f.replaceChildren(wrap, det);
+  f.insertAdjacentElement('beforeend', el('p', 'fig-pie', 'Porcentaje de horas de cada conjunto que toca cada tema. Una canción o un disco puede tener varios temas, así que no suman 100. 2026 llega hasta el 18 de noviembre.'));
+
+  const tip = el('div', 'tip'); tip.style.display = 'none'; graf.append(tip);
+  let svg, x, y, W, H;
+  const m = { t: 16, r: 46, b: 28, l: 34 };
+  function base() {
+    graf.querySelectorAll('svg').forEach((s) => s.remove());
+    W = Math.max(300, graf.clientWidth); H = 300;
+    x = d3.scalePoint().domain(Y).range([m.l, W - m.r]).padding(0.15);
+    y = d3.scaleLinear().domain([0, 55]).range([H - m.b, m.t]);
+    svg = d3.select(graf).insert('svg', '.tip').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img')
+      .attr('aria-label', 'Porcentaje de horas por tema en 2024, 2025 y 2026. La tabla con todas las cifras está debajo.');
+    const g = svg.append('g');
+    [0, 20, 40].forEach((v) => {
+      g.append('line').attr('x1', m.l).attr('x2', W - m.r).attr('y1', y(v)).attr('y2', y(v)).style('stroke', 'var(--line)');
+      g.append('text').attr('x', m.l - 8).attr('y', y(v) + 4).attr('text-anchor', 'end').text(v + NN + '%');
+    });
+    Y.forEach((yr) => g.append('text').attr('x', x(yr)).attr('y', H - 6).attr('text-anchor', 'middle').text(yr));
+    svg.append('g').attr('class', 'lineas');
+    svg.append('g').attr('class', 'puntos');
+    svg.append('g').attr('class', 'etqs');
+  }
+  const line = d3.line().x((d, i) => x(Y[i])).y((d) => y(d)).curve(d3.curveMonotoneX);
+  function dibujar(anim) {
+    const dur = anim && !RM.matches ? 520 : 0;
+    const vis = (t) => foco ? t.k === foco : t.base;
+    wrap.classList.toggle('enfocado', !!foco);
+    lista.querySelectorAll('button').forEach((b) => { const t = T.find((q) => q.k === b.dataset.k); b.setAttribute('aria-pressed', foco === t.k); b.querySelector('.v').textContent = t[lente][2] + NN + '%'; });
+    const orden = [...T].sort((a, b) => (vis(a) - vis(b)));
+    svg.select('.lineas').selectAll('path').data(orden, (t) => t.k).join('path')
+      .attr('fill', 'none').attr('stroke-linecap', 'round')
+      .style('stroke', (t) => !vis(t) ? '#33343b' : (foco && !['muerte', 'mente'].includes(t.k) ? 'var(--fg)' : t.col))
+      .attr('stroke-width', (t) => !vis(t) ? 1.2 : (foco ? 2.6 : t.w))
+      .attr('stroke-dasharray', (t) => t.dash ? '5 4' : null)
+      .order()
+      .transition().duration(dur).ease(d3.easeCubicInOut)
+      .attr('d', (t) => line(t[lente]));
+    const pts = T.filter(vis).flatMap((t) => t[lente].map((v, i) => ({ t, v, i })));
+    svg.select('.puntos').selectAll('circle').data(pts, (p) => p.t.k + p.i).join('circle')
+      .attr('r', 3.6).style('fill', (p) => foco && !['muerte', 'mente'].includes(p.t.k) ? 'var(--fg)' : p.t.col).style('stroke', 'var(--bg)').attr('stroke-width', 2).attr('cx', (p) => x(Y[p.i]))
+      .on('pointermove', (ev, p) => {
+        const [px, py] = d3.pointer(ev, graf);
+        tip.style.display = ''; tip.replaceChildren(el('b', null, `${Y[p.i]}: ${p.v}${NN}%`), el('span', null, p.t.n));
+        tip.style.left = Math.max(0, Math.min(px + 12, graf.clientWidth - tip.offsetWidth)) + 'px'; tip.style.top = Math.max(py - 58, 0) + 'px';
+      })
+      .on('pointerleave', () => { tip.style.display = 'none'; })
+      .transition().duration(dur).ease(d3.easeCubicInOut).attr('cy', (p) => y(p.v));
+    // etiquetas al final de cada línea visible, separadas para que no se pisen
+    const fin = T.filter(vis).map((t) => ({ t, yy: y(t[lente][2]) })).sort((a, b) => a.yy - b.yy);
+    for (let i = 1; i < fin.length; i++) if (fin[i].yy - fin[i - 1].yy < 15) fin[i].yy = fin[i - 1].yy + 15;
+    svg.select('.etqs').selectAll('text').data(fin, (d) => d.t.k).join('text')
+      .attr('x', x(2026) + 10).attr('text-anchor', 'start').style('fill', (d) => d.t.k === 'muerte' ? 'var(--fg)' : 'var(--muted)')
+      .style('font-weight', (d) => d.t.k === 'muerte' ? 600 : 400)
+      .text((d) => d.t[lente][2] + NN + '%')
+      .transition().duration(dur).ease(d3.easeCubicInOut).attr('y', (d) => d.yy + 4);
+    if (foco) {
+      const t = T.find((q) => q.k === foco);
+      svg.select('.etqs').selectAll('text.ini').data(t[lente].slice(0, 2)).join('text').attr('class', 'ini')
+        .attr('x', (d, i) => x(Y[i])).attr('text-anchor', 'middle').style('fill', 'var(--muted)')
+        .text((d) => d + NN + '%').attr('y', (d) => y(d) - 10);
+    }
+  }
+  base(); dibujar(false);
+  let rw = graf.clientWidth, rt;
+  new ResizeObserver(() => { if (Math.abs(graf.clientWidth - rw) < 4) return; rw = graf.clientWidth; clearTimeout(rt); rt = setTimeout(() => { base(); dibujar(false); }, 120); }).observe(graf);
+}
+
+/* ---------- Figura: el último año en horas ---------- */
+function figUltimo(f) {
+  const total = 56;
+  const G = [
+    ['De qué hablan', [
+      ['Muerte', 26, 17, 'como idea 9,3 h, duelo 5,5 h', true], ['Mente que sufre por dentro', 15.9, 15], ['Crítica social o política', 8.45, 7],
+      ['Amor', 8.45, 7], ['Religión institucional criticada', 8.4, 4], ['Espiritualidad sin iglesia', 5.9, 4],
+    ]],
+    ['Cómo terminan', [['Aceptación o desafío', 14.6, 6, 'incluye tu #1, tu #2 y tu #4'], ['Consuelo o salida', 7.6, 7]]],
+  ];
+  const max = 26; const wrap = el('div');
+  let i = 0;
+  G.forEach(([tit, rows]) => {
+    const g = el('div', 'hbar-g'); g.append(el('h4', null, tit));
+    rows.forEach(([n, h, c, nota, fuerte]) => {
+      const r = el('div', 'hbar' + (fuerte ? ' fuerte' : ''));
+      const nm = el('div', 'hbar-n', n); nm.append(el('small', null, `${c} canciones` + (nota ? `, ${nota.replace(/(\d) h/g, '$1' + NN + 'h')}` : '')));
+      const b = el('div', 'hbar-b'); const bar = el('i'); bar.style.width = `calc((100% - 92px) * ${h / max})`; bar.style.setProperty('--i', i++);
+      const v = el('span'); v.append(el('b', null, fmt(h, 2) + NN + 'h'), ` ${Math.round(h / total * 100)}${NN}%`);
+      b.append(bar, v); r.append(nm, b); g.append(r);
+    });
+    wrap.append(g);
+  });
+  f.replaceChildren(wrap, el('p', 'fig-pie', 'Horas de las 44 canciones con letra entre el 18 de noviembre de 2025 y el 18 de noviembre de 2026, que suman 56 h. Una canción puede tocar varios temas.'.replace(/(\d) h/g, '$1' + NN + 'h')));
+  if (!RM.matches) alVer(f, () => f.classList.add('va-crecer'));
+}
+
+/* ---------- Figura: Born in Winter por año ---------- */
+function figBiw(f) {
+  const D = [[2019, 0.69], [2020, 0.19], [2021, 1.06], [2022, 0.99], [2023, 0.37], [2024, 0.13], [2025, 0.13], [2026, 0]];
+  const max = 1.2;
+  const w = el('div', 'biw'); w.setAttribute('role', 'img');
+  w.setAttribute('aria-label', 'Horas de Born in Winter por año: ' + D.map(([y, h]) => `${y}, ${fmt(h, 2)} horas`).join('. '));
+  D.forEach(([y, h], i) => {
+    const c = el('div', h === 1.06 ? 'pico' : null); c.setAttribute('aria-hidden', 'true');
+    const b = el('i'); b.style.height = (h / max * 100) + '%'; b.style.setProperty('--i', i);
+    c.append(el('span', null, h ? fmt(h, 2) : '0'), b); w.append(c);
+  });
+  const xs = el('div', 'biw-x'); xs.setAttribute('aria-hidden', 'true'); D.forEach(([y]) => xs.append(el('span', null, y)));
+  f.replaceChildren(w, xs, el('p', 'fig-pie', `Horas de “Born in Winter” por año, unas 3,6${NN}h desde 2019. Su mejor año fue 2021.`));
+  if (!RM.matches) alVer(f, () => f.classList.add('va-crecer'));
+}
+
+/* ---------- Figura: canciones que dejaron rastro, en su año pico ---------- */
+function figRastro(f) {
+  const S = [
+    ['Up North', 'Borknagar', 8.5, 2020], ['Antagonist', 'Soen', 7.0, 2021], ['Systematomatic', 'Rishloo', 6.3, 2023], ['Jinn', 'Soen', 6.1, 2023],
+    ['July', 'Katatonia', 5.9, 2021], ['Freaks & Animals', 'Rishloo', 5.8, 2024], ['For My Demons', 'Katatonia', 3.7, 2022], ['Lost to Apathy', 'Dark Tranquillity', 3.4, 2023],
+    ['Monarch', 'Soen', 3.3, 2024], ['...of Melancholy Burning', 'Dark Tranquillity', 3.0, 2024], ['Iridium', 'Dark Tranquillity', 2.1, 2024], ['Spiders', 'System Of A Down', 1.8, 2025],
+    ['Therein', 'Dark Tranquillity', 1.4, 2026], ['Forward Momentum', 'Dark Tranquillity', 1.3, 2024], ['The Gallery', 'Dark Tranquillity', 1.1, 2024], ['Punish My Heaven', 'Dark Tranquillity', 1.0, 2024],
+    ['The Wonders at Your Feet', 'Dark Tranquillity', 0.8, 2024], ["Misery's Crown", 'Dark Tranquillity', 0.5, 2024], ['Mine Is the Grandeur...', 'Dark Tranquillity', 0.5, 2025],
+  ].map(([n, a, h, y]) => ({ n, a, h, y }));
+  const YRS = [2020, 2021, 2022, 2023, 2024, 2025, 2026];
+  const box = el('div', 'rastro-graf'); const tip = el('div', 'tip'); tip.style.display = 'none';
+  const ley = el('div', 'rastro-leyenda');
+  const l1 = el('span'); const i1 = el('i'); i1.style.background = '#8d8c94'; l1.append(i1, 'Pico antes de 2024, fuera de la ventana del análisis');
+  const l2 = el('span'); const i2 = el('i'); i2.style.background = 'var(--accent)'; l2.append(i2, 'Pico entre 2024 y 2026');
+  ley.append(l1, l2);
+  f.replaceChildren(box, ley, el('p', 'fig-pie', 'Cada círculo es una de las 19 canciones, puesta en el año en que más la escuchaste. El tamaño son sus horas desde 2019. Pasa el cursor por un círculo para ver su nombre.'));
+  box.append(tip);
+  const draw = () => {
+    box.querySelectorAll('svg').forEach((s) => s.remove());
+    const W = Math.max(300, box.clientWidth), narrow = W < 620;
+    const rr = (h) => (narrow ? 2.5 : 3) + Math.sqrt(h) * (narrow ? 3.6 : 4.6);
+    const ROW = narrow ? 40 : 46, top = 34, labW = 48;
+    const H = top + YRS.length * ROW + 6;
+    const svg = d3.select(box).insert('svg', '.tip').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img')
+      .attr('aria-label', 'Las 19 canciones según su año pico. Antes de 2024: Up North, Antagonist, July, For My Demons, Systematomatic, Jinn y Lost to Apathy. El resto tuvo su pico entre 2024 y 2026, casi todas en 2024.');
+    const yRow = (y) => top + YRS.indexOf(y) * ROW + ROW / 2;
+    const y0 = top + YRS.indexOf(2024) * ROW;
+    svg.append('rect').attr('x', 0).attr('y', y0).attr('width', W).attr('height', ROW * 3).attr('rx', 10).style('fill', 'rgb(217 72 59 / .07)');
+    svg.append('text').attr('x', W - 12).attr('y', y0 + ROW * 2.5 + 4).attr('text-anchor', 'end').style('fill', 'var(--accent-ink)').text('Ventana del análisis');
+    svg.append('text').attr('x', labW).attr('y', 16).text('Año pico de cada canción, de la que más horas suma a la que menos');
+    YRS.forEach((y) => {
+      svg.append('text').attr('x', 10).attr('y', yRow(y) + 4).style('fill', y >= 2024 ? 'var(--fg)' : 'var(--muted)').text(y);
+      if (y < 2024) svg.append('line').attr('x1', 0).attr('x2', W).attr('y1', yRow(y) + ROW / 2).attr('y2', yRow(y) + ROW / 2).style('stroke', 'var(--line)');
+    });
+    // en cada fila, las canciones de mayor a menor; el nombre al lado de las que pesan más
+    const cols = d3.group(S, (s) => s.y);
+    const gC = svg.append('g'), gT = svg.append('g');
+    cols.forEach((arr, y) => {
+      arr.sort((a, b) => b.h - a.h); let xx = labW + 14;
+      arr.forEach((s, i) => {
+        s.r = rr(s.h); s.cx = xx + s.r; s.cy = yRow(y); xx += s.r * 2 + 5;
+        if (narrow ? i === 0 && arr.length <= 3 : s.h >= 3) {
+          const t = gT.append('text').attr('x', xx + 2).attr('y', s.cy + 4).style('fill', 'var(--fg)').style('font-size', '12.5px').text(`${s.n} ${fmt(s.h)}${NN}h`);
+          xx += t.node().getComputedTextLength() + 16;
+        }
+      });
+    });
+    gC.selectAll('circle').data(S).join('circle')
+      .attr('cx', (s) => s.cx).attr('cy', (s) => s.cy).attr('r', (s) => s.r)
+      .style('fill', (s) => s.y >= 2024 ? 'var(--accent)' : '#8d8c94').style('fill-opacity', 0.9)
+      .on('pointermove', (ev, s) => {
+        const [px, py] = d3.pointer(ev, box);
+        tip.style.display = ''; tip.replaceChildren(el('b', null, s.n), el('span', null, `${s.a}, ${fmt(s.h)}${NN}h, pico en ${s.y}`));
+        tip.style.left = Math.max(0, Math.min(px + 12, box.clientWidth - tip.offsetWidth)) + 'px'; tip.style.top = Math.max(py - 60, 0) + 'px';
+      })
+      .on('pointerleave', () => { tip.style.display = 'none'; });
+  };
+  draw(); let rw = box.clientWidth, t;
+  new ResizeObserver(() => { if (Math.abs(box.clientWidth - rw) < 4) return; rw = box.clientWidth; clearTimeout(t); t = setTimeout(draw, 120); }).observe(box);
+}
+
+/* ---------- Tablas: barras pequeñas, fuentes, orden, búsqueda ---------- */
+const BASES = { A: 'el artista habló de la canción', Ad: 'el artista habló del disco', C: 'crítica o medio', F: 'fans o sitio sin autor', L: 'lectura de letra transcrita', t: 'tentativa' };
+const NOMBRES = { ultimo: 'canciones', rastro: 'canciones', ventana: 'canciones', discos: 'discos' };
+const num = (s) => { const v = parseFloat(String(s).replace(',', '.')); return isNaN(v) ? -1 : v; };
+function tablas() {
+  document.querySelectorAll('.tabla[data-tabla]').forEach((wrap) => {
+    const table = wrap.querySelector('table'); if (!table) return;
+    const tbody = table.tBodies[0]; const rows = [...tbody.rows]; const ths = [...table.tHead.rows[0].cells];
+    const tri = /^(\d+,\d) \/ (\d+,\d) \/ (\d+,\d)$/;
+    let triMax = 0;
+    rows.forEach((r) => [...r.cells].forEach((c) => { const m = c.textContent.trim().match(tri); if (m) triMax = Math.max(triMax, ...m.slice(1).map(num)); }));
+    rows.forEach((r) => {
+      [...r.cells].forEach((c, ci) => {
+        const txt = c.textContent.trim(); const head = ths[ci].textContent.trim();
+        const m = txt.match(tri);
+        if (m) {
+          const v = m.slice(1).map(num); c.classList.add('num'); c.dataset.orden = v.reduce((a, b) => a + b, 0);
+          const sp = el('span', 'spark'); sp.setAttribute('aria-hidden', 'true');
+          v.forEach((x) => { const i = el('i'); i.style.height = Math.max(x / triMax * 100, 4) + '%'; sp.append(i); });
+          const t = el('span', 'spark-t', txt); t.setAttribute('aria-label', `2024: ${m[1]} horas, 2025: ${m[2]} horas, 2026: ${m[3]} horas`);
+          c.replaceChildren(sp, t);
+        } else if (head === 'h' || head === 'Pico') { c.classList.add('num'); c.dataset.orden = num(txt); }
+        const a = c.querySelector('a');
+        if (head === 'Base' && a) {
+          a.className = 'base-chip';
+          const codes = txt.split(/,\s*/).map((s) => s.split(' ')[0]);
+          const desc = codes.map((k) => BASES[k] ? `${k}: ${BASES[k]}` : null).filter(Boolean);
+          if (desc.length) a.title = desc.join(', ');
+          if (codes[0] === 'A' || /^Artista/.test(txt)) a.dataset.fuerte = '';
+          a.target = '_blank'; a.rel = 'noopener';
+        }
+      });
+    });
+    // Orden por columnas numéricas
+    ths.forEach((th, ci) => {
+      const h = th.textContent.trim();
+      if (!(h === 'h' || h.startsWith('h 2') || h === 'Pico')) return;
+      const b = el('button', null, h); b.type = 'button'; th.replaceChildren(b);
+      b.addEventListener('click', () => {
+        const dir = th.getAttribute('aria-sort') === 'descending' ? 'ascending' : 'descending';
+        ths.forEach((x) => x.removeAttribute('aria-sort')); th.setAttribute('aria-sort', dir);
+        const key = (r) => +(r.cells[ci].dataset.orden || -1);
+        [...tbody.rows].sort((a, z) => dir === 'descending' ? key(z) - key(a) : key(a) - key(z)).forEach((r) => tbody.append(r));
+        aplicar();
+      });
+    });
+    // Búsqueda y vista corta en las tablas largas
+    const filtrable = wrap.dataset.filtro === '1';
+    const LIM = 10; let abierta = !filtrable || rows.length <= LIM + 2; let q = '';
+    const cosa = NOMBRES[wrap.dataset.tabla] || 'filas';
+    let cuenta, vacia, mas;
+    if (filtrable) {
+      const ctrl = el('div', 'tabla-ctrl');
+      const lab = el('label'); lab.append('Buscar por nombre, artista o tema');
+      const inp = document.createElement('input'); inp.type = 'search'; inp.autocomplete = 'off'; inp.placeholder = 'Por ejemplo, agua o Opeth';
+      lab.append(inp); cuenta = el('span', 'tabla-cuenta'); cuenta.setAttribute('aria-live', 'polite');
+      ctrl.append(lab, cuenta); wrap.prepend(ctrl);
+      vacia = el('p', 'tabla-vacia'); wrap.append(vacia);
+      inp.addEventListener('input', () => { q = inp.value.trim().toLowerCase(); aplicar(); });
+      if (!abierta) {
+        mas = el('button', 'tabla-mas'); mas.type = 'button';
+        mas.addEventListener('click', () => { abierta = !abierta; aplicar(); if (!abierta) wrap.scrollIntoView({ block: 'start', behavior: RM.matches ? 'auto' : 'smooth' }); });
+        wrap.append(mas);
+      }
+    }
+    function aplicar() {
+      let vis = 0, k = 0;
+      [...tbody.rows].forEach((r) => {
+        const ok = !q || r.textContent.toLowerCase().includes(q);
+        r.classList.toggle('filtrada', !ok);
+        if (ok) { vis++; r.classList.toggle('oculta', !abierta && !q && k >= LIM); k++; } else r.classList.remove('oculta');
+      });
+      if (cuenta) cuenta.textContent = q ? `${vis} de ${rows.length} ${cosa}` : `${rows.length} ${cosa}`;
+      if (vacia) { vacia.style.display = vis ? 'none' : 'block'; vacia.textContent = `Ninguna fila tiene “${q}”. Prueba con otro nombre o tema.`; }
+      if (mas) { mas.style.display = q ? 'none' : ''; mas.textContent = abierta ? 'Ver menos' : `Ver las ${rows.length} ${cosa}`; mas.setAttribute('aria-expanded', abierta); }
+    }
+    aplicar();
+  });
+}
+
+cielo(); indice(); tablas();
+const figs = { anios: figAnios, temas: figTemas, ultimo: figUltimo, biw: figBiw, rastro: figRastro };
+document.querySelectorAll('[data-fig]').forEach((f) => {
+  const fn = figs[f.dataset.fig]; if (!fn) return;
+  if (['temas', 'rastro'].includes(f.dataset.fig) && !window.d3) { f.replaceChildren(el('p', 'sin-js', 'No se pudo cargar la librería de gráficas. Revisa la conexión y recarga la página.')); return; }
+  try { fn(f); } catch (e) { console.error(f.dataset.fig, e); }
+});
+})();
+</script>
+</body>
+</html>
